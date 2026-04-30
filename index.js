@@ -230,6 +230,267 @@ function validateInformationSecurityArrayItem(section, payload = {}, { partial =
   return { errors, value }
 }
 
+const mobilePlatformSections = {
+  serviceLinks: 'serviceLinks',
+  socials: 'socials',
+  checklist: 'checklist',
+  team: 'team',
+  skills: 'skills',
+}
+
+const dataSynchronizationSections = {
+  serviceLinks: 'serviceLinks',
+  socials: 'socials',
+  featureCards: 'featureCards',
+}
+
+function getDefaultMobilePlatformPage() {
+  return {
+    key: 'mobile-platform-page',
+    heroImage:
+      'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=2000&q=80',
+    topImageLeft:
+      'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1000&q=80',
+    topImageRight:
+      'https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1000&q=80',
+    heroTitle: 'Mobile Platforms',
+    sectionTitle: 'Mobile Platforms',
+    sectionDescription:
+      'Mobile platform strategy provides strong foundations for secure apps, strong UX, and scalable backend integrations. We build products that stay reliable across device versions and high traffic.',
+    bottomDescription:
+      'There are many variations of passages available, but the majority have suffered alteration in some form, by injected humour, or randomised words which do not look even slightly believable.',
+    mainServicesTitle: 'Main Services',
+    brochuresTitle: 'Brochures',
+    brochuresDescription:
+      'Cras enim urna, interdum nec porttitor vitae, sollicitudin eu eros. Praesent eget mollis nulla.',
+    brochuresPrimaryButton: 'Download',
+    brochuresSecondaryButton: 'Discover',
+    followUsTitle: 'Follow Us',
+    teamTitle: 'Our Team',
+    serviceLinks: [
+      { _id: new ObjectId().toString(), label: 'Information Security', to: '/information-security' },
+      { _id: new ObjectId().toString(), label: 'Mobile Platforms', to: '/mobile-platform' },
+      { _id: new ObjectId().toString(), label: 'Data Synchronization', to: '/data-synchronization' },
+      { _id: new ObjectId().toString(), label: 'Process Automation', to: '/process-automation' },
+      { _id: new ObjectId().toString(), label: 'Event Processing', to: '/event-processing' },
+      { _id: new ObjectId().toString(), label: 'Content Management', to: '/content-management' },
+    ],
+    socials: [
+      { _id: new ObjectId().toString(), label: 'f' },
+      { _id: new ObjectId().toString(), label: 't' },
+      { _id: new ObjectId().toString(), label: 'i' },
+      { _id: new ObjectId().toString(), label: 'in' },
+    ],
+    checklist: [
+      { _id: new ObjectId().toString(), text: 'Marketing options and rates' },
+      { _id: new ObjectId().toString(), text: 'Research beyond the business plan' },
+      { _id: new ObjectId().toString(), text: 'The ability to turnaround consulting' },
+      { _id: new ObjectId().toString(), text: 'Customer engagement matters' },
+    ],
+    team: [
+      {
+        _id: new ObjectId().toString(),
+        name: 'Hamish French',
+        role: 'Computer Scientist',
+        image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=80',
+      },
+      {
+        _id: new ObjectId().toString(),
+        name: 'Zara Matheson',
+        role: 'CEO',
+        image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=700&q=80',
+      },
+      {
+        _id: new ObjectId().toString(),
+        name: 'Dylan Bonney',
+        role: 'Process Analyst',
+        image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=80',
+      },
+    ],
+    skills: [
+      { _id: new ObjectId().toString(), label: 'Consulting', value: 65 },
+      { _id: new ObjectId().toString(), label: 'Development', value: 80 },
+      { _id: new ObjectId().toString(), label: 'Management', value: 55 },
+    ],
+  }
+}
+
+function validateMobilePlatformArrayItem(section, payload = {}, { partial = false } = {}) {
+  const value = {}
+  const errors = []
+
+  if (section === mobilePlatformSections.serviceLinks) {
+    const label = typeof payload.label === 'string' ? payload.label.trim() : ''
+    const to = typeof payload.to === 'string' ? payload.to.trim() : ''
+    if (!partial || 'label' in payload) {
+      if (!label) errors.push('label is required')
+      else value.label = label
+    }
+    if (!partial || 'to' in payload) {
+      if (!to) errors.push('to is required')
+      else value.to = to
+    }
+  }
+
+  if (section === mobilePlatformSections.socials) {
+    const label = typeof payload.label === 'string' ? payload.label.trim() : ''
+    if (!partial || 'label' in payload) {
+      if (!label) errors.push('label is required')
+      else value.label = label
+    }
+  }
+
+  if (section === mobilePlatformSections.checklist) {
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
+    }
+  }
+
+  if (section === mobilePlatformSections.team) {
+    const name = typeof payload.name === 'string' ? payload.name.trim() : ''
+    const role = typeof payload.role === 'string' ? payload.role.trim() : ''
+    const image = typeof payload.image === 'string' ? payload.image.trim() : ''
+    if (!partial || 'name' in payload) {
+      if (!name) errors.push('name is required')
+      else value.name = name
+    }
+    if (!partial || 'role' in payload) {
+      if (!role) errors.push('role is required')
+      else value.role = role
+    }
+    if (!partial || 'image' in payload) {
+      if (!image) errors.push('image is required')
+      else value.image = image
+    }
+  }
+
+  if (section === mobilePlatformSections.skills) {
+    const label = typeof payload.label === 'string' ? payload.label.trim() : ''
+    const hasValueField = 'value' in payload || !partial
+    const numericValue = Number(payload.value)
+    if (!partial || 'label' in payload) {
+      if (!label) errors.push('label is required')
+      else value.label = label
+    }
+    if (hasValueField) {
+      if (!Number.isFinite(numericValue)) {
+        errors.push('value must be a valid number')
+      } else if (numericValue < 0 || numericValue > 100) {
+        errors.push('value must be between 0 and 100')
+      } else {
+        value.value = numericValue
+      }
+    }
+  }
+
+  return { errors, value }
+}
+
+function getDefaultDataSynchronizationPage() {
+  return {
+    key: 'data-synchronization-page',
+    heroImage:
+      'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=2000&q=80',
+    mainImage:
+      'https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1400&q=80',
+    heroTitle: 'Data Synchronization',
+    sectionTitle: 'Data Synchronization',
+    sectionDescription:
+      'Data synchronization keeps your systems aligned in real time. We focus on reliable pipelines, conflict resolution, and secure transfers so your teams always work from a single source of truth.',
+    bottomDescriptionTop:
+      'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which do not look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there is not anything embarrassing hidden.',
+    bottomDescriptionBottom:
+      'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.',
+    mainServicesTitle: 'Main Services',
+    brochuresTitle: 'Brochures',
+    brochuresDescription:
+      'Cras enim urna, interdum nec porttitor vitae, sollicitudin eu eros. Praesent eget mollis nulla.',
+    brochuresPrimaryButton: 'Download',
+    brochuresOrLabel: 'OR',
+    brochuresSecondaryButton: 'Discover',
+    followUsTitle: 'Follow Us',
+    quoteText:
+      "It's the perfect solution for our business. Thanks guys, keep up the good work! It's really wonderful. It's the perfect solution for our business.",
+    quoteAuthor: 'William Blake',
+    serviceLinks: [
+      { _id: new ObjectId().toString(), label: 'Information Security', to: '/information-security' },
+      { _id: new ObjectId().toString(), label: 'Mobile Platforms', to: '/mobile-platform' },
+      { _id: new ObjectId().toString(), label: 'Data Synchronization', to: '/data-synchronization' },
+      { _id: new ObjectId().toString(), label: 'Process Automation', to: '/process-automation' },
+      { _id: new ObjectId().toString(), label: 'Event Processing', to: '/event-processing' },
+      { _id: new ObjectId().toString(), label: 'Content Management', to: '/content-management' },
+    ],
+    socials: [
+      { _id: new ObjectId().toString(), label: 'f' },
+      { _id: new ObjectId().toString(), label: 't' },
+      { _id: new ObjectId().toString(), label: 'i' },
+      { _id: new ObjectId().toString(), label: 'in' },
+    ],
+    featureCards: [
+      {
+        _id: new ObjectId().toString(),
+        title: 'Processes Optimization',
+        description: 'Streamline how data moves between apps and databases with monitoring, retries, and clear ownership.',
+        icon: 'cube',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Standards Compliance',
+        description: 'Align synchronization policies with industry expectations and your internal security requirements.',
+        icon: 'sliders',
+      },
+    ],
+  }
+}
+
+function validateDataSynchronizationArrayItem(section, payload = {}, { partial = false } = {}) {
+  const value = {}
+  const errors = []
+
+  if (section === dataSynchronizationSections.serviceLinks) {
+    const label = typeof payload.label === 'string' ? payload.label.trim() : ''
+    const to = typeof payload.to === 'string' ? payload.to.trim() : ''
+    if (!partial || 'label' in payload) {
+      if (!label) errors.push('label is required')
+      else value.label = label
+    }
+    if (!partial || 'to' in payload) {
+      if (!to) errors.push('to is required')
+      else value.to = to
+    }
+  }
+
+  if (section === dataSynchronizationSections.socials) {
+    const label = typeof payload.label === 'string' ? payload.label.trim() : ''
+    if (!partial || 'label' in payload) {
+      if (!label) errors.push('label is required')
+      else value.label = label
+    }
+  }
+
+  if (section === dataSynchronizationSections.featureCards) {
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const description = typeof payload.description === 'string' ? payload.description.trim() : ''
+    const icon = typeof payload.icon === 'string' ? payload.icon.trim() : ''
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'description' in payload) {
+      if (!description) errors.push('description is required')
+      else value.description = description
+    }
+    if (!partial || 'icon' in payload) {
+      if (!icon) errors.push('icon is required')
+      else value.icon = icon
+    }
+  }
+
+  return { errors, value }
+}
+
 async function getInformationSecurityPageDocument() {
   const collection = getPageContentCollection()
   const existing = await collection.findOne({ key: 'information-security-page' })
@@ -240,6 +501,42 @@ async function getInformationSecurityPageDocument() {
 
   const defaults = {
     ...getDefaultInformationSecurityPage(),
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  }
+
+  await collection.insertOne(defaults)
+  return defaults
+}
+
+async function getMobilePlatformPageDocument() {
+  const collection = getPageContentCollection()
+  const existing = await collection.findOne({ key: 'mobile-platform-page' })
+
+  if (existing) {
+    return existing
+  }
+
+  const defaults = {
+    ...getDefaultMobilePlatformPage(),
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  }
+
+  await collection.insertOne(defaults)
+  return defaults
+}
+
+async function getDataSynchronizationPageDocument() {
+  const collection = getPageContentCollection()
+  const existing = await collection.findOne({ key: 'data-synchronization-page' })
+
+  if (existing) {
+    return existing
+  }
+
+  const defaults = {
+    ...getDefaultDataSynchronizationPage(),
     createdAt: new Date(),
     updatedAt: new Date(),
   }
@@ -827,6 +1124,413 @@ app.delete('/api/information-security-page/:section/:itemId', async (req, res) =
   } catch (error) {
     console.error(error)
     return res.status(500).json({ error: 'Failed to delete information security section item' })
+  }
+})
+
+app.get('/api/mobile-platform-page', async (_req, res) => {
+  try {
+    const page = await getMobilePlatformPageDocument()
+    return res.json(normalizeDocument(page))
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to fetch mobile platform page data' })
+  }
+})
+
+app.put('/api/mobile-platform-page', async (req, res) => {
+  try {
+    const defaultPage = getDefaultMobilePlatformPage()
+    const payload = {
+      heroImage: typeof req.body.heroImage === 'string' ? req.body.heroImage.trim() : '',
+      topImageLeft: typeof req.body.topImageLeft === 'string' ? req.body.topImageLeft.trim() : '',
+      topImageRight: typeof req.body.topImageRight === 'string' ? req.body.topImageRight.trim() : '',
+      heroTitle: typeof req.body.heroTitle === 'string' ? req.body.heroTitle.trim() : 'Mobile Platforms',
+      sectionTitle: typeof req.body.sectionTitle === 'string' ? req.body.sectionTitle.trim() : 'Mobile Platforms',
+      sectionDescription: typeof req.body.sectionDescription === 'string' ? req.body.sectionDescription.trim() : '',
+      bottomDescription: typeof req.body.bottomDescription === 'string' ? req.body.bottomDescription.trim() : '',
+      mainServicesTitle:
+        typeof req.body.mainServicesTitle === 'string' ? req.body.mainServicesTitle.trim() : 'Main Services',
+      brochuresTitle: typeof req.body.brochuresTitle === 'string' ? req.body.brochuresTitle.trim() : 'Brochures',
+      brochuresDescription:
+        typeof req.body.brochuresDescription === 'string' ? req.body.brochuresDescription.trim() : '',
+      brochuresPrimaryButton:
+        typeof req.body.brochuresPrimaryButton === 'string'
+          ? req.body.brochuresPrimaryButton.trim()
+          : 'Download',
+      brochuresSecondaryButton:
+        typeof req.body.brochuresSecondaryButton === 'string'
+          ? req.body.brochuresSecondaryButton.trim()
+          : 'Discover',
+      followUsTitle:
+        typeof req.body.followUsTitle === 'string' ? req.body.followUsTitle.trim() : 'Follow Us',
+      teamTitle: typeof req.body.teamTitle === 'string' ? req.body.teamTitle.trim() : 'Our Team',
+      updatedAt: new Date(),
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'mobile-platform-page' },
+      {
+        $set: payload,
+        $setOnInsert: {
+          key: defaultPage.key,
+          serviceLinks: defaultPage.serviceLinks,
+          socials: defaultPage.socials,
+          checklist: defaultPage.checklist,
+          team: defaultPage.team,
+          skills: defaultPage.skills,
+          createdAt: new Date(),
+        },
+      },
+      { upsert: true },
+    )
+
+    const updatedPage = await getPageContentCollection().findOne({ key: 'mobile-platform-page' })
+    return res.json({
+      message: 'Mobile platform page content updated',
+      page: normalizeDocument(updatedPage),
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update mobile platform page content' })
+  }
+})
+
+app.post('/api/mobile-platform-page/:section', async (req, res) => {
+  try {
+    const { section } = req.params
+    const targetSection = mobilePlatformSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateMobilePlatformArrayItem(targetSection, req.body)
+
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    const page = await getMobilePlatformPageDocument()
+    const nextItem = {
+      _id: new ObjectId().toString(),
+      ...value,
+    }
+    const nextItems = [...(page[targetSection] || []), nextItem]
+
+    await getPageContentCollection().updateOne(
+      { key: 'mobile-platform-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.status(201).json({
+      message: `${targetSection} item created successfully`,
+      item: nextItem,
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to create mobile platform section item' })
+  }
+})
+
+app.patch('/api/mobile-platform-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = mobilePlatformSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateMobilePlatformArrayItem(targetSection, req.body, {
+      partial: true,
+    })
+
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    if (!Object.keys(value).length) {
+      return res.status(400).json({ error: 'At least one field is required to update' })
+    }
+
+    const page = await getMobilePlatformPageDocument()
+    const items = page[targetSection] || []
+    const index = items.findIndex((item) => item._id === itemId)
+
+    if (index === -1) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    const updatedItem = {
+      ...items[index],
+      ...value,
+    }
+
+    const nextItems = [...items]
+    nextItems[index] = updatedItem
+
+    await getPageContentCollection().updateOne(
+      { key: 'mobile-platform-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.json({
+      message: `${targetSection} item updated successfully`,
+      item: updatedItem,
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update mobile platform section item' })
+  }
+})
+
+app.delete('/api/mobile-platform-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = mobilePlatformSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const page = await getMobilePlatformPageDocument()
+    const items = page[targetSection] || []
+    const nextItems = items.filter((item) => item._id !== itemId)
+
+    if (nextItems.length === items.length) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'mobile-platform-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.json({ message: `${targetSection} item deleted successfully` })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to delete mobile platform section item' })
+  }
+})
+
+app.get('/api/data-synchronization-page', async (_req, res) => {
+  try {
+    const page = await getDataSynchronizationPageDocument()
+    return res.json(normalizeDocument(page))
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to fetch data synchronization page data' })
+  }
+})
+
+app.put('/api/data-synchronization-page', async (req, res) => {
+  try {
+    const defaultPage = getDefaultDataSynchronizationPage()
+    const payload = {
+      heroImage: typeof req.body.heroImage === 'string' ? req.body.heroImage.trim() : '',
+      mainImage: typeof req.body.mainImage === 'string' ? req.body.mainImage.trim() : '',
+      heroTitle:
+        typeof req.body.heroTitle === 'string' ? req.body.heroTitle.trim() : 'Data Synchronization',
+      sectionTitle:
+        typeof req.body.sectionTitle === 'string' ? req.body.sectionTitle.trim() : 'Data Synchronization',
+      sectionDescription:
+        typeof req.body.sectionDescription === 'string' ? req.body.sectionDescription.trim() : '',
+      bottomDescriptionTop:
+        typeof req.body.bottomDescriptionTop === 'string' ? req.body.bottomDescriptionTop.trim() : '',
+      bottomDescriptionBottom:
+        typeof req.body.bottomDescriptionBottom === 'string' ? req.body.bottomDescriptionBottom.trim() : '',
+      mainServicesTitle:
+        typeof req.body.mainServicesTitle === 'string' ? req.body.mainServicesTitle.trim() : 'Main Services',
+      brochuresTitle: typeof req.body.brochuresTitle === 'string' ? req.body.brochuresTitle.trim() : 'Brochures',
+      brochuresDescription:
+        typeof req.body.brochuresDescription === 'string' ? req.body.brochuresDescription.trim() : '',
+      brochuresPrimaryButton:
+        typeof req.body.brochuresPrimaryButton === 'string'
+          ? req.body.brochuresPrimaryButton.trim()
+          : 'Download',
+      brochuresOrLabel: typeof req.body.brochuresOrLabel === 'string' ? req.body.brochuresOrLabel.trim() : 'OR',
+      brochuresSecondaryButton:
+        typeof req.body.brochuresSecondaryButton === 'string'
+          ? req.body.brochuresSecondaryButton.trim()
+          : 'Discover',
+      followUsTitle:
+        typeof req.body.followUsTitle === 'string' ? req.body.followUsTitle.trim() : 'Follow Us',
+      quoteText: typeof req.body.quoteText === 'string' ? req.body.quoteText.trim() : '',
+      quoteAuthor: typeof req.body.quoteAuthor === 'string' ? req.body.quoteAuthor.trim() : '',
+      updatedAt: new Date(),
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'data-synchronization-page' },
+      {
+        $set: payload,
+        $setOnInsert: {
+          key: defaultPage.key,
+          serviceLinks: defaultPage.serviceLinks,
+          socials: defaultPage.socials,
+          featureCards: defaultPage.featureCards,
+          createdAt: new Date(),
+        },
+      },
+      { upsert: true },
+    )
+
+    const updatedPage = await getPageContentCollection().findOne({ key: 'data-synchronization-page' })
+    return res.json({
+      message: 'Data synchronization page content updated',
+      page: normalizeDocument(updatedPage),
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update data synchronization page content' })
+  }
+})
+
+app.post('/api/data-synchronization-page/:section', async (req, res) => {
+  try {
+    const { section } = req.params
+    const targetSection = dataSynchronizationSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateDataSynchronizationArrayItem(targetSection, req.body)
+
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    const page = await getDataSynchronizationPageDocument()
+    const nextItem = {
+      _id: new ObjectId().toString(),
+      ...value,
+    }
+    const nextItems = [...(page[targetSection] || []), nextItem]
+
+    await getPageContentCollection().updateOne(
+      { key: 'data-synchronization-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.status(201).json({
+      message: `${targetSection} item created successfully`,
+      item: nextItem,
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to create data synchronization section item' })
+  }
+})
+
+app.patch('/api/data-synchronization-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = dataSynchronizationSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateDataSynchronizationArrayItem(targetSection, req.body, {
+      partial: true,
+    })
+
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    if (!Object.keys(value).length) {
+      return res.status(400).json({ error: 'At least one field is required to update' })
+    }
+
+    const page = await getDataSynchronizationPageDocument()
+    const items = page[targetSection] || []
+    const index = items.findIndex((item) => item._id === itemId)
+
+    if (index === -1) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    const updatedItem = {
+      ...items[index],
+      ...value,
+    }
+
+    const nextItems = [...items]
+    nextItems[index] = updatedItem
+
+    await getPageContentCollection().updateOne(
+      { key: 'data-synchronization-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.json({
+      message: `${targetSection} item updated successfully`,
+      item: updatedItem,
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update data synchronization section item' })
+  }
+})
+
+app.delete('/api/data-synchronization-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = dataSynchronizationSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const page = await getDataSynchronizationPageDocument()
+    const items = page[targetSection] || []
+    const nextItems = items.filter((item) => item._id !== itemId)
+
+    if (nextItems.length === items.length) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'data-synchronization-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.json({ message: `${targetSection} item deleted successfully` })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to delete data synchronization section item' })
   }
 })
 
