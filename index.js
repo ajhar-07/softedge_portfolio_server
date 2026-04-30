@@ -244,6 +244,13 @@ const dataSynchronizationSections = {
   featureCards: 'featureCards',
 }
 
+const processAutomationSections = {
+  serviceLinks: 'serviceLinks',
+  socials: 'socials',
+  cards: 'cards',
+  faqs: 'faqs',
+}
+
 function getDefaultMobilePlatformPage() {
   return {
     key: 'mobile-platform-page',
@@ -491,6 +498,160 @@ function validateDataSynchronizationArrayItem(section, payload = {}, { partial =
   return { errors, value }
 }
 
+function getDefaultProcessAutomationPage() {
+  return {
+    key: 'process-automation-page',
+    heroImage:
+      'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=2000&q=80',
+    heroStripImage:
+      'https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1600&q=80',
+    heroTitle: 'Process Automation',
+    sectionTitle: 'Process Automation',
+    sectionDescription:
+      'Process automation is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using content here.',
+    sectionDescriptionBottom:
+      'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which do not look even slightly believable.',
+    finalDescription:
+      'If you are going to use a passage of Lorem Ipsum, you need to be sure there is not anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.',
+    stripLabel: 'Automation',
+    mainServicesTitle: 'Main Services',
+    brochuresTitle: 'Brochures',
+    brochuresDescription:
+      'Cras enim urna, interdum nec porttitor vitae, sollicitudin eu eros. Praesent eget mollis nulla.',
+    brochuresPrimaryButton: 'Download',
+    brochuresOrLabel: 'OR',
+    brochuresSecondaryButton: 'Discover',
+    followUsTitle: 'Follow Us',
+    serviceLinks: [
+      { _id: new ObjectId().toString(), label: 'Information Security', to: '/information-security' },
+      { _id: new ObjectId().toString(), label: 'Mobile Platforms', to: '/mobile-platform' },
+      { _id: new ObjectId().toString(), label: 'Data Synchronization', to: '/data-synchronization' },
+      { _id: new ObjectId().toString(), label: 'Process Automation', to: '/process-automation' },
+      { _id: new ObjectId().toString(), label: 'Event Processing', to: '/event-processing' },
+      { _id: new ObjectId().toString(), label: 'Content Management', to: '/content-management' },
+    ],
+    socials: [
+      { _id: new ObjectId().toString(), label: 'f' },
+      { _id: new ObjectId().toString(), label: 't' },
+      { _id: new ObjectId().toString(), label: 'i' },
+      { _id: new ObjectId().toString(), label: 'in' },
+    ],
+    cards: [
+      {
+        _id: new ObjectId().toString(),
+        title: 'Web Development',
+        description: 'We focus on the best practices for IT solutions and services with reliable delivery.',
+        image: 'https://images.unsplash.com/photo-1498050100023-c117bdebc3b4?auto=format&fit=crop&w=900&q=80',
+        icon: 'code',
+        variant: 'overlay',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Branding Services',
+        description: '',
+        image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=80',
+        icon: 'megaphone',
+        variant: 'footer',
+      },
+    ],
+    faqs: [
+      {
+        _id: new ObjectId().toString(),
+        question: '1. Why we are best company?',
+        answer:
+          'We are committed to providing our customers with exceptional service while offering our employees the best training. Our automation approach is structured, measurable, and scalable.',
+        open: true,
+      },
+      {
+        _id: new ObjectId().toString(),
+        question: '2. How the template process works?',
+        answer:
+          'We start with discovery, map workflows, implement integrations, and iterate with monitoring and feedback loops.',
+        open: false,
+      },
+      {
+        _id: new ObjectId().toString(),
+        question: '3. What should be listed on a business card?',
+        answer:
+          'Business name, your role, primary contact details, website, and a clear value proposition line are the essentials.',
+        open: false,
+      },
+    ],
+  }
+}
+
+function validateProcessAutomationArrayItem(section, payload = {}, { partial = false } = {}) {
+  const value = {}
+  const errors = []
+
+  if (section === processAutomationSections.serviceLinks) {
+    const label = typeof payload.label === 'string' ? payload.label.trim() : ''
+    const to = typeof payload.to === 'string' ? payload.to.trim() : ''
+    if (!partial || 'label' in payload) {
+      if (!label) errors.push('label is required')
+      else value.label = label
+    }
+    if (!partial || 'to' in payload) {
+      if (!to) errors.push('to is required')
+      else value.to = to
+    }
+  }
+
+  if (section === processAutomationSections.socials) {
+    const label = typeof payload.label === 'string' ? payload.label.trim() : ''
+    if (!partial || 'label' in payload) {
+      if (!label) errors.push('label is required')
+      else value.label = label
+    }
+  }
+
+  if (section === processAutomationSections.cards) {
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const description = typeof payload.description === 'string' ? payload.description.trim() : ''
+    const image = typeof payload.image === 'string' ? payload.image.trim() : ''
+    const icon = typeof payload.icon === 'string' ? payload.icon.trim() : ''
+    const variant = typeof payload.variant === 'string' ? payload.variant.trim() : ''
+
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if ('description' in payload || !partial) {
+      value.description = description
+    }
+    if (!partial || 'image' in payload) {
+      if (!image) errors.push('image is required')
+      else value.image = image
+    }
+    if (!partial || 'icon' in payload) {
+      if (!icon) errors.push('icon is required')
+      else value.icon = icon
+    }
+    if (!partial || 'variant' in payload) {
+      if (!variant) errors.push('variant is required')
+      else value.variant = variant
+    }
+  }
+
+  if (section === processAutomationSections.faqs) {
+    const question = typeof payload.question === 'string' ? payload.question.trim() : ''
+    const answer = typeof payload.answer === 'string' ? payload.answer.trim() : ''
+    if (!partial || 'question' in payload) {
+      if (!question) errors.push('question is required')
+      else value.question = question
+    }
+    if (!partial || 'answer' in payload) {
+      if (!answer) errors.push('answer is required')
+      else value.answer = answer
+    }
+    if ('open' in payload || !partial) {
+      value.open = Boolean(payload.open)
+    }
+  }
+
+  return { errors, value }
+}
+
 async function getInformationSecurityPageDocument() {
   const collection = getPageContentCollection()
   const existing = await collection.findOne({ key: 'information-security-page' })
@@ -537,6 +698,24 @@ async function getDataSynchronizationPageDocument() {
 
   const defaults = {
     ...getDefaultDataSynchronizationPage(),
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  }
+
+  await collection.insertOne(defaults)
+  return defaults
+}
+
+async function getProcessAutomationPageDocument() {
+  const collection = getPageContentCollection()
+  const existing = await collection.findOne({ key: 'process-automation-page' })
+
+  if (existing) {
+    return existing
+  }
+
+  const defaults = {
+    ...getDefaultProcessAutomationPage(),
     createdAt: new Date(),
     updatedAt: new Date(),
   }
@@ -1531,6 +1710,210 @@ app.delete('/api/data-synchronization-page/:section/:itemId', async (req, res) =
   } catch (error) {
     console.error(error)
     return res.status(500).json({ error: 'Failed to delete data synchronization section item' })
+  }
+})
+
+app.get('/api/process-automation-page', async (_req, res) => {
+  try {
+    const page = await getProcessAutomationPageDocument()
+    return res.json(normalizeDocument(page))
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to fetch process automation page data' })
+  }
+})
+
+app.put('/api/process-automation-page', async (req, res) => {
+  try {
+    const defaultPage = getDefaultProcessAutomationPage()
+    const payload = {
+      heroImage: typeof req.body.heroImage === 'string' ? req.body.heroImage.trim() : '',
+      heroStripImage: typeof req.body.heroStripImage === 'string' ? req.body.heroStripImage.trim() : '',
+      heroTitle: typeof req.body.heroTitle === 'string' ? req.body.heroTitle.trim() : 'Process Automation',
+      sectionTitle:
+        typeof req.body.sectionTitle === 'string' ? req.body.sectionTitle.trim() : 'Process Automation',
+      sectionDescription:
+        typeof req.body.sectionDescription === 'string' ? req.body.sectionDescription.trim() : '',
+      sectionDescriptionBottom:
+        typeof req.body.sectionDescriptionBottom === 'string' ? req.body.sectionDescriptionBottom.trim() : '',
+      finalDescription: typeof req.body.finalDescription === 'string' ? req.body.finalDescription.trim() : '',
+      stripLabel: typeof req.body.stripLabel === 'string' ? req.body.stripLabel.trim() : 'Automation',
+      mainServicesTitle:
+        typeof req.body.mainServicesTitle === 'string' ? req.body.mainServicesTitle.trim() : 'Main Services',
+      brochuresTitle: typeof req.body.brochuresTitle === 'string' ? req.body.brochuresTitle.trim() : 'Brochures',
+      brochuresDescription:
+        typeof req.body.brochuresDescription === 'string' ? req.body.brochuresDescription.trim() : '',
+      brochuresPrimaryButton:
+        typeof req.body.brochuresPrimaryButton === 'string'
+          ? req.body.brochuresPrimaryButton.trim()
+          : 'Download',
+      brochuresOrLabel: typeof req.body.brochuresOrLabel === 'string' ? req.body.brochuresOrLabel.trim() : 'OR',
+      brochuresSecondaryButton:
+        typeof req.body.brochuresSecondaryButton === 'string'
+          ? req.body.brochuresSecondaryButton.trim()
+          : 'Discover',
+      followUsTitle:
+        typeof req.body.followUsTitle === 'string' ? req.body.followUsTitle.trim() : 'Follow Us',
+      updatedAt: new Date(),
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'process-automation-page' },
+      {
+        $set: payload,
+        $setOnInsert: {
+          key: defaultPage.key,
+          serviceLinks: defaultPage.serviceLinks,
+          socials: defaultPage.socials,
+          cards: defaultPage.cards,
+          faqs: defaultPage.faqs,
+          createdAt: new Date(),
+        },
+      },
+      { upsert: true },
+    )
+
+    const updatedPage = await getPageContentCollection().findOne({ key: 'process-automation-page' })
+    return res.json({
+      message: 'Process automation page content updated',
+      page: normalizeDocument(updatedPage),
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update process automation page content' })
+  }
+})
+
+app.post('/api/process-automation-page/:section', async (req, res) => {
+  try {
+    const { section } = req.params
+    const targetSection = processAutomationSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateProcessAutomationArrayItem(targetSection, req.body)
+
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    const page = await getProcessAutomationPageDocument()
+    const nextItem = {
+      _id: new ObjectId().toString(),
+      ...value,
+    }
+    const nextItems = [...(page[targetSection] || []), nextItem]
+
+    await getPageContentCollection().updateOne(
+      { key: 'process-automation-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.status(201).json({
+      message: `${targetSection} item created successfully`,
+      item: nextItem,
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to create process automation section item' })
+  }
+})
+
+app.patch('/api/process-automation-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = processAutomationSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateProcessAutomationArrayItem(targetSection, req.body, {
+      partial: true,
+    })
+
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    if (!Object.keys(value).length) {
+      return res.status(400).json({ error: 'At least one field is required to update' })
+    }
+
+    const page = await getProcessAutomationPageDocument()
+    const items = page[targetSection] || []
+    const index = items.findIndex((item) => item._id === itemId)
+
+    if (index === -1) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    const updatedItem = {
+      ...items[index],
+      ...value,
+    }
+
+    const nextItems = [...items]
+    nextItems[index] = updatedItem
+
+    await getPageContentCollection().updateOne(
+      { key: 'process-automation-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.json({
+      message: `${targetSection} item updated successfully`,
+      item: updatedItem,
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update process automation section item' })
+  }
+})
+
+app.delete('/api/process-automation-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = processAutomationSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const page = await getProcessAutomationPageDocument()
+    const items = page[targetSection] || []
+    const nextItems = items.filter((item) => item._id !== itemId)
+
+    if (nextItems.length === items.length) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'process-automation-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.json({ message: `${targetSection} item deleted successfully` })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to delete process automation section item' })
   }
 })
 
