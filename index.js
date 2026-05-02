@@ -251,6 +251,20 @@ const processAutomationSections = {
   faqs: 'faqs',
 }
 
+const eventProcessingSections = {
+  serviceLinks: 'serviceLinks',
+  socials: 'socials',
+  checklist: 'checklist',
+  benefits: 'benefits',
+}
+
+const contentManagementSections = {
+  serviceLinks: 'serviceLinks',
+  socials: 'socials',
+  gallery: 'gallery',
+  checklist: 'checklist',
+}
+
 function getDefaultMobilePlatformPage() {
   return {
     key: 'mobile-platform-page',
@@ -652,6 +666,300 @@ function validateProcessAutomationArrayItem(section, payload = {}, { partial = f
   return { errors, value }
 }
 
+function getDefaultEventProcessingPage() {
+  return {
+    key: 'event-processing-page',
+    heroImage:
+      'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=2000&q=80',
+    leftImage:
+      'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1000&q=80',
+    rightImage:
+      'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80',
+    heroTitle: 'Event Processing',
+    sectionTitle: 'Event Processing',
+    sectionDescription:
+      'Event processing helps teams react instantly to system activities and user actions. We design robust event flows for real-time analytics, automation triggers, and reliable outcomes.',
+    leftColumnText:
+      'It is a long established fact that a reader will be distracted by the readable content of a page. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.',
+    benefitsSectionTitle: 'Our work benefits',
+    benefitsSectionDescription:
+      'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which do not look even slightly believable.',
+    benefitReadMoreLabel: 'Read more →',
+    mainServicesTitle: 'Main Services',
+    brochuresTitle: 'Brochures',
+    brochuresDescription:
+      'Cras enim urna, interdum nec porttitor vitae, sollicitudin eu eros. Praesent eget mollis nulla.',
+    brochuresPrimaryButton: 'Download',
+    brochuresOrLabel: 'OR',
+    brochuresSecondaryButton: 'Discover',
+    followUsTitle: 'Follow Us',
+    serviceLinks: [
+      { _id: new ObjectId().toString(), label: 'Information Security', to: '/information-security' },
+      { _id: new ObjectId().toString(), label: 'Mobile Platforms', to: '/mobile-platform' },
+      { _id: new ObjectId().toString(), label: 'Data Synchronization', to: '/data-synchronization' },
+      { _id: new ObjectId().toString(), label: 'Process Automation', to: '/process-automation' },
+      { _id: new ObjectId().toString(), label: 'Event Processing', to: '/event-processing' },
+      { _id: new ObjectId().toString(), label: 'Content Management', to: '/content-management' },
+    ],
+    socials: [
+      { _id: new ObjectId().toString(), label: 'f' },
+      { _id: new ObjectId().toString(), label: 't' },
+      { _id: new ObjectId().toString(), label: 'i' },
+      { _id: new ObjectId().toString(), label: 'in' },
+    ],
+    checklist: [
+      { _id: new ObjectId().toString(), text: 'Marketing options and rates' },
+      { _id: new ObjectId().toString(), text: 'The ability to turnaround consulting' },
+      { _id: new ObjectId().toString(), text: 'Research beyond the business plan' },
+      { _id: new ObjectId().toString(), text: 'Customer engagement matters' },
+    ],
+    benefits: [
+      {
+        _id: new ObjectId().toString(),
+        title: 'Information Security',
+        text: 'We focus on the best practices for IT solutions and services.',
+        icon: '🛡️',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Mobile Platforms',
+        text: 'We focus on the best practices for IT solutions and services.',
+        icon: '📱',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Data Synchronization',
+        text: 'We focus on the best practices for IT solutions and services.',
+        icon: '🔄',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Process Automation',
+        text: 'We focus on the best practices for IT solutions and services.',
+        icon: '⚙️',
+      },
+    ],
+  }
+}
+
+function getDefaultContentManagementPage() {
+  return {
+    key: 'content-management-page',
+    heroImage:
+      'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=2000&q=80',
+    mainImage:
+      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1500&q=80',
+    heroTitle: 'Content Management',
+    sectionTitle: 'Content Management',
+    sectionDescription:
+      'Content management gives your team a single place to plan, publish, and optimize digital experiences. We focus on structured workflows, reusable assets, and scalable governance.',
+    sectionSecondaryDescription:
+      'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.',
+    benefitsSectionTitle: 'Our work benefits',
+    benefitsSectionDescription:
+      'There are many variations of passages available, but the majority have suffered alteration in some form, by injected humour, or randomised words which do not look even slightly believable.',
+    mainServicesTitle: 'Main Services',
+    brochuresTitle: 'Brochures',
+    brochuresDescription:
+      'Cras enim urna, interdum nec porttitor vitae, sollicitudin eu eros. Praesent eget mollis nulla.',
+    brochuresPrimaryButton: 'Download',
+    brochuresOrLabel: 'OR',
+    brochuresSecondaryButton: 'Discover',
+    followUsTitle: 'Follow Us',
+    serviceLinks: [
+      { _id: new ObjectId().toString(), label: 'Information Security', to: '/information-security' },
+      { _id: new ObjectId().toString(), label: 'Mobile Platforms', to: '/mobile-platform' },
+      { _id: new ObjectId().toString(), label: 'Data Synchronization', to: '/data-synchronization' },
+      { _id: new ObjectId().toString(), label: 'Process Automation', to: '/process-automation' },
+      { _id: new ObjectId().toString(), label: 'Event Processing', to: '/event-processing' },
+      { _id: new ObjectId().toString(), label: 'Content Management', to: '/content-management' },
+    ],
+    socials: [
+      { _id: new ObjectId().toString(), label: 'f' },
+      { _id: new ObjectId().toString(), label: 't' },
+      { _id: new ObjectId().toString(), label: 'i' },
+      { _id: new ObjectId().toString(), label: 'in' },
+    ],
+    gallery: [
+      {
+        _id: new ObjectId().toString(),
+        url: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=900&q=80',
+      },
+      {
+        _id: new ObjectId().toString(),
+        url: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80',
+      },
+      {
+        _id: new ObjectId().toString(),
+        url: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=900&q=80',
+      },
+    ],
+    checklist: [
+      { _id: new ObjectId().toString(), text: 'Marketing options and rates' },
+      { _id: new ObjectId().toString(), text: 'Research beyond the business plan' },
+      { _id: new ObjectId().toString(), text: 'The ability to turnaround consulting' },
+      { _id: new ObjectId().toString(), text: 'Customer engagement matters' },
+    ],
+  }
+}
+
+function getDefaultPrivacyPolicyPage() {
+  return {
+    key: 'privacy-policy-page',
+    heroImage:
+      'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=2000&q=80',
+    pageTitle: 'Privacy Policy',
+    sections: [
+      {
+        _id: new ObjectId().toString(),
+        title: 'Introduction',
+        paragraphs: [
+          'SoftEdge Technology Limited is committed to protecting the privacy of our clients, partners, and website visitors. This Privacy Policy explains how we collect, use, store, and protect your personal information when you interact with our website or services.',
+          'By using our platform, you agree to the practices described in this policy. We encourage you to read this page carefully so you understand what information we process and why we process it.',
+        ],
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Use of user information.',
+        paragraphs: [
+          'We use the information we collect to respond to inquiries, deliver requested services, improve user experience, maintain platform security, and communicate important service-related updates.',
+        ],
+        bullets: [
+          'Provide support and respond to business inquiries',
+          'Improve website performance and user experience',
+          'Maintain service quality, security, and compliance',
+        ],
+        footer:
+          'We only use personal information for legitimate business purposes and process it in a way that is relevant, limited, and appropriate for the services we provide.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Disclosure of user information.',
+        paragraphs: [
+          'We do not sell or rent your personal information. Information may be shared only when necessary with trusted service providers, legal authorities, or internal teams that help us operate our business, and always under appropriate confidentiality and security obligations.',
+        ],
+      },
+    ],
+    asidePrivacyFirst: {
+      label: 'Privacy First',
+      title: 'Your data deserves clarity and protection.',
+      description:
+        'We keep our privacy practices transparent, secure, and aligned with the trust our clients place in us.',
+    },
+    asideHighlights: {
+      label: 'Highlights',
+      items: [
+        { _id: new ObjectId().toString(), text: 'Clear handling of personal and business information' },
+        { _id: new ObjectId().toString(), text: 'Restricted sharing with trusted parties only' },
+        { _id: new ObjectId().toString(), text: 'Security-focused storage and operational safeguards' },
+      ],
+    },
+    asideNeedHelp: {
+      label: 'Need help?',
+      description:
+        'For privacy-related questions, you can connect with our team and request more information about data handling, updates, or policy clarification.',
+    },
+  }
+}
+
+function validateEventProcessingArrayItem(section, payload = {}, { partial = false } = {}) {
+  const value = {}
+  const errors = []
+
+  if (section === eventProcessingSections.serviceLinks) {
+    const label = typeof payload.label === 'string' ? payload.label.trim() : ''
+    const to = typeof payload.to === 'string' ? payload.to.trim() : ''
+    if (!partial || 'label' in payload) {
+      if (!label) errors.push('label is required')
+      else value.label = label
+    }
+    if (!partial || 'to' in payload) {
+      if (!to) errors.push('to is required')
+      else value.to = to
+    }
+  }
+
+  if (section === eventProcessingSections.socials) {
+    const label = typeof payload.label === 'string' ? payload.label.trim() : ''
+    if (!partial || 'label' in payload) {
+      if (!label) errors.push('label is required')
+      else value.label = label
+    }
+  }
+
+  if (section === eventProcessingSections.checklist) {
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
+    }
+  }
+
+  if (section === eventProcessingSections.benefits) {
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    const icon = typeof payload.icon === 'string' ? payload.icon.trim() : ''
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
+    }
+    if (!partial || 'icon' in payload) {
+      if (!icon) errors.push('icon is required')
+      else value.icon = icon
+    }
+  }
+
+  return { errors, value }
+}
+
+function validateContentManagementArrayItem(section, payload = {}, { partial = false } = {}) {
+  const value = {}
+  const errors = []
+
+  if (section === contentManagementSections.serviceLinks) {
+    const label = typeof payload.label === 'string' ? payload.label.trim() : ''
+    const to = typeof payload.to === 'string' ? payload.to.trim() : ''
+    if (!partial || 'label' in payload) {
+      if (!label) errors.push('label is required')
+      else value.label = label
+    }
+    if (!partial || 'to' in payload) {
+      if (!to) errors.push('to is required')
+      else value.to = to
+    }
+  }
+
+  if (section === contentManagementSections.socials) {
+    const label = typeof payload.label === 'string' ? payload.label.trim() : ''
+    if (!partial || 'label' in payload) {
+      if (!label) errors.push('label is required')
+      else value.label = label
+    }
+  }
+
+  if (section === contentManagementSections.gallery) {
+    const url = typeof payload.url === 'string' ? payload.url.trim() : ''
+    if (!partial || 'url' in payload) {
+      if (!url) errors.push('url is required')
+      else value.url = url
+    }
+  }
+
+  if (section === contentManagementSections.checklist) {
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
+    }
+  }
+
+  return { errors, value }
+}
+
 async function getInformationSecurityPageDocument() {
   const collection = getPageContentCollection()
   const existing = await collection.findOne({ key: 'information-security-page' })
@@ -716,6 +1024,130 @@ async function getProcessAutomationPageDocument() {
 
   const defaults = {
     ...getDefaultProcessAutomationPage(),
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  }
+
+  await collection.insertOne(defaults)
+  return defaults
+}
+
+async function getEventProcessingPageDocument() {
+  const collection = getPageContentCollection()
+  const existing = await collection.findOne({ key: 'event-processing-page' })
+
+  if (existing) {
+    return existing
+  }
+
+  const defaults = {
+    ...getDefaultEventProcessingPage(),
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  }
+
+  await collection.insertOne(defaults)
+  return defaults
+}
+
+async function getContentManagementPageDocument() {
+  const collection = getPageContentCollection()
+  const existing = await collection.findOne({ key: 'content-management-page' })
+
+  if (existing) {
+    return existing
+  }
+
+  const defaults = {
+    ...getDefaultContentManagementPage(),
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  }
+
+  await collection.insertOne(defaults)
+  return defaults
+}
+
+function validatePrivacyPolicySectionPayload(payload = {}, { partial = false } = {}) {
+  const errors = []
+  const value = {}
+
+  if (!partial || 'title' in payload) {
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    if (!partial && !title) errors.push('title is required')
+    if (partial && 'title' in payload && !title) errors.push('title cannot be empty')
+    if (title) value.title = title
+  }
+
+  if (!partial || 'paragraphs' in payload) {
+    if (!partial) {
+      if (!Array.isArray(payload.paragraphs)) {
+        errors.push('paragraphs must be an array of strings')
+      } else {
+        const paragraphs = payload.paragraphs
+          .map((p) => (typeof p === 'string' ? p.trim() : ''))
+          .filter((p) => p.length > 0)
+        if (!paragraphs.length) errors.push('paragraphs must contain at least one non-empty string')
+        else value.paragraphs = paragraphs
+      }
+    } else if ('paragraphs' in payload) {
+      if (!Array.isArray(payload.paragraphs)) {
+        errors.push('paragraphs must be an array')
+      } else {
+        value.paragraphs = payload.paragraphs.map((p) => (typeof p === 'string' ? p.trim() : ''))
+      }
+    }
+  }
+
+  if ('bullets' in payload) {
+    if (payload.bullets === null) {
+      value.bullets = null
+    } else if (Array.isArray(payload.bullets)) {
+      value.bullets = payload.bullets
+        .map((b) => (typeof b === 'string' ? b.trim() : ''))
+        .filter((b) => b.length > 0)
+    } else {
+      errors.push('bullets must be an array or null')
+    }
+  }
+
+  if ('footer' in payload) {
+    if (payload.footer === null) {
+      value.footer = null
+    } else if (typeof payload.footer === 'string') {
+      value.footer = payload.footer.trim()
+    } else {
+      errors.push('footer must be a string or null')
+    }
+  }
+
+  return { errors, value }
+}
+
+function validatePrivacyPolicyHighlightPayload(payload = {}, { partial = false } = {}) {
+  const errors = []
+  const value = {}
+  const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+
+  if (!partial || 'text' in payload) {
+    if (!text && !partial) errors.push('text is required')
+    if (partial && 'text' in payload && !text) errors.push('text cannot be empty')
+    if (text) value.text = text
+  }
+
+  return { errors, value }
+}
+
+async function getPrivacyPolicyPageDocument() {
+  const collection = getPageContentCollection()
+  const existing = await collection.findOne({ key: 'privacy-policy-page' })
+
+  if (existing) {
+    return existing
+  }
+
+  const defaults = {
+    ...getDefaultPrivacyPolicyPage(),
     createdAt: new Date(),
     updatedAt: new Date(),
   }
@@ -1914,6 +2346,736 @@ app.delete('/api/process-automation-page/:section/:itemId', async (req, res) => 
   } catch (error) {
     console.error(error)
     return res.status(500).json({ error: 'Failed to delete process automation section item' })
+  }
+})
+
+app.get('/api/event-processing-page', async (_req, res) => {
+  try {
+    const page = await getEventProcessingPageDocument()
+    return res.json(normalizeDocument(page))
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to fetch event processing page data' })
+  }
+})
+
+app.put('/api/event-processing-page', async (req, res) => {
+  try {
+    const defaultPage = getDefaultEventProcessingPage()
+    const payload = {
+      heroImage: typeof req.body.heroImage === 'string' ? req.body.heroImage.trim() : '',
+      leftImage: typeof req.body.leftImage === 'string' ? req.body.leftImage.trim() : '',
+      rightImage: typeof req.body.rightImage === 'string' ? req.body.rightImage.trim() : '',
+      heroTitle: typeof req.body.heroTitle === 'string' ? req.body.heroTitle.trim() : 'Event Processing',
+      sectionTitle:
+        typeof req.body.sectionTitle === 'string' ? req.body.sectionTitle.trim() : 'Event Processing',
+      sectionDescription:
+        typeof req.body.sectionDescription === 'string' ? req.body.sectionDescription.trim() : '',
+      leftColumnText: typeof req.body.leftColumnText === 'string' ? req.body.leftColumnText.trim() : '',
+      benefitsSectionTitle:
+        typeof req.body.benefitsSectionTitle === 'string'
+          ? req.body.benefitsSectionTitle.trim()
+          : 'Our work benefits',
+      benefitsSectionDescription:
+        typeof req.body.benefitsSectionDescription === 'string'
+          ? req.body.benefitsSectionDescription.trim()
+          : '',
+      benefitReadMoreLabel:
+        typeof req.body.benefitReadMoreLabel === 'string'
+          ? req.body.benefitReadMoreLabel.trim()
+          : 'Read more →',
+      mainServicesTitle:
+        typeof req.body.mainServicesTitle === 'string' ? req.body.mainServicesTitle.trim() : 'Main Services',
+      brochuresTitle: typeof req.body.brochuresTitle === 'string' ? req.body.brochuresTitle.trim() : 'Brochures',
+      brochuresDescription:
+        typeof req.body.brochuresDescription === 'string' ? req.body.brochuresDescription.trim() : '',
+      brochuresPrimaryButton:
+        typeof req.body.brochuresPrimaryButton === 'string'
+          ? req.body.brochuresPrimaryButton.trim()
+          : 'Download',
+      brochuresOrLabel: typeof req.body.brochuresOrLabel === 'string' ? req.body.brochuresOrLabel.trim() : 'OR',
+      brochuresSecondaryButton:
+        typeof req.body.brochuresSecondaryButton === 'string'
+          ? req.body.brochuresSecondaryButton.trim()
+          : 'Discover',
+      followUsTitle:
+        typeof req.body.followUsTitle === 'string' ? req.body.followUsTitle.trim() : 'Follow Us',
+      updatedAt: new Date(),
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'event-processing-page' },
+      {
+        $set: payload,
+        $setOnInsert: {
+          key: defaultPage.key,
+          serviceLinks: defaultPage.serviceLinks,
+          socials: defaultPage.socials,
+          checklist: defaultPage.checklist,
+          benefits: defaultPage.benefits,
+          createdAt: new Date(),
+        },
+      },
+      { upsert: true },
+    )
+
+    const updatedPage = await getPageContentCollection().findOne({ key: 'event-processing-page' })
+    return res.json({
+      message: 'Event processing page content updated',
+      page: normalizeDocument(updatedPage),
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update event processing page content' })
+  }
+})
+
+app.post('/api/event-processing-page/:section', async (req, res) => {
+  try {
+    const { section } = req.params
+    const targetSection = eventProcessingSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateEventProcessingArrayItem(targetSection, req.body)
+
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    const page = await getEventProcessingPageDocument()
+    const nextItem = {
+      _id: new ObjectId().toString(),
+      ...value,
+    }
+    const nextItems = [...(page[targetSection] || []), nextItem]
+
+    await getPageContentCollection().updateOne(
+      { key: 'event-processing-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.status(201).json({
+      message: `${targetSection} item created successfully`,
+      item: nextItem,
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to create event processing section item' })
+  }
+})
+
+app.patch('/api/event-processing-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = eventProcessingSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateEventProcessingArrayItem(targetSection, req.body, {
+      partial: true,
+    })
+
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    if (!Object.keys(value).length) {
+      return res.status(400).json({ error: 'At least one field is required to update' })
+    }
+
+    const page = await getEventProcessingPageDocument()
+    const items = page[targetSection] || []
+    const index = items.findIndex((item) => item._id === itemId)
+
+    if (index === -1) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    const updatedItem = {
+      ...items[index],
+      ...value,
+    }
+
+    const nextItems = [...items]
+    nextItems[index] = updatedItem
+
+    await getPageContentCollection().updateOne(
+      { key: 'event-processing-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.json({
+      message: `${targetSection} item updated successfully`,
+      item: updatedItem,
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update event processing section item' })
+  }
+})
+
+app.delete('/api/event-processing-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = eventProcessingSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const page = await getEventProcessingPageDocument()
+    const items = page[targetSection] || []
+    const nextItems = items.filter((item) => item._id !== itemId)
+
+    if (nextItems.length === items.length) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'event-processing-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.json({ message: `${targetSection} item deleted successfully` })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to delete event processing section item' })
+  }
+})
+
+app.get('/api/content-management-page', async (_req, res) => {
+  try {
+    const page = await getContentManagementPageDocument()
+    return res.json(normalizeDocument(page))
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to fetch content management page data' })
+  }
+})
+
+app.put('/api/content-management-page', async (req, res) => {
+  try {
+    const defaultPage = getDefaultContentManagementPage()
+    const payload = {
+      heroImage: typeof req.body.heroImage === 'string' ? req.body.heroImage.trim() : '',
+      mainImage: typeof req.body.mainImage === 'string' ? req.body.mainImage.trim() : '',
+      heroTitle:
+        typeof req.body.heroTitle === 'string' ? req.body.heroTitle.trim() : 'Content Management',
+      sectionTitle:
+        typeof req.body.sectionTitle === 'string' ? req.body.sectionTitle.trim() : 'Content Management',
+      sectionDescription:
+        typeof req.body.sectionDescription === 'string' ? req.body.sectionDescription.trim() : '',
+      sectionSecondaryDescription:
+        typeof req.body.sectionSecondaryDescription === 'string'
+          ? req.body.sectionSecondaryDescription.trim()
+          : '',
+      benefitsSectionTitle:
+        typeof req.body.benefitsSectionTitle === 'string'
+          ? req.body.benefitsSectionTitle.trim()
+          : 'Our work benefits',
+      benefitsSectionDescription:
+        typeof req.body.benefitsSectionDescription === 'string'
+          ? req.body.benefitsSectionDescription.trim()
+          : '',
+      mainServicesTitle:
+        typeof req.body.mainServicesTitle === 'string' ? req.body.mainServicesTitle.trim() : 'Main Services',
+      brochuresTitle: typeof req.body.brochuresTitle === 'string' ? req.body.brochuresTitle.trim() : 'Brochures',
+      brochuresDescription:
+        typeof req.body.brochuresDescription === 'string' ? req.body.brochuresDescription.trim() : '',
+      brochuresPrimaryButton:
+        typeof req.body.brochuresPrimaryButton === 'string'
+          ? req.body.brochuresPrimaryButton.trim()
+          : 'Download',
+      brochuresOrLabel: typeof req.body.brochuresOrLabel === 'string' ? req.body.brochuresOrLabel.trim() : 'OR',
+      brochuresSecondaryButton:
+        typeof req.body.brochuresSecondaryButton === 'string'
+          ? req.body.brochuresSecondaryButton.trim()
+          : 'Discover',
+      followUsTitle:
+        typeof req.body.followUsTitle === 'string' ? req.body.followUsTitle.trim() : 'Follow Us',
+      updatedAt: new Date(),
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'content-management-page' },
+      {
+        $set: payload,
+        $setOnInsert: {
+          key: defaultPage.key,
+          serviceLinks: defaultPage.serviceLinks,
+          socials: defaultPage.socials,
+          gallery: defaultPage.gallery,
+          checklist: defaultPage.checklist,
+          createdAt: new Date(),
+        },
+      },
+      { upsert: true },
+    )
+
+    const updatedPage = await getPageContentCollection().findOne({ key: 'content-management-page' })
+    return res.json({
+      message: 'Content management page content updated',
+      page: normalizeDocument(updatedPage),
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update content management page content' })
+  }
+})
+
+app.post('/api/content-management-page/:section', async (req, res) => {
+  try {
+    const { section } = req.params
+    const targetSection = contentManagementSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateContentManagementArrayItem(targetSection, req.body)
+
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    const page = await getContentManagementPageDocument()
+    const nextItem = {
+      _id: new ObjectId().toString(),
+      ...value,
+    }
+    const nextItems = [...(page[targetSection] || []), nextItem]
+
+    await getPageContentCollection().updateOne(
+      { key: 'content-management-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.status(201).json({
+      message: `${targetSection} item created successfully`,
+      item: nextItem,
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to create content management section item' })
+  }
+})
+
+app.patch('/api/content-management-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = contentManagementSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateContentManagementArrayItem(targetSection, req.body, {
+      partial: true,
+    })
+
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    if (!Object.keys(value).length) {
+      return res.status(400).json({ error: 'At least one field is required to update' })
+    }
+
+    const page = await getContentManagementPageDocument()
+    const items = page[targetSection] || []
+    const index = items.findIndex((item) => item._id === itemId)
+
+    if (index === -1) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    const updatedItem = {
+      ...items[index],
+      ...value,
+    }
+
+    const nextItems = [...items]
+    nextItems[index] = updatedItem
+
+    await getPageContentCollection().updateOne(
+      { key: 'content-management-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.json({
+      message: `${targetSection} item updated successfully`,
+      item: updatedItem,
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update content management section item' })
+  }
+})
+
+app.delete('/api/content-management-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = contentManagementSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const page = await getContentManagementPageDocument()
+    const items = page[targetSection] || []
+    const nextItems = items.filter((item) => item._id !== itemId)
+
+    if (nextItems.length === items.length) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'content-management-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.json({ message: `${targetSection} item deleted successfully` })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to delete content management section item' })
+  }
+})
+
+app.get('/api/privacy-policy-page', async (_req, res) => {
+  try {
+    const page = await getPrivacyPolicyPageDocument()
+    return res.json(normalizeDocument(page))
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to fetch privacy policy page data' })
+  }
+})
+
+app.put('/api/privacy-policy-page', async (req, res) => {
+  try {
+    const page = await getPrivacyPolicyPageDocument()
+    const defaults = getDefaultPrivacyPolicyPage()
+    const payload = { updatedAt: new Date() }
+
+    if (typeof req.body.heroImage === 'string') payload.heroImage = req.body.heroImage.trim()
+    if (typeof req.body.pageTitle === 'string') payload.pageTitle = req.body.pageTitle.trim()
+
+    if (req.body.asidePrivacyFirst && typeof req.body.asidePrivacyFirst === 'object') {
+      const cur = page.asidePrivacyFirst || defaults.asidePrivacyFirst
+      const n = req.body.asidePrivacyFirst
+      payload.asidePrivacyFirst = {
+        label: typeof n.label === 'string' ? n.label.trim() : cur.label,
+        title: typeof n.title === 'string' ? n.title.trim() : cur.title,
+        description: typeof n.description === 'string' ? n.description.trim() : cur.description,
+      }
+    }
+
+    if (req.body.asideHighlights && typeof req.body.asideHighlights === 'object') {
+      const cur = page.asideHighlights || defaults.asideHighlights
+      const n = req.body.asideHighlights
+      payload.asideHighlights = {
+        label: typeof n.label === 'string' ? n.label.trim() : cur.label,
+        items: Array.isArray(cur.items) ? cur.items : [],
+      }
+    }
+
+    if (req.body.asideNeedHelp && typeof req.body.asideNeedHelp === 'object') {
+      const cur = page.asideNeedHelp || defaults.asideNeedHelp
+      const n = req.body.asideNeedHelp
+      payload.asideNeedHelp = {
+        label: typeof n.label === 'string' ? n.label.trim() : cur.label,
+        description: typeof n.description === 'string' ? n.description.trim() : cur.description,
+      }
+    }
+
+    // Document is guaranteed to exist — getPrivacyPolicyPageDocument() inserts defaults if missing.
+    // Do not mix $set with $setOnInsert using the same paths as ...defaults (MongoDB upsert path conflict).
+    const updateResult = await getPageContentCollection().updateOne({ key: 'privacy-policy-page' }, { $set: payload })
+
+    if (!updateResult.matchedCount) {
+      return res.status(500).json({ error: 'Privacy policy document not found after load' })
+    }
+
+    const updatedPage = await getPageContentCollection().findOne({ key: 'privacy-policy-page' })
+    return res.json({
+      message: 'Privacy policy page content updated',
+      page: normalizeDocument(updatedPage),
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update privacy policy page content' })
+  }
+})
+
+app.post('/api/privacy-policy-page/sections', async (req, res) => {
+  try {
+    const { errors, value } = validatePrivacyPolicySectionPayload(req.body, { partial: false })
+
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    const newSection = {
+      _id: new ObjectId().toString(),
+      ...value,
+    }
+
+    const page = await getPrivacyPolicyPageDocument()
+    const nextSections = [...(page.sections || []), newSection]
+
+    await getPageContentCollection().updateOne(
+      { key: 'privacy-policy-page' },
+      {
+        $set: {
+          sections: nextSections,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.status(201).json({
+      message: 'Privacy policy section created successfully',
+      section: newSection,
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to create privacy policy section' })
+  }
+})
+
+app.patch('/api/privacy-policy-page/sections/:sectionId', async (req, res) => {
+  try {
+    const { sectionId } = req.params
+    const { errors, value } = validatePrivacyPolicySectionPayload(req.body, { partial: true })
+
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    if (!Object.keys(value).length) {
+      return res.status(400).json({ error: 'At least one field is required to update' })
+    }
+
+    const page = await getPrivacyPolicyPageDocument()
+    const sections = page.sections || []
+    const index = sections.findIndex((s) => s._id === sectionId)
+
+    if (index === -1) {
+      return res.status(404).json({ error: 'Section not found' })
+    }
+
+    const prev = sections[index]
+    const updated = { ...prev }
+
+    if ('title' in value) updated.title = value.title
+    if ('paragraphs' in value) updated.paragraphs = value.paragraphs
+    if ('bullets' in value) {
+      if (value.bullets === null) delete updated.bullets
+      else updated.bullets = value.bullets
+    }
+    if ('footer' in value) {
+      if (value.footer === null || value.footer === '') delete updated.footer
+      else updated.footer = value.footer
+    }
+
+    const nextSections = [...sections]
+    nextSections[index] = updated
+
+    await getPageContentCollection().updateOne(
+      { key: 'privacy-policy-page' },
+      {
+        $set: {
+          sections: nextSections,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.json({
+      message: 'Privacy policy section updated successfully',
+      section: updated,
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update privacy policy section' })
+  }
+})
+
+app.delete('/api/privacy-policy-page/sections/:sectionId', async (req, res) => {
+  try {
+    const { sectionId } = req.params
+    const page = await getPrivacyPolicyPageDocument()
+    const sections = page.sections || []
+    const nextSections = sections.filter((s) => s._id !== sectionId)
+
+    if (nextSections.length === sections.length) {
+      return res.status(404).json({ error: 'Section not found' })
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'privacy-policy-page' },
+      {
+        $set: {
+          sections: nextSections,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.json({ message: 'Privacy policy section deleted successfully' })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to delete privacy policy section' })
+  }
+})
+
+app.post('/api/privacy-policy-page/highlight-items', async (req, res) => {
+  try {
+    const { errors, value } = validatePrivacyPolicyHighlightPayload(req.body, { partial: false })
+
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    const newItem = {
+      _id: new ObjectId().toString(),
+      ...value,
+    }
+
+    const page = await getPrivacyPolicyPageDocument()
+    const defaults = getDefaultPrivacyPolicyPage()
+    const aside = page.asideHighlights || defaults.asideHighlights
+    const items = [...(aside.items || []), newItem]
+
+    await getPageContentCollection().updateOne(
+      { key: 'privacy-policy-page' },
+      {
+        $set: {
+          asideHighlights: { ...aside, items },
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.status(201).json({
+      message: 'Highlight item created successfully',
+      item: newItem,
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to create privacy policy highlight item' })
+  }
+})
+
+app.patch('/api/privacy-policy-page/highlight-items/:itemId', async (req, res) => {
+  try {
+    const { itemId } = req.params
+    const { errors, value } = validatePrivacyPolicyHighlightPayload(req.body, { partial: true })
+
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    if (!Object.keys(value).length) {
+      return res.status(400).json({ error: 'At least one field is required to update' })
+    }
+
+    const page = await getPrivacyPolicyPageDocument()
+    const defaults = getDefaultPrivacyPolicyPage()
+    const aside = page.asideHighlights || defaults.asideHighlights
+    const list = aside.items || []
+    const index = list.findIndex((item) => item._id === itemId)
+
+    if (index === -1) {
+      return res.status(404).json({ error: 'Highlight item not found' })
+    }
+
+    const updatedItem = { ...list[index], ...value }
+    const nextItems = [...list]
+    nextItems[index] = updatedItem
+
+    await getPageContentCollection().updateOne(
+      { key: 'privacy-policy-page' },
+      {
+        $set: {
+          asideHighlights: { ...aside, items: nextItems },
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.json({
+      message: 'Highlight item updated successfully',
+      item: updatedItem,
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update privacy policy highlight item' })
+  }
+})
+
+app.delete('/api/privacy-policy-page/highlight-items/:itemId', async (req, res) => {
+  try {
+    const { itemId } = req.params
+    const page = await getPrivacyPolicyPageDocument()
+    const defaults = getDefaultPrivacyPolicyPage()
+    const aside = page.asideHighlights || defaults.asideHighlights
+    const list = aside.items || []
+    const nextItems = list.filter((item) => item._id !== itemId)
+
+    if (nextItems.length === list.length) {
+      return res.status(404).json({ error: 'Highlight item not found' })
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'privacy-policy-page' },
+      {
+        $set: {
+          asideHighlights: { ...aside, items: nextItems },
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.json({ message: 'Highlight item deleted successfully' })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to delete privacy policy highlight item' })
   }
 })
 
