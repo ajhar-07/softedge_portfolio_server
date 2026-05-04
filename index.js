@@ -289,6 +289,27 @@ const pharmacyManagementSoftwareSections = {
   faqs: 'faqs',
 }
 
+const restaurantManagementSoftwareSections = {
+  serviceLinks: 'serviceLinks',
+  topPills: 'topPills',
+  modules: 'modules',
+  spotlight: 'spotlight',
+  timeline: 'timeline',
+  stats: 'stats',
+  faqs: 'faqs',
+}
+
+const inventoryManagementSoftwareSections = {
+  serviceLinks: 'serviceLinks',
+  overviewCards: 'overviewCards',
+  operationsFlow: 'operationsFlow',
+  integrationGrid: 'integrationGrid',
+  outcomes: 'outcomes',
+  capabilities: 'capabilities',
+  metrics: 'metrics',
+  faqs: 'faqs',
+}
+
 const eventProcessingSections = {
   serviceLinks: 'serviceLinks',
   socials: 'socials',
@@ -1601,6 +1622,531 @@ function validatePharmacyManagementSoftwareArrayItem(section, payload = {}, { pa
   return { errors, value }
 }
 
+function getDefaultRestaurantManagementSoftwarePage() {
+  return {
+    key: 'restaurant-management-software-page',
+    heroImage:
+      'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=2200&q=80',
+    heroTitle: 'Restaurant Management Software',
+    heroLead:
+      'Table service, kitchen coordination, inventory, and billing in one live command center for fast-growing restaurants.',
+    heroBadge: 'Dine in. Takeaway. Delivery.',
+    coreTitle: 'One platform across front-of-house and back-of-house',
+    coreBody:
+      'SoftEdge Restaurant Suite connects waiters, kitchen, cashier, and owner dashboards. Orders route instantly, modifiers stay attached, and every sale updates stock usage and cash counters in real time.',
+    serviceLinks: [
+      {
+        _id: new ObjectId().toString(),
+        label: 'Restaurant Management Software',
+        to: '/restaurant-management-software',
+      },
+      {
+        _id: new ObjectId().toString(),
+        label: 'Hospital Management Software',
+        to: '/hospital-management-software',
+      },
+      {
+        _id: new ObjectId().toString(),
+        label: 'Pharmacy Management Software',
+        to: '/pharmacy-management-software',
+      },
+      { _id: new ObjectId().toString(), label: 'ERP Software', to: '/erp-software' },
+      { _id: new ObjectId().toString(), label: 'Our Services', to: '/services' },
+    ],
+    topPills: [
+      { _id: new ObjectId().toString(), label: 'Cloud POS', value: 'Real-time sync' },
+      { _id: new ObjectId().toString(), label: 'Kitchen Display', value: 'Ticket prioritization' },
+      { _id: new ObjectId().toString(), label: 'Inventory', value: 'Recipe-level control' },
+      { _id: new ObjectId().toString(), label: 'Reports', value: 'Hour-by-hour sales' },
+    ],
+    modules: [
+      {
+        _id: new ObjectId().toString(),
+        code: '01',
+        title: 'Smart POS & billing',
+        text: 'Fast menu search, split bills, discounts, tax rules, and payment mix (cash, card, mobile wallets).',
+      },
+      {
+        _id: new ObjectId().toString(),
+        code: '02',
+        title: 'Table & reservation flow',
+        text: 'Visual floor map, booking slots, waitlist handling, and quick table merge or transfer.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        code: '03',
+        title: 'Kitchen display system',
+        text: 'Category-wise KOT routing, prep timers, rush alerts, and delayed-item escalation.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        code: '04',
+        title: 'Recipe inventory',
+        text: 'Ingredient-level consumption, wastage tracking, low-stock triggers, and purchase planning.',
+      },
+    ],
+    spotlight: [
+      {
+        _id: new ObjectId().toString(),
+        title: 'Table Experience That Feels Premium',
+        body: 'From QR menu to order confirmation, guests get a smooth dine-in journey while staff track requests in real time without missed items.',
+        tag: 'Front of House',
+        image:
+          'https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1200&q=80',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Kitchen Operations Without Bottlenecks',
+        body: 'Live kitchen queues, prep timers, and section-based routing keep chefs focused while managers monitor delays and throughput instantly.',
+        tag: 'Back of House',
+        image:
+          'https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=1200&q=80',
+      },
+    ],
+    timeline: [
+      {
+        _id: new ObjectId().toString(),
+        title: 'Order taken',
+        text: 'Dine-in, parcel, and delivery orders captured from one screen.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Kitchen sync',
+        text: 'KOT auto-routes to kitchen sections with modifiers and notes.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Service complete',
+        text: 'Status updates return to waiter/cashier with no manual calls.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Bill closed',
+        text: 'Payment, tips, and taxes posted with stock and sales reports updated.',
+      },
+    ],
+    stats: [
+      { _id: new ObjectId().toString(), label: 'Order channels', value: '3 in 1' },
+      { _id: new ObjectId().toString(), label: 'Menu updates', value: 'Live' },
+      { _id: new ObjectId().toString(), label: 'Owner visibility', value: '24/7' },
+    ],
+    faqs: [
+      {
+        _id: new ObjectId().toString(),
+        q: 'Can we use this for multiple branches?',
+        a: 'Yes. Branch-wise menus, pricing, user access, and consolidated reporting are supported from one admin panel.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        q: 'Does it support food delivery workflows?',
+        a: 'Yes. Dedicated delivery order flow, rider assignment tags, and channel-wise sales tracking are included.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        q: 'Can we start small and scale later?',
+        a: 'Absolutely. Most teams start with POS + kitchen + inventory, then add loyalty, CRM, and branch controls.',
+      },
+    ],
+  }
+}
+
+function validateRestaurantManagementSoftwareArrayItem(section, payload = {}, { partial = false } = {}) {
+  const value = {}
+  const errors = []
+
+  if (section === restaurantManagementSoftwareSections.serviceLinks) {
+    const label = typeof payload.label === 'string' ? payload.label.trim() : ''
+    const to = typeof payload.to === 'string' ? payload.to.trim() : ''
+    if (!partial || 'label' in payload) {
+      if (!label) errors.push('label is required')
+      else value.label = label
+    }
+    if (!partial || 'to' in payload) {
+      if (!to) errors.push('to is required')
+      else value.to = to
+    }
+  }
+
+  if (section === restaurantManagementSoftwareSections.topPills) {
+    const label = typeof payload.label === 'string' ? payload.label.trim() : ''
+    const pillValue = typeof payload.value === 'string' ? payload.value.trim() : ''
+    if (!partial || 'label' in payload) {
+      if (!label) errors.push('label is required')
+      else value.label = label
+    }
+    if (!partial || 'value' in payload) {
+      if (!pillValue) errors.push('value is required')
+      else value.value = pillValue
+    }
+  }
+
+  if (section === restaurantManagementSoftwareSections.modules) {
+    const code = typeof payload.code === 'string' ? payload.code.trim() : ''
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    if (!partial || 'code' in payload) {
+      if (!code) errors.push('code is required')
+      else if (code.length > 20) errors.push('code is too long')
+      else value.code = code
+    }
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
+    }
+  }
+
+  if (section === restaurantManagementSoftwareSections.spotlight) {
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const body = typeof payload.body === 'string' ? payload.body.trim() : ''
+    const tag = typeof payload.tag === 'string' ? payload.tag.trim() : ''
+    const image = typeof payload.image === 'string' ? payload.image.trim() : ''
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'body' in payload) {
+      if (!body) errors.push('body is required')
+      else value.body = body
+    }
+    if (!partial || 'tag' in payload) {
+      if (!tag) errors.push('tag is required')
+      else value.tag = tag
+    }
+    if (!partial || 'image' in payload) {
+      if (!image) errors.push('image is required')
+      else value.image = image
+    }
+  }
+
+  if (section === restaurantManagementSoftwareSections.timeline) {
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
+    }
+  }
+
+  if (section === restaurantManagementSoftwareSections.stats) {
+    const label = typeof payload.label === 'string' ? payload.label.trim() : ''
+    const statValue = typeof payload.value === 'string' ? payload.value.trim() : ''
+    if (!partial || 'label' in payload) {
+      if (!label) errors.push('label is required')
+      else value.label = label
+    }
+    if (!partial || 'value' in payload) {
+      if (!statValue) errors.push('value is required')
+      else value.value = statValue
+    }
+  }
+
+  if (section === restaurantManagementSoftwareSections.faqs) {
+    const q = typeof payload.q === 'string' ? payload.q.trim() : ''
+    const a = typeof payload.a === 'string' ? payload.a.trim() : ''
+    if (!partial || 'q' in payload) {
+      if (!q) errors.push('q is required')
+      else value.q = q
+    }
+    if (!partial || 'a' in payload) {
+      if (!a) errors.push('a is required')
+      else value.a = a
+    }
+  }
+
+  return { errors, value }
+}
+
+function getDefaultInventoryManagementSoftwarePage() {
+  return {
+    key: 'inventory-management-software-page',
+    heroImage:
+      'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=2200&q=80',
+    heroTitle: 'Inventory Management Software',
+    heroLead:
+      'Track stock movement, automate replenishment, and control warehouse operations with one intelligent inventory platform.',
+    heroBadge: 'Stock. Control. Visibility.',
+    serviceLinks: [
+      {
+        _id: new ObjectId().toString(),
+        label: 'Inventory Management Software',
+        to: '/inventory-management-software',
+      },
+      { _id: new ObjectId().toString(), label: 'ERP Software', to: '/erp-software' },
+      {
+        _id: new ObjectId().toString(),
+        label: 'Hospital Management Software',
+        to: '/hospital-management-software',
+      },
+      {
+        _id: new ObjectId().toString(),
+        label: 'Restaurant Management Software',
+        to: '/restaurant-management-software',
+      },
+      { _id: new ObjectId().toString(), label: 'Our Services', to: '/services' },
+    ],
+    overviewCards: [
+      {
+        _id: new ObjectId().toString(),
+        title: 'Live Stock Ledger',
+        text: 'Batch-wise, SKU-wise, and location-wise stock updates in real time.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Smart Reorder',
+        text: 'Auto reorder points based on demand pattern and lead time.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Audit Trail',
+        text: 'Every stock in/out, transfer, and correction stays fully traceable.',
+      },
+    ],
+    operationsFlow: [
+      {
+        _id: new ObjectId().toString(),
+        step: 'Step 01',
+        title: 'Goods Receive Note (GRN)',
+        text: 'Capture inbound stock with supplier reference, batch details, and quality checkpoints.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        step: 'Step 02',
+        title: 'Bin Allocation & Putaway',
+        text: 'Assign SKUs to optimized rack/bin locations for faster retrieval and fewer picking errors.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        step: 'Step 03',
+        title: 'Order Fulfillment',
+        text: 'Create pick list, validate packed quantities, and update stock ledger automatically.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        step: 'Step 04',
+        title: 'Cycle Count & Reconciliation',
+        text: 'Run periodic counts, detect variances, and maintain audit-ready adjustments.',
+      },
+    ],
+    integrationGrid: [
+      {
+        _id: new ObjectId().toString(),
+        label: 'POS Systems',
+        detail: 'Sales sync to inventory in real time',
+      },
+      {
+        _id: new ObjectId().toString(),
+        label: 'ERP & Finance',
+        detail: 'Purchase, stock value, and COGS alignment',
+      },
+      {
+        _id: new ObjectId().toString(),
+        label: 'E-commerce',
+        detail: 'Live availability across online channels',
+      },
+      {
+        _id: new ObjectId().toString(),
+        label: 'Barcode Devices',
+        detail: 'Faster GRN, transfers, and stock count',
+      },
+      {
+        _id: new ObjectId().toString(),
+        label: 'Delivery Modules',
+        detail: 'Dispatch status with item-level tracking',
+      },
+      {
+        _id: new ObjectId().toString(),
+        label: 'Analytics Layer',
+        detail: 'Demand forecasting and reorder intelligence',
+      },
+    ],
+    outcomes: [
+      {
+        _id: new ObjectId().toString(),
+        title: 'Lower stock leakage',
+        text: 'Role-based approvals and movement tracking reduce unauthorized adjustments.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Faster warehouse response',
+        text: 'Structured receiving and pick workflows reduce operational delays.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Better planning accuracy',
+        text: 'Historical consumption with lead-time awareness improves procurement decisions.',
+      },
+    ],
+    capabilities: [
+      {
+        _id: new ObjectId().toString(),
+        id: 'A1',
+        heading: 'Multi-warehouse control',
+        detail: 'Central view with warehouse-specific permissions and transfer approvals.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        id: 'A2',
+        heading: 'Barcode & QR support',
+        detail: 'Fast scanning for receiving, picking, cycle counts, and retail dispatch.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        id: 'A3',
+        heading: 'Dead stock insights',
+        detail: 'Slow movers, overstock risk, and aging inventory alerts with action suggestions.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        id: 'A4',
+        heading: 'Purchase coordination',
+        detail: 'Vendor-wise rates, pending POs, and GRN mismatch visibility for finance teams.',
+      },
+    ],
+    metrics: [
+      { _id: new ObjectId().toString(), value: '99.9%', label: 'Stock accuracy target' },
+      { _id: new ObjectId().toString(), value: '24/7', label: 'Owner dashboard visibility' },
+      { _id: new ObjectId().toString(), value: '∞', label: 'Scalable SKU handling' },
+    ],
+    faqs: [
+      {
+        _id: new ObjectId().toString(),
+        question: 'Can we manage multiple warehouses and outlets?',
+        answer:
+          'Yes. You can manage central warehouse, branches, and counters from one system with role-based access.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        question: 'Does this support barcode-based operations?',
+        answer:
+          'Yes. Receiving, transfer, stock count, and dispatch can all be performed with barcode/QR scanning.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        question: 'Can we integrate with billing or ERP later?',
+        answer:
+          'Absolutely. The inventory modules are designed for phased integration with POS, accounting, and ERP workflows.',
+      },
+    ],
+  }
+}
+
+function validateInventoryManagementSoftwareArrayItem(section, payload = {}, { partial = false } = {}) {
+  const value = {}
+  const errors = []
+
+  if (section === inventoryManagementSoftwareSections.serviceLinks) {
+    const label = typeof payload.label === 'string' ? payload.label.trim() : ''
+    const to = typeof payload.to === 'string' ? payload.to.trim() : ''
+    if (!partial || 'label' in payload) {
+      if (!label) errors.push('label is required')
+      else value.label = label
+    }
+    if (!partial || 'to' in payload) {
+      if (!to) errors.push('to is required')
+      else value.to = to
+    }
+  }
+
+  if (section === inventoryManagementSoftwareSections.overviewCards || section === inventoryManagementSoftwareSections.outcomes) {
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
+    }
+  }
+
+  if (section === inventoryManagementSoftwareSections.operationsFlow) {
+    const step = typeof payload.step === 'string' ? payload.step.trim() : ''
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    if (!partial || 'step' in payload) {
+      if (!step) errors.push('step is required')
+      else value.step = step
+    }
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
+    }
+  }
+
+  if (section === inventoryManagementSoftwareSections.integrationGrid) {
+    const label = typeof payload.label === 'string' ? payload.label.trim() : ''
+    const detail = typeof payload.detail === 'string' ? payload.detail.trim() : ''
+    if (!partial || 'label' in payload) {
+      if (!label) errors.push('label is required')
+      else value.label = label
+    }
+    if (!partial || 'detail' in payload) {
+      if (!detail) errors.push('detail is required')
+      else value.detail = detail
+    }
+  }
+
+  if (section === inventoryManagementSoftwareSections.capabilities) {
+    const capId = typeof payload.id === 'string' ? payload.id.trim() : ''
+    const heading = typeof payload.heading === 'string' ? payload.heading.trim() : ''
+    const detail = typeof payload.detail === 'string' ? payload.detail.trim() : ''
+    if (!partial || 'id' in payload) {
+      if (!capId) errors.push('id is required')
+      else if (capId.length > 20) errors.push('id is too long')
+      else value.id = capId
+    }
+    if (!partial || 'heading' in payload) {
+      if (!heading) errors.push('heading is required')
+      else value.heading = heading
+    }
+    if (!partial || 'detail' in payload) {
+      if (!detail) errors.push('detail is required')
+      else value.detail = detail
+    }
+  }
+
+  if (section === inventoryManagementSoftwareSections.metrics) {
+    const valueText = typeof payload.value === 'string' ? payload.value.trim() : ''
+    const label = typeof payload.label === 'string' ? payload.label.trim() : ''
+    if (!partial || 'value' in payload) {
+      if (!valueText) errors.push('value is required')
+      else value.value = valueText
+    }
+    if (!partial || 'label' in payload) {
+      if (!label) errors.push('label is required')
+      else value.label = label
+    }
+  }
+
+  if (section === inventoryManagementSoftwareSections.faqs) {
+    const question = typeof payload.question === 'string' ? payload.question.trim() : ''
+    const answer = typeof payload.answer === 'string' ? payload.answer.trim() : ''
+    if (!partial || 'question' in payload) {
+      if (!question) errors.push('question is required')
+      else value.question = question
+    }
+    if (!partial || 'answer' in payload) {
+      if (!answer) errors.push('answer is required')
+      else value.answer = answer
+    }
+  }
+
+  return { errors, value }
+}
+
 function getDefaultEventProcessingPage() {
   return {
     key: 'event-processing-page',
@@ -2031,6 +2577,42 @@ async function getPharmacyManagementSoftwarePageDocument() {
 
   const defaults = {
     ...getDefaultPharmacyManagementSoftwarePage(),
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  }
+
+  await collection.insertOne(defaults)
+  return defaults
+}
+
+async function getRestaurantManagementSoftwarePageDocument() {
+  const collection = getPageContentCollection()
+  const existing = await collection.findOne({ key: 'restaurant-management-software-page' })
+
+  if (existing) {
+    return existing
+  }
+
+  const defaults = {
+    ...getDefaultRestaurantManagementSoftwarePage(),
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  }
+
+  await collection.insertOne(defaults)
+  return defaults
+}
+
+async function getInventoryManagementSoftwarePageDocument() {
+  const collection = getPageContentCollection()
+  const existing = await collection.findOne({ key: 'inventory-management-software-page' })
+
+  if (existing) {
+    return existing
+  }
+
+  const defaults = {
+    ...getDefaultInventoryManagementSoftwarePage(),
     createdAt: new Date(),
     updatedAt: new Date(),
   }
@@ -5204,6 +5786,384 @@ app.delete('/api/pharmacy-management-software-page/:section/:itemId', async (req
   } catch (error) {
     console.error(error)
     return res.status(500).json({ error: 'Failed to delete pharmacy management software section item' })
+  }
+})
+
+app.get('/api/restaurant-management-software-page', async (_req, res) => {
+  try {
+    const page = await getRestaurantManagementSoftwarePageDocument()
+    return res.json(normalizeDocument(page))
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to fetch restaurant management software page data' })
+  }
+})
+
+app.put('/api/restaurant-management-software-page', async (req, res) => {
+  try {
+    const defaultPage = getDefaultRestaurantManagementSoftwarePage()
+    const payload = {
+      heroImage: typeof req.body.heroImage === 'string' ? req.body.heroImage.trim() : '',
+      heroTitle:
+        typeof req.body.heroTitle === 'string' ? req.body.heroTitle.trim() : 'Restaurant Management Software',
+      heroLead: typeof req.body.heroLead === 'string' ? req.body.heroLead.trim() : defaultPage.heroLead,
+      heroBadge:
+        typeof req.body.heroBadge === 'string' ? req.body.heroBadge.trim() : 'Dine in. Takeaway. Delivery.',
+      coreTitle:
+        typeof req.body.coreTitle === 'string'
+          ? req.body.coreTitle.trim()
+          : 'One platform across front-of-house and back-of-house',
+      coreBody: typeof req.body.coreBody === 'string' ? req.body.coreBody.trim() : defaultPage.coreBody,
+      updatedAt: new Date(),
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'restaurant-management-software-page' },
+      {
+        $set: payload,
+        $setOnInsert: {
+          key: defaultPage.key,
+          serviceLinks: defaultPage.serviceLinks,
+          topPills: defaultPage.topPills,
+          modules: defaultPage.modules,
+          spotlight: defaultPage.spotlight,
+          timeline: defaultPage.timeline,
+          stats: defaultPage.stats,
+          faqs: defaultPage.faqs,
+          createdAt: new Date(),
+        },
+      },
+      { upsert: true },
+    )
+
+    const updatedPage = await getPageContentCollection().findOne({ key: 'restaurant-management-software-page' })
+    return res.json({
+      message: 'Restaurant management software page content updated',
+      page: normalizeDocument(updatedPage),
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update restaurant management software page content' })
+  }
+})
+
+app.post('/api/restaurant-management-software-page/:section', async (req, res) => {
+  try {
+    const { section } = req.params
+    const targetSection = restaurantManagementSoftwareSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateRestaurantManagementSoftwareArrayItem(targetSection, req.body)
+
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    const page = await getRestaurantManagementSoftwarePageDocument()
+    const nextItem = {
+      _id: new ObjectId().toString(),
+      ...value,
+    }
+    const nextItems = [...(page[targetSection] || []), nextItem]
+
+    await getPageContentCollection().updateOne(
+      { key: 'restaurant-management-software-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.status(201).json({
+      message: `${targetSection} item created successfully`,
+      item: nextItem,
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to create restaurant management software section item' })
+  }
+})
+
+app.patch('/api/restaurant-management-software-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = restaurantManagementSoftwareSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateRestaurantManagementSoftwareArrayItem(targetSection, req.body, {
+      partial: true,
+    })
+
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    if (!Object.keys(value).length) {
+      return res.status(400).json({ error: 'At least one field is required to update' })
+    }
+
+    const page = await getRestaurantManagementSoftwarePageDocument()
+    const items = page[targetSection] || []
+    const index = items.findIndex((item) => item._id === itemId)
+
+    if (index === -1) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    const updatedItem = {
+      ...items[index],
+      ...value,
+    }
+
+    const nextItems = [...items]
+    nextItems[index] = updatedItem
+
+    await getPageContentCollection().updateOne(
+      { key: 'restaurant-management-software-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.json({
+      message: `${targetSection} item updated successfully`,
+      item: updatedItem,
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update restaurant management software section item' })
+  }
+})
+
+app.delete('/api/restaurant-management-software-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = restaurantManagementSoftwareSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const page = await getRestaurantManagementSoftwarePageDocument()
+    const items = page[targetSection] || []
+    const nextItems = items.filter((item) => item._id !== itemId)
+
+    if (nextItems.length === items.length) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'restaurant-management-software-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.json({ message: `${targetSection} item deleted successfully` })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to delete restaurant management software section item' })
+  }
+})
+
+app.get('/api/inventory-management-software-page', async (_req, res) => {
+  try {
+    const page = await getInventoryManagementSoftwarePageDocument()
+    return res.json(normalizeDocument(page))
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to fetch inventory management software page data' })
+  }
+})
+
+app.put('/api/inventory-management-software-page', async (req, res) => {
+  try {
+    const defaultPage = getDefaultInventoryManagementSoftwarePage()
+    const payload = {
+      heroImage: typeof req.body.heroImage === 'string' ? req.body.heroImage.trim() : '',
+      heroTitle:
+        typeof req.body.heroTitle === 'string' ? req.body.heroTitle.trim() : 'Inventory Management Software',
+      heroLead: typeof req.body.heroLead === 'string' ? req.body.heroLead.trim() : defaultPage.heroLead,
+      heroBadge:
+        typeof req.body.heroBadge === 'string' ? req.body.heroBadge.trim() : 'Stock. Control. Visibility.',
+      updatedAt: new Date(),
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'inventory-management-software-page' },
+      {
+        $set: payload,
+        $setOnInsert: {
+          key: defaultPage.key,
+          serviceLinks: defaultPage.serviceLinks,
+          overviewCards: defaultPage.overviewCards,
+          operationsFlow: defaultPage.operationsFlow,
+          integrationGrid: defaultPage.integrationGrid,
+          outcomes: defaultPage.outcomes,
+          capabilities: defaultPage.capabilities,
+          metrics: defaultPage.metrics,
+          faqs: defaultPage.faqs,
+          createdAt: new Date(),
+        },
+      },
+      { upsert: true },
+    )
+
+    const updatedPage = await getPageContentCollection().findOne({ key: 'inventory-management-software-page' })
+    return res.json({
+      message: 'Inventory management software page content updated',
+      page: normalizeDocument(updatedPage),
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update inventory management software page content' })
+  }
+})
+
+app.post('/api/inventory-management-software-page/:section', async (req, res) => {
+  try {
+    const { section } = req.params
+    const targetSection = inventoryManagementSoftwareSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateInventoryManagementSoftwareArrayItem(targetSection, req.body)
+
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    const page = await getInventoryManagementSoftwarePageDocument()
+    const nextItem = {
+      _id: new ObjectId().toString(),
+      ...value,
+    }
+    const nextItems = [...(page[targetSection] || []), nextItem]
+
+    await getPageContentCollection().updateOne(
+      { key: 'inventory-management-software-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.status(201).json({
+      message: `${targetSection} item created successfully`,
+      item: nextItem,
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to create inventory management software section item' })
+  }
+})
+
+app.patch('/api/inventory-management-software-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = inventoryManagementSoftwareSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateInventoryManagementSoftwareArrayItem(targetSection, req.body, {
+      partial: true,
+    })
+
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    if (!Object.keys(value).length) {
+      return res.status(400).json({ error: 'At least one field is required to update' })
+    }
+
+    const page = await getInventoryManagementSoftwarePageDocument()
+    const items = page[targetSection] || []
+    const index = items.findIndex((item) => item._id === itemId)
+
+    if (index === -1) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    const updatedItem = {
+      ...items[index],
+      ...value,
+    }
+
+    const nextItems = [...items]
+    nextItems[index] = updatedItem
+
+    await getPageContentCollection().updateOne(
+      { key: 'inventory-management-software-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.json({
+      message: `${targetSection} item updated successfully`,
+      item: updatedItem,
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update inventory management software section item' })
+  }
+})
+
+app.delete('/api/inventory-management-software-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = inventoryManagementSoftwareSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const page = await getInventoryManagementSoftwarePageDocument()
+    const items = page[targetSection] || []
+    const nextItems = items.filter((item) => item._id !== itemId)
+
+    if (nextItems.length === items.length) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'inventory-management-software-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.json({ message: `${targetSection} item deleted successfully` })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to delete inventory management software section item' })
   }
 })
 
