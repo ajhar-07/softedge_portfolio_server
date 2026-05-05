@@ -310,6 +310,76 @@ const inventoryManagementSoftwareSections = {
   faqs: 'faqs',
 }
 
+const municipalityUnionManagementSections = {
+  serviceLinks: 'serviceLinks',
+  civicModules: 'civicModules',
+  processTimeline: 'processTimeline',
+  performanceCards: 'performanceCards',
+  governanceFeatures: 'governanceFeatures',
+  faq: 'faq',
+}
+
+const paymentGatewaysSections = {
+  heroStats: 'heroStats',
+  serviceLinks: 'serviceLinks',
+  rails: 'rails',
+  partnerChannels: 'partnerChannels',
+  flowSteps: 'flowSteps',
+  riskLayers: 'riskLayers',
+  walletCapabilities: 'walletCapabilities',
+  metrics: 'metrics',
+  businessUseCases: 'businessUseCases',
+  faqs: 'faqs',
+}
+
+const websiteDevelopmentSections = {
+  introPoints: 'introPoints',
+  quickLinks: 'quickLinks',
+  designPillars: 'designPillars',
+  deliveryTracks: 'deliveryTracks',
+  packageGrid: 'packageGrid',
+  serviceDetails: 'serviceDetails',
+  projectShowcase: 'projectShowcase',
+  stack: 'stack',
+  stats: 'stats',
+  faqs: 'faqs',
+}
+
+const landingPageDesignSections = {
+  quickActions: 'quickActions',
+  campaignTypes: 'campaignTypes',
+  sectionBlocks: 'sectionBlocks',
+  processFlow: 'processFlow',
+  conversionStats: 'conversionStats',
+  pricingCards: 'pricingCards',
+  faqs: 'faqs',
+}
+
+const ecommerceNewsPortalSections = {
+  quickLinks: 'quickLinks',
+  commerceModules: 'commerceModules',
+  newsroomFlow: 'newsroomFlow',
+  monetizationCards: 'monetizationCards',
+  architectureHighlights: 'architectureHighlights',
+  audienceSolutions: 'audienceSolutions',
+  integrationSuite: 'integrationSuite',
+  packageGrid: 'packageGrid',
+  faqs: 'faqs',
+}
+
+const domainHostingServerSections = {
+  quickLinks: 'quickLinks',
+  domainServices: 'domainServices',
+  hostingStacks: 'hostingStacks',
+  serverOpsFlow: 'serverOpsFlow',
+  supportPackages: 'supportPackages',
+  securityCoverage: 'securityCoverage',
+  migrationChecklist: 'migrationChecklist',
+  platformCoverage: 'platformCoverage',
+  reliabilityMetrics: 'reliabilityMetrics',
+  faqs: 'faqs',
+}
+
 const eventProcessingSections = {
   serviceLinks: 'serviceLinks',
   socials: 'socials',
@@ -2223,6 +2293,951 @@ function getDefaultEventProcessingPage() {
   }
 }
 
+function getDefaultMunicipalityUnionManagementPage() {
+  return {
+    key: 'municipality-union-management-page',
+    heroImage:
+      'https://images.unsplash.com/photo-1577493340887-b7bfff550145?auto=format&fit=crop&w=2200&q=80',
+    heroBadge: 'Smart Governance',
+    heroTitle: 'Municipality / Union Management',
+    heroLead:
+      'Digitize citizen services, tax collection, social safety operations, and administrative workflows with one connected e-governance platform.',
+    serviceLinks: [
+      {
+        _id: new ObjectId().toString(),
+        label: 'Municipality / Union Management',
+        to: '/municipality-union-management',
+      },
+      { _id: new ObjectId().toString(), label: 'Our Services', to: '/services' },
+      { _id: new ObjectId().toString(), label: 'Information Security', to: '/information-security' },
+      { _id: new ObjectId().toString(), label: 'Process Automation', to: '/process-automation' },
+      { _id: new ObjectId().toString(), label: 'Event Processing', to: '/event-processing' },
+    ],
+    civicModules: [
+      {
+        _id: new ObjectId().toString(),
+        title: 'Citizen Service Desk',
+        text: 'Application intake, certificate issuance, trade license flow, and digital tracking in one queue.',
+        icon: 'Office',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Revenue & Tax Collection',
+        text: 'Holding tax, water bills, market rent, and due notices with payment status visibility.',
+        icon: 'Payment',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Social Safety Net',
+        text: 'Beneficiary enlistment, eligibility checks, and distribution audit trail by ward or village.',
+        icon: 'Support',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Village Court & Complaints',
+        text: 'Case registration, hearing schedule, order notes, and status updates for citizens.',
+        icon: 'Justice',
+      },
+    ],
+    processTimeline: [
+      {
+        _id: new ObjectId().toString(),
+        step: 'Phase 01',
+        title: 'Citizen Request Submission',
+        text: 'Requests are received from front desk, agent point, or online form with instant token creation.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        step: 'Phase 02',
+        title: 'Field Validation & Approval',
+        text: 'Assigned officials verify data and complete role-based approvals with full action history.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        step: 'Phase 03',
+        title: 'Fee, Tax & Payment Reconciliation',
+        text: 'System generates payable amounts and syncs all transactions with treasury and finance records.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        step: 'Phase 04',
+        title: 'Document Delivery & Reporting',
+        text: 'Approved documents are delivered while dashboards show ward-wise service performance and backlog.',
+      },
+    ],
+    performanceCards: [
+      { _id: new ObjectId().toString(), label: 'Citizen Requests Tracked', value: '50K+' },
+      { _id: new ObjectId().toString(), label: 'Average Process Reduction', value: '60%' },
+      { _id: new ObjectId().toString(), label: 'Revenue Visibility', value: '100%' },
+      { _id: new ObjectId().toString(), label: 'Digital Record Confidence', value: '99.9%' },
+    ],
+    governanceFeatures: [
+      { _id: new ObjectId().toString(), text: 'Ward/Area wise population and household registry' },
+      { _id: new ObjectId().toString(), text: 'Birth, death, marriage and inheritance certificate workflow' },
+      { _id: new ObjectId().toString(), text: 'Trade license issue, renewal and arrear tracking' },
+      { _id: new ObjectId().toString(), text: 'Tender notice, procurement and project progress board' },
+      { _id: new ObjectId().toString(), text: 'Employee attendance, movement log and payroll handoff' },
+      {
+        _id: new ObjectId().toString(),
+        text: 'Unified analytics dashboard for chairman, mayor and secretary',
+      },
+    ],
+    faq: [
+      {
+        _id: new ObjectId().toString(),
+        q: 'Can this platform work for both municipality and union parishad?',
+        a: 'Yes. The platform supports both structures with configurable service modules, naming, and role hierarchy.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        q: 'Does it support Bangla-friendly citizen-facing operations?',
+        a: 'Yes. Core forms, service labels, and printable outputs can be configured for Bangla and English usage.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        q: 'Can it integrate payment gateway later?',
+        a: 'Absolutely. The billing and reconciliation layer is designed to connect with gateway, wallet, or bank APIs.',
+      },
+    ],
+  }
+}
+
+function getDefaultPaymentGatewaysPage() {
+  return {
+    key: 'payment-gateways-page',
+    heroImage:
+      'https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=2200&q=80',
+    heroBadge: 'FinTech Infrastructure',
+    heroTitle: 'Payment Gateways & Digital Wallets',
+    heroLead:
+      'Launch secure, scalable payment experiences with wallet operations, merchant onboarding, settlement intelligence, and fraud-aware transaction controls.',
+    heroStats: [
+      { _id: new ObjectId().toString(), value: '120M+', label: 'Yearly transactions processed' },
+      { _id: new ObjectId().toString(), value: '35+', label: 'Integrated banks and processors' },
+      { _id: new ObjectId().toString(), value: '9', label: 'Risk engines in one pipeline' },
+    ],
+    serviceLinks: [
+      { _id: new ObjectId().toString(), label: 'Payment Gateways & Digital Wallets', to: '/payment-gateways' },
+      {
+        _id: new ObjectId().toString(),
+        label: 'Municipality / Union Management',
+        to: '/municipality-union-management',
+      },
+      { _id: new ObjectId().toString(), label: 'ERP Software', to: '/erp-software' },
+      { _id: new ObjectId().toString(), label: 'Information Security', to: '/information-security' },
+      { _id: new ObjectId().toString(), label: 'Our Services', to: '/services' },
+    ],
+    rails: [
+      {
+        _id: new ObjectId().toString(),
+        title: 'Checkout Orchestration',
+        text: 'Route transactions by bank, method, and risk score to maximize approval rate.',
+        gradient: 'from-[#00d2ff]/45 to-[#1b6ea1]/35',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Wallet Ledger Engine',
+        text: 'Credit/debit, reversal, hold, release, and statement generation with immutable history.',
+        gradient: 'from-[#00c17c]/35 to-[#0a4d64]/35',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Merchant Settlement',
+        text: 'Automated T+0/T+1 settlement, fee split, and payout file generation.',
+        gradient: 'from-[#7a6bff]/35 to-[#13395b]/35',
+      },
+    ],
+    partnerChannels: [
+      {
+        _id: new ObjectId().toString(),
+        name: 'Card Networks',
+        detail: 'Visa, Mastercard, local schemes, tokenized rails',
+      },
+      {
+        _id: new ObjectId().toString(),
+        name: 'Wallet Partners',
+        detail: 'App wallets, telco wallets, super app ecosystems',
+      },
+      {
+        _id: new ObjectId().toString(),
+        name: 'QR & NFC',
+        detail: 'Static/dynamic QR and contactless acceptance flows',
+      },
+      {
+        _id: new ObjectId().toString(),
+        name: 'Bank Transfers',
+        detail: 'Instant transfer, scheduled payout, virtual accounts',
+      },
+    ],
+    flowSteps: [
+      {
+        _id: new ObjectId().toString(),
+        phase: '01',
+        title: 'User Pays',
+        text: 'Customer completes payment through card, wallet, QR, or transfer.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        phase: '02',
+        title: 'Risk Check',
+        text: 'Real-time fraud filters and velocity rules evaluate transaction health.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        phase: '03',
+        title: 'Authorization',
+        text: 'Smart routing sends request to best processor/bank channel.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        phase: '04',
+        title: 'Settlement',
+        text: 'Funds are reconciled and settled to merchant and platform wallets.',
+      },
+    ],
+    riskLayers: [
+      {
+        _id: new ObjectId().toString(),
+        id: 'R1',
+        title: 'Device fingerprinting',
+        text: 'Detect unusual device swaps and emulator activity.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        id: 'R2',
+        title: 'Behavior intelligence',
+        text: 'Model transaction rhythm, amount spikes, and geo mismatch.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        id: 'R3',
+        title: 'Rule orchestration',
+        text: 'Allow, challenge, queue, or block with policy-based routing.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        id: 'R4',
+        title: 'Case management',
+        text: 'Fraud review board with annotated timelines and outcomes.',
+      },
+    ],
+    walletCapabilities: [
+      {
+        _id: new ObjectId().toString(),
+        code: 'W1',
+        heading: 'KYC & account tiers',
+        detail: 'Support onboarding tiers with configurable limits.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        code: 'W2',
+        heading: 'Cash in / cash out',
+        detail: 'Agent, bank, and API-assisted top-up and withdrawal flows.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        code: 'W3',
+        heading: 'Bill & utility payments',
+        detail: 'Single dashboard for recurring and one-time payment services.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        code: 'W4',
+        heading: 'Refund & dispute handling',
+        detail: 'Traceable dispute states with SLA timers and audit notes.',
+      },
+    ],
+    metrics: [
+      { _id: new ObjectId().toString(), value: '99.95%', label: 'Transaction uptime target' },
+      { _id: new ObjectId().toString(), value: '< 1.8s', label: 'Average payment response' },
+      { _id: new ObjectId().toString(), value: '24/7', label: 'Monitoring & alerts' },
+    ],
+    businessUseCases: [
+      {
+        _id: new ObjectId().toString(),
+        title: 'E-commerce checkout',
+        text: 'Improve conversion with one-click cards, saved instruments, and retry routing.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Utility and bill payment',
+        text: 'Handle recurring bills, reminders, and due-tracking in a wallet-first flow.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Agent cash operations',
+        text: 'Branch and agent-assisted cash-in/cash-out with role-based limits.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Marketplace settlement',
+        text: 'Split payments by merchant, commission, tax, and delayed release.',
+      },
+    ],
+    faqs: [
+      {
+        _id: new ObjectId().toString(),
+        q: 'Can this support both gateway and wallet in one platform?',
+        a: 'Yes. The architecture supports processor integrations and full wallet lifecycle in one control panel.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        q: 'Do you provide fraud and reconciliation modules?',
+        a: 'Yes. We provide rule-based fraud checks, transaction traceability, and auto reconciliation workflows.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        q: 'Can we start with gateway first and add wallet later?',
+        a: 'Absolutely. Modules are deployment-ready in phases so you can scale from gateway to full fintech stack.',
+      },
+    ],
+  }
+}
+
+function getDefaultWebsiteDevelopmentPage() {
+  return {
+    key: 'website-development-page',
+    heroImage:
+      'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=2200&q=80',
+    eyebrow: 'Creative Web Studio',
+    title: 'Website Design & Development',
+    subtitle:
+      'We craft brand-first, conversion-ready websites with modern engineering, clean architecture, and measurable growth outcomes.',
+    introPoints: [
+      { _id: new ObjectId().toString(), text: 'SEO-friendly architecture with semantic markup and clean URL patterns' },
+      { _id: new ObjectId().toString(), text: 'Responsive UI across desktop, tablet, and mobile with accessibility-first layout' },
+      { _id: new ObjectId().toString(), text: 'Fast-loading pages with image optimization, caching strategy, and code splitting' },
+      { _id: new ObjectId().toString(), text: 'Analytics-ready deployment so you can track leads, clicks, and conversion funnels' },
+    ],
+    quickLinks: [
+      { _id: new ObjectId().toString(), label: 'Website Design & Development', to: '/website-development' },
+      { _id: new ObjectId().toString(), label: 'Landing Page Design', to: '/services' },
+      { _id: new ObjectId().toString(), label: 'E-commerce & News Portal', to: '/services' },
+      { _id: new ObjectId().toString(), label: 'Domain & Hosting', to: '/services' },
+    ],
+    designPillars: [
+      {
+        _id: new ObjectId().toString(),
+        name: 'Visual Identity',
+        detail: 'Brand-driven UI system, typography, spacing rhythm, and interaction language.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        name: 'User Journey',
+        detail: 'Clear content hierarchy, CTA placement, and frictionless conversion paths.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        name: 'Engineering Quality',
+        detail: 'Reusable components, clean code, and scalable deployment strategy.',
+      },
+    ],
+    deliveryTracks: [
+      {
+        _id: new ObjectId().toString(),
+        track: 'Track 01',
+        title: 'Discovery & Wireframe',
+        text: 'Audience map, goal architecture, and low-fidelity blueprint.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        track: 'Track 02',
+        title: 'UI Design & Prototype',
+        text: 'High-fidelity visual system with animated click-through prototypes.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        track: 'Track 03',
+        title: 'Development Sprint',
+        text: 'Responsive frontend, CMS/API integration, and performance tuning.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        track: 'Track 04',
+        title: 'Launch & Optimization',
+        text: 'SEO baseline, analytics setup, and post-launch conversion iteration.',
+      },
+    ],
+    packageGrid: [
+      { _id: new ObjectId().toString(), type: 'Starter Site', scope: 'Corporate profile', eta: '7-10 days', price: 'From $250' },
+      { _id: new ObjectId().toString(), type: 'Growth Site', scope: 'Dynamic CMS pages', eta: '2-3 weeks', price: 'From $700' },
+      { _id: new ObjectId().toString(), type: 'Commerce Site', scope: 'Product + checkout', eta: '3-5 weeks', price: 'From $1200' },
+      { _id: new ObjectId().toString(), type: 'Custom Build', scope: 'Complex portal/SaaS', eta: 'By scope', price: 'Custom quote' },
+    ],
+    serviceDetails: [
+      {
+        _id: new ObjectId().toString(),
+        title: 'UI/UX Strategy',
+        text: 'From content hierarchy to wireframe and clickable prototypes, we validate user flow before development starts.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Custom Frontend Development',
+        text: 'Pixel-perfect components, motion interactions, reusable sections, and scalable code structure for future growth.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Backend & CMS Integration',
+        text: 'Dynamic content control, API integration, admin-ready setup, and secure data handling for production usage.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Launch & Growth Support',
+        text: 'Deployment, QA, SEO baseline, analytics setup, and iterative improvements after launch.',
+      },
+    ],
+    projectShowcase: [
+      {
+        _id: new ObjectId().toString(),
+        name: 'SoftEdge Corporate Website',
+        category: 'Corporate / IT Services',
+        summary: 'Modern company profile website with service funnels, team page, and lead generation flow.',
+        liveLink: 'https://example.com/softedge-corporate',
+        githubLink: 'https://github.com/example/softedge-corporate',
+        image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80',
+        tech: ['React', 'Tailwind', 'Node.js'],
+      },
+      {
+        _id: new ObjectId().toString(),
+        name: 'NovaShop E-commerce',
+        category: 'E-commerce',
+        summary: 'Product catalog, cart/checkout journey, payment integration, and order management dashboard.',
+        liveLink: 'https://example.com/novashop',
+        githubLink: 'https://github.com/example/novashop',
+        image: 'https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=1200&q=80',
+        tech: ['React', 'Express', 'MongoDB'],
+      },
+      {
+        _id: new ObjectId().toString(),
+        name: 'DailyNews Portal',
+        category: 'News & Media',
+        summary: 'High-content publishing portal with category-based routing, trending widgets, and admin posting tools.',
+        liveLink: 'https://example.com/dailynews',
+        githubLink: 'https://github.com/example/dailynews',
+        image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80',
+        tech: ['Next.js', 'API', 'Cloud CDN'],
+      },
+    ],
+    stack: [
+      { _id: new ObjectId().toString(), text: 'React' },
+      { _id: new ObjectId().toString(), text: 'Node.js' },
+      { _id: new ObjectId().toString(), text: 'MongoDB' },
+      { _id: new ObjectId().toString(), text: 'WordPress' },
+      { _id: new ObjectId().toString(), text: 'Tailwind CSS' },
+      { _id: new ObjectId().toString(), text: 'Cloud Hosting' },
+    ],
+    stats: [
+      { _id: new ObjectId().toString(), value: '120+', label: 'Web projects delivered' },
+      { _id: new ObjectId().toString(), value: '96%', label: 'Client satisfaction rate' },
+      { _id: new ObjectId().toString(), value: '90+', label: 'Lighthouse performance target' },
+    ],
+    faqs: [
+      {
+        _id: new ObjectId().toString(),
+        q: 'Can you redesign our existing website without losing SEO?',
+        a: 'Yes. We preserve URL strategy, set redirects, and apply technical SEO checks during migration.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        q: 'Will the site be editable by our internal team?',
+        a: 'Absolutely. We provide CMS controls and training so your team can update content independently.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        q: 'Do you offer maintenance after launch?',
+        a: 'Yes. We provide monthly maintenance plans including updates, backups, and performance monitoring.',
+      },
+    ],
+  }
+}
+
+function getDefaultLandingPageDesignPage() {
+  return {
+    key: 'landing-page-design-page',
+    heroImage:
+      'https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=2200&q=80',
+    badge: 'Conversion-Centric Design',
+    title: 'Landing Page Design',
+    subtitle:
+      'Build high-performing landing pages that turn clicks into leads, signups, and sales with strategy-led messaging and sharp visual storytelling.',
+    quickActions: [
+      { _id: new ObjectId().toString(), label: 'Landing Page Design', to: '/landing-page-design' },
+      { _id: new ObjectId().toString(), label: 'Website Design & Development', to: '/website-development' },
+      { _id: new ObjectId().toString(), label: 'Content Management', to: '/content-management' },
+      { _id: new ObjectId().toString(), label: 'Our Services', to: '/services' },
+    ],
+    campaignTypes: [
+      {
+        _id: new ObjectId().toString(),
+        type: 'Lead Generation',
+        detail: 'Service inquiry, form capture, and consultation booking focused pages.',
+        accent: 'from-[#00d2ff]/45 to-[#0c4d75]/45',
+      },
+      {
+        _id: new ObjectId().toString(),
+        type: 'Product Launch',
+        detail: 'Feature spotlight, urgency blocks, social proof, and CTA sequencing.',
+        accent: 'from-[#1fa2ff]/35 to-[#12507a]/35',
+      },
+      {
+        _id: new ObjectId().toString(),
+        type: 'Webinar/Event Signup',
+        detail: 'Speaker highlights, schedule modules, and conversion-friendly registration flow.',
+        accent: 'from-[#00b09b]/35 to-[#0b5c66]/35',
+      },
+      {
+        _id: new ObjectId().toString(),
+        type: 'App Download',
+        detail: 'Benefit-first storytelling with platform badges and trust indicators.',
+        accent: 'from-[#667eea]/30 to-[#29408a]/35',
+      },
+    ],
+    sectionBlocks: [
+      {
+        _id: new ObjectId().toString(),
+        heading: 'Messaging Blueprint',
+        points: [
+          'Audience pain points and intent mapping',
+          'Clear value proposition above the fold',
+          'Headline-CTA alignment for better conversion',
+        ],
+      },
+      {
+        _id: new ObjectId().toString(),
+        heading: 'Design Structure',
+        points: [
+          'Visual hierarchy with contrast-driven blocks',
+          'Mobile-first responsive components',
+          'Brand-consistent typography and color rhythm',
+        ],
+      },
+      {
+        _id: new ObjectId().toString(),
+        heading: 'Trust & Proof',
+        points: [
+          'Testimonial and review placement strategy',
+          'Client logos, badges, and credibility cards',
+          'FAQ layer to reduce objection friction',
+        ],
+      },
+      {
+        _id: new ObjectId().toString(),
+        heading: 'Growth Optimization',
+        points: [
+          'A/B ready sections and copy variants',
+          'Heatmap + analytics event integration',
+          'Post-launch CRO iteration workflow',
+        ],
+      },
+    ],
+    processFlow: [
+      {
+        _id: new ObjectId().toString(),
+        step: 'Step 01',
+        title: 'Brief & Goal Setup',
+        text: 'Define offer, audience, and conversion target KPI.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        step: 'Step 02',
+        title: 'Wireframe & Copy',
+        text: 'Craft page flow, section intent, and CTA placements.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        step: 'Step 03',
+        title: 'UI & Development',
+        text: 'Design + build with responsive and fast-load standards.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        step: 'Step 04',
+        title: 'Launch & Experiment',
+        text: 'Deploy with analytics and start optimization cycles.',
+      },
+    ],
+    conversionStats: [
+      { _id: new ObjectId().toString(), value: '+38%', label: 'Average lead uplift' },
+      { _id: new ObjectId().toString(), value: '-42%', label: 'Bounce rate reduction' },
+      { _id: new ObjectId().toString(), value: '2.4x', label: 'CTA click improvement' },
+    ],
+    pricingCards: [
+      {
+        _id: new ObjectId().toString(),
+        name: 'Starter Landing',
+        features: ['1 page design', 'Responsive build', 'Lead form integration', 'Basic analytics'],
+        timeline: '3-5 days',
+        price: 'From $120',
+      },
+      {
+        _id: new ObjectId().toString(),
+        name: 'Growth Landing',
+        features: ['A/B-ready sections', 'Custom illustrations', 'Advanced copy blocks', 'CRM sync'],
+        timeline: '7-10 days',
+        price: 'From $280',
+      },
+      {
+        _id: new ObjectId().toString(),
+        name: 'Campaign Pro',
+        features: ['Multi-variant setup', 'Heatmap tooling', 'Conversion dashboard', 'CRO support'],
+        timeline: '2-3 weeks',
+        price: 'Custom quote',
+      },
+    ],
+    faqs: [
+      {
+        _id: new ObjectId().toString(),
+        q: 'Can you redesign an existing landing page to improve results?',
+        a: 'Yes. We audit your current page, identify conversion leaks, then redesign structure, copy, and CTA hierarchy.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        q: 'Will the page load fast on mobile networks?',
+        a: 'Absolutely. We optimize media and frontend delivery to maintain strong page speed across devices.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        q: 'Can this connect with Facebook/Google Ads tracking?',
+        a: 'Yes. We can configure Meta Pixel, Google tag events, and custom conversion tracking setup.',
+      },
+    ],
+  }
+}
+
+function getDefaultEcommerceNewsPortalPage() {
+  return {
+    key: 'ecommerce-news-portal-page',
+    heroImage:
+      'https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=2200&q=80',
+    badge: 'Commerce + Content Ecosystem',
+    title: 'E-commerce & News Portal',
+    subtitle:
+      'Launch a high-speed online store and modern news portal under one scalable platform with strong catalog search, editorial workflows, and built-in monetization tools.',
+    quickLinks: [
+      { _id: new ObjectId().toString(), label: 'E-commerce & news portal', to: '/ecommerce-news-portal' },
+      { _id: new ObjectId().toString(), label: 'Website Design & Development', to: '/website-development' },
+      { _id: new ObjectId().toString(), label: 'Landing Page Design', to: '/landing-page-design' },
+      { _id: new ObjectId().toString(), label: 'Content Management', to: '/content-management' },
+    ],
+    commerceModules: [
+      {
+        _id: new ObjectId().toString(),
+        title: 'Catalog & Inventory Core',
+        detail:
+          'Unlimited categories, smart product variants, warehouse stock sync, barcode-ready item setup, and low-stock alerts for faster operations.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Checkout & Payment Layer',
+        detail:
+          'Guest checkout, coupon system, cart recovery prompts, regional shipping rules, and payment gateway support for card, wallet, and COD.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Order & Customer Desk',
+        detail:
+          'Real-time order pipeline, invoice automation, return/refund controls, customer notes, and timeline tracking for support teams.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Marketing Engine',
+        detail:
+          'Flash sales, bundle pricing, personalized recommendations, loyalty points, abandoned-cart automation, and campaign landing blocks.',
+      },
+    ],
+    newsroomFlow: [
+      {
+        _id: new ObjectId().toString(),
+        phase: '01',
+        heading: 'Editorial Planning',
+        text: 'Beat-wise planning board, assignment approvals, and deadline calendar for editors and reporters.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        phase: '02',
+        heading: 'Publishing Pipeline',
+        text: 'Draft-review-publish workflow with role permissions, SEO checklist, and scheduled release controls.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        phase: '03',
+        heading: 'Distribution & Alerts',
+        text: 'Auto sharing to social channels, breaking news push notifications, and newsletter-ready snippets.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        phase: '04',
+        heading: 'Performance Intelligence',
+        text: 'Story heatmaps, engagement score, session depth analytics, and ad placement insights.',
+      },
+    ],
+    monetizationCards: [
+      {
+        _id: new ObjectId().toString(),
+        name: 'Ad Revenue Suite',
+        points: ['Banner slot manager', 'Sponsored story labels', 'Ad position A/B tests'],
+      },
+      {
+        _id: new ObjectId().toString(),
+        name: 'Membership & Paywall',
+        points: ['Freemium article rules', 'Subscriber-only reports', 'Recurring plan billing'],
+      },
+      {
+        _id: new ObjectId().toString(),
+        name: 'Commerce-to-Content Cross Sell',
+        points: ['Article to product widgets', 'Shop the story blocks', 'Trending product embeds'],
+      },
+    ],
+    architectureHighlights: [
+      { _id: new ObjectId().toString(), value: '99.95%', label: 'Target uptime readiness' },
+      { _id: new ObjectId().toString(), value: '<2.2s', label: 'Mobile first-content load target' },
+      { _id: new ObjectId().toString(), value: '3x', label: 'Higher repeat visits with personalization' },
+      { _id: new ObjectId().toString(), value: '24/7', label: 'Operational monitoring support' },
+    ],
+    audienceSolutions: [
+      {
+        _id: new ObjectId().toString(),
+        audience: 'Retail Brands',
+        outcome: 'Faster product launches, cleaner checkout funnels, and repeat-purchase growth through loyalty automation.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        audience: 'Media Houses',
+        outcome: 'Structured newsroom workflow, high-frequency publishing, and stronger ad inventory performance.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        audience: 'Hybrid Business Models',
+        outcome: 'Content-driven product discovery where articles, reviews, and stories directly influence conversion.',
+      },
+    ],
+    integrationSuite: [
+      { _id: new ObjectId().toString(), text: 'Payment gateway and wallet integrations' },
+      { _id: new ObjectId().toString(), text: 'Courier and shipment status sync' },
+      { _id: new ObjectId().toString(), text: 'CRM and customer support tools' },
+      { _id: new ObjectId().toString(), text: 'Meta pixel and GA4 event tracking' },
+      { _id: new ObjectId().toString(), text: 'Email and push notification automation' },
+      { _id: new ObjectId().toString(), text: 'CDN, cache, and security layer setup' },
+    ],
+    packageGrid: [
+      {
+        _id: new ObjectId().toString(),
+        tier: 'Launch',
+        timeline: '2-3 weeks',
+        includes: ['Storefront + blog/news core', 'Basic CMS and media library', 'Analytics starter setup'],
+        price: 'From $350',
+      },
+      {
+        _id: new ObjectId().toString(),
+        tier: 'Growth',
+        timeline: '4-6 weeks',
+        includes: ['Advanced editorial workflow', 'Marketplace-ready commerce modules', 'SEO and ad-ops toolkit'],
+        price: 'From $900',
+      },
+      {
+        _id: new ObjectId().toString(),
+        tier: 'Scale Enterprise',
+        timeline: 'Custom roadmap',
+        includes: ['Multi-brand architecture', 'High traffic optimization', 'Data integrations + automation'],
+        price: 'Custom quote',
+      },
+    ],
+    faqs: [
+      {
+        _id: new ObjectId().toString(),
+        q: 'Can I run the store and news portal with one admin panel?',
+        a: 'Yes. You can manage products, orders, newsroom content, ads, users, and analytics from one unified dashboard.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        q: 'Do you support Bengali and English content publishing?',
+        a: 'Yes. The portal supports multilingual articles, category structures, and localized SEO metadata.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        q: 'Will this support heavy traffic during campaigns or breaking news?',
+        a: 'Yes. We design the stack for caching, CDN delivery, and scalable infrastructure to handle traffic spikes.',
+      },
+    ],
+  }
+}
+
+function getDefaultDomainHostingServerPage() {
+  return {
+    key: 'domain-hosting-server-page',
+    heroImage:
+      'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=2200&q=80',
+    badge: 'Domain + Hosting + Server Excellence',
+    title: 'Domain, Hosting, Server Management & Support Packages',
+    subtitle:
+      'Build a reliable digital foundation with domain strategy, high-performance hosting, proactive server operations, and dedicated support packages designed for growing businesses.',
+    quickLinks: [
+      { _id: new ObjectId().toString(), label: 'Domain, hosting, server management & support packages', to: '/domain-hosting-server-management' },
+      { _id: new ObjectId().toString(), label: 'Website Design & Development', to: '/website-development' },
+      { _id: new ObjectId().toString(), label: 'E-commerce & news portal', to: '/ecommerce-news-portal' },
+      { _id: new ObjectId().toString(), label: 'Information Security', to: '/information-security' },
+    ],
+    domainServices: [
+      {
+        _id: new ObjectId().toString(),
+        title: 'Domain Planning & Brand Protection',
+        detail:
+          'Primary domain selection, TLD strategy (.com/.net/.org/.bd), typo-domain protection, competitor conflict checks, and renewal risk prevention.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'DNS Architecture & Delivery',
+        detail:
+          'Managed DNS zones, failover records, SPF/DKIM/DMARC setup, subdomain routing, and CDN-aware DNS tuning for speed and reliability.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Transfer, Renewal & Ownership Governance',
+        detail:
+          'Safe registrar transfer, lock/unlock control, WHOIS privacy, organization ownership cleanup, and domain lifecycle governance.',
+      },
+    ],
+    hostingStacks: [
+      {
+        _id: new ObjectId().toString(),
+        type: 'Managed Shared / Business Hosting',
+        useCase: 'Startup websites, portfolios, and business landing pages with cost-efficient management.',
+        features: ['SSL included', 'Daily backup', 'Email accounts', 'Control panel access'],
+      },
+      {
+        _id: new ObjectId().toString(),
+        type: 'VPS / Cloud Hosting',
+        useCase: 'High-traffic websites and custom applications needing better resource isolation.',
+        features: ['Dedicated resources', 'Root access', 'Scalable RAM/CPU', 'Firewall hardening'],
+      },
+      {
+        _id: new ObjectId().toString(),
+        type: 'Dedicated & Hybrid Infrastructure',
+        useCase: 'Mission-critical platforms that require maximum control, custom networking, and compliance.',
+        features: ['Private networking', 'Load balancing', 'Disaster planning', 'Advanced monitoring'],
+      },
+    ],
+    serverOpsFlow: [
+      {
+        _id: new ObjectId().toString(),
+        step: '01',
+        heading: 'Assessment & Architecture',
+        text: 'Audit traffic, compute profile, risk points, and target availability before final stack design.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        step: '02',
+        heading: 'Provisioning & Hardening',
+        text: 'Secure OS baseline, patching, access policy setup, SSH hardening, and firewall rule enforcement.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        step: '03',
+        heading: 'Performance Optimization',
+        text: 'Web server tuning, database optimization, cache policy setup, and page delivery acceleration.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        step: '04',
+        heading: 'Monitoring & Incident Response',
+        text: '24/7 uptime checks, threshold alerts, incident playbooks, and recovery workflows.',
+      },
+    ],
+    supportPackages: [
+      {
+        _id: new ObjectId().toString(),
+        name: 'Essential Care',
+        timeline: 'Monthly plan',
+        features: ['Uptime monitoring', 'Security patch updates', 'Weekly backup verification', 'Email support'],
+        price: 'From $49/mo',
+      },
+      {
+        _id: new ObjectId().toString(),
+        name: 'Growth Ops',
+        timeline: 'Monthly plan',
+        features: ['Everything in Essential', 'Performance optimization', 'Priority issue handling', 'DNS and SSL management'],
+        price: 'From $119/mo',
+      },
+      {
+        _id: new ObjectId().toString(),
+        name: 'Enterprise Guard',
+        timeline: 'Custom SLA',
+        features: ['24/7 incident response', 'Dedicated engineer support', 'Advanced compliance reports', 'DR drill support'],
+        price: 'Custom quote',
+      },
+    ],
+    securityCoverage: [
+      {
+        _id: new ObjectId().toString(),
+        title: 'Server & Access Security',
+        points: ['MFA-first admin access policy', 'SSH key rotation and restricted sudo model', 'WAF and firewall hardening baseline'],
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Data Protection & Continuity',
+        points: ['Automated backup retention rules', 'Recovery point objective planning', 'Disaster recovery drill and verification'],
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Compliance Readiness',
+        points: ['Log retention and audit trail setup', 'Security posture reporting', 'Policy alignment for industry controls'],
+      },
+    ],
+    migrationChecklist: [
+      { _id: new ObjectId().toString(), text: 'Existing DNS and registrar audit' },
+      { _id: new ObjectId().toString(), text: 'Mail delivery records (SPF/DKIM/DMARC) validation' },
+      { _id: new ObjectId().toString(), text: 'Staging clone and load test before cutover' },
+      { _id: new ObjectId().toString(), text: 'Downtime-safe switch plan with rollback' },
+      { _id: new ObjectId().toString(), text: 'Post-migration security and speed re-check' },
+    ],
+    platformCoverage: [
+      {
+        _id: new ObjectId().toString(),
+        name: 'WordPress / CMS',
+        detail: 'Plugin-safe updates, cache strategy, media optimization, and security hardening.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        name: 'Node / React Apps',
+        detail: 'PM2/runtime process management, Nginx reverse proxy, and CI-friendly deployment flow.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        name: 'Laravel / PHP Apps',
+        detail: 'Queue/cron supervision, OPcache tuning, and database connection stability setup.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        name: 'Custom APIs',
+        detail: 'Rate limiting, observability dashboards, and endpoint-level uptime tracking.',
+      },
+    ],
+    reliabilityMetrics: [
+      { _id: new ObjectId().toString(), value: '99.95%', label: 'Target uptime standard' },
+      { _id: new ObjectId().toString(), value: '<15 min', label: 'Critical alert response goal' },
+      { _id: new ObjectId().toString(), value: '24/7', label: 'Monitoring coverage' },
+      { _id: new ObjectId().toString(), value: '0-downtime', label: 'Planned release strategy' },
+    ],
+    faqs: [
+      {
+        _id: new ObjectId().toString(),
+        q: 'Can you migrate my existing site and emails without downtime?',
+        a: 'Yes. We prepare staging migration, DNS cutover planning, and rollback strategy to minimize or avoid downtime.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        q: 'Do you provide SSL, backups, and malware protection in support plans?',
+        a: 'Yes. Security, backup policy, patch updates, and threat monitoring are included based on your chosen plan.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        q: 'Which option is better for me: business hosting, VPS, or dedicated server?',
+        a: 'We recommend based on traffic, app complexity, security requirements, and expected growth roadmap.',
+      },
+    ],
+  }
+}
+
 function getDefaultContentManagementPage() {
   return {
     key: 'content-management-page',
@@ -2441,6 +3456,824 @@ function validateContentManagementArrayItem(section, payload = {}, { partial = f
   return { errors, value }
 }
 
+function validateMunicipalityUnionManagementArrayItem(section, payload = {}, { partial = false } = {}) {
+  const value = {}
+  const errors = []
+
+  if (section === municipalityUnionManagementSections.serviceLinks) {
+    const label = typeof payload.label === 'string' ? payload.label.trim() : ''
+    const to = typeof payload.to === 'string' ? payload.to.trim() : ''
+    if (!partial || 'label' in payload) {
+      if (!label) errors.push('label is required')
+      else value.label = label
+    }
+    if (!partial || 'to' in payload) {
+      if (!to) errors.push('to is required')
+      else value.to = to
+    }
+  }
+
+  if (section === municipalityUnionManagementSections.civicModules) {
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    const icon = typeof payload.icon === 'string' ? payload.icon.trim() : ''
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
+    }
+    if (!partial || 'icon' in payload) {
+      if (!icon) errors.push('icon is required')
+      else value.icon = icon
+    }
+  }
+
+  if (section === municipalityUnionManagementSections.processTimeline) {
+    const step = typeof payload.step === 'string' ? payload.step.trim() : ''
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    if (!partial || 'step' in payload) {
+      if (!step) errors.push('step is required')
+      else value.step = step
+    }
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
+    }
+  }
+
+  if (section === municipalityUnionManagementSections.performanceCards) {
+    const label = typeof payload.label === 'string' ? payload.label.trim() : ''
+    const cardValue = typeof payload.value === 'string' ? payload.value.trim() : ''
+    if (!partial || 'label' in payload) {
+      if (!label) errors.push('label is required')
+      else value.label = label
+    }
+    if (!partial || 'value' in payload) {
+      if (!cardValue) errors.push('value is required')
+      else value.value = cardValue
+    }
+  }
+
+  if (section === municipalityUnionManagementSections.governanceFeatures) {
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
+    }
+  }
+
+  if (section === municipalityUnionManagementSections.faq) {
+    const q = typeof payload.q === 'string' ? payload.q.trim() : ''
+    const a = typeof payload.a === 'string' ? payload.a.trim() : ''
+    if (!partial || 'q' in payload) {
+      if (!q) errors.push('q is required')
+      else value.q = q
+    }
+    if (!partial || 'a' in payload) {
+      if (!a) errors.push('a is required')
+      else value.a = a
+    }
+  }
+
+  return { errors, value }
+}
+
+function validatePaymentGatewaysArrayItem(section, payload = {}, { partial = false } = {}) {
+  const value = {}
+  const errors = []
+
+  if (section === paymentGatewaysSections.heroStats || section === paymentGatewaysSections.metrics) {
+    const valueText = typeof payload.value === 'string' ? payload.value.trim() : ''
+    const label = typeof payload.label === 'string' ? payload.label.trim() : ''
+    if (!partial || 'value' in payload) {
+      if (!valueText) errors.push('value is required')
+      else value.value = valueText
+    }
+    if (!partial || 'label' in payload) {
+      if (!label) errors.push('label is required')
+      else value.label = label
+    }
+  }
+
+  if (section === paymentGatewaysSections.serviceLinks) {
+    const label = typeof payload.label === 'string' ? payload.label.trim() : ''
+    const to = typeof payload.to === 'string' ? payload.to.trim() : ''
+    if (!partial || 'label' in payload) {
+      if (!label) errors.push('label is required')
+      else value.label = label
+    }
+    if (!partial || 'to' in payload) {
+      if (!to) errors.push('to is required')
+      else value.to = to
+    }
+  }
+
+  if (section === paymentGatewaysSections.rails) {
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    const gradient = typeof payload.gradient === 'string' ? payload.gradient.trim() : ''
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
+    }
+    if (!partial || 'gradient' in payload) {
+      if (!gradient) errors.push('gradient is required')
+      else value.gradient = gradient
+    }
+  }
+
+  if (section === paymentGatewaysSections.partnerChannels) {
+    const name = typeof payload.name === 'string' ? payload.name.trim() : ''
+    const detail = typeof payload.detail === 'string' ? payload.detail.trim() : ''
+    if (!partial || 'name' in payload) {
+      if (!name) errors.push('name is required')
+      else value.name = name
+    }
+    if (!partial || 'detail' in payload) {
+      if (!detail) errors.push('detail is required')
+      else value.detail = detail
+    }
+  }
+
+  if (section === paymentGatewaysSections.flowSteps) {
+    const phase = typeof payload.phase === 'string' ? payload.phase.trim() : ''
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    if (!partial || 'phase' in payload) {
+      if (!phase) errors.push('phase is required')
+      else value.phase = phase
+    }
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
+    }
+  }
+
+  if (section === paymentGatewaysSections.riskLayers) {
+    const layerId = typeof payload.id === 'string' ? payload.id.trim() : ''
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    if (!partial || 'id' in payload) {
+      if (!layerId) errors.push('id is required')
+      else value.id = layerId
+    }
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
+    }
+  }
+
+  if (section === paymentGatewaysSections.walletCapabilities) {
+    const code = typeof payload.code === 'string' ? payload.code.trim() : ''
+    const heading = typeof payload.heading === 'string' ? payload.heading.trim() : ''
+    const detail = typeof payload.detail === 'string' ? payload.detail.trim() : ''
+    if (!partial || 'code' in payload) {
+      if (!code) errors.push('code is required')
+      else value.code = code
+    }
+    if (!partial || 'heading' in payload) {
+      if (!heading) errors.push('heading is required')
+      else value.heading = heading
+    }
+    if (!partial || 'detail' in payload) {
+      if (!detail) errors.push('detail is required')
+      else value.detail = detail
+    }
+  }
+
+  if (section === paymentGatewaysSections.businessUseCases) {
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
+    }
+  }
+
+  if (section === paymentGatewaysSections.faqs) {
+    const q = typeof payload.q === 'string' ? payload.q.trim() : ''
+    const a = typeof payload.a === 'string' ? payload.a.trim() : ''
+    if (!partial || 'q' in payload) {
+      if (!q) errors.push('q is required')
+      else value.q = q
+    }
+    if (!partial || 'a' in payload) {
+      if (!a) errors.push('a is required')
+      else value.a = a
+    }
+  }
+
+  return { errors, value }
+}
+
+function validateWebsiteDevelopmentArrayItem(section, payload = {}, { partial = false } = {}) {
+  const value = {}
+  const errors = []
+
+  if (section === websiteDevelopmentSections.introPoints || section === websiteDevelopmentSections.stack) {
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
+    }
+  }
+
+  if (section === websiteDevelopmentSections.quickLinks) {
+    const label = typeof payload.label === 'string' ? payload.label.trim() : ''
+    const to = typeof payload.to === 'string' ? payload.to.trim() : ''
+    if (!partial || 'label' in payload) {
+      if (!label) errors.push('label is required')
+      else value.label = label
+    }
+    if (!partial || 'to' in payload) {
+      if (!to) errors.push('to is required')
+      else value.to = to
+    }
+  }
+
+  if (
+    section === websiteDevelopmentSections.designPillars ||
+    section === websiteDevelopmentSections.partnerChannels ||
+    section === websiteDevelopmentSections.serviceDetails ||
+    section === websiteDevelopmentSections.businessUseCases
+  ) {
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    const name = typeof payload.name === 'string' ? payload.name.trim() : ''
+    const detail = typeof payload.detail === 'string' ? payload.detail.trim() : ''
+
+    if (section === websiteDevelopmentSections.designPillars) {
+      if (!partial || 'name' in payload) {
+        if (!name) errors.push('name is required')
+        else value.name = name
+      }
+      if (!partial || 'detail' in payload) {
+        if (!detail) errors.push('detail is required')
+        else value.detail = detail
+      }
+    } else {
+      if (!partial || 'title' in payload) {
+        if (!title) errors.push('title is required')
+        else value.title = title
+      }
+      if (!partial || 'text' in payload) {
+        if (!text) errors.push('text is required')
+        else value.text = text
+      }
+    }
+  }
+
+  if (section === websiteDevelopmentSections.deliveryTracks) {
+    const track = typeof payload.track === 'string' ? payload.track.trim() : ''
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    if (!partial || 'track' in payload) {
+      if (!track) errors.push('track is required')
+      else value.track = track
+    }
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
+    }
+  }
+
+  if (section === websiteDevelopmentSections.packageGrid) {
+    const type = typeof payload.type === 'string' ? payload.type.trim() : ''
+    const scope = typeof payload.scope === 'string' ? payload.scope.trim() : ''
+    const eta = typeof payload.eta === 'string' ? payload.eta.trim() : ''
+    const price = typeof payload.price === 'string' ? payload.price.trim() : ''
+    if (!partial || 'type' in payload) {
+      if (!type) errors.push('type is required')
+      else value.type = type
+    }
+    if (!partial || 'scope' in payload) {
+      if (!scope) errors.push('scope is required')
+      else value.scope = scope
+    }
+    if (!partial || 'eta' in payload) {
+      if (!eta) errors.push('eta is required')
+      else value.eta = eta
+    }
+    if (!partial || 'price' in payload) {
+      if (!price) errors.push('price is required')
+      else value.price = price
+    }
+  }
+
+  if (section === websiteDevelopmentSections.projectShowcase) {
+    const name = typeof payload.name === 'string' ? payload.name.trim() : ''
+    const category = typeof payload.category === 'string' ? payload.category.trim() : ''
+    const summary = typeof payload.summary === 'string' ? payload.summary.trim() : ''
+    const liveLink = typeof payload.liveLink === 'string' ? payload.liveLink.trim() : ''
+    const githubLink = typeof payload.githubLink === 'string' ? payload.githubLink.trim() : ''
+    const image = typeof payload.image === 'string' ? payload.image.trim() : ''
+    const tech = Array.isArray(payload.tech) ? payload.tech.filter((t) => typeof t === 'string').map((t) => t.trim()).filter(Boolean) : []
+
+    if (!partial || 'name' in payload) {
+      if (!name) errors.push('name is required')
+      else value.name = name
+    }
+    if (!partial || 'category' in payload) {
+      if (!category) errors.push('category is required')
+      else value.category = category
+    }
+    if (!partial || 'summary' in payload) {
+      if (!summary) errors.push('summary is required')
+      else value.summary = summary
+    }
+    if (!partial || 'liveLink' in payload) {
+      if (!liveLink) errors.push('liveLink is required')
+      else value.liveLink = liveLink
+    }
+    if (!partial || 'githubLink' in payload) {
+      if (!githubLink) errors.push('githubLink is required')
+      else value.githubLink = githubLink
+    }
+    if (!partial || 'image' in payload) {
+      if (!image) errors.push('image is required')
+      else value.image = image
+    }
+    if ('tech' in payload || !partial) {
+      if (!tech.length) errors.push('tech is required')
+      else value.tech = tech
+    }
+  }
+
+  if (section === websiteDevelopmentSections.stats) {
+    const valueText = typeof payload.value === 'string' ? payload.value.trim() : ''
+    const label = typeof payload.label === 'string' ? payload.label.trim() : ''
+    if (!partial || 'value' in payload) {
+      if (!valueText) errors.push('value is required')
+      else value.value = valueText
+    }
+    if (!partial || 'label' in payload) {
+      if (!label) errors.push('label is required')
+      else value.label = label
+    }
+  }
+
+  if (section === websiteDevelopmentSections.faqs) {
+    const q = typeof payload.q === 'string' ? payload.q.trim() : ''
+    const a = typeof payload.a === 'string' ? payload.a.trim() : ''
+    if (!partial || 'q' in payload) {
+      if (!q) errors.push('q is required')
+      else value.q = q
+    }
+    if (!partial || 'a' in payload) {
+      if (!a) errors.push('a is required')
+      else value.a = a
+    }
+  }
+
+  return { errors, value }
+}
+
+function validateLandingPageDesignArrayItem(section, payload = {}, { partial = false } = {}) {
+  const value = {}
+  const errors = []
+
+  if (section === landingPageDesignSections.quickActions) {
+    const label = typeof payload.label === 'string' ? payload.label.trim() : ''
+    const to = typeof payload.to === 'string' ? payload.to.trim() : ''
+    if (!partial || 'label' in payload) {
+      if (!label) errors.push('label is required')
+      else value.label = label
+    }
+    if (!partial || 'to' in payload) {
+      if (!to) errors.push('to is required')
+      else value.to = to
+    }
+  }
+
+  if (section === landingPageDesignSections.campaignTypes) {
+    const type = typeof payload.type === 'string' ? payload.type.trim() : ''
+    const detail = typeof payload.detail === 'string' ? payload.detail.trim() : ''
+    const accent = typeof payload.accent === 'string' ? payload.accent.trim() : ''
+    if (!partial || 'type' in payload) {
+      if (!type) errors.push('type is required')
+      else value.type = type
+    }
+    if (!partial || 'detail' in payload) {
+      if (!detail) errors.push('detail is required')
+      else value.detail = detail
+    }
+    if (!partial || 'accent' in payload) {
+      if (!accent) errors.push('accent is required')
+      else value.accent = accent
+    }
+  }
+
+  if (section === landingPageDesignSections.sectionBlocks) {
+    const heading = typeof payload.heading === 'string' ? payload.heading.trim() : ''
+    const points = Array.isArray(payload.points)
+      ? payload.points.filter((p) => typeof p === 'string').map((p) => p.trim()).filter(Boolean)
+      : []
+    if (!partial || 'heading' in payload) {
+      if (!heading) errors.push('heading is required')
+      else value.heading = heading
+    }
+    if ('points' in payload || !partial) {
+      if (!points.length) errors.push('points is required')
+      else value.points = points
+    }
+  }
+
+  if (section === landingPageDesignSections.processFlow) {
+    const step = typeof payload.step === 'string' ? payload.step.trim() : ''
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    if (!partial || 'step' in payload) {
+      if (!step) errors.push('step is required')
+      else value.step = step
+    }
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
+    }
+  }
+
+  if (section === landingPageDesignSections.conversionStats) {
+    const valueText = typeof payload.value === 'string' ? payload.value.trim() : ''
+    const label = typeof payload.label === 'string' ? payload.label.trim() : ''
+    if (!partial || 'value' in payload) {
+      if (!valueText) errors.push('value is required')
+      else value.value = valueText
+    }
+    if (!partial || 'label' in payload) {
+      if (!label) errors.push('label is required')
+      else value.label = label
+    }
+  }
+
+  if (section === landingPageDesignSections.pricingCards) {
+    const name = typeof payload.name === 'string' ? payload.name.trim() : ''
+    const timeline = typeof payload.timeline === 'string' ? payload.timeline.trim() : ''
+    const price = typeof payload.price === 'string' ? payload.price.trim() : ''
+    const features = Array.isArray(payload.features)
+      ? payload.features.filter((f) => typeof f === 'string').map((f) => f.trim()).filter(Boolean)
+      : []
+    if (!partial || 'name' in payload) {
+      if (!name) errors.push('name is required')
+      else value.name = name
+    }
+    if ('features' in payload || !partial) {
+      if (!features.length) errors.push('features is required')
+      else value.features = features
+    }
+    if (!partial || 'timeline' in payload) {
+      if (!timeline) errors.push('timeline is required')
+      else value.timeline = timeline
+    }
+    if (!partial || 'price' in payload) {
+      if (!price) errors.push('price is required')
+      else value.price = price
+    }
+  }
+
+  if (section === landingPageDesignSections.faqs) {
+    const q = typeof payload.q === 'string' ? payload.q.trim() : ''
+    const a = typeof payload.a === 'string' ? payload.a.trim() : ''
+    if (!partial || 'q' in payload) {
+      if (!q) errors.push('q is required')
+      else value.q = q
+    }
+    if (!partial || 'a' in payload) {
+      if (!a) errors.push('a is required')
+      else value.a = a
+    }
+  }
+
+  return { errors, value }
+}
+
+function validateEcommerceNewsPortalArrayItem(section, payload = {}, { partial = false } = {}) {
+  const value = {}
+  const errors = []
+
+  if (section === ecommerceNewsPortalSections.quickLinks) {
+    const label = typeof payload.label === 'string' ? payload.label.trim() : ''
+    const to = typeof payload.to === 'string' ? payload.to.trim() : ''
+    if (!partial || 'label' in payload) {
+      if (!label) errors.push('label is required')
+      else value.label = label
+    }
+    if (!partial || 'to' in payload) {
+      if (!to) errors.push('to is required')
+      else value.to = to
+    }
+  }
+
+  if (section === ecommerceNewsPortalSections.commerceModules) {
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const detail = typeof payload.detail === 'string' ? payload.detail.trim() : ''
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'detail' in payload) {
+      if (!detail) errors.push('detail is required')
+      else value.detail = detail
+    }
+  }
+
+  if (section === ecommerceNewsPortalSections.newsroomFlow) {
+    const phase = typeof payload.phase === 'string' ? payload.phase.trim() : ''
+    const heading = typeof payload.heading === 'string' ? payload.heading.trim() : ''
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    if (!partial || 'phase' in payload) {
+      if (!phase) errors.push('phase is required')
+      else value.phase = phase
+    }
+    if (!partial || 'heading' in payload) {
+      if (!heading) errors.push('heading is required')
+      else value.heading = heading
+    }
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
+    }
+  }
+
+  if (section === ecommerceNewsPortalSections.monetizationCards) {
+    const name = typeof payload.name === 'string' ? payload.name.trim() : ''
+    const points = Array.isArray(payload.points)
+      ? payload.points.filter((p) => typeof p === 'string').map((p) => p.trim()).filter(Boolean)
+      : []
+    if (!partial || 'name' in payload) {
+      if (!name) errors.push('name is required')
+      else value.name = name
+    }
+    if ('points' in payload || !partial) {
+      if (!points.length) errors.push('points is required')
+      else value.points = points
+    }
+  }
+
+  if (section === ecommerceNewsPortalSections.architectureHighlights) {
+    const valueText = typeof payload.value === 'string' ? payload.value.trim() : ''
+    const label = typeof payload.label === 'string' ? payload.label.trim() : ''
+    if (!partial || 'value' in payload) {
+      if (!valueText) errors.push('value is required')
+      else value.value = valueText
+    }
+    if (!partial || 'label' in payload) {
+      if (!label) errors.push('label is required')
+      else value.label = label
+    }
+  }
+
+  if (section === ecommerceNewsPortalSections.audienceSolutions) {
+    const audience = typeof payload.audience === 'string' ? payload.audience.trim() : ''
+    const outcome = typeof payload.outcome === 'string' ? payload.outcome.trim() : ''
+    if (!partial || 'audience' in payload) {
+      if (!audience) errors.push('audience is required')
+      else value.audience = audience
+    }
+    if (!partial || 'outcome' in payload) {
+      if (!outcome) errors.push('outcome is required')
+      else value.outcome = outcome
+    }
+  }
+
+  if (section === ecommerceNewsPortalSections.integrationSuite) {
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
+    }
+  }
+
+  if (section === ecommerceNewsPortalSections.packageGrid) {
+    const tier = typeof payload.tier === 'string' ? payload.tier.trim() : ''
+    const timeline = typeof payload.timeline === 'string' ? payload.timeline.trim() : ''
+    const price = typeof payload.price === 'string' ? payload.price.trim() : ''
+    const includes = Array.isArray(payload.includes)
+      ? payload.includes.filter((item) => typeof item === 'string').map((item) => item.trim()).filter(Boolean)
+      : []
+    if (!partial || 'tier' in payload) {
+      if (!tier) errors.push('tier is required')
+      else value.tier = tier
+    }
+    if (!partial || 'timeline' in payload) {
+      if (!timeline) errors.push('timeline is required')
+      else value.timeline = timeline
+    }
+    if (!partial || 'price' in payload) {
+      if (!price) errors.push('price is required')
+      else value.price = price
+    }
+    if ('includes' in payload || !partial) {
+      if (!includes.length) errors.push('includes is required')
+      else value.includes = includes
+    }
+  }
+
+  if (section === ecommerceNewsPortalSections.faqs) {
+    const q = typeof payload.q === 'string' ? payload.q.trim() : ''
+    const a = typeof payload.a === 'string' ? payload.a.trim() : ''
+    if (!partial || 'q' in payload) {
+      if (!q) errors.push('q is required')
+      else value.q = q
+    }
+    if (!partial || 'a' in payload) {
+      if (!a) errors.push('a is required')
+      else value.a = a
+    }
+  }
+
+  return { errors, value }
+}
+
+function validateDomainHostingServerArrayItem(section, payload = {}, { partial = false } = {}) {
+  const value = {}
+  const errors = []
+
+  if (section === domainHostingServerSections.quickLinks) {
+    const label = typeof payload.label === 'string' ? payload.label.trim() : ''
+    const to = typeof payload.to === 'string' ? payload.to.trim() : ''
+    if (!partial || 'label' in payload) {
+      if (!label) errors.push('label is required')
+      else value.label = label
+    }
+    if (!partial || 'to' in payload) {
+      if (!to) errors.push('to is required')
+      else value.to = to
+    }
+  }
+
+  if (section === domainHostingServerSections.domainServices) {
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const detail = typeof payload.detail === 'string' ? payload.detail.trim() : ''
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'detail' in payload) {
+      if (!detail) errors.push('detail is required')
+      else value.detail = detail
+    }
+  }
+
+  if (section === domainHostingServerSections.hostingStacks) {
+    const type = typeof payload.type === 'string' ? payload.type.trim() : ''
+    const useCase = typeof payload.useCase === 'string' ? payload.useCase.trim() : ''
+    const features = Array.isArray(payload.features)
+      ? payload.features.filter((item) => typeof item === 'string').map((item) => item.trim()).filter(Boolean)
+      : []
+    if (!partial || 'type' in payload) {
+      if (!type) errors.push('type is required')
+      else value.type = type
+    }
+    if (!partial || 'useCase' in payload) {
+      if (!useCase) errors.push('useCase is required')
+      else value.useCase = useCase
+    }
+    if ('features' in payload || !partial) {
+      if (!features.length) errors.push('features is required')
+      else value.features = features
+    }
+  }
+
+  if (section === domainHostingServerSections.serverOpsFlow) {
+    const step = typeof payload.step === 'string' ? payload.step.trim() : ''
+    const heading = typeof payload.heading === 'string' ? payload.heading.trim() : ''
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    if (!partial || 'step' in payload) {
+      if (!step) errors.push('step is required')
+      else value.step = step
+    }
+    if (!partial || 'heading' in payload) {
+      if (!heading) errors.push('heading is required')
+      else value.heading = heading
+    }
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
+    }
+  }
+
+  if (section === domainHostingServerSections.supportPackages) {
+    const name = typeof payload.name === 'string' ? payload.name.trim() : ''
+    const timeline = typeof payload.timeline === 'string' ? payload.timeline.trim() : ''
+    const price = typeof payload.price === 'string' ? payload.price.trim() : ''
+    const features = Array.isArray(payload.features)
+      ? payload.features.filter((item) => typeof item === 'string').map((item) => item.trim()).filter(Boolean)
+      : []
+    if (!partial || 'name' in payload) {
+      if (!name) errors.push('name is required')
+      else value.name = name
+    }
+    if (!partial || 'timeline' in payload) {
+      if (!timeline) errors.push('timeline is required')
+      else value.timeline = timeline
+    }
+    if (!partial || 'price' in payload) {
+      if (!price) errors.push('price is required')
+      else value.price = price
+    }
+    if ('features' in payload || !partial) {
+      if (!features.length) errors.push('features is required')
+      else value.features = features
+    }
+  }
+
+  if (section === domainHostingServerSections.securityCoverage) {
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const points = Array.isArray(payload.points)
+      ? payload.points.filter((item) => typeof item === 'string').map((item) => item.trim()).filter(Boolean)
+      : []
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if ('points' in payload || !partial) {
+      if (!points.length) errors.push('points is required')
+      else value.points = points
+    }
+  }
+
+  if (section === domainHostingServerSections.migrationChecklist) {
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
+    }
+  }
+
+  if (section === domainHostingServerSections.platformCoverage) {
+    const name = typeof payload.name === 'string' ? payload.name.trim() : ''
+    const detail = typeof payload.detail === 'string' ? payload.detail.trim() : ''
+    if (!partial || 'name' in payload) {
+      if (!name) errors.push('name is required')
+      else value.name = name
+    }
+    if (!partial || 'detail' in payload) {
+      if (!detail) errors.push('detail is required')
+      else value.detail = detail
+    }
+  }
+
+  if (section === domainHostingServerSections.reliabilityMetrics) {
+    const valueText = typeof payload.value === 'string' ? payload.value.trim() : ''
+    const label = typeof payload.label === 'string' ? payload.label.trim() : ''
+    if (!partial || 'value' in payload) {
+      if (!valueText) errors.push('value is required')
+      else value.value = valueText
+    }
+    if (!partial || 'label' in payload) {
+      if (!label) errors.push('label is required')
+      else value.label = label
+    }
+  }
+
+  if (section === domainHostingServerSections.faqs) {
+    const q = typeof payload.q === 'string' ? payload.q.trim() : ''
+    const a = typeof payload.a === 'string' ? payload.a.trim() : ''
+    if (!partial || 'q' in payload) {
+      if (!q) errors.push('q is required')
+      else value.q = q
+    }
+    if (!partial || 'a' in payload) {
+      if (!a) errors.push('a is required')
+      else value.a = a
+    }
+  }
+
+  return { errors, value }
+}
+
 async function getInformationSecurityPageDocument() {
   const collection = getPageContentCollection()
   const existing = await collection.findOne({ key: 'information-security-page' })
@@ -2613,6 +4446,114 @@ async function getInventoryManagementSoftwarePageDocument() {
 
   const defaults = {
     ...getDefaultInventoryManagementSoftwarePage(),
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  }
+
+  await collection.insertOne(defaults)
+  return defaults
+}
+
+async function getMunicipalityUnionManagementPageDocument() {
+  const collection = getPageContentCollection()
+  const existing = await collection.findOne({ key: 'municipality-union-management-page' })
+
+  if (existing) {
+    return existing
+  }
+
+  const defaults = {
+    ...getDefaultMunicipalityUnionManagementPage(),
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  }
+
+  await collection.insertOne(defaults)
+  return defaults
+}
+
+async function getPaymentGatewaysPageDocument() {
+  const collection = getPageContentCollection()
+  const existing = await collection.findOne({ key: 'payment-gateways-page' })
+
+  if (existing) {
+    return existing
+  }
+
+  const defaults = {
+    ...getDefaultPaymentGatewaysPage(),
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  }
+
+  await collection.insertOne(defaults)
+  return defaults
+}
+
+async function getWebsiteDevelopmentPageDocument() {
+  const collection = getPageContentCollection()
+  const existing = await collection.findOne({ key: 'website-development-page' })
+
+  if (existing) {
+    return existing
+  }
+
+  const defaults = {
+    ...getDefaultWebsiteDevelopmentPage(),
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  }
+
+  await collection.insertOne(defaults)
+  return defaults
+}
+
+async function getLandingPageDesignPageDocument() {
+  const collection = getPageContentCollection()
+  const existing = await collection.findOne({ key: 'landing-page-design-page' })
+
+  if (existing) {
+    return existing
+  }
+
+  const defaults = {
+    ...getDefaultLandingPageDesignPage(),
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  }
+
+  await collection.insertOne(defaults)
+  return defaults
+}
+
+async function getEcommerceNewsPortalPageDocument() {
+  const collection = getPageContentCollection()
+  const existing = await collection.findOne({ key: 'ecommerce-news-portal-page' })
+
+  if (existing) {
+    return existing
+  }
+
+  const defaults = {
+    ...getDefaultEcommerceNewsPortalPage(),
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  }
+
+  await collection.insertOne(defaults)
+  return defaults
+}
+
+async function getDomainHostingServerPageDocument() {
+  const collection = getPageContentCollection()
+  const existing = await collection.findOne({ key: 'domain-hosting-server-page' })
+
+  if (existing) {
+    return existing
+  }
+
+  const defaults = {
+    ...getDefaultDomainHostingServerPage(),
     createdAt: new Date(),
     updatedAt: new Date(),
   }
@@ -6164,6 +8105,1099 @@ app.delete('/api/inventory-management-software-page/:section/:itemId', async (re
   } catch (error) {
     console.error(error)
     return res.status(500).json({ error: 'Failed to delete inventory management software section item' })
+  }
+})
+
+app.get('/api/municipality-union-management-page', async (_req, res) => {
+  try {
+    const page = await getMunicipalityUnionManagementPageDocument()
+    return res.json(normalizeDocument(page))
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to fetch municipality union management page data' })
+  }
+})
+
+app.put('/api/municipality-union-management-page', async (req, res) => {
+  try {
+    const defaultPage = getDefaultMunicipalityUnionManagementPage()
+    const payload = {
+      heroImage: typeof req.body.heroImage === 'string' ? req.body.heroImage.trim() : '',
+      heroBadge: typeof req.body.heroBadge === 'string' ? req.body.heroBadge.trim() : 'Smart Governance',
+      heroTitle:
+        typeof req.body.heroTitle === 'string' ? req.body.heroTitle.trim() : 'Municipality / Union Management',
+      heroLead: typeof req.body.heroLead === 'string' ? req.body.heroLead.trim() : defaultPage.heroLead,
+      updatedAt: new Date(),
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'municipality-union-management-page' },
+      {
+        $set: payload,
+        $setOnInsert: {
+          key: defaultPage.key,
+          serviceLinks: defaultPage.serviceLinks,
+          civicModules: defaultPage.civicModules,
+          processTimeline: defaultPage.processTimeline,
+          performanceCards: defaultPage.performanceCards,
+          governanceFeatures: defaultPage.governanceFeatures,
+          faq: defaultPage.faq,
+          createdAt: new Date(),
+        },
+      },
+      { upsert: true },
+    )
+
+    const updatedPage = await getPageContentCollection().findOne({ key: 'municipality-union-management-page' })
+    return res.json({
+      message: 'Municipality union management page content updated',
+      page: normalizeDocument(updatedPage),
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update municipality union management page content' })
+  }
+})
+
+app.post('/api/municipality-union-management-page/:section', async (req, res) => {
+  try {
+    const { section } = req.params
+    const targetSection = municipalityUnionManagementSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateMunicipalityUnionManagementArrayItem(targetSection, req.body)
+
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    const page = await getMunicipalityUnionManagementPageDocument()
+    const nextItem = {
+      _id: new ObjectId().toString(),
+      ...value,
+    }
+    const nextItems = [...(page[targetSection] || []), nextItem]
+
+    await getPageContentCollection().updateOne(
+      { key: 'municipality-union-management-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.status(201).json({
+      message: `${targetSection} item created successfully`,
+      item: nextItem,
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to create municipality union management section item' })
+  }
+})
+
+app.patch('/api/municipality-union-management-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = municipalityUnionManagementSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateMunicipalityUnionManagementArrayItem(targetSection, req.body, {
+      partial: true,
+    })
+
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    if (!Object.keys(value).length) {
+      return res.status(400).json({ error: 'At least one field is required to update' })
+    }
+
+    const page = await getMunicipalityUnionManagementPageDocument()
+    const items = page[targetSection] || []
+    const index = items.findIndex((item) => item._id === itemId)
+
+    if (index === -1) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    const updatedItem = {
+      ...items[index],
+      ...value,
+    }
+
+    const nextItems = [...items]
+    nextItems[index] = updatedItem
+
+    await getPageContentCollection().updateOne(
+      { key: 'municipality-union-management-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.json({
+      message: `${targetSection} item updated successfully`,
+      item: updatedItem,
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update municipality union management section item' })
+  }
+})
+
+app.delete('/api/municipality-union-management-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = municipalityUnionManagementSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const page = await getMunicipalityUnionManagementPageDocument()
+    const items = page[targetSection] || []
+    const nextItems = items.filter((item) => item._id !== itemId)
+
+    if (nextItems.length === items.length) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'municipality-union-management-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.json({ message: `${targetSection} item deleted successfully` })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to delete municipality union management section item' })
+  }
+})
+
+app.get('/api/payment-gateways-page', async (_req, res) => {
+  try {
+    const page = await getPaymentGatewaysPageDocument()
+    return res.json(normalizeDocument(page))
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to fetch payment gateways page data' })
+  }
+})
+
+app.put('/api/payment-gateways-page', async (req, res) => {
+  try {
+    const defaultPage = getDefaultPaymentGatewaysPage()
+    const payload = {
+      heroImage: typeof req.body.heroImage === 'string' ? req.body.heroImage.trim() : '',
+      heroBadge: typeof req.body.heroBadge === 'string' ? req.body.heroBadge.trim() : defaultPage.heroBadge,
+      heroTitle: typeof req.body.heroTitle === 'string' ? req.body.heroTitle.trim() : defaultPage.heroTitle,
+      heroLead: typeof req.body.heroLead === 'string' ? req.body.heroLead.trim() : defaultPage.heroLead,
+      updatedAt: new Date(),
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'payment-gateways-page' },
+      {
+        $set: payload,
+        $setOnInsert: {
+          key: defaultPage.key,
+          heroStats: defaultPage.heroStats,
+          serviceLinks: defaultPage.serviceLinks,
+          rails: defaultPage.rails,
+          partnerChannels: defaultPage.partnerChannels,
+          flowSteps: defaultPage.flowSteps,
+          riskLayers: defaultPage.riskLayers,
+          walletCapabilities: defaultPage.walletCapabilities,
+          metrics: defaultPage.metrics,
+          businessUseCases: defaultPage.businessUseCases,
+          faqs: defaultPage.faqs,
+          createdAt: new Date(),
+        },
+      },
+      { upsert: true },
+    )
+
+    const updatedPage = await getPageContentCollection().findOne({ key: 'payment-gateways-page' })
+    return res.json({
+      message: 'Payment gateways page content updated',
+      page: normalizeDocument(updatedPage),
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update payment gateways page content' })
+  }
+})
+
+app.post('/api/payment-gateways-page/:section', async (req, res) => {
+  try {
+    const { section } = req.params
+    const targetSection = paymentGatewaysSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validatePaymentGatewaysArrayItem(targetSection, req.body)
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    const page = await getPaymentGatewaysPageDocument()
+    const nextItem = {
+      _id: new ObjectId().toString(),
+      ...value,
+    }
+    const nextItems = [...(page[targetSection] || []), nextItem]
+
+    await getPageContentCollection().updateOne(
+      { key: 'payment-gateways-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.status(201).json({
+      message: `${targetSection} item created successfully`,
+      item: nextItem,
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to create payment gateways section item' })
+  }
+})
+
+app.patch('/api/payment-gateways-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = paymentGatewaysSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validatePaymentGatewaysArrayItem(targetSection, req.body, { partial: true })
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    if (!Object.keys(value).length) {
+      return res.status(400).json({ error: 'At least one field is required to update' })
+    }
+
+    const page = await getPaymentGatewaysPageDocument()
+    const items = page[targetSection] || []
+    const index = items.findIndex((item) => item._id === itemId)
+
+    if (index === -1) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    const updatedItem = {
+      ...items[index],
+      ...value,
+    }
+
+    const nextItems = [...items]
+    nextItems[index] = updatedItem
+
+    await getPageContentCollection().updateOne(
+      { key: 'payment-gateways-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.json({
+      message: `${targetSection} item updated successfully`,
+      item: updatedItem,
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update payment gateways section item' })
+  }
+})
+
+app.delete('/api/payment-gateways-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = paymentGatewaysSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const page = await getPaymentGatewaysPageDocument()
+    const items = page[targetSection] || []
+    const nextItems = items.filter((item) => item._id !== itemId)
+
+    if (nextItems.length === items.length) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'payment-gateways-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.json({ message: `${targetSection} item deleted successfully` })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to delete payment gateways section item' })
+  }
+})
+
+app.get('/api/website-development-page', async (_req, res) => {
+  try {
+    const page = await getWebsiteDevelopmentPageDocument()
+    return res.json(normalizeDocument(page))
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to fetch website development page data' })
+  }
+})
+
+app.put('/api/website-development-page', async (req, res) => {
+  try {
+    const defaultPage = getDefaultWebsiteDevelopmentPage()
+    const payload = {
+      heroImage: typeof req.body.heroImage === 'string' ? req.body.heroImage.trim() : '',
+      eyebrow: typeof req.body.eyebrow === 'string' ? req.body.eyebrow.trim() : defaultPage.eyebrow,
+      title: typeof req.body.title === 'string' ? req.body.title.trim() : defaultPage.title,
+      subtitle: typeof req.body.subtitle === 'string' ? req.body.subtitle.trim() : defaultPage.subtitle,
+      updatedAt: new Date(),
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'website-development-page' },
+      {
+        $set: payload,
+        $setOnInsert: {
+          key: defaultPage.key,
+          introPoints: defaultPage.introPoints,
+          quickLinks: defaultPage.quickLinks,
+          designPillars: defaultPage.designPillars,
+          deliveryTracks: defaultPage.deliveryTracks,
+          packageGrid: defaultPage.packageGrid,
+          serviceDetails: defaultPage.serviceDetails,
+          projectShowcase: defaultPage.projectShowcase,
+          stack: defaultPage.stack,
+          stats: defaultPage.stats,
+          faqs: defaultPage.faqs,
+          createdAt: new Date(),
+        },
+      },
+      { upsert: true },
+    )
+
+    const updatedPage = await getPageContentCollection().findOne({ key: 'website-development-page' })
+    return res.json({
+      message: 'Website development page content updated',
+      page: normalizeDocument(updatedPage),
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update website development page content' })
+  }
+})
+
+app.post('/api/website-development-page/:section', async (req, res) => {
+  try {
+    const { section } = req.params
+    const targetSection = websiteDevelopmentSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateWebsiteDevelopmentArrayItem(targetSection, req.body)
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    const page = await getWebsiteDevelopmentPageDocument()
+    const nextItem = {
+      _id: new ObjectId().toString(),
+      ...value,
+    }
+    const nextItems = [...(page[targetSection] || []), nextItem]
+
+    await getPageContentCollection().updateOne(
+      { key: 'website-development-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.status(201).json({
+      message: `${targetSection} item created successfully`,
+      item: nextItem,
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to create website development section item' })
+  }
+})
+
+app.patch('/api/website-development-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = websiteDevelopmentSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateWebsiteDevelopmentArrayItem(targetSection, req.body, { partial: true })
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    if (!Object.keys(value).length) {
+      return res.status(400).json({ error: 'At least one field is required to update' })
+    }
+
+    const page = await getWebsiteDevelopmentPageDocument()
+    const items = page[targetSection] || []
+    const index = items.findIndex((item) => item._id === itemId)
+
+    if (index === -1) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    const updatedItem = {
+      ...items[index],
+      ...value,
+    }
+
+    const nextItems = [...items]
+    nextItems[index] = updatedItem
+
+    await getPageContentCollection().updateOne(
+      { key: 'website-development-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.json({
+      message: `${targetSection} item updated successfully`,
+      item: updatedItem,
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update website development section item' })
+  }
+})
+
+app.delete('/api/website-development-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = websiteDevelopmentSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const page = await getWebsiteDevelopmentPageDocument()
+    const items = page[targetSection] || []
+    const nextItems = items.filter((item) => item._id !== itemId)
+
+    if (nextItems.length === items.length) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'website-development-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.json({ message: `${targetSection} item deleted successfully` })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to delete website development section item' })
+  }
+})
+
+app.get('/api/landing-page-design-page', async (_req, res) => {
+  try {
+    const page = await getLandingPageDesignPageDocument()
+    return res.json(normalizeDocument(page))
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to fetch landing page design page data' })
+  }
+})
+
+app.put('/api/landing-page-design-page', async (req, res) => {
+  try {
+    const defaultPage = getDefaultLandingPageDesignPage()
+    const payload = {
+      heroImage: typeof req.body.heroImage === 'string' ? req.body.heroImage.trim() : '',
+      badge: typeof req.body.badge === 'string' ? req.body.badge.trim() : defaultPage.badge,
+      title: typeof req.body.title === 'string' ? req.body.title.trim() : defaultPage.title,
+      subtitle: typeof req.body.subtitle === 'string' ? req.body.subtitle.trim() : defaultPage.subtitle,
+      updatedAt: new Date(),
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'landing-page-design-page' },
+      {
+        $set: payload,
+        $setOnInsert: {
+          key: defaultPage.key,
+          quickActions: defaultPage.quickActions,
+          campaignTypes: defaultPage.campaignTypes,
+          sectionBlocks: defaultPage.sectionBlocks,
+          processFlow: defaultPage.processFlow,
+          conversionStats: defaultPage.conversionStats,
+          pricingCards: defaultPage.pricingCards,
+          faqs: defaultPage.faqs,
+          createdAt: new Date(),
+        },
+      },
+      { upsert: true },
+    )
+
+    const updatedPage = await getPageContentCollection().findOne({ key: 'landing-page-design-page' })
+    return res.json({
+      message: 'Landing page design content updated',
+      page: normalizeDocument(updatedPage),
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update landing page design content' })
+  }
+})
+
+app.post('/api/landing-page-design-page/:section', async (req, res) => {
+  try {
+    const { section } = req.params
+    const targetSection = landingPageDesignSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateLandingPageDesignArrayItem(targetSection, req.body)
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    const page = await getLandingPageDesignPageDocument()
+    const nextItem = {
+      _id: new ObjectId().toString(),
+      ...value,
+    }
+    const nextItems = [...(page[targetSection] || []), nextItem]
+
+    await getPageContentCollection().updateOne(
+      { key: 'landing-page-design-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.status(201).json({
+      message: `${targetSection} item created successfully`,
+      item: nextItem,
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to create landing page design section item' })
+  }
+})
+
+app.patch('/api/landing-page-design-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = landingPageDesignSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateLandingPageDesignArrayItem(targetSection, req.body, { partial: true })
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    if (!Object.keys(value).length) {
+      return res.status(400).json({ error: 'At least one field is required to update' })
+    }
+
+    const page = await getLandingPageDesignPageDocument()
+    const items = page[targetSection] || []
+    const index = items.findIndex((item) => item._id === itemId)
+
+    if (index === -1) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    const updatedItem = {
+      ...items[index],
+      ...value,
+    }
+
+    const nextItems = [...items]
+    nextItems[index] = updatedItem
+
+    await getPageContentCollection().updateOne(
+      { key: 'landing-page-design-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.json({
+      message: `${targetSection} item updated successfully`,
+      item: updatedItem,
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update landing page design section item' })
+  }
+})
+
+app.delete('/api/landing-page-design-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = landingPageDesignSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const page = await getLandingPageDesignPageDocument()
+    const items = page[targetSection] || []
+    const nextItems = items.filter((item) => item._id !== itemId)
+
+    if (nextItems.length === items.length) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'landing-page-design-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.json({ message: `${targetSection} item deleted successfully` })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to delete landing page design section item' })
+  }
+})
+
+app.get('/api/ecommerce-news-portal-page', async (_req, res) => {
+  try {
+    const page = await getEcommerceNewsPortalPageDocument()
+    return res.json(normalizeDocument(page))
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to fetch ecommerce news portal page data' })
+  }
+})
+
+app.put('/api/ecommerce-news-portal-page', async (req, res) => {
+  try {
+    const defaultPage = getDefaultEcommerceNewsPortalPage()
+    const payload = {
+      heroImage: typeof req.body.heroImage === 'string' ? req.body.heroImage.trim() : '',
+      badge: typeof req.body.badge === 'string' ? req.body.badge.trim() : defaultPage.badge,
+      title: typeof req.body.title === 'string' ? req.body.title.trim() : defaultPage.title,
+      subtitle: typeof req.body.subtitle === 'string' ? req.body.subtitle.trim() : defaultPage.subtitle,
+      updatedAt: new Date(),
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'ecommerce-news-portal-page' },
+      {
+        $set: payload,
+        $setOnInsert: {
+          key: defaultPage.key,
+          quickLinks: defaultPage.quickLinks,
+          commerceModules: defaultPage.commerceModules,
+          newsroomFlow: defaultPage.newsroomFlow,
+          monetizationCards: defaultPage.monetizationCards,
+          architectureHighlights: defaultPage.architectureHighlights,
+          audienceSolutions: defaultPage.audienceSolutions,
+          integrationSuite: defaultPage.integrationSuite,
+          packageGrid: defaultPage.packageGrid,
+          faqs: defaultPage.faqs,
+          createdAt: new Date(),
+        },
+      },
+      { upsert: true },
+    )
+
+    const updatedPage = await getPageContentCollection().findOne({ key: 'ecommerce-news-portal-page' })
+    return res.json({
+      message: 'Ecommerce news portal content updated',
+      page: normalizeDocument(updatedPage),
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update ecommerce news portal content' })
+  }
+})
+
+app.post('/api/ecommerce-news-portal-page/:section', async (req, res) => {
+  try {
+    const { section } = req.params
+    const targetSection = ecommerceNewsPortalSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateEcommerceNewsPortalArrayItem(targetSection, req.body)
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    const page = await getEcommerceNewsPortalPageDocument()
+    const nextItem = {
+      _id: new ObjectId().toString(),
+      ...value,
+    }
+    const nextItems = [...(page[targetSection] || []), nextItem]
+
+    await getPageContentCollection().updateOne(
+      { key: 'ecommerce-news-portal-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.status(201).json({
+      message: `${targetSection} item created successfully`,
+      item: nextItem,
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to create ecommerce news portal section item' })
+  }
+})
+
+app.patch('/api/ecommerce-news-portal-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = ecommerceNewsPortalSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateEcommerceNewsPortalArrayItem(targetSection, req.body, { partial: true })
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    if (!Object.keys(value).length) {
+      return res.status(400).json({ error: 'At least one field is required to update' })
+    }
+
+    const page = await getEcommerceNewsPortalPageDocument()
+    const items = page[targetSection] || []
+    const index = items.findIndex((item) => item._id === itemId)
+
+    if (index === -1) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    const updatedItem = {
+      ...items[index],
+      ...value,
+    }
+    const nextItems = [...items]
+    nextItems[index] = updatedItem
+
+    await getPageContentCollection().updateOne(
+      { key: 'ecommerce-news-portal-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.json({
+      message: `${targetSection} item updated successfully`,
+      item: updatedItem,
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update ecommerce news portal section item' })
+  }
+})
+
+app.delete('/api/ecommerce-news-portal-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = ecommerceNewsPortalSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const page = await getEcommerceNewsPortalPageDocument()
+    const items = page[targetSection] || []
+    const nextItems = items.filter((item) => item._id !== itemId)
+
+    if (nextItems.length === items.length) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'ecommerce-news-portal-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.json({ message: `${targetSection} item deleted successfully` })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to delete ecommerce news portal section item' })
+  }
+})
+
+app.get('/api/domain-hosting-server-page', async (_req, res) => {
+  try {
+    const page = await getDomainHostingServerPageDocument()
+    return res.json(normalizeDocument(page))
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to fetch domain hosting server page data' })
+  }
+})
+
+app.put('/api/domain-hosting-server-page', async (req, res) => {
+  try {
+    const defaultPage = getDefaultDomainHostingServerPage()
+    const payload = {
+      heroImage: typeof req.body.heroImage === 'string' ? req.body.heroImage.trim() : '',
+      badge: typeof req.body.badge === 'string' ? req.body.badge.trim() : defaultPage.badge,
+      title: typeof req.body.title === 'string' ? req.body.title.trim() : defaultPage.title,
+      subtitle: typeof req.body.subtitle === 'string' ? req.body.subtitle.trim() : defaultPage.subtitle,
+      updatedAt: new Date(),
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'domain-hosting-server-page' },
+      {
+        $set: payload,
+        $setOnInsert: {
+          key: defaultPage.key,
+          quickLinks: defaultPage.quickLinks,
+          domainServices: defaultPage.domainServices,
+          hostingStacks: defaultPage.hostingStacks,
+          serverOpsFlow: defaultPage.serverOpsFlow,
+          supportPackages: defaultPage.supportPackages,
+          securityCoverage: defaultPage.securityCoverage,
+          migrationChecklist: defaultPage.migrationChecklist,
+          platformCoverage: defaultPage.platformCoverage,
+          reliabilityMetrics: defaultPage.reliabilityMetrics,
+          faqs: defaultPage.faqs,
+          createdAt: new Date(),
+        },
+      },
+      { upsert: true },
+    )
+
+    const updatedPage = await getPageContentCollection().findOne({ key: 'domain-hosting-server-page' })
+    return res.json({
+      message: 'Domain hosting server page content updated',
+      page: normalizeDocument(updatedPage),
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update domain hosting server page content' })
+  }
+})
+
+app.post('/api/domain-hosting-server-page/:section', async (req, res) => {
+  try {
+    const { section } = req.params
+    const targetSection = domainHostingServerSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateDomainHostingServerArrayItem(targetSection, req.body)
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    const page = await getDomainHostingServerPageDocument()
+    const nextItem = {
+      _id: new ObjectId().toString(),
+      ...value,
+    }
+    const nextItems = [...(page[targetSection] || []), nextItem]
+
+    await getPageContentCollection().updateOne(
+      { key: 'domain-hosting-server-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.status(201).json({
+      message: `${targetSection} item created successfully`,
+      item: nextItem,
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to create domain hosting server section item' })
+  }
+})
+
+app.patch('/api/domain-hosting-server-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = domainHostingServerSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateDomainHostingServerArrayItem(targetSection, req.body, { partial: true })
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    if (!Object.keys(value).length) {
+      return res.status(400).json({ error: 'At least one field is required to update' })
+    }
+
+    const page = await getDomainHostingServerPageDocument()
+    const items = page[targetSection] || []
+    const index = items.findIndex((item) => item._id === itemId)
+
+    if (index === -1) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    const updatedItem = {
+      ...items[index],
+      ...value,
+    }
+    const nextItems = [...items]
+    nextItems[index] = updatedItem
+
+    await getPageContentCollection().updateOne(
+      { key: 'domain-hosting-server-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.json({
+      message: `${targetSection} item updated successfully`,
+      item: updatedItem,
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update domain hosting server section item' })
+  }
+})
+
+app.delete('/api/domain-hosting-server-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = domainHostingServerSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const page = await getDomainHostingServerPageDocument()
+    const items = page[targetSection] || []
+    const nextItems = items.filter((item) => item._id !== itemId)
+
+    if (nextItems.length === items.length) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'domain-hosting-server-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.json({ message: `${targetSection} item deleted successfully` })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to delete domain hosting server section item' })
   }
 })
 
