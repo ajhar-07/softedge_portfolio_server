@@ -380,6 +380,52 @@ const domainHostingServerSections = {
   faqs: 'faqs',
 }
 
+const adsSeoPageSections = {
+  heroHighlights: 'heroHighlights',
+  navPills: 'navPills',
+  whyTogetherBullets: 'whyTogetherBullets',
+  adsPillars: 'adsPillars',
+  seoPillars: 'seoPillars',
+  deliverables: 'deliverables',
+  platforms: 'platforms',
+  reporting: 'reporting',
+  faqs: 'faqs',
+}
+
+const socialContentBrandingPageSections = {
+  navPills: 'navPills',
+  introCards: 'introCards',
+  unifiedPitchBullets: 'unifiedPitchBullets',
+  socialMediaItems: 'socialMediaItems',
+  contentWritingItems: 'contentWritingItems',
+  brandingItems: 'brandingItems',
+  processPhases: 'processPhases',
+  deliverablesStrip: 'deliverablesStrip',
+  faqs: 'faqs',
+}
+
+const securityAuditPageSections = {
+  navPills: 'navPills',
+  stats: 'stats',
+  auditVsPentest: 'auditVsPentest',
+  methodology: 'methodology',
+  coverage: 'coverage',
+  deliverables: 'deliverables',
+  frameworks: 'frameworks',
+  faqs: 'faqs',
+}
+
+const backupDisasterCloudPageSections = {
+  navPills: 'navPills',
+  kpis: 'kpis',
+  pillars: 'pillars',
+  rtoRpoRows: 'rtoRpoRows',
+  providerNotes: 'providerNotes',
+  engagementPhases: 'engagementPhases',
+  deliverableBullets: 'deliverableBullets',
+  faqs: 'faqs',
+}
+
 const eventProcessingSections = {
   serviceLinks: 'serviceLinks',
   socials: 'socials',
@@ -2751,6 +2797,946 @@ function getDefaultWebsiteDevelopmentPage() {
   }
 }
 
+function getDefaultAdsSeoPage() {
+  const heroImage =
+    'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=2200&q=80'
+  return {
+    key: 'ads-seo-page',
+    heroImage,
+    eyebrow: 'Performance marketing',
+    title: 'Ads + SEO management',
+    subtitle:
+      'Run profitable paid campaigns and build durable organic visibility — one team, shared measurement, and reporting you can actually use for decisions.',
+    whyTogetherTitle: 'Why Ads and SEO belong in one roadmap',
+    whyTogetherBody:
+      'Paid ads give you speed; SEO compounds returns. When both share keyword research, landing page quality, and conversion tracking, you stop guessing which channel “won” — you see how demand is created, captured, and converted.',
+    pillarsSectionEyebrow: 'Two engines · one customer journey',
+    pillarsSectionTitle: 'Paid acquisition & organic growth',
+    pillarsSectionSubtitle:
+      'Deep capability lists — so you know exactly what we operate, measure, and improve week over week.',
+    adsCardTitle: 'Paid media management',
+    adsCardSubtitle: 'Auctions, creative, budgets, experiments',
+    seoCardTitle: 'Search engine optimization',
+    seoCardSubtitle: 'Technical, content, authority',
+    deliverablesSectionEyebrow: 'How we work',
+    deliverablesSectionTitle: 'Engagement phases & deliverables',
+    deliverablesSectionSubtitle:
+      'Clear checkpoints so stakeholders see progress — not a black box of “marketing activity.”',
+    platformsSectionTitle: 'Platforms we operate',
+    platformsSectionSubtitle:
+      'Tooling is tailored to your stack; this is a typical enterprise-grade mix.',
+    reportingSectionTitle: 'Reporting you can steer with',
+    reportingSectionSubtitle: 'Every metric ties to a decision: scale, fix, or pause.',
+    faqSectionEyebrow: 'FAQ',
+    faqSectionTitle: 'Straight answers',
+    growthCtaLabel: 'Talk to us about growth',
+    growthCtaTo: '/services',
+    ctaTitle: 'Ready to align Ads + SEO?',
+    ctaSubtitle:
+      'Share your goals, markets, and current stack — we’ll propose a practical plan with timelines and success metrics.',
+    ctaButtonLabel: 'View all services',
+    ctaButtonTo: '/services',
+    heroHighlights: [
+      {
+        _id: new ObjectId().toString(),
+        label: 'Paid media',
+        value: 'Meta · Google · LinkedIn',
+      },
+      {
+        _id: new ObjectId().toString(),
+        label: 'Organic',
+        value: 'Technical + content SEO',
+      },
+      {
+        _id: new ObjectId().toString(),
+        label: 'Attribution',
+        value: 'GA4 · pixels · CRM hooks',
+      },
+    ],
+    navPills: [
+      { _id: new ObjectId().toString(), label: 'Ads + SEO', to: '/ads-seo-management' },
+      { _id: new ObjectId().toString(), label: 'Website development', to: '/website-development' },
+      { _id: new ObjectId().toString(), label: 'Landing pages', to: '/landing-page-design' },
+      { _id: new ObjectId().toString(), label: 'All services', to: '/services' },
+    ],
+    whyTogetherBullets: [
+      {
+        _id: new ObjectId().toString(),
+        text: 'Shared keyword & intent map across paid and organic',
+      },
+      {
+        _id: new ObjectId().toString(),
+        text: 'Landing pages tuned for Quality Score and Core Web Vitals',
+      },
+      {
+        _id: new ObjectId().toString(),
+        text: 'Creative and copy tested in ads, winners folded into SEO content',
+      },
+      {
+        _id: new ObjectId().toString(),
+        text: 'Unified dashboards: spend, impressions, rankings, leads, revenue',
+      },
+    ],
+    adsPillars: [
+      {
+        _id: new ObjectId().toString(),
+        title: 'Campaign architecture',
+        detail:
+          'Account structure by funnel stage, geo, and product line. Naming conventions, budget pacing, and audience exclusions that scale without chaos.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Creative & messaging',
+        detail:
+          'Hooks, angles, and offer stacks per persona. UGC-style variants, static + motion, and systematic refresh cadence to fight fatigue.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Bid & budget strategy',
+        detail:
+          'Target CPA/ROAS guardrails, seasonality rules, and experiments (ASC, PMax, search partners) with clear hypothesis and readouts.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Conversion tracking',
+        detail:
+          'Pixel + CAPI hygiene, offline conversions, enhanced measurements, and lead-quality signals back to the ad platforms.',
+      },
+    ],
+    seoPillars: [
+      {
+        _id: new ObjectId().toString(),
+        title: 'Technical SEO',
+        detail:
+          'Crawl budget, indexation, canonicals, schema, redirects, log analysis, and page experience (LCP, INP, CLS) fixes prioritized by revenue impact.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Information architecture',
+        detail:
+          'URL patterns, internal linking hubs, faceted navigation controls, and content depth aligned to search intent — not vanity keyword lists.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'On-page & entities',
+        detail:
+          'Title/meta patterns, heading structure, E-E-A-T signals, FAQ blocks, and entity-rich copy that matches how people actually search.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Authority & digital PR',
+        detail:
+          'Link-worthy assets, outreach, digital PR, and brand SERP hygiene so rankings hold when competition increases.',
+      },
+    ],
+    deliverables: [
+      {
+        _id: new ObjectId().toString(),
+        phase: 'Discovery (week 1)',
+        items: [
+          'Business goals, margins, and LTV/CAC guardrails',
+          'Analytics + ads account audit (access, events, data layer)',
+          'Competitor visibility snapshot (ads libraries + SERP)',
+          'Measurement plan: KPIs, attribution assumptions, reporting cadence',
+        ],
+      },
+      {
+        _id: new ObjectId().toString(),
+        phase: 'Foundation (weeks 2–3)',
+        items: [
+          'Unified keyword & intent map (paid + organic)',
+          'Landing page briefs: UX, copy, speed, and conversion events',
+          'Technical SEO fixes backlog with effort vs impact scoring',
+          'Creative matrix: angles × formats × audiences',
+        ],
+      },
+      {
+        _id: new ObjectId().toString(),
+        phase: 'Execution (ongoing)',
+        items: [
+          'Campaign builds, experiments, and weekly optimization loops',
+          'Content calendar tied to clusters and commercial intent',
+          'Link building / PR outreach where it moves the needle',
+          'Executive summary + granular dashboards (looker-style or sheets)',
+        ],
+      },
+    ],
+    platforms: [
+      { _id: new ObjectId().toString(), name: 'Google Ads', note: 'Search, PMax, Display, YouTube' },
+      { _id: new ObjectId().toString(), name: 'Meta Ads', note: 'Feed, Stories, Advantage+ tests' },
+      { _id: new ObjectId().toString(), name: 'LinkedIn / others', note: 'B2B lead gen where CAC fits' },
+      { _id: new ObjectId().toString(), name: 'GA4 + GTM', note: 'Events, conversions, audiences' },
+      { _id: new ObjectId().toString(), name: 'Search Console', note: 'Queries, coverage, enhancements' },
+      { _id: new ObjectId().toString(), name: 'SEO tooling', note: 'Crawlers, rank tracking, content briefs' },
+    ],
+    reporting: [
+      {
+        _id: new ObjectId().toString(),
+        metric: 'Pipeline & revenue',
+        desc: 'Leads, SQLs, closed-won where CRM is connected — not just “clicks.”',
+      },
+      {
+        _id: new ObjectId().toString(),
+        metric: 'Efficiency',
+        desc: 'CPA, ROAS, MER blended view, and organic-assisted conversions.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        metric: 'Visibility',
+        desc: 'Share of voice for priority topics, ranking tiers, and SERP features.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        metric: 'Experience',
+        desc: 'Landing page speed, mobile usability, and on-page engagement proxies.',
+      },
+    ],
+    faqs: [
+      {
+        _id: new ObjectId().toString(),
+        q: 'Do you guarantee #1 rankings or a fixed ROAS?',
+        a: 'No ethical team can guarantee rankings or platform-specific ROAS — algorithms, auctions, and competitors change. We guarantee rigorous process, transparent reporting, and prioritized work tied to business outcomes.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        q: 'What budgets do you usually work with?',
+        a: 'We work across ranges, but meaningful learning velocity in paid media typically needs enough daily volume to exit the “noise floor.” We’ll advise minimums per channel after your geo and goal clarity.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        q: 'Can you work with our in-house designer or developer?',
+        a: 'Yes. We often pair with internal teams: we supply briefs, specs, and acceptance checks (speed, tracking, SEO) so production stays smooth.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        q: 'How fast will SEO show results?',
+        a: 'Technical fixes can move the needle in weeks; competitive topics often need months of compounding. We stage quick wins alongside long-horizon cluster builds.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        q: 'Do you handle Bengali / bilingual campaigns?',
+        a: 'Yes — creative, keyword research, and localized landing experiences can be structured for mixed-language audiences where that matches your market.',
+      },
+    ],
+  }
+}
+
+function getDefaultSocialContentBrandingPage() {
+  const heroImage =
+    'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=2200&q=80'
+  return {
+    key: 'social-content-branding-page',
+    heroImage,
+    eyebrow: 'Digital presence & voice',
+    title: 'Social media, content & branding',
+    subtitle:
+      'We grow recognizable brands with channel-native social, editorial-grade content, and visual systems that stay consistent everywhere your audience meets you.',
+    unifiedPitchTitle: 'One narrative across every touchpoint',
+    unifiedPitchBody:
+      'Social amplifies, content educates, and branding ties it together. When strategy, tone, and design share the same brief, your campaigns feel intentional — not scattered.',
+    socialMediaEyebrow: 'Social media',
+    socialMediaTitle: 'Channel management that fits the algorithm — and your brand',
+    socialMediaIntro:
+      'Organic and paid social need different rhythms, but the same voice. We plan, produce, publish, and optimize so feeds stay active without burning your team.',
+    contentWritingEyebrow: 'Content writing',
+    contentWritingTitle: 'Copy and long-form that converts — and ranks',
+    contentWritingIntro:
+      'From landing pages to newsletters, we write for clarity, persuasion, and search intent — with editors who catch tone drift before it ships.',
+    brandingEyebrow: 'Branding',
+    brandingTitle: 'Identity and systems your team can actually use',
+    brandingIntro:
+      'A brand isn’t only a logo — it’s rules, templates, and examples that keep marketing, sales, and product aligned.',
+    processSectionEyebrow: 'How we work',
+    processSectionTitle: 'From discovery to always-on execution',
+    processSectionSubtitle: 'Transparent phases so you know what ships when — and who approves it.',
+    faqSectionEyebrow: 'FAQ',
+    faqSectionTitle: 'Common questions',
+    ctaTitle: 'Sharpen your brand voice everywhere',
+    ctaSubtitle:
+      'Tell us your markets, channels, and internal capacity — we’ll propose a retainer or project scope with clear deliverables.',
+    ctaButtonLabel: 'Explore all services',
+    ctaButtonTo: '/services',
+    navPills: [
+      { _id: new ObjectId().toString(), label: 'Social + content + branding', to: '/social-content-branding' },
+      { _id: new ObjectId().toString(), label: 'Ads + SEO', to: '/ads-seo-management' },
+      { _id: new ObjectId().toString(), label: 'Website development', to: '/website-development' },
+      { _id: new ObjectId().toString(), label: 'All services', to: '/services' },
+    ],
+    introCards: [
+      {
+        _id: new ObjectId().toString(),
+        label: 'Channels',
+        value: 'Meta · LinkedIn · X · YouTube · TikTok',
+      },
+      {
+        _id: new ObjectId().toString(),
+        label: 'Content',
+        value: 'Blogs · scripts · email · long-form',
+      },
+      {
+        _id: new ObjectId().toString(),
+        label: 'Brand',
+        value: 'Identity · guidelines · templates',
+      },
+    ],
+    unifiedPitchBullets: [
+      {
+        _id: new ObjectId().toString(),
+        text: 'Single messaging framework: pillars, proof points, and CTAs per funnel stage',
+      },
+      {
+        _id: new ObjectId().toString(),
+        text: 'Editorial calendar aligned to product launches, seasons, and cultural moments',
+      },
+      {
+        _id: new ObjectId().toString(),
+        text: 'Visual kit: logos, color, type, social templates, and motion rules',
+      },
+      {
+        _id: new ObjectId().toString(),
+        text: 'Community playbooks: response SLAs, escalation paths, and crisis notes',
+      },
+    ],
+    socialMediaItems: [
+      {
+        _id: new ObjectId().toString(),
+        title: 'Strategy & positioning',
+        detail:
+          'Audience segments, competitor listening, content pillars, and platform-specific hooks (short-form vs. long captions, carousels, Stories).',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Content production',
+        detail:
+          'Shot lists, UGC direction, static and motion design, subtitles, and accessibility checks for each network’s specs.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Publishing & community',
+        detail:
+          'Scheduling, inbox monitoring, comment moderation, and FAQ-ready macros so engagement stays on-brand.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Performance loops',
+        detail:
+          'Weekly readouts: reach, saves, shares, watch time, and creative fatigue signals — with clear next experiments.',
+      },
+    ],
+    contentWritingItems: [
+      {
+        _id: new ObjectId().toString(),
+        title: 'Website & landing copy',
+        detail:
+          'Hero blocks, feature pages, industry pages, and localized variants with consistent terminology and legal-safe claims.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Blog & thought leadership',
+        detail:
+          'Briefs from keyword research and SME interviews; outlines, drafts, and refresh cycles for evergreen posts.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Email & lifecycle',
+        detail:
+          'Welcome flows, nurture sequences, re-engagement, and transactional copy aligned to CRM fields and personalization rules.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Scripts & social captions',
+        detail:
+          'Hooks, CTA stacks, A/B caption sets, and video scripts with beat-by-beat timing for editors.',
+      },
+    ],
+    brandingItems: [
+      {
+        _id: new ObjectId().toString(),
+        title: 'Brand strategy',
+        detail:
+          'Purpose, audience, differentiation, voice principles, and “do / don’t” examples for writers and designers.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Visual identity',
+        detail:
+          'Logo usage, color palettes, typography scales, iconography, photography direction, and layout grids.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Templates & toolkits',
+        detail:
+          'Social frames, presentation decks, one-pagers, and email headers — export-ready for Canva, Figma, or your DAM.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Rollout & training',
+        detail:
+          'Launch checklist, internal wiki pages, and short Loom-style walkthroughs so teams adopt the system.',
+      },
+    ],
+    processPhases: [
+      {
+        _id: new ObjectId().toString(),
+        phase: 'Immersion',
+        lines: [
+          'Stakeholder interviews and offer clarity',
+          'Audit of current channels, content, and assets',
+          'Goals: awareness, leads, retention, or employer brand',
+        ],
+      },
+      {
+        _id: new ObjectId().toString(),
+        phase: 'Blueprint',
+        lines: [
+          'Messaging house + content pillars',
+          '90-day calendar sketch and creative territories',
+          'Brand guidelines v1 and template priorities',
+        ],
+      },
+      {
+        _id: new ObjectId().toString(),
+        phase: 'Production & ship',
+        lines: [
+          'Batch content creation with approval workflow',
+          'Publishing schedule and community coverage',
+          'Monthly optimization and reporting narrative',
+        ],
+      },
+    ],
+    deliverablesStrip: [
+      {
+        _id: new ObjectId().toString(),
+        label: 'Editorial calendar',
+        detail: 'Monthly view with themes, formats, and owners',
+      },
+      {
+        _id: new ObjectId().toString(),
+        label: 'Content briefs',
+        detail: 'Objective, audience, outline, references, SEO notes',
+      },
+      {
+        _id: new ObjectId().toString(),
+        label: 'Asset library',
+        detail: 'Organized folders + naming for handoff',
+      },
+      {
+        _id: new ObjectId().toString(),
+        label: 'Brand book PDF',
+        detail: 'Strategy + visual rules + examples',
+      },
+      {
+        _id: new ObjectId().toString(),
+        label: 'Reporting deck',
+        detail: 'Narrative + metrics + next tests',
+      },
+    ],
+    faqs: [
+      {
+        _id: new ObjectId().toString(),
+        q: 'Do you handle only organic social or paid as well?',
+        a: 'We can run organic-only retainers or pair with your media team / our Ads specialists for boosted posts and full-funnel campaigns.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        q: 'Can you match our existing brand voice?',
+        a: 'Yes. We start from your guidelines and live assets, then stress-test with sample posts and iterate with your reviewers.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        q: 'What if we need content in English and Bengali?',
+        a: 'We structure bilingual calendars and translations with native review so tone stays natural in both languages.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        q: 'How fast can we go live?',
+        a: 'Lightweight social + content programs often start within 2–3 weeks after brief; full rebrands depend on scope and legal review.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        q: 'Do you provide designers and video editors?',
+        a: 'Yes — static, motion, and simple edits in-house; larger shoots can be planned with partners under one creative brief.',
+      },
+    ],
+  }
+}
+
+function getDefaultSecurityAuditPage() {
+  return {
+    key: 'security-audit-page',
+    heroImage:
+      'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=2200&q=80',
+    eyebrow: 'Ethical hacking · defensive assurance',
+    title: 'Security audits & penetration testing',
+    subtitle:
+      'Independent validation of your attack surface — from architecture review to controlled exploitation — with clear priorities, evidence, and a remediation path your developers can ship.',
+    methodologySectionEyebrow: 'Methodology',
+    methodologySectionTitle: 'How we run every engagement',
+    methodologySectionSubtitle:
+      'A consistent cadence so your teams always know what happens next — from kickoff to retest sign-off.',
+    coverageSectionEyebrow: 'Coverage',
+    coverageSectionTitle: 'What we can test',
+    deliverablesSectionEyebrow: 'Deliverables',
+    deliverablesSectionTitle: 'What you receive',
+    frameworksSectionEyebrow: 'Alignment',
+    frameworksSectionTitle: 'Frameworks we map to',
+    frameworksSectionSubtitle: 'Language your security team and auditors already speak.',
+    faqSectionEyebrow: 'FAQ',
+    faqSectionTitle: 'Common questions',
+    ctaTitle: 'Ready to validate your defenses?',
+    ctaSubtitle:
+      'Share your environment and compliance goals — we will propose a scoped audit, pentest, or combined program.',
+    ctaPrimaryLabel: 'Start a conversation',
+    ctaPrimaryTo: '/how-we-work',
+    ctaSecondaryLabel: 'Browse services',
+    ctaSecondaryTo: '/services',
+    navPills: [
+      { _id: new ObjectId().toString(), label: 'Security audit + pentest', to: '/security-audit' },
+      { _id: new ObjectId().toString(), label: 'Information security', to: '/information-security' },
+      { _id: new ObjectId().toString(), label: 'Our services', to: '/services' },
+      { _id: new ObjectId().toString(), label: 'How we work', to: '/how-we-work' },
+    ],
+    stats: [
+      { _id: new ObjectId().toString(), label: 'Engagement models', value: 'Black / grey / white box' },
+      { _id: new ObjectId().toString(), label: 'Reporting', value: 'Exec + technical + retest' },
+      { _id: new ObjectId().toString(), label: 'Scope', value: 'Web · API · cloud · network' },
+    ],
+    auditVsPentest: [
+      {
+        _id: new ObjectId().toString(),
+        tag: 'ASSESS',
+        title: 'Security audit & hardening review',
+        body:
+          'Policy, configuration, and design review aligned to your risk profile. We map controls, gap-test against frameworks, and produce prioritized fixes before attackers find them first.',
+        bullets: [
+          'Architecture & threat modeling workshops',
+          'Secure configuration baselines (cloud, IAM, network)',
+          'Code & dependency risk sampling where applicable',
+          'Compliance-oriented evidence packs (OWASP, CIS-style)',
+        ],
+      },
+      {
+        _id: new ObjectId().toString(),
+        tag: 'PENTEST',
+        title: 'Penetration testing',
+        body:
+          'Goal-oriented simulated attacks with safe, agreed rules of engagement. We chain realistic weaknesses to show business impact — not just scanner noise.',
+        bullets: [
+          'External & internal network testing',
+          'Web & mobile application exploitation',
+          'API & authentication / session abuse cases',
+          'Phishing simulations & awareness (optional add-on)',
+        ],
+      },
+    ],
+    methodology: [
+      {
+        _id: new ObjectId().toString(),
+        phase: '01 — Scoping',
+        detail:
+          'Assets, sensitivity tiers, blackout windows, and legal boundaries. We align on success criteria and communication channels.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        phase: '02 — Recon & mapping',
+        detail:
+          'Surface discovery, asset inventory cross-checks, and passive intelligence — always within the agreed envelope.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        phase: '03 — Vulnerability analysis',
+        detail:
+          'Manual validation on top of tooling: business logic flaws, authZ gaps, and misconfigurations scanners miss.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        phase: '04 — Controlled exploitation',
+        detail:
+          'Demonstrate impact with evidence screenshots and reproduction steps — stopping short of anything that could harm production.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        phase: '05 — Report & retest',
+        detail:
+          'Executive summary for leadership, technical appendix for engineering, and optional remediation retest windows.',
+      },
+    ],
+    coverage: [
+      {
+        _id: new ObjectId().toString(),
+        area: 'Web applications',
+        note: 'OWASP Top 10, business logic, SSRF/IDOR, XSS, CSRF',
+      },
+      {
+        _id: new ObjectId().toString(),
+        area: 'APIs & microservices',
+        note: 'AuthN/Z, rate limits, mass assignment, schema abuse',
+      },
+      {
+        _id: new ObjectId().toString(),
+        area: 'Cloud & containers',
+        note: 'IAM, storage policies, K8s RBAC, secrets hygiene',
+      },
+      {
+        _id: new ObjectId().toString(),
+        area: 'Network perimeter',
+        note: 'Exposure, segmentation, VPN, wireless (where in scope)',
+      },
+      {
+        _id: new ObjectId().toString(),
+        area: 'Mobile apps',
+        note: 'Local storage, SSL pinning bypass checks, deep links',
+      },
+      {
+        _id: new ObjectId().toString(),
+        area: 'Social engineering',
+        note: 'Phishing, vishing, physical tests — scoped separately',
+      },
+    ],
+    deliverables: [
+      {
+        _id: new ObjectId().toString(),
+        title: 'Executive summary',
+        desc: 'Risk themes, dollars-at-stake framing, and what to fix first for board-ready clarity.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Technical findings',
+        desc: 'CVSS-style severity, reproduction steps, affected components, and references.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Remediation roadmap',
+        desc: 'Grouped by sprint-friendly themes with owners and suggested timelines.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Retest attestation',
+        desc: 'Evidence that critical and high issues were resolved — or residual risk accepted.',
+      },
+    ],
+    frameworks: [
+      { _id: new ObjectId().toString(), text: 'OWASP ASVS' },
+      { _id: new ObjectId().toString(), text: 'OWASP WSTG' },
+      { _id: new ObjectId().toString(), text: 'OWASP Top 10' },
+      { _id: new ObjectId().toString(), text: 'PTES mindset' },
+      { _id: new ObjectId().toString(), text: 'CIS benchmarks' },
+      { _id: new ObjectId().toString(), text: 'NIST CSF mapping' },
+    ],
+    faqs: [
+      {
+        _id: new ObjectId().toString(),
+        q: 'Will penetration testing take our systems offline?',
+        a: 'No — we design tests to avoid denial-of-service conditions and coordinate any intrusive steps. Production safety is explicit in the rules of engagement.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        q: 'How is this different from a vulnerability scan?',
+        a: 'Scanners are broad and shallow. Pentesting adds human judgment, chaining, and business-context abuse cases that automation cannot reason about.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        q: 'Can you test our staging instead of production?',
+        a: 'Yes — many clients prefer staging-first engagements. We will note environmental gaps that might differ from production.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        q: 'Do you provide fixes or only reports?',
+        a: 'Deliverables focus on clarity and proof. We can pair with your engineering team for remediation guidance and retesting as a follow-on.',
+      },
+    ],
+  }
+}
+
+function getDefaultBackupDisasterCloudPage() {
+  const pillarPoints = (pairs) =>
+    pairs.map(([head, text]) => ({
+      head,
+      text,
+    }))
+
+  return {
+    key: 'backup-disaster-cloud-page',
+    heroImage:
+      'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=2200&q=80',
+    eyebrow: 'Resilience · continuity · hardening',
+    title: 'Backup, disaster recovery & cloud security',
+    subtitle:
+      'Design backups you can restore, DR drills your team trusts, and cloud foundations that resist misconfiguration — documented, tested, and aligned to your RTO/RPO and compliance obligations.',
+    whySectionEyebrow: 'Why this matters',
+    pillarIntro:
+      'Most outages are not exotic zero-days — they are failed patches, human error, region incidents, or ransomware. We combine engineering discipline with runbooks so recovery is repeatable under stress.',
+    matrixSectionEyebrow: 'Tiers & patterns',
+    matrixSectionTitle: 'RTO / RPO reference matrix',
+    matrixSectionSubtitle:
+      'Starting point for workshops — your actual numbers depend on revenue impact, regulatory language, and technical constraints.',
+    hyperscalersSectionEyebrow: 'Hyperscalers',
+    hyperscalersSectionTitle: 'What we implement by platform',
+    engagementSectionEyebrow: 'How we engage',
+    engagementSectionTitle: 'From discovery to steady-state',
+    deliverablesSectionEyebrow: 'Deliverables',
+    deliverablesSectionTitle: 'What you walk away with',
+    faqSectionEyebrow: 'FAQ',
+    faqSectionTitle: 'Common questions',
+    ctaTitle: 'Strengthen continuity and cloud posture',
+    ctaSubtitle:
+      'Share your environments, compliance drivers, and past incidents — we will propose a phased roadmap with clear tests and documentation.',
+    ctaPrimaryLabel: 'Talk to us',
+    ctaPrimaryTo: '/how-we-work',
+    ctaSecondaryLabel: 'Browse services',
+    ctaSecondaryTo: '/services',
+    navPills: [
+      { _id: new ObjectId().toString(), label: 'Backup + DR + cloud', to: '/backup-disaster-cloud' },
+      { _id: new ObjectId().toString(), label: 'Security audit', to: '/security-audit' },
+      { _id: new ObjectId().toString(), label: 'Information security', to: '/information-security' },
+      { _id: new ObjectId().toString(), label: 'All services', to: '/services' },
+    ],
+    kpis: [
+      { _id: new ObjectId().toString(), label: 'RPO / RTO clarity', value: 'Targets per workload' },
+      { _id: new ObjectId().toString(), label: 'Restore proof', value: 'Quarterly test evidence' },
+      { _id: new ObjectId().toString(), label: 'Cloud guardrails', value: 'IAM · network · data' },
+    ],
+    pillars: [
+      {
+        _id: new ObjectId().toString(),
+        id: 'backup',
+        badge: '01 — Backup',
+        title: 'Backup strategy & immutable copies',
+        lead:
+          'Backups only matter when restores work on deadline. We define retention, encryption, access separation, and verification so your copies survive operator mistakes and malicious actors.',
+        points: pillarPoints([
+          [
+            'Scope & classification',
+            'Map databases, file shares, VMs, SaaS exports, and config-as-code repos. Tag sensitivity (PII, finance, PHI) to drive retention and encryption choices.',
+          ],
+          [
+            '3-2-1 and modern variants',
+            'Three copies, two media types, one off-site — extended with immutability (object lock), air-gapped or offline vaults where policy demands it.',
+          ],
+          [
+            'Application-consistent captures',
+            'Quiesce databases and distributed systems correctly; avoid “silent corruption” restores. Document pre/post snapshot hooks for critical apps.',
+          ],
+          [
+            'Encryption & keys',
+            'KMS integration, CMK vs provider keys, rotation, and break-glass procedures. Separate backup admin from production admin where feasible.',
+          ],
+          [
+            'Monitoring & alerting',
+            'Failed jobs, capacity trends, SLA drift. Dashboards that surface “last successful restore test” per tier, not only last backup job.',
+          ],
+        ]),
+      },
+      {
+        _id: new ObjectId().toString(),
+        id: 'dr',
+        badge: '02 — Disaster recovery',
+        title: 'DR architectures & rehearsal culture',
+        lead:
+          'DR is a program — not a second data center collecting dust. We align failover patterns to cost and risk: pilot light, warm standby, active-active where justified.',
+        points: pillarPoints([
+          [
+            'Business impact analysis',
+            'Tier workloads: gold (minutes), silver (hours), bronze (days). Tie each tier to RTO/RPO, dependencies, and manual runbook steps.',
+          ],
+          [
+            'Runbooks & communications',
+            'Decision trees for “region down” vs “app bug” vs “ransomware”. Escalation lists, customer comms templates, and internal status page hooks.',
+          ],
+          [
+            'DNS, traffic & data lag',
+            'Health checks, weighted routing, global load balancing. Understand replication lag before you promise zero data loss.',
+          ],
+          [
+            'Tabletop & technical drills',
+            'Semi-annual tabletops plus annual isolated restores and failover exercises. Capture time-to-recover metrics and gap lists.',
+          ],
+          [
+            'Cyber recovery specifics',
+            'Golden images, clean-room analysis, identity reset playbooks. Assume AD / SSO may be compromised — parallel recovery paths.',
+          ],
+        ]),
+      },
+      {
+        _id: new ObjectId().toString(),
+        id: 'cloud',
+        badge: '03 — Cloud security',
+        title: 'AWS, GCP & Azure hardening patterns',
+        lead:
+          'Cloud providers give powerful primitives; misconfiguration is the dominant breach class. We implement baseline guardrails, least privilege, and continuous checks.',
+        points: pillarPoints([
+          [
+            'Landing zone & accounts',
+            'Org structure, centralized logging, guardrails for new accounts, service control policies, and tagging standards for cost + security.',
+          ],
+          [
+            'Identity & access',
+            'SSO integration, MFA enforcement, permission boundaries, short-lived credentials, break-glass accounts with extra monitoring.',
+          ],
+          [
+            'Network segmentation',
+            'Private subnets, hub-spoke or mesh patterns, egress controls, private endpoints for PaaS, and inspection where required.',
+          ],
+          [
+            'Data protection',
+            'Encryption at rest defaults, bucket policies blocking public ACLs, DLP hooks, key rotation, and cross-region replication rules.',
+          ],
+          [
+            'Detection & posture',
+            'CSPM or native config rules, anomaly alerts, CloudTrail / Activity logs to SIEM, vulnerability scanning for images and VMs.',
+          ],
+        ]),
+      },
+    ],
+    rtoRpoRows: [
+      {
+        _id: new ObjectId().toString(),
+        tier: 'Tier 0 — Mission critical',
+        rpo: 'Near zero to 15 min',
+        rto: '15–60 min',
+        pattern: 'Active-active or hot standby + synchronous or near-sync replication',
+      },
+      {
+        _id: new ObjectId().toString(),
+        tier: 'Tier 1 — Revenue / ops',
+        rpo: '1–4 hours',
+        rto: '4–24 hours',
+        pattern: 'Warm standby, frequent async replication, automated failover scripts',
+      },
+      {
+        _id: new ObjectId().toString(),
+        tier: 'Tier 2 — Standard',
+        rpo: '24 hours',
+        rto: '24–72 hours',
+        pattern: 'Pilot light + restore from backup; documented manual steps',
+      },
+      {
+        _id: new ObjectId().toString(),
+        tier: 'Tier 3 — Archive / internal',
+        rpo: 'Days',
+        rto: 'Best effort',
+        pattern: 'Backup-centric; DR event may defer restore until capacity returns',
+      },
+    ],
+    providerNotes: [
+      {
+        _id: new ObjectId().toString(),
+        name: 'Amazon Web Services',
+        items: [
+          'Organizations + Control Tower or custom LZ',
+          'S3 versioning + Object Lock for ransomware resilience',
+          'AWS Backup cross-account / cross-region',
+          'DR with Route 53, Global Accelerator, Aurora global',
+        ],
+      },
+      {
+        _id: new ObjectId().toString(),
+        name: 'Google Cloud',
+        items: [
+          'Folders, org policies, VPC SC for data perimeter',
+          'Immutable retention buckets + dual-region options',
+          'Backup for GKE / Cloud SQL schedules',
+          'Global LB + health-checked MIGs for failover',
+        ],
+      },
+      {
+        _id: new ObjectId().toString(),
+        name: 'Microsoft Azure',
+        items: [
+          'Management groups + Azure Policy initiatives',
+          'RA-GRS / GZRS storage and immutable blobs',
+          'Azure Site Recovery for VM orchestration',
+          'Front Door / Traffic Manager patterns',
+        ],
+      },
+    ],
+    engagementPhases: [
+      {
+        _id: new ObjectId().toString(),
+        step: 'Discover',
+        detail:
+          'Inventory workloads, data flows, current backups, DR assets, and cloud accounts. Interview owners for pain points and past incidents.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        step: 'Design',
+        detail:
+          'Propose target architectures per tier: backup products, DR topology, cloud guardrails. Produce RACI and cost bands.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        step: 'Implement',
+        detail:
+          'Build landing zones, policies, backup jobs, replication, monitoring, and documentation. Peer review all IaC changes.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        step: 'Validate',
+        detail: 'Restore tests, failover drills, tabletop. Capture metrics and update runbooks with real timings.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        step: 'Operate',
+        detail:
+          'Handover with health dashboards, quarterly review cadence, and roadmap for maturity (e.g., chaos engineering lite).',
+      },
+    ],
+    deliverableBullets: [
+      {
+        _id: new ObjectId().toString(),
+        text: 'Architecture diagrams (as-is / to-be) and dependency maps',
+      },
+      {
+        _id: new ObjectId().toString(),
+        text: 'Backup & retention matrix per application tier',
+      },
+      {
+        _id: new ObjectId().toString(),
+        text: 'DR runbooks with decision trees and comms templates',
+      },
+      {
+        _id: new ObjectId().toString(),
+        text: 'Cloud baseline policy pack (IaC + console references)',
+      },
+      {
+        _id: new ObjectId().toString(),
+        text: 'Test reports with RTO/RPO evidence and remediation backlog',
+      },
+      {
+        _id: new ObjectId().toString(),
+        text: 'Executive one-pager for board or insurer questionnaires',
+      },
+    ],
+    faqs: [
+      {
+        _id: new ObjectId().toString(),
+        q: 'Do you replace our IT team or MSP?',
+        a: 'We typically partner: we deliver designs, automation, and evidence; your team or MSP executes day-to-day operations with clearer standards.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        q: 'Can you work only in one cloud?',
+        a: 'Yes — many engagements start single-cloud. We still document portability risks if you later add multi-cloud or hybrid links.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        q: 'How do you price this?',
+        a: 'Scoped by number of workloads, regions, compliance add-ons, and drill depth. Fixed phases are common; retainers optional for ongoing posture reviews.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        q: 'What about Microsoft 365 / Google Workspace backups?',
+        a: 'SaaS retention is not infinite backup. We scope third-party or native export strategies for mail, drives, and Teams / Chat where required.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        q: 'Ransomware: is backup enough?',
+        a: 'Backups help only if they are immutable, monitored, and restored in a clean environment. DR and identity recovery are equally critical.',
+      },
+    ],
+  }
+}
+
 function getDefaultLandingPageDesignPage() {
   return {
     key: 'landing-page-design-page',
@@ -3978,6 +4964,482 @@ function validateLandingPageDesignArrayItem(section, payload = {}, { partial = f
   return { errors, value }
 }
 
+function validateAdsSeoPageArrayItem(section, payload = {}, { partial = false } = {}) {
+  const value = {}
+  const errors = []
+
+  if (section === adsSeoPageSections.heroHighlights) {
+    const label = typeof payload.label === 'string' ? payload.label.trim() : ''
+    const val = typeof payload.value === 'string' ? payload.value.trim() : ''
+    if (!partial || 'label' in payload) {
+      if (!label) errors.push('label is required')
+      else value.label = label
+    }
+    if (!partial || 'value' in payload) {
+      if (!val) errors.push('value is required')
+      else value.value = val
+    }
+  }
+
+  if (section === adsSeoPageSections.navPills) {
+    const label = typeof payload.label === 'string' ? payload.label.trim() : ''
+    const to = typeof payload.to === 'string' ? payload.to.trim() : ''
+    if (!partial || 'label' in payload) {
+      if (!label) errors.push('label is required')
+      else value.label = label
+    }
+    if (!partial || 'to' in payload) {
+      if (!to) errors.push('to is required')
+      else value.to = to
+    }
+  }
+
+  if (section === adsSeoPageSections.whyTogetherBullets) {
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
+    }
+  }
+
+  if (section === adsSeoPageSections.adsPillars || section === adsSeoPageSections.seoPillars) {
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const detail = typeof payload.detail === 'string' ? payload.detail.trim() : ''
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'detail' in payload) {
+      if (!detail) errors.push('detail is required')
+      else value.detail = detail
+    }
+  }
+
+  if (section === adsSeoPageSections.deliverables) {
+    const phase = typeof payload.phase === 'string' ? payload.phase.trim() : ''
+    const items = Array.isArray(payload.items)
+      ? payload.items.filter((line) => typeof line === 'string').map((line) => line.trim()).filter(Boolean)
+      : []
+    if (!partial || 'phase' in payload) {
+      if (!phase) errors.push('phase is required')
+      else value.phase = phase
+    }
+    if ('items' in payload || !partial) {
+      if (!partial && !items.length) errors.push('items must be a non-empty array of strings')
+      else if ('items' in payload) value.items = items
+      else if (!partial) value.items = items
+    }
+  }
+
+  if (section === adsSeoPageSections.platforms) {
+    const name = typeof payload.name === 'string' ? payload.name.trim() : ''
+    const note = typeof payload.note === 'string' ? payload.note.trim() : ''
+    if (!partial || 'name' in payload) {
+      if (!name) errors.push('name is required')
+      else value.name = name
+    }
+    if (!partial || 'note' in payload) {
+      if (!note) errors.push('note is required')
+      else value.note = note
+    }
+  }
+
+  if (section === adsSeoPageSections.reporting) {
+    const metric = typeof payload.metric === 'string' ? payload.metric.trim() : ''
+    const desc = typeof payload.desc === 'string' ? payload.desc.trim() : ''
+    if (!partial || 'metric' in payload) {
+      if (!metric) errors.push('metric is required')
+      else value.metric = metric
+    }
+    if (!partial || 'desc' in payload) {
+      if (!desc) errors.push('desc is required')
+      else value.desc = desc
+    }
+  }
+
+  if (section === adsSeoPageSections.faqs) {
+    const q = typeof payload.q === 'string' ? payload.q.trim() : ''
+    const a = typeof payload.a === 'string' ? payload.a.trim() : ''
+    if (!partial || 'q' in payload) {
+      if (!q) errors.push('q is required')
+      else value.q = q
+    }
+    if (!partial || 'a' in payload) {
+      if (!a) errors.push('a is required')
+      else value.a = a
+    }
+  }
+
+  return { errors, value }
+}
+
+function validateSocialContentBrandingArrayItem(section, payload = {}, { partial = false } = {}) {
+  const value = {}
+  const errors = []
+
+  if (section === socialContentBrandingPageSections.navPills) {
+    const label = typeof payload.label === 'string' ? payload.label.trim() : ''
+    const to = typeof payload.to === 'string' ? payload.to.trim() : ''
+    if (!partial || 'label' in payload) {
+      if (!label) errors.push('label is required')
+      else value.label = label
+    }
+    if (!partial || 'to' in payload) {
+      if (!to) errors.push('to is required')
+      else value.to = to
+    }
+  }
+
+  if (section === socialContentBrandingPageSections.introCards) {
+    const label = typeof payload.label === 'string' ? payload.label.trim() : ''
+    const val = typeof payload.value === 'string' ? payload.value.trim() : ''
+    if (!partial || 'label' in payload) {
+      if (!label) errors.push('label is required')
+      else value.label = label
+    }
+    if (!partial || 'value' in payload) {
+      if (!val) errors.push('value is required')
+      else value.value = val
+    }
+  }
+
+  if (section === socialContentBrandingPageSections.unifiedPitchBullets) {
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
+    }
+  }
+
+  if (
+    section === socialContentBrandingPageSections.socialMediaItems ||
+    section === socialContentBrandingPageSections.contentWritingItems ||
+    section === socialContentBrandingPageSections.brandingItems
+  ) {
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const detail = typeof payload.detail === 'string' ? payload.detail.trim() : ''
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'detail' in payload) {
+      if (!detail) errors.push('detail is required')
+      else value.detail = detail
+    }
+  }
+
+  if (section === socialContentBrandingPageSections.processPhases) {
+    const phase = typeof payload.phase === 'string' ? payload.phase.trim() : ''
+    const lines = Array.isArray(payload.lines)
+      ? payload.lines.filter((line) => typeof line === 'string').map((line) => line.trim()).filter(Boolean)
+      : []
+    if (!partial || 'phase' in payload) {
+      if (!phase) errors.push('phase is required')
+      else value.phase = phase
+    }
+    if ('lines' in payload || !partial) {
+      if (!partial && !lines.length) errors.push('lines must be a non-empty array of strings')
+      else if ('lines' in payload) value.lines = lines
+      else if (!partial) value.lines = lines
+    }
+  }
+
+  if (section === socialContentBrandingPageSections.deliverablesStrip) {
+    const label = typeof payload.label === 'string' ? payload.label.trim() : ''
+    const detail = typeof payload.detail === 'string' ? payload.detail.trim() : ''
+    if (!partial || 'label' in payload) {
+      if (!label) errors.push('label is required')
+      else value.label = label
+    }
+    if (!partial || 'detail' in payload) {
+      if (!detail) errors.push('detail is required')
+      else value.detail = detail
+    }
+  }
+
+  if (section === socialContentBrandingPageSections.faqs) {
+    const q = typeof payload.q === 'string' ? payload.q.trim() : ''
+    const a = typeof payload.a === 'string' ? payload.a.trim() : ''
+    if (!partial || 'q' in payload) {
+      if (!q) errors.push('q is required')
+      else value.q = q
+    }
+    if (!partial || 'a' in payload) {
+      if (!a) errors.push('a is required')
+      else value.a = a
+    }
+  }
+
+  return { errors, value }
+}
+
+function validateSecurityAuditArrayItem(section, payload = {}, { partial = false } = {}) {
+  const value = {}
+  const errors = []
+
+  if (section === securityAuditPageSections.navPills) {
+    const label = typeof payload.label === 'string' ? payload.label.trim() : ''
+    const to = typeof payload.to === 'string' ? payload.to.trim() : ''
+    if (!partial || 'label' in payload) {
+      if (!label) errors.push('label is required')
+      else value.label = label
+    }
+    if (!partial || 'to' in payload) {
+      if (!to) errors.push('to is required')
+      else value.to = to
+    }
+  }
+
+  if (section === securityAuditPageSections.stats) {
+    const label = typeof payload.label === 'string' ? payload.label.trim() : ''
+    const val = typeof payload.value === 'string' ? payload.value.trim() : ''
+    if (!partial || 'label' in payload) {
+      if (!label) errors.push('label is required')
+      else value.label = label
+    }
+    if (!partial || 'value' in payload) {
+      if (!val) errors.push('value is required')
+      else value.value = val
+    }
+  }
+
+  if (section === securityAuditPageSections.auditVsPentest) {
+    const tag = typeof payload.tag === 'string' ? payload.tag.trim() : ''
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const body = typeof payload.body === 'string' ? payload.body.trim() : ''
+    const bullets = Array.isArray(payload.bullets)
+      ? payload.bullets.filter((b) => typeof b === 'string').map((b) => b.trim()).filter(Boolean)
+      : []
+    if (!partial || 'tag' in payload) {
+      if (!tag) errors.push('tag is required')
+      else value.tag = tag
+    }
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'body' in payload) {
+      if (!body) errors.push('body is required')
+      else value.body = body
+    }
+    if ('bullets' in payload || !partial) {
+      if (!partial && !bullets.length) errors.push('bullets must be a non-empty array of strings')
+      else if ('bullets' in payload) value.bullets = bullets
+      else if (!partial) value.bullets = bullets
+    }
+  }
+
+  if (section === securityAuditPageSections.methodology) {
+    const phase = typeof payload.phase === 'string' ? payload.phase.trim() : ''
+    const detail = typeof payload.detail === 'string' ? payload.detail.trim() : ''
+    if (!partial || 'phase' in payload) {
+      if (!phase) errors.push('phase is required')
+      else value.phase = phase
+    }
+    if (!partial || 'detail' in payload) {
+      if (!detail) errors.push('detail is required')
+      else value.detail = detail
+    }
+  }
+
+  if (section === securityAuditPageSections.coverage) {
+    const area = typeof payload.area === 'string' ? payload.area.trim() : ''
+    const note = typeof payload.note === 'string' ? payload.note.trim() : ''
+    if (!partial || 'area' in payload) {
+      if (!area) errors.push('area is required')
+      else value.area = area
+    }
+    if (!partial || 'note' in payload) {
+      if (!note) errors.push('note is required')
+      else value.note = note
+    }
+  }
+
+  if (section === securityAuditPageSections.deliverables) {
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const desc = typeof payload.desc === 'string' ? payload.desc.trim() : ''
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'desc' in payload) {
+      if (!desc) errors.push('desc is required')
+      else value.desc = desc
+    }
+  }
+
+  if (section === securityAuditPageSections.frameworks) {
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
+    }
+  }
+
+  if (section === securityAuditPageSections.faqs) {
+    const q = typeof payload.q === 'string' ? payload.q.trim() : ''
+    const a = typeof payload.a === 'string' ? payload.a.trim() : ''
+    if (!partial || 'q' in payload) {
+      if (!q) errors.push('q is required')
+      else value.q = q
+    }
+    if (!partial || 'a' in payload) {
+      if (!a) errors.push('a is required')
+      else value.a = a
+    }
+  }
+
+  return { errors, value }
+}
+
+function normalizeBackupDisasterPillarPoints(payloadPoints) {
+  if (!Array.isArray(payloadPoints)) return []
+  const out = []
+  for (const p of payloadPoints) {
+    const head = typeof p?.head === 'string' ? p.head.trim() : ''
+    const text = typeof p?.text === 'string' ? p.text.trim() : ''
+    if (head && text) out.push({ head, text })
+  }
+  return out
+}
+
+function validateBackupDisasterCloudArrayItem(section, payload = {}, { partial = false } = {}) {
+  const value = {}
+  const errors = []
+
+  if (section === backupDisasterCloudPageSections.navPills) {
+    const label = typeof payload.label === 'string' ? payload.label.trim() : ''
+    const to = typeof payload.to === 'string' ? payload.to.trim() : ''
+    if (!partial || 'label' in payload) {
+      if (!label) errors.push('label is required')
+      else value.label = label
+    }
+    if (!partial || 'to' in payload) {
+      if (!to) errors.push('to is required')
+      else value.to = to
+    }
+  }
+
+  if (section === backupDisasterCloudPageSections.kpis) {
+    const label = typeof payload.label === 'string' ? payload.label.trim() : ''
+    const val = typeof payload.value === 'string' ? payload.value.trim() : ''
+    if (!partial || 'label' in payload) {
+      if (!label) errors.push('label is required')
+      else value.label = label
+    }
+    if (!partial || 'value' in payload) {
+      if (!val) errors.push('value is required')
+      else value.value = val
+    }
+  }
+
+  if (section === backupDisasterCloudPageSections.pillars) {
+    const id = typeof payload.id === 'string' ? payload.id.trim() : ''
+    const badge = typeof payload.badge === 'string' ? payload.badge.trim() : ''
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const lead = typeof payload.lead === 'string' ? payload.lead.trim() : ''
+    const points = normalizeBackupDisasterPillarPoints(payload.points)
+    if (!partial || 'id' in payload) {
+      if (!id) errors.push('id is required')
+      else value.id = id
+    }
+    if (!partial || 'badge' in payload) {
+      if (!badge) errors.push('badge is required')
+      else value.badge = badge
+    }
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'lead' in payload) {
+      if (!lead) errors.push('lead is required')
+      else value.lead = lead
+    }
+    if ('points' in payload || !partial) {
+      if (!partial && !points.length) errors.push('points must be a non-empty array of { head, text }')
+      else if (partial && 'points' in payload && !points.length) {
+        errors.push('points cannot be empty')
+      } else if ('points' in payload) value.points = points
+      else if (!partial) value.points = points
+    }
+  }
+
+  if (section === backupDisasterCloudPageSections.rtoRpoRows) {
+    const tier = typeof payload.tier === 'string' ? payload.tier.trim() : ''
+    const rpo = typeof payload.rpo === 'string' ? payload.rpo.trim() : ''
+    const rto = typeof payload.rto === 'string' ? payload.rto.trim() : ''
+    const pattern = typeof payload.pattern === 'string' ? payload.pattern.trim() : ''
+    if (!partial || 'tier' in payload) {
+      if (!tier) errors.push('tier is required')
+      else value.tier = tier
+    }
+    if (!partial || 'rpo' in payload) {
+      if (!rpo) errors.push('rpo is required')
+      else value.rpo = rpo
+    }
+    if (!partial || 'rto' in payload) {
+      if (!rto) errors.push('rto is required')
+      else value.rto = rto
+    }
+    if (!partial || 'pattern' in payload) {
+      if (!pattern) errors.push('pattern is required')
+      else value.pattern = pattern
+    }
+  }
+
+  if (section === backupDisasterCloudPageSections.providerNotes) {
+    const name = typeof payload.name === 'string' ? payload.name.trim() : ''
+    const items = Array.isArray(payload.items)
+      ? payload.items.filter((x) => typeof x === 'string').map((x) => x.trim()).filter(Boolean)
+      : []
+    if (!partial || 'name' in payload) {
+      if (!name) errors.push('name is required')
+      else value.name = name
+    }
+    if ('items' in payload || !partial) {
+      if (!partial && !items.length) errors.push('items must be a non-empty array of strings')
+      else if ('items' in payload) value.items = items
+      else if (!partial) value.items = items
+    }
+  }
+
+  if (section === backupDisasterCloudPageSections.engagementPhases) {
+    const step = typeof payload.step === 'string' ? payload.step.trim() : ''
+    const detail = typeof payload.detail === 'string' ? payload.detail.trim() : ''
+    if (!partial || 'step' in payload) {
+      if (!step) errors.push('step is required')
+      else value.step = step
+    }
+    if (!partial || 'detail' in payload) {
+      if (!detail) errors.push('detail is required')
+      else value.detail = detail
+    }
+  }
+
+  if (section === backupDisasterCloudPageSections.deliverableBullets) {
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
+    }
+  }
+
+  if (section === backupDisasterCloudPageSections.faqs) {
+    const q = typeof payload.q === 'string' ? payload.q.trim() : ''
+    const a = typeof payload.a === 'string' ? payload.a.trim() : ''
+    if (!partial || 'q' in payload) {
+      if (!q) errors.push('q is required')
+      else value.q = q
+    }
+    if (!partial || 'a' in payload) {
+      if (!a) errors.push('a is required')
+      else value.a = a
+    }
+  }
+
+  return { errors, value }
+}
+
 function validateEcommerceNewsPortalArrayItem(section, payload = {}, { partial = false } = {}) {
   const value = {}
   const errors = []
@@ -4518,6 +5980,78 @@ async function getLandingPageDesignPageDocument() {
 
   const defaults = {
     ...getDefaultLandingPageDesignPage(),
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  }
+
+  await collection.insertOne(defaults)
+  return defaults
+}
+
+async function getAdsSeoPageDocument() {
+  const collection = getPageContentCollection()
+  const existing = await collection.findOne({ key: 'ads-seo-page' })
+
+  if (existing) {
+    return existing
+  }
+
+  const defaults = {
+    ...getDefaultAdsSeoPage(),
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  }
+
+  await collection.insertOne(defaults)
+  return defaults
+}
+
+async function getSocialContentBrandingPageDocument() {
+  const collection = getPageContentCollection()
+  const existing = await collection.findOne({ key: 'social-content-branding-page' })
+
+  if (existing) {
+    return existing
+  }
+
+  const defaults = {
+    ...getDefaultSocialContentBrandingPage(),
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  }
+
+  await collection.insertOne(defaults)
+  return defaults
+}
+
+async function getSecurityAuditPageDocument() {
+  const collection = getPageContentCollection()
+  const existing = await collection.findOne({ key: 'security-audit-page' })
+
+  if (existing) {
+    return existing
+  }
+
+  const defaults = {
+    ...getDefaultSecurityAuditPage(),
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  }
+
+  await collection.insertOne(defaults)
+  return defaults
+}
+
+async function getBackupDisasterCloudPageDocument() {
+  const collection = getPageContentCollection()
+  const existing = await collection.findOne({ key: 'backup-disaster-cloud-page' })
+
+  if (existing) {
+    return existing
+  }
+
+  const defaults = {
+    ...getDefaultBackupDisasterCloudPage(),
     createdAt: new Date(),
     updatedAt: new Date(),
   }
@@ -8835,6 +10369,833 @@ app.delete('/api/landing-page-design-page/:section/:itemId', async (req, res) =>
   } catch (error) {
     console.error(error)
     return res.status(500).json({ error: 'Failed to delete landing page design section item' })
+  }
+})
+
+app.get('/api/ads-seo-page', async (_req, res) => {
+  try {
+    const page = await getAdsSeoPageDocument()
+    return res.json(normalizeDocument(page))
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to fetch ads SEO page data' })
+  }
+})
+
+app.put('/api/ads-seo-page', async (req, res) => {
+  try {
+    const defaultPage = getDefaultAdsSeoPage()
+    const s = (k, fallback) =>
+      typeof req.body[k] === 'string' ? req.body[k].trim() : fallback
+    const payload = {
+      heroImage: s('heroImage', ''),
+      eyebrow: s('eyebrow', defaultPage.eyebrow),
+      title: s('title', defaultPage.title),
+      subtitle: s('subtitle', defaultPage.subtitle),
+      whyTogetherTitle: s('whyTogetherTitle', defaultPage.whyTogetherTitle),
+      whyTogetherBody: s('whyTogetherBody', defaultPage.whyTogetherBody),
+      pillarsSectionEyebrow: s('pillarsSectionEyebrow', defaultPage.pillarsSectionEyebrow),
+      pillarsSectionTitle: s('pillarsSectionTitle', defaultPage.pillarsSectionTitle),
+      pillarsSectionSubtitle: s('pillarsSectionSubtitle', defaultPage.pillarsSectionSubtitle),
+      adsCardTitle: s('adsCardTitle', defaultPage.adsCardTitle),
+      adsCardSubtitle: s('adsCardSubtitle', defaultPage.adsCardSubtitle),
+      seoCardTitle: s('seoCardTitle', defaultPage.seoCardTitle),
+      seoCardSubtitle: s('seoCardSubtitle', defaultPage.seoCardSubtitle),
+      deliverablesSectionEyebrow: s('deliverablesSectionEyebrow', defaultPage.deliverablesSectionEyebrow),
+      deliverablesSectionTitle: s('deliverablesSectionTitle', defaultPage.deliverablesSectionTitle),
+      deliverablesSectionSubtitle: s(
+        'deliverablesSectionSubtitle',
+        defaultPage.deliverablesSectionSubtitle,
+      ),
+      platformsSectionTitle: s('platformsSectionTitle', defaultPage.platformsSectionTitle),
+      platformsSectionSubtitle: s('platformsSectionSubtitle', defaultPage.platformsSectionSubtitle),
+      reportingSectionTitle: s('reportingSectionTitle', defaultPage.reportingSectionTitle),
+      reportingSectionSubtitle: s('reportingSectionSubtitle', defaultPage.reportingSectionSubtitle),
+      faqSectionEyebrow: s('faqSectionEyebrow', defaultPage.faqSectionEyebrow),
+      faqSectionTitle: s('faqSectionTitle', defaultPage.faqSectionTitle),
+      growthCtaLabel: s('growthCtaLabel', defaultPage.growthCtaLabel),
+      growthCtaTo: s('growthCtaTo', defaultPage.growthCtaTo),
+      ctaTitle: s('ctaTitle', defaultPage.ctaTitle),
+      ctaSubtitle: s('ctaSubtitle', defaultPage.ctaSubtitle),
+      ctaButtonLabel: s('ctaButtonLabel', defaultPage.ctaButtonLabel),
+      ctaButtonTo: s('ctaButtonTo', defaultPage.ctaButtonTo),
+      updatedAt: new Date(),
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'ads-seo-page' },
+      {
+        $set: payload,
+        $setOnInsert: {
+          key: defaultPage.key,
+          heroHighlights: defaultPage.heroHighlights,
+          navPills: defaultPage.navPills,
+          whyTogetherBullets: defaultPage.whyTogetherBullets,
+          adsPillars: defaultPage.adsPillars,
+          seoPillars: defaultPage.seoPillars,
+          deliverables: defaultPage.deliverables,
+          platforms: defaultPage.platforms,
+          reporting: defaultPage.reporting,
+          faqs: defaultPage.faqs,
+          createdAt: new Date(),
+        },
+      },
+      { upsert: true },
+    )
+
+    const updatedPage = await getPageContentCollection().findOne({ key: 'ads-seo-page' })
+    return res.json({
+      message: 'Ads SEO page content updated',
+      page: normalizeDocument(updatedPage),
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update ads SEO page content' })
+  }
+})
+
+app.post('/api/ads-seo-page/:section', async (req, res) => {
+  try {
+    const { section } = req.params
+    const targetSection = adsSeoPageSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateAdsSeoPageArrayItem(targetSection, req.body)
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    const page = await getAdsSeoPageDocument()
+    const nextItem = {
+      _id: new ObjectId().toString(),
+      ...value,
+    }
+    const nextItems = [...(page[targetSection] || []), nextItem]
+
+    await getPageContentCollection().updateOne(
+      { key: 'ads-seo-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.status(201).json({
+      message: `${targetSection} item created successfully`,
+      item: nextItem,
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to create ads SEO section item' })
+  }
+})
+
+app.patch('/api/ads-seo-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = adsSeoPageSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateAdsSeoPageArrayItem(targetSection, req.body, { partial: true })
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    if (!Object.keys(value).length) {
+      return res.status(400).json({ error: 'At least one field is required to update' })
+    }
+
+    const page = await getAdsSeoPageDocument()
+    const items = page[targetSection] || []
+    const index = items.findIndex((item) => item._id === itemId)
+
+    if (index === -1) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    const updatedItem = {
+      ...items[index],
+      ...value,
+    }
+
+    const nextItems = [...items]
+    nextItems[index] = updatedItem
+
+    await getPageContentCollection().updateOne(
+      { key: 'ads-seo-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.json({
+      message: `${targetSection} item updated successfully`,
+      item: updatedItem,
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update ads SEO section item' })
+  }
+})
+
+app.delete('/api/ads-seo-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = adsSeoPageSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const page = await getAdsSeoPageDocument()
+    const items = page[targetSection] || []
+    const nextItems = items.filter((item) => item._id !== itemId)
+
+    if (nextItems.length === items.length) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'ads-seo-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.json({ message: `${targetSection} item deleted successfully` })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to delete ads SEO section item' })
+  }
+})
+
+app.get('/api/social-content-branding-page', async (_req, res) => {
+  try {
+    const page = await getSocialContentBrandingPageDocument()
+    return res.json(normalizeDocument(page))
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to fetch social content branding page data' })
+  }
+})
+
+app.put('/api/social-content-branding-page', async (req, res) => {
+  try {
+    const defaultPage = getDefaultSocialContentBrandingPage()
+    const s = (k, fallback) =>
+      typeof req.body[k] === 'string' ? req.body[k].trim() : fallback
+    const payload = {
+      heroImage: s('heroImage', ''),
+      eyebrow: s('eyebrow', defaultPage.eyebrow),
+      title: s('title', defaultPage.title),
+      subtitle: s('subtitle', defaultPage.subtitle),
+      unifiedPitchTitle: s('unifiedPitchTitle', defaultPage.unifiedPitchTitle),
+      unifiedPitchBody: s('unifiedPitchBody', defaultPage.unifiedPitchBody),
+      socialMediaEyebrow: s('socialMediaEyebrow', defaultPage.socialMediaEyebrow),
+      socialMediaTitle: s('socialMediaTitle', defaultPage.socialMediaTitle),
+      socialMediaIntro: s('socialMediaIntro', defaultPage.socialMediaIntro),
+      contentWritingEyebrow: s('contentWritingEyebrow', defaultPage.contentWritingEyebrow),
+      contentWritingTitle: s('contentWritingTitle', defaultPage.contentWritingTitle),
+      contentWritingIntro: s('contentWritingIntro', defaultPage.contentWritingIntro),
+      brandingEyebrow: s('brandingEyebrow', defaultPage.brandingEyebrow),
+      brandingTitle: s('brandingTitle', defaultPage.brandingTitle),
+      brandingIntro: s('brandingIntro', defaultPage.brandingIntro),
+      processSectionEyebrow: s('processSectionEyebrow', defaultPage.processSectionEyebrow),
+      processSectionTitle: s('processSectionTitle', defaultPage.processSectionTitle),
+      processSectionSubtitle: s('processSectionSubtitle', defaultPage.processSectionSubtitle),
+      faqSectionEyebrow: s('faqSectionEyebrow', defaultPage.faqSectionEyebrow),
+      faqSectionTitle: s('faqSectionTitle', defaultPage.faqSectionTitle),
+      ctaTitle: s('ctaTitle', defaultPage.ctaTitle),
+      ctaSubtitle: s('ctaSubtitle', defaultPage.ctaSubtitle),
+      ctaButtonLabel: s('ctaButtonLabel', defaultPage.ctaButtonLabel),
+      ctaButtonTo: s('ctaButtonTo', defaultPage.ctaButtonTo),
+      updatedAt: new Date(),
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'social-content-branding-page' },
+      {
+        $set: payload,
+        $setOnInsert: {
+          key: defaultPage.key,
+          navPills: defaultPage.navPills,
+          introCards: defaultPage.introCards,
+          unifiedPitchBullets: defaultPage.unifiedPitchBullets,
+          socialMediaItems: defaultPage.socialMediaItems,
+          contentWritingItems: defaultPage.contentWritingItems,
+          brandingItems: defaultPage.brandingItems,
+          processPhases: defaultPage.processPhases,
+          deliverablesStrip: defaultPage.deliverablesStrip,
+          faqs: defaultPage.faqs,
+          createdAt: new Date(),
+        },
+      },
+      { upsert: true },
+    )
+
+    const updatedPage = await getPageContentCollection().findOne({ key: 'social-content-branding-page' })
+    return res.json({
+      message: 'Social content branding page content updated',
+      page: normalizeDocument(updatedPage),
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update social content branding page content' })
+  }
+})
+
+app.post('/api/social-content-branding-page/:section', async (req, res) => {
+  try {
+    const { section } = req.params
+    const targetSection = socialContentBrandingPageSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateSocialContentBrandingArrayItem(targetSection, req.body)
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    const page = await getSocialContentBrandingPageDocument()
+    const nextItem = {
+      _id: new ObjectId().toString(),
+      ...value,
+    }
+    const nextItems = [...(page[targetSection] || []), nextItem]
+
+    await getPageContentCollection().updateOne(
+      { key: 'social-content-branding-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.status(201).json({
+      message: `${targetSection} item created successfully`,
+      item: nextItem,
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to create social content branding section item' })
+  }
+})
+
+app.patch('/api/social-content-branding-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = socialContentBrandingPageSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateSocialContentBrandingArrayItem(targetSection, req.body, {
+      partial: true,
+    })
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    if (!Object.keys(value).length) {
+      return res.status(400).json({ error: 'At least one field is required to update' })
+    }
+
+    const page = await getSocialContentBrandingPageDocument()
+    const items = page[targetSection] || []
+    const index = items.findIndex((item) => item._id === itemId)
+
+    if (index === -1) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    const updatedItem = {
+      ...items[index],
+      ...value,
+    }
+
+    const nextItems = [...items]
+    nextItems[index] = updatedItem
+
+    await getPageContentCollection().updateOne(
+      { key: 'social-content-branding-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.json({
+      message: `${targetSection} item updated successfully`,
+      item: updatedItem,
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update social content branding section item' })
+  }
+})
+
+app.delete('/api/social-content-branding-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = socialContentBrandingPageSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const page = await getSocialContentBrandingPageDocument()
+    const items = page[targetSection] || []
+    const nextItems = items.filter((item) => item._id !== itemId)
+
+    if (nextItems.length === items.length) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'social-content-branding-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.json({ message: `${targetSection} item deleted successfully` })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to delete social content branding section item' })
+  }
+})
+
+app.get('/api/security-audit-page', async (_req, res) => {
+  try {
+    const page = await getSecurityAuditPageDocument()
+    return res.json(normalizeDocument(page))
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to fetch security audit page data' })
+  }
+})
+
+app.put('/api/security-audit-page', async (req, res) => {
+  try {
+    const defaultPage = getDefaultSecurityAuditPage()
+    const s = (k, fallback) =>
+      typeof req.body[k] === 'string' ? req.body[k].trim() : fallback
+    const payload = {
+      heroImage: s('heroImage', ''),
+      eyebrow: s('eyebrow', defaultPage.eyebrow),
+      title: s('title', defaultPage.title),
+      subtitle: s('subtitle', defaultPage.subtitle),
+      methodologySectionEyebrow: s('methodologySectionEyebrow', defaultPage.methodologySectionEyebrow),
+      methodologySectionTitle: s('methodologySectionTitle', defaultPage.methodologySectionTitle),
+      methodologySectionSubtitle: s(
+        'methodologySectionSubtitle',
+        defaultPage.methodologySectionSubtitle,
+      ),
+      coverageSectionEyebrow: s('coverageSectionEyebrow', defaultPage.coverageSectionEyebrow),
+      coverageSectionTitle: s('coverageSectionTitle', defaultPage.coverageSectionTitle),
+      deliverablesSectionEyebrow: s('deliverablesSectionEyebrow', defaultPage.deliverablesSectionEyebrow),
+      deliverablesSectionTitle: s('deliverablesSectionTitle', defaultPage.deliverablesSectionTitle),
+      frameworksSectionEyebrow: s('frameworksSectionEyebrow', defaultPage.frameworksSectionEyebrow),
+      frameworksSectionTitle: s('frameworksSectionTitle', defaultPage.frameworksSectionTitle),
+      frameworksSectionSubtitle: s('frameworksSectionSubtitle', defaultPage.frameworksSectionSubtitle),
+      faqSectionEyebrow: s('faqSectionEyebrow', defaultPage.faqSectionEyebrow),
+      faqSectionTitle: s('faqSectionTitle', defaultPage.faqSectionTitle),
+      ctaTitle: s('ctaTitle', defaultPage.ctaTitle),
+      ctaSubtitle: s('ctaSubtitle', defaultPage.ctaSubtitle),
+      ctaPrimaryLabel: s('ctaPrimaryLabel', defaultPage.ctaPrimaryLabel),
+      ctaPrimaryTo: s('ctaPrimaryTo', defaultPage.ctaPrimaryTo),
+      ctaSecondaryLabel: s('ctaSecondaryLabel', defaultPage.ctaSecondaryLabel),
+      ctaSecondaryTo: s('ctaSecondaryTo', defaultPage.ctaSecondaryTo),
+      updatedAt: new Date(),
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'security-audit-page' },
+      {
+        $set: payload,
+        $setOnInsert: {
+          key: defaultPage.key,
+          navPills: defaultPage.navPills,
+          stats: defaultPage.stats,
+          auditVsPentest: defaultPage.auditVsPentest,
+          methodology: defaultPage.methodology,
+          coverage: defaultPage.coverage,
+          deliverables: defaultPage.deliverables,
+          frameworks: defaultPage.frameworks,
+          faqs: defaultPage.faqs,
+          createdAt: new Date(),
+        },
+      },
+      { upsert: true },
+    )
+
+    const updatedPage = await getPageContentCollection().findOne({ key: 'security-audit-page' })
+    return res.json({
+      message: 'Security audit page content updated',
+      page: normalizeDocument(updatedPage),
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update security audit page content' })
+  }
+})
+
+app.post('/api/security-audit-page/:section', async (req, res) => {
+  try {
+    const { section } = req.params
+    const targetSection = securityAuditPageSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateSecurityAuditArrayItem(targetSection, req.body)
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    const page = await getSecurityAuditPageDocument()
+    const nextItem = {
+      _id: new ObjectId().toString(),
+      ...value,
+    }
+    const nextItems = [...(page[targetSection] || []), nextItem]
+
+    await getPageContentCollection().updateOne(
+      { key: 'security-audit-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.status(201).json({
+      message: `${targetSection} item created successfully`,
+      item: nextItem,
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to create security audit section item' })
+  }
+})
+
+app.patch('/api/security-audit-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = securityAuditPageSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateSecurityAuditArrayItem(targetSection, req.body, {
+      partial: true,
+    })
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    if (!Object.keys(value).length) {
+      return res.status(400).json({ error: 'At least one field is required to update' })
+    }
+
+    const page = await getSecurityAuditPageDocument()
+    const items = page[targetSection] || []
+    const index = items.findIndex((item) => item._id === itemId)
+
+    if (index === -1) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    const updatedItem = {
+      ...items[index],
+      ...value,
+    }
+
+    const nextItems = [...items]
+    nextItems[index] = updatedItem
+
+    await getPageContentCollection().updateOne(
+      { key: 'security-audit-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.json({
+      message: `${targetSection} item updated successfully`,
+      item: updatedItem,
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update security audit section item' })
+  }
+})
+
+app.delete('/api/security-audit-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = securityAuditPageSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const page = await getSecurityAuditPageDocument()
+    const items = page[targetSection] || []
+    const nextItems = items.filter((item) => item._id !== itemId)
+
+    if (nextItems.length === items.length) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'security-audit-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.json({ message: `${targetSection} item deleted successfully` })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to delete security audit section item' })
+  }
+})
+
+app.get('/api/backup-disaster-cloud-page', async (_req, res) => {
+  try {
+    const page = await getBackupDisasterCloudPageDocument()
+    return res.json(normalizeDocument(page))
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to fetch backup disaster cloud page data' })
+  }
+})
+
+app.put('/api/backup-disaster-cloud-page', async (req, res) => {
+  try {
+    const defaultPage = getDefaultBackupDisasterCloudPage()
+    const s = (k, fallback) =>
+      typeof req.body[k] === 'string' ? req.body[k].trim() : fallback
+    const payload = {
+      heroImage: s('heroImage', ''),
+      eyebrow: s('eyebrow', defaultPage.eyebrow),
+      title: s('title', defaultPage.title),
+      subtitle: s('subtitle', defaultPage.subtitle),
+      whySectionEyebrow: s('whySectionEyebrow', defaultPage.whySectionEyebrow),
+      pillarIntro: s('pillarIntro', defaultPage.pillarIntro),
+      matrixSectionEyebrow: s('matrixSectionEyebrow', defaultPage.matrixSectionEyebrow),
+      matrixSectionTitle: s('matrixSectionTitle', defaultPage.matrixSectionTitle),
+      matrixSectionSubtitle: s('matrixSectionSubtitle', defaultPage.matrixSectionSubtitle),
+      hyperscalersSectionEyebrow: s('hyperscalersSectionEyebrow', defaultPage.hyperscalersSectionEyebrow),
+      hyperscalersSectionTitle: s('hyperscalersSectionTitle', defaultPage.hyperscalersSectionTitle),
+      engagementSectionEyebrow: s('engagementSectionEyebrow', defaultPage.engagementSectionEyebrow),
+      engagementSectionTitle: s('engagementSectionTitle', defaultPage.engagementSectionTitle),
+      deliverablesSectionEyebrow: s('deliverablesSectionEyebrow', defaultPage.deliverablesSectionEyebrow),
+      deliverablesSectionTitle: s('deliverablesSectionTitle', defaultPage.deliverablesSectionTitle),
+      faqSectionEyebrow: s('faqSectionEyebrow', defaultPage.faqSectionEyebrow),
+      faqSectionTitle: s('faqSectionTitle', defaultPage.faqSectionTitle),
+      ctaTitle: s('ctaTitle', defaultPage.ctaTitle),
+      ctaSubtitle: s('ctaSubtitle', defaultPage.ctaSubtitle),
+      ctaPrimaryLabel: s('ctaPrimaryLabel', defaultPage.ctaPrimaryLabel),
+      ctaPrimaryTo: s('ctaPrimaryTo', defaultPage.ctaPrimaryTo),
+      ctaSecondaryLabel: s('ctaSecondaryLabel', defaultPage.ctaSecondaryLabel),
+      ctaSecondaryTo: s('ctaSecondaryTo', defaultPage.ctaSecondaryTo),
+      updatedAt: new Date(),
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'backup-disaster-cloud-page' },
+      {
+        $set: payload,
+        $setOnInsert: {
+          key: defaultPage.key,
+          navPills: defaultPage.navPills,
+          kpis: defaultPage.kpis,
+          pillars: defaultPage.pillars,
+          rtoRpoRows: defaultPage.rtoRpoRows,
+          providerNotes: defaultPage.providerNotes,
+          engagementPhases: defaultPage.engagementPhases,
+          deliverableBullets: defaultPage.deliverableBullets,
+          faqs: defaultPage.faqs,
+          createdAt: new Date(),
+        },
+      },
+      { upsert: true },
+    )
+
+    const updatedPage = await getPageContentCollection().findOne({ key: 'backup-disaster-cloud-page' })
+    return res.json({
+      message: 'Backup disaster cloud page content updated',
+      page: normalizeDocument(updatedPage),
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update backup disaster cloud page content' })
+  }
+})
+
+app.post('/api/backup-disaster-cloud-page/:section', async (req, res) => {
+  try {
+    const { section } = req.params
+    const targetSection = backupDisasterCloudPageSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateBackupDisasterCloudArrayItem(targetSection, req.body)
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    const page = await getBackupDisasterCloudPageDocument()
+    const nextItem = {
+      _id: new ObjectId().toString(),
+      ...value,
+    }
+    const nextItems = [...(page[targetSection] || []), nextItem]
+
+    await getPageContentCollection().updateOne(
+      { key: 'backup-disaster-cloud-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.status(201).json({
+      message: `${targetSection} item created successfully`,
+      item: nextItem,
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to create backup disaster cloud section item' })
+  }
+})
+
+app.patch('/api/backup-disaster-cloud-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = backupDisasterCloudPageSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateBackupDisasterCloudArrayItem(targetSection, req.body, {
+      partial: true,
+    })
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    if (!Object.keys(value).length) {
+      return res.status(400).json({ error: 'At least one field is required to update' })
+    }
+
+    const page = await getBackupDisasterCloudPageDocument()
+    const items = page[targetSection] || []
+    const index = items.findIndex((item) => item._id === itemId)
+
+    if (index === -1) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    const updatedItem = {
+      ...items[index],
+      ...value,
+    }
+
+    const nextItems = [...items]
+    nextItems[index] = updatedItem
+
+    await getPageContentCollection().updateOne(
+      { key: 'backup-disaster-cloud-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.json({
+      message: `${targetSection} item updated successfully`,
+      item: updatedItem,
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update backup disaster cloud section item' })
+  }
+})
+
+app.delete('/api/backup-disaster-cloud-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = backupDisasterCloudPageSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const page = await getBackupDisasterCloudPageDocument()
+    const items = page[targetSection] || []
+    const nextItems = items.filter((item) => item._id !== itemId)
+
+    if (nextItems.length === items.length) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'backup-disaster-cloud-page' },
+      {
+        $set: {
+          [targetSection]: nextItems,
+          updatedAt: new Date(),
+        },
+      },
+    )
+
+    return res.json({ message: `${targetSection} item deleted successfully` })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to delete backup disaster cloud section item' })
   }
 })
 
