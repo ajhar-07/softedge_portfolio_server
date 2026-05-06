@@ -255,6 +255,104 @@ const processAutomationSections = {
   faqs: 'faqs',
 }
 
+const iotSmartOfficeHomeSections = {
+  featureCards: 'featureCards',
+  includedServices: 'includedServices',
+  solutionPhases: 'solutionPhases',
+}
+
+const biometricCctvSections = {
+  metrics: 'metrics',
+  coreModules: 'coreModules',
+  projectFlow: 'projectFlow',
+  coverageItems: 'coverageItems',
+  hardwareStack: 'hardwareStack',
+  compliancePoints: 'compliancePoints',
+  servicePlans: 'servicePlans',
+  faqItems: 'faqItems',
+}
+
+const conversationalAiSections = {
+  solutionBlocks: 'solutionBlocks',
+  capabilities: 'capabilities',
+  aiWorkflow: 'aiWorkflow',
+  kpiCards: 'kpiCards',
+}
+
+const roboticProcessSections = {
+  rpaSolutions: 'rpaSolutions',
+  automationTargets: 'automationTargets',
+  implementationFlow: 'implementationFlow',
+  outcomes: 'outcomes',
+  faqs: 'faqs',
+}
+
+const generativeAiMarketingSections = {
+  marketingUseCases: 'marketingUseCases',
+  workflowStages: 'workflowStages',
+  capabilityTags: 'capabilityTags',
+  resultCards: 'resultCards',
+  faqs: 'faqs',
+}
+
+const servicePointSections = {
+  serviceModules: 'serviceModules',
+  governancePillars: 'governancePillars',
+  implementationPlan: 'implementationPlan',
+  videoItems: 'videoItems',
+  galleryItems: 'galleryItems',
+}
+
+const customSaasSections = {
+  deliveryTracks: 'deliveryTracks',
+  buildFlow: 'buildFlow',
+  architectureHighlights: 'architectureHighlights',
+  engagementModels: 'engagementModels',
+  projects: 'projects',
+  projectDemoVideos: 'projectDemoVideos',
+  saasFaqs: 'saasFaqs',
+}
+
+const startupItConsultingSections = {
+  consultingPillars: 'consultingPillars',
+  transformationStages: 'transformationStages',
+  outcomes: 'outcomes',
+}
+
+const itTrainingSections = {
+  trainingTracks: 'trainingTracks',
+  internshipFlow: 'internshipFlow',
+  outcomes: 'outcomes',
+  demoVideos: 'demoVideos',
+  curriculumModules: 'curriculumModules',
+  learningSupports: 'learningSupports',
+  faqItems: 'faqItems',
+}
+
+const technicalSupportSections = {
+  supportPillars: 'supportPillars',
+  amcCoverage: 'amcCoverage',
+  responseMatrix: 'responseMatrix',
+  supportVideos: 'supportVideos',
+  amcPlans: 'amcPlans',
+  toolStack: 'toolStack',
+  workingFlow: 'workingFlow',
+  supportFaqs: 'supportFaqs',
+}
+
+const footerSections = {
+  socialLinks: 'socialLinks',
+}
+
+const homePageSections = {
+  slides: 'slides',
+  aboutHighlights: 'aboutHighlights',
+  aboutStats: 'aboutStats',
+  timeline: 'timeline',
+  pricingPlans: 'pricingPlans',
+  pricingFeatures: 'pricingFeatures',
+}
+
 const educationalInstituteManagementSections = {
   serviceLinks: 'serviceLinks',
   socials: 'socials',
@@ -835,6 +933,2266 @@ function validateProcessAutomationArrayItem(section, payload = {}, { partial = f
     }
     if ('open' in payload || !partial) {
       value.open = Boolean(payload.open)
+    }
+  }
+
+  return { errors, value }
+}
+
+function getDefaultIoTSmartOfficeHomePage() {
+  return {
+    key: 'iot-smart-office-home-page',
+    heroImage:
+      'https://images.unsplash.com/photo-1581092921461-39b2f2f53a22?auto=format&fit=crop&w=2200&q=80',
+    heroTitle: 'IoT Smart Office/Home + Smart Board/ICT Lab',
+    breadcrumbTitle: 'IoT Smart Office/Home',
+    sectionBadge: 'Next Generation Infrastructure',
+    sectionTitle: 'Intelligent Spaces for Productivity, Learning, and Security',
+    sectionDescription:
+      'We build complete IoT ecosystems for offices, homes, educational institutes, and training centers. From smart board enabled classrooms to automated office floors, our solutions combine hardware, software, and cloud analytics to deliver measurable energy savings, better operational control, and safer environments.',
+    deliverTitle: 'What We Deliver',
+    roadmapTitle: 'Implementation Roadmap',
+    ctaBadge: 'Ready To Upgrade',
+    ctaTitle: 'Build a smarter office, home, and ICT learning ecosystem with SoftEdge.',
+    ctaDescription:
+      'We provide end-to-end planning, deployment, user training, and after-sales support so your smart setup is stable from day one.',
+    ctaButtonText: 'Explore More Services',
+    ctaButtonLink: '/services',
+    featureCards: [
+      {
+        _id: new ObjectId().toString(),
+        title: 'Smart Office Automation',
+        description:
+          'Lighting, AC, curtain, meeting room booking, and occupancy sensors are integrated into one intelligent control layer.',
+        icon: '🏢',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Smart Home Integration',
+        description:
+          'Voice-ready automation with remote app control, energy scheduling, and family safety alerts for modern connected homes.',
+        icon: '🏠',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Smart Board & ICT Lab Setup',
+        description:
+          'Interactive board deployment, classroom device management, and lab network optimization for training institutes and schools.',
+        icon: '🧑‍🏫',
+      },
+    ],
+    includedServices: [
+      { _id: new ObjectId().toString(), text: 'IoT device selection, installation and commissioning' },
+      { _id: new ObjectId().toString(), text: 'Sensor network design (temperature, motion, door, smoke, humidity)' },
+      { _id: new ObjectId().toString(), text: 'Central dashboard with role-based access control' },
+      { _id: new ObjectId().toString(), text: 'Smart board installation with teacher training support' },
+      { _id: new ObjectId().toString(), text: 'ICT lab desktop/network architecture and secure internet policy' },
+      { _id: new ObjectId().toString(), text: 'CCTV + biometric attendance integration with IoT trigger events' },
+      { _id: new ObjectId().toString(), text: 'Preventive maintenance and remote monitoring' },
+      { _id: new ObjectId().toString(), text: 'Custom automation rules and monthly performance reports' },
+    ],
+    solutionPhases: [
+      {
+        _id: new ObjectId().toString(),
+        title: 'Discover',
+        text: 'Site visit, requirement collection, and infrastructure audit to design a practical smart environment.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Design',
+        text: 'Blueprint with device map, network zoning, security controls, and deployment milestones.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Deploy',
+        text: 'Hardware installation, smart board calibration, ICT lab setup, and software integration.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Optimize',
+        text: 'Usage analytics, preventive support, and automation tuning for long-term reliability.',
+      },
+    ],
+  }
+}
+
+function validateIoTSmartOfficeHomeArrayItem(section, payload = {}, { partial = false } = {}) {
+  const value = {}
+  const errors = []
+
+  if (section === iotSmartOfficeHomeSections.featureCards) {
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const description = typeof payload.description === 'string' ? payload.description.trim() : ''
+    const icon = typeof payload.icon === 'string' ? payload.icon.trim() : ''
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'description' in payload) {
+      if (!description) errors.push('description is required')
+      else value.description = description
+    }
+    if (!partial || 'icon' in payload) {
+      if (!icon) errors.push('icon is required')
+      else value.icon = icon
+    }
+  }
+
+  if (section === iotSmartOfficeHomeSections.includedServices) {
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
+    }
+  }
+
+  if (section === iotSmartOfficeHomeSections.solutionPhases) {
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
+    }
+  }
+
+  return { errors, value }
+}
+
+function getDefaultBiometricCctvPage() {
+  return {
+    key: 'biometric-cctv-page',
+    heroImage:
+      'https://images.unsplash.com/photo-1518773553398-650c184e0bb3?auto=format&fit=crop&w=2200&q=80',
+    heroBadge: 'Physical Security Solutions',
+    heroTitle: 'Biometric Access + CCTV Surveillance',
+    breadcrumbTitle: 'Biometric + CCTV',
+    whyBadge: 'Why This Matters',
+    whyTitle: 'Integrated Security For People, Assets, and Data',
+    whyDescription:
+      'Modern organizations need more than standalone devices. We build integrated biometric and CCTV systems where entry points, surveillance, alerting, and reporting operate together. This reduces unauthorized access risk, improves response time, and gives clear evidence trails for management, compliance, and legal review.',
+    whyDescriptionBottom:
+      'Our deployments include site-specific planning, secure networking, centralized control, and user training so your team can operate confidently from day one.',
+    implementationTitle: 'Implementation Flow',
+    coverageTitle: 'Coverage Environments',
+    complianceTitle: 'Compliance & Security Governance',
+    complianceDescription:
+      'A security deployment is complete only when operations, policy, and audit trails are aligned. We help your team maintain secure daily operations through documentation and periodic reviews.',
+    stackTitle: 'Recommended Technology Stack',
+    supportTitle: 'Operations & Support Plans',
+    faqTitle: 'FAQ & Next Step',
+    ctaButtonText: 'Request Consultation',
+    ctaButtonLink: '/services',
+    metrics: [
+      { _id: new ObjectId().toString(), value: '99.9%', label: 'System Uptime Target' },
+      { _id: new ObjectId().toString(), value: '24/7', label: 'Monitoring Ready' },
+      { _id: new ObjectId().toString(), value: 'Role-based', label: 'Access Permission Control' },
+      { _id: new ObjectId().toString(), value: 'Instant', label: 'Alert & Notification Pipeline' },
+    ],
+    coreModules: [
+      {
+        _id: new ObjectId().toString(),
+        title: 'Biometric Access Control',
+        description:
+          'Fingerprint, face, card, and PIN based multi-factor entry with role-wise permissions for office floors, labs, and restricted zones.',
+        points: ['RFID + Finger + Face combo', 'Shift-based access schedule', 'Anti-passback and forced-door alerts'],
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'CCTV Surveillance Intelligence',
+        description:
+          'HD/4K CCTV camera network with live monitoring, event tagging, motion analytics, and secure playback for audit and incident review.',
+        points: ['NVR/VMS integration', 'Motion + intrusion zone alerts', 'Remote live feed with permissions'],
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Attendance & Visitor Automation',
+        description:
+          'Centralized attendance logs with automated reports, visitor pass flow, and optional integration with HR/payroll systems.',
+        points: ['Real-time attendance board', 'Visitor token and check-in', 'Late/absence auto reports'],
+      },
+    ],
+    projectFlow: [
+      { _id: new ObjectId().toString(), text: 'Security requirement survey and zone risk mapping' },
+      { _id: new ObjectId().toString(), text: 'Device planning: controller, reader, locks, camera, storage' },
+      { _id: new ObjectId().toString(), text: 'Network design with VLAN and backup power planning' },
+      { _id: new ObjectId().toString(), text: 'Installation, calibration, and access policy setup' },
+      { _id: new ObjectId().toString(), text: 'Command center dashboard and admin training' },
+      { _id: new ObjectId().toString(), text: 'Health check, AMC support, and monthly optimization' },
+    ],
+    coverageItems: [
+      { _id: new ObjectId().toString(), text: 'Corporate office' },
+      { _id: new ObjectId().toString(), text: 'Factory & warehouse' },
+      { _id: new ObjectId().toString(), text: 'School / ICT lab' },
+      { _id: new ObjectId().toString(), text: 'Hospital & clinic' },
+      { _id: new ObjectId().toString(), text: 'Banking branch' },
+      { _id: new ObjectId().toString(), text: 'Residential building' },
+    ],
+    hardwareStack: [
+      {
+        _id: new ObjectId().toString(),
+        title: 'Access Hardware',
+        items: ['Biometric reader', 'Door controller', 'Magnetic/bolt lock', 'Emergency break-glass switch'],
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Surveillance Hardware',
+        items: ['IP camera (indoor/outdoor)', 'NVR with RAID storage', 'PoE switch', 'Night vision + wide dynamic range'],
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Control Software',
+        items: ['Central monitoring dashboard', 'Event analytics', 'Role-based user accounts', 'Audit log export'],
+      },
+    ],
+    compliancePoints: [
+      { _id: new ObjectId().toString(), text: 'User access policy with approval workflow' },
+      { _id: new ObjectId().toString(), text: 'Encrypted admin login and password policy' },
+      { _id: new ObjectId().toString(), text: 'Camera retention and backup guidelines' },
+      { _id: new ObjectId().toString(), text: 'Incident response checklist and escalation matrix' },
+      { _id: new ObjectId().toString(), text: 'Access logs mapped with CCTV evidence timeline' },
+      { _id: new ObjectId().toString(), text: 'Quarterly security review and patch plan' },
+    ],
+    servicePlans: [
+      {
+        _id: new ObjectId().toString(),
+        name: 'Standard Support',
+        details: 'Business-hours monitoring support, monthly health check, and remote troubleshooting.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        name: 'Priority AMC',
+        details: '24/7 call support, preventive visits, standby replacement policy, and emergency on-site response.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        name: 'Enterprise SOC Link',
+        details: 'Advanced alert routing, SIEM integration, and central command center collaboration.',
+      },
+    ],
+    faqItems: [
+      {
+        _id: new ObjectId().toString(),
+        q: 'Can biometric and CCTV work together?',
+        a: 'Yes. Access events can trigger camera snapshots, alerts, and audit trails from a unified dashboard.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        q: 'How long can footage be stored?',
+        a: 'Storage depends on camera resolution, frame rate, and disk size. We design retention plans based on your policy.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        q: 'Is remote monitoring secure?',
+        a: 'We apply encrypted access, role-based login, and network hardening so only authorized users can view sensitive feeds.',
+      },
+    ],
+  }
+}
+
+function validateBiometricCctvArrayItem(section, payload = {}, { partial = false } = {}) {
+  const value = {}
+  const errors = []
+
+  if (section === biometricCctvSections.metrics) {
+    const valueText = typeof payload.value === 'string' ? payload.value.trim() : ''
+    const label = typeof payload.label === 'string' ? payload.label.trim() : ''
+    if (!partial || 'value' in payload) {
+      if (!valueText) errors.push('value is required')
+      else value.value = valueText
+    }
+    if (!partial || 'label' in payload) {
+      if (!label) errors.push('label is required')
+      else value.label = label
+    }
+  }
+
+  if (section === biometricCctvSections.coreModules) {
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const description = typeof payload.description === 'string' ? payload.description.trim() : ''
+    const points = Array.isArray(payload.points)
+      ? payload.points.map((point) => (typeof point === 'string' ? point.trim() : '')).filter(Boolean)
+      : []
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'description' in payload) {
+      if (!description) errors.push('description is required')
+      else value.description = description
+    }
+    if (!partial || 'points' in payload) {
+      if (!points.length) errors.push('points is required')
+      else value.points = points
+    }
+  }
+
+  if (
+    section === biometricCctvSections.projectFlow ||
+    section === biometricCctvSections.coverageItems ||
+    section === biometricCctvSections.compliancePoints
+  ) {
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
+    }
+  }
+
+  if (section === biometricCctvSections.hardwareStack) {
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const items = Array.isArray(payload.items)
+      ? payload.items.map((item) => (typeof item === 'string' ? item.trim() : '')).filter(Boolean)
+      : []
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'items' in payload) {
+      if (!items.length) errors.push('items is required')
+      else value.items = items
+    }
+  }
+
+  if (section === biometricCctvSections.servicePlans) {
+    const name = typeof payload.name === 'string' ? payload.name.trim() : ''
+    const details = typeof payload.details === 'string' ? payload.details.trim() : ''
+    if (!partial || 'name' in payload) {
+      if (!name) errors.push('name is required')
+      else value.name = name
+    }
+    if (!partial || 'details' in payload) {
+      if (!details) errors.push('details is required')
+      else value.details = details
+    }
+  }
+
+  if (section === biometricCctvSections.faqItems) {
+    const q = typeof payload.q === 'string' ? payload.q.trim() : ''
+    const a = typeof payload.a === 'string' ? payload.a.trim() : ''
+    if (!partial || 'q' in payload) {
+      if (!q) errors.push('q is required')
+      else value.q = q
+    }
+    if (!partial || 'a' in payload) {
+      if (!a) errors.push('a is required')
+      else value.a = a
+    }
+  }
+
+  return { errors, value }
+}
+
+function getDefaultConversationalAiPage() {
+  return {
+    key: 'conversational-ai-page',
+    heroImage:
+      'https://images.unsplash.com/photo-1677442135968-6d894f7d8f6a?auto=format&fit=crop&w=2200&q=80',
+    heroBadge: 'AI Automation Suite',
+    heroTitle: 'Conversational AI Chatbots + AI Analytics',
+    breadcrumbTitle: 'Conversational AI',
+    smartBadge: 'Smart Interaction Layer',
+    smartTitle: 'Transform Customer Conversations Into Growth Signals',
+    smartDescription:
+      'Conversational AI is not just a chatbot popup. It is a full digital communication engine that supports customers, collects qualified leads, assists operations, and creates analytics for better decisions. We design enterprise-ready chatbots with clear business logic, secure integrations, and measurable outcomes.',
+    smartDescriptionBottom:
+      'From support and sales to onboarding and internal service desk, each conversation is mapped, analyzed, and optimized for user satisfaction and business efficiency.',
+    implementationTitle: 'Implementation Workflow',
+    capabilitiesTitle: 'Key Capabilities',
+    readyBadge: 'Ready To Launch AI',
+    readyTitle: 'Build an intelligent conversation system that supports, sells, and learns.',
+    readyDescription:
+      'We provide strategy, bot design, channel deployment, model tuning, analytics dashboard setup, and continuous optimization support for production-scale usage.',
+    ctaButtonText: 'Start AI Consultation',
+    ctaButtonLink: '/services',
+    solutionBlocks: [
+      {
+        _id: new ObjectId().toString(),
+        title: 'AI Customer Support Chatbot',
+        description:
+          '24/7 multilingual chatbot for website, Facebook, WhatsApp, and app support with instant responses and contextual conversation.',
+        bullets: ['Intent detection + smart fallback', 'Ticket handoff to human agent', 'Knowledge base connected answers'],
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Lead Generation Conversational Flow',
+        description:
+          'Interactive conversation funnel for service inquiries, qualification, and appointment booking to improve conversion rate.',
+        bullets: ['Form-less lead capture', 'Auto follow-up sequence', 'CRM synced lead profile'],
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'AI Analytics & Insights',
+        description:
+          'Conversation analytics dashboard that tracks user intent, drop-off points, response quality, and campaign-driven behavior.',
+        bullets: ['Top query clustering', 'Sentiment and satisfaction trend', 'Performance report by channel'],
+      },
+    ],
+    capabilities: [
+      { _id: new ObjectId().toString(), text: 'Website widget + mobile app chatbot integration' },
+      { _id: new ObjectId().toString(), text: 'Facebook Messenger / WhatsApp / Telegram conversational deployment' },
+      { _id: new ObjectId().toString(), text: 'RAG-based response using your own documents' },
+      { _id: new ObjectId().toString(), text: 'Role-based admin panel and analytics permissions' },
+      { _id: new ObjectId().toString(), text: 'Auto language switch and localized reply strategy' },
+      { _id: new ObjectId().toString(), text: 'Custom workflow: quote, order status, support ticket, onboarding' },
+      { _id: new ObjectId().toString(), text: 'Conversation export, logs, and compliance-ready history' },
+      { _id: new ObjectId().toString(), text: 'Prompt tuning, guardrails, and brand voice alignment' },
+    ],
+    aiWorkflow: [
+      {
+        _id: new ObjectId().toString(),
+        phase: 'Phase 1',
+        title: 'Discovery & Use-case Mapping',
+        text: 'Business goals, target users, channel strategy, and intent library planning.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        phase: 'Phase 2',
+        title: 'Data & Knowledge Setup',
+        text: 'FAQ, policies, product docs, and support scripts are structured for response accuracy.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        phase: 'Phase 3',
+        title: 'Bot Design & Integration',
+        text: 'Conversation flow, fallback logic, API integrations, and dashboard configuration.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        phase: 'Phase 4',
+        title: 'Launch & Continuous Optimization',
+        text: 'Performance monitoring, analytics review, retraining, and monthly improvement cycle.',
+      },
+    ],
+    kpiCards: [
+      { _id: new ObjectId().toString(), value: '60%+', label: 'Average response time reduction' },
+      { _id: new ObjectId().toString(), value: '24/7', label: 'Always-on conversational support' },
+      { _id: new ObjectId().toString(), value: '3x', label: 'Faster query handling capacity' },
+      { _id: new ObjectId().toString(), value: 'Data-driven', label: 'Decision-ready conversational analytics' },
+    ],
+  }
+}
+
+function validateConversationalAiArrayItem(section, payload = {}, { partial = false } = {}) {
+  const value = {}
+  const errors = []
+
+  if (section === conversationalAiSections.solutionBlocks) {
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const description = typeof payload.description === 'string' ? payload.description.trim() : ''
+    const bullets = Array.isArray(payload.bullets)
+      ? payload.bullets.map((bullet) => (typeof bullet === 'string' ? bullet.trim() : '')).filter(Boolean)
+      : []
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'description' in payload) {
+      if (!description) errors.push('description is required')
+      else value.description = description
+    }
+    if (!partial || 'bullets' in payload) {
+      if (!bullets.length) errors.push('bullets is required')
+      else value.bullets = bullets
+    }
+  }
+
+  if (section === conversationalAiSections.capabilities) {
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
+    }
+  }
+
+  if (section === conversationalAiSections.aiWorkflow) {
+    const phase = typeof payload.phase === 'string' ? payload.phase.trim() : ''
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    if (!partial || 'phase' in payload) {
+      if (!phase) errors.push('phase is required')
+      else value.phase = phase
+    }
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
+    }
+  }
+
+  if (section === conversationalAiSections.kpiCards) {
+    const valueText = typeof payload.value === 'string' ? payload.value.trim() : ''
+    const label = typeof payload.label === 'string' ? payload.label.trim() : ''
+    if (!partial || 'value' in payload) {
+      if (!valueText) errors.push('value is required')
+      else value.value = valueText
+    }
+    if (!partial || 'label' in payload) {
+      if (!label) errors.push('label is required')
+      else value.label = label
+    }
+  }
+
+  return { errors, value }
+}
+
+function getDefaultRoboticProcessPage() {
+  return {
+    key: 'robotic-process-page',
+    heroImage:
+      'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2200&q=80',
+    heroBadge: 'Automation Excellence',
+    heroTitle: 'Robotic Process Automation (RPA)',
+    breadcrumbTitle: 'RPA',
+    processBadge: 'Process Intelligence',
+    processTitle: 'Automate Repetitive Workflows and Free Your Team For Higher-Value Tasks',
+    processDescription:
+      'RPA helps organizations reduce manual workload, improve speed, and maintain process consistency across departments. Our bots follow your SOPs, integrate with existing systems, and provide full operational visibility through logs and dashboards.',
+    processDescriptionBottom:
+      'We design automation with governance in mind: exception control, audit traceability, and scalable bot operations for business growth.',
+    implementationTitle: 'Implementation Workflow',
+    targetsTitle: 'High-impact Automation Targets',
+    faqTitle: 'FAQ & Next Step',
+    ctaButtonText: 'Plan RPA Strategy',
+    ctaButtonLink: '/services',
+    rpaSolutions: [
+      {
+        _id: new ObjectId().toString(),
+        title: 'Back-office Task Automation',
+        description:
+          'Automate repetitive daily tasks like data entry, reconciliation, report generation, and document movement across systems.',
+        points: ['Rule-based workflows', 'Human approval checkpoints', 'Error handling and retry logic'],
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Finance & HR Process Bots',
+        description:
+          'RPA bots for invoice processing, payroll validations, leave tracking, onboarding forms, and compliance documentation.',
+        points: ['Excel/PDF extraction', 'Auto validation rules', 'Audit-ready logs'],
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Customer Operations Automation',
+        description:
+          'Automate ticket routing, status updates, SLA reminders, and service follow-up actions to speed up response delivery.',
+        points: ['CRM integration', 'Notification triggers', 'Escalation pipelines'],
+      },
+    ],
+    automationTargets: [
+      { _id: new ObjectId().toString(), text: 'Data migration and synchronization' },
+      { _id: new ObjectId().toString(), text: 'Invoice and payment matching' },
+      { _id: new ObjectId().toString(), text: 'Vendor onboarding workflows' },
+      { _id: new ObjectId().toString(), text: 'Employee onboarding/offboarding' },
+      { _id: new ObjectId().toString(), text: 'KYC document verification pipeline' },
+      { _id: new ObjectId().toString(), text: 'Report compilation and dispatch' },
+      { _id: new ObjectId().toString(), text: 'Customer query ticket classification' },
+      { _id: new ObjectId().toString(), text: 'Dashboard data refresh scheduling' },
+    ],
+    implementationFlow: [
+      {
+        _id: new ObjectId().toString(),
+        phase: 'Phase 1',
+        title: 'Process Discovery',
+        text: 'Identify high-volume repetitive tasks and map current process gaps with measurable baseline KPIs.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        phase: 'Phase 2',
+        title: 'Bot Design',
+        text: 'Define workflow rules, exception handling, security controls, and integration touchpoints.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        phase: 'Phase 3',
+        title: 'Development & UAT',
+        text: 'Build bots, run test scenarios, validate business outputs, and finalize go-live checklist.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        phase: 'Phase 4',
+        title: 'Deployment & Monitoring',
+        text: 'Launch automation with live monitoring, optimization cycles, and controlled scaling.',
+      },
+    ],
+    outcomes: [
+      { _id: new ObjectId().toString(), value: '70%+', label: 'Faster repetitive process execution' },
+      { _id: new ObjectId().toString(), value: '24/7', label: 'Consistent bot operation window' },
+      { _id: new ObjectId().toString(), value: 'Lower', label: 'Manual error and rework rate' },
+      { _id: new ObjectId().toString(), value: 'Real-time', label: 'Process visibility and alerts' },
+    ],
+    faqs: [
+      {
+        _id: new ObjectId().toString(),
+        q: 'Which processes are best suited for RPA?',
+        a: 'Rule-based, repetitive, high-volume tasks with structured inputs are ideal for fast and stable automation.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        q: 'Do we need to replace existing software?',
+        a: 'No. RPA generally works with your current tools by automating interaction steps, reducing disruption.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        q: 'How do you ensure control and security?',
+        a: 'We use role-based access, bot credential governance, detailed logs, and approval checkpoints where needed.',
+      },
+    ],
+  }
+}
+
+function validateRoboticProcessArrayItem(section, payload = {}, { partial = false } = {}) {
+  const value = {}
+  const errors = []
+
+  if (section === roboticProcessSections.rpaSolutions) {
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const description = typeof payload.description === 'string' ? payload.description.trim() : ''
+    const points = Array.isArray(payload.points)
+      ? payload.points.map((point) => (typeof point === 'string' ? point.trim() : '')).filter(Boolean)
+      : []
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'description' in payload) {
+      if (!description) errors.push('description is required')
+      else value.description = description
+    }
+    if (!partial || 'points' in payload) {
+      if (!points.length) errors.push('points is required')
+      else value.points = points
+    }
+  }
+
+  if (section === roboticProcessSections.automationTargets) {
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
+    }
+  }
+
+  if (section === roboticProcessSections.implementationFlow) {
+    const phase = typeof payload.phase === 'string' ? payload.phase.trim() : ''
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    if (!partial || 'phase' in payload) {
+      if (!phase) errors.push('phase is required')
+      else value.phase = phase
+    }
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
+    }
+  }
+
+  if (section === roboticProcessSections.outcomes) {
+    const valueText = typeof payload.value === 'string' ? payload.value.trim() : ''
+    const label = typeof payload.label === 'string' ? payload.label.trim() : ''
+    if (!partial || 'value' in payload) {
+      if (!valueText) errors.push('value is required')
+      else value.value = valueText
+    }
+    if (!partial || 'label' in payload) {
+      if (!label) errors.push('label is required')
+      else value.label = label
+    }
+  }
+
+  if (section === roboticProcessSections.faqs) {
+    const q = typeof payload.q === 'string' ? payload.q.trim() : ''
+    const a = typeof payload.a === 'string' ? payload.a.trim() : ''
+    if (!partial || 'q' in payload) {
+      if (!q) errors.push('q is required')
+      else value.q = q
+    }
+    if (!partial || 'a' in payload) {
+      if (!a) errors.push('a is required')
+      else value.a = a
+    }
+  }
+
+  return { errors, value }
+}
+
+function getDefaultGenerativeAiMarketingPage() {
+  return {
+    key: 'generative-ai-marketing-page',
+    heroImage:
+      'https://images.unsplash.com/photo-1674027392844-8d3fd2fda8f4?auto=format&fit=crop&w=2200&q=80',
+    heroBadge: 'AI-Powered Growth',
+    heroTitle: 'Generative AI For Marketing',
+    breadcrumbTitle: 'Generative AI Marketing',
+    introBadge: 'Creative Intelligence',
+    introTitle: 'Produce, Personalize, and Optimize Marketing Content at Scale',
+    introDescription:
+      'Generative AI helps marketing teams accelerate campaign execution without sacrificing quality. We design practical AI workflows that produce consistent messaging, support rapid experimentation, and improve decision-making with analytics.',
+    introDescriptionBottom:
+      'From awareness campaigns to conversion-focused creatives, our framework combines strategic prompts, human review, and performance insights to deliver measurable business outcomes.',
+    workflowTitle: 'Implementation Workflow',
+    capabilitiesTitle: 'Core Capabilities',
+    faqTitle: 'FAQ & Next Step',
+    ctaButtonText: 'Launch AI Marketing',
+    ctaButtonLink: '/services',
+    marketingUseCases: [
+      {
+        _id: new ObjectId().toString(),
+        title: 'AI Content Studio',
+        description:
+          'Generate campaign copies, social captions, ad variations, blog drafts, and product descriptions with brand-tone consistency.',
+        points: ['Brand voice prompt library', 'Multi-format content generation', 'Fast localization for multiple audiences'],
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Campaign Personalization Engine',
+        description:
+          'Create audience-segment specific messaging, offers, and CTAs to improve engagement and conversion at each funnel stage.',
+        points: ['Segment-level messaging', 'Dynamic personalization rules', 'Offer optimization by behavior'],
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Creative Performance Intelligence',
+        description:
+          'Analyze ad creatives and campaign outcomes to identify top-performing messaging patterns and optimization opportunities.',
+        points: ['Creative scoring signals', 'A/B message iteration', 'Performance trend dashboard'],
+      },
+    ],
+    workflowStages: [
+      {
+        _id: new ObjectId().toString(),
+        phase: 'Stage 1',
+        title: 'Brand Context Setup',
+        text: 'Collect product, audience, positioning, and tone rules to build an AI-ready marketing knowledge base.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        phase: 'Stage 2',
+        title: 'Prompt & Template Design',
+        text: 'Create reusable prompt templates for campaigns, channels, audience segments, and conversion goals.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        phase: 'Stage 3',
+        title: 'Production & Review Pipeline',
+        text: 'Automate draft generation with human-in-the-loop review for quality, compliance, and final publishing.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        phase: 'Stage 4',
+        title: 'Measure & Optimize',
+        text: 'Track engagement, conversion, and ROI data to continuously improve prompts and content strategy.',
+      },
+    ],
+    capabilityTags: [
+      { _id: new ObjectId().toString(), text: 'AI copywriting' },
+      { _id: new ObjectId().toString(), text: 'Ad headline generation' },
+      { _id: new ObjectId().toString(), text: 'Email sequence drafting' },
+      { _id: new ObjectId().toString(), text: 'Social media calendar content' },
+      { _id: new ObjectId().toString(), text: 'SEO-focused article briefs' },
+      { _id: new ObjectId().toString(), text: 'Landing page message variants' },
+      { _id: new ObjectId().toString(), text: 'Audience intent-based content' },
+      { _id: new ObjectId().toString(), text: 'Campaign performance insights' },
+      { _id: new ObjectId().toString(), text: 'Multilingual marketing content' },
+      { _id: new ObjectId().toString(), text: 'Creative prompt governance' },
+    ],
+    resultCards: [
+      { _id: new ObjectId().toString(), value: '4x', label: 'Faster content production cycle' },
+      { _id: new ObjectId().toString(), value: 'Higher', label: 'Campaign relevance per audience' },
+      { _id: new ObjectId().toString(), value: 'Lower', label: 'Manual content bottleneck' },
+      { _id: new ObjectId().toString(), value: 'Data-led', label: 'Creative decision process' },
+    ],
+    faqs: [
+      {
+        _id: new ObjectId().toString(),
+        q: 'Will AI replace my marketing team?',
+        a: 'No. AI accelerates drafting and experimentation, while your team controls strategy, brand direction, and final approvals.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        q: 'How do you keep content on-brand?',
+        a: 'We build brand voice instructions, approved prompt templates, and review gates before content goes live.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        q: 'Can AI content be measured properly?',
+        a: 'Yes. We connect content outputs with campaign metrics and conversion signals for continuous optimization.',
+      },
+    ],
+  }
+}
+
+function validateGenerativeAiMarketingArrayItem(section, payload = {}, { partial = false } = {}) {
+  const value = {}
+  const errors = []
+
+  if (section === generativeAiMarketingSections.marketingUseCases) {
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const description = typeof payload.description === 'string' ? payload.description.trim() : ''
+    const points = Array.isArray(payload.points)
+      ? payload.points.map((point) => (typeof point === 'string' ? point.trim() : '')).filter(Boolean)
+      : []
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'description' in payload) {
+      if (!description) errors.push('description is required')
+      else value.description = description
+    }
+    if (!partial || 'points' in payload) {
+      if (!points.length) errors.push('points is required')
+      else value.points = points
+    }
+  }
+
+  if (section === generativeAiMarketingSections.workflowStages) {
+    const phase = typeof payload.phase === 'string' ? payload.phase.trim() : ''
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    if (!partial || 'phase' in payload) {
+      if (!phase) errors.push('phase is required')
+      else value.phase = phase
+    }
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
+    }
+  }
+
+  if (section === generativeAiMarketingSections.capabilityTags) {
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
+    }
+  }
+
+  if (section === generativeAiMarketingSections.resultCards) {
+    const valueText = typeof payload.value === 'string' ? payload.value.trim() : ''
+    const label = typeof payload.label === 'string' ? payload.label.trim() : ''
+    if (!partial || 'value' in payload) {
+      if (!valueText) errors.push('value is required')
+      else value.value = valueText
+    }
+    if (!partial || 'label' in payload) {
+      if (!label) errors.push('label is required')
+      else value.label = label
+    }
+  }
+
+  if (section === generativeAiMarketingSections.faqs) {
+    const q = typeof payload.q === 'string' ? payload.q.trim() : ''
+    const a = typeof payload.a === 'string' ? payload.a.trim() : ''
+    if (!partial || 'q' in payload) {
+      if (!q) errors.push('q is required')
+      else value.q = q
+    }
+    if (!partial || 'a' in payload) {
+      if (!a) errors.push('a is required')
+      else value.a = a
+    }
+  }
+
+  return { errors, value }
+}
+
+function getDefaultServicePointPage() {
+  return {
+    key: 'service-point-page',
+    heroImage:
+      'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=2200&q=80',
+    heroBadge: 'E-Governance Platform',
+    heroTitle: 'Service Point (Municipality / Union)',
+    breadcrumbTitle: 'Service Point',
+    overviewTitle: 'Smart Public Service Delivery Hub',
+    overviewDescription:
+      'Service Point platform enables municipality and union offices to deliver faster, transparent, and citizen-friendly digital services. From registration and billing to grievance handling and social program support, every workflow becomes trackable and measurable.',
+    overviewDescriptionBottom:
+      'This solution combines front-desk service modules, administration tools, finance operations, and analytics dashboard so leadership can monitor performance and improve local governance quality.',
+    serviceModulesTitle: 'Core Service Modules',
+    roadmapTitle: 'Implementation Roadmap',
+    governanceTitle: 'Governance Capability Stack',
+    videoSectionTitle: 'Live Demo & Explainer Videos',
+    videoSectionSubtitle:
+      'Municipality and union offices can use training and rollout videos for staff onboarding, citizen awareness, and process adoption.',
+    videoTagText: 'Field-ready onboarding',
+    galleryTitle: 'Field Gallery',
+    proposalTitle: 'Need a Custom Rollout Plan?',
+    proposalDescription:
+      'Get a module-wise proposal and deployment timeline for your municipality or union office based on your local service priorities.',
+    proposalButtonText: 'Request Service Point Proposal',
+    proposalButtonLink: '/contact-us',
+    serviceModules: [
+      {
+        _id: new ObjectId().toString(),
+        title: 'Citizen Service Desk',
+        description:
+          'Birth certificate, death registration, trade license support, and application tracking from one digital counter.',
+        points: ['Token-based queue management', 'SMS status notifications', 'Digital record and print-ready documents'],
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Tax, Billing & Collection',
+        description:
+          'Holding tax, water bill, waste fee, market fee, and service charge collection with transparent transaction logs.',
+        points: ['Demand register automation', 'Due list and penalty setup', 'Daily collection reconciliation'],
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Social Safety Net Distribution',
+        description:
+          'Beneficiary profile management, fund disbursement monitoring, and verification workflow to reduce leakage.',
+        points: ['Ward-level beneficiary database', 'Eligibility verification checklist', 'Program-wise performance reports'],
+      },
+    ],
+    governancePillars: [
+      { _id: new ObjectId().toString(), text: 'Citizen-first service delivery model' },
+      { _id: new ObjectId().toString(), text: 'Digital records with role-based access' },
+      { _id: new ObjectId().toString(), text: 'Audit trail and accountability tracking' },
+      { _id: new ObjectId().toString(), text: 'Village court and complaint monitoring' },
+      { _id: new ObjectId().toString(), text: 'Budget, finance, and voucher reporting' },
+      { _id: new ObjectId().toString(), text: 'Land, certificate, and notice workflow' },
+      { _id: new ObjectId().toString(), text: 'Mobile-friendly field operation support' },
+      { _id: new ObjectId().toString(), text: 'Data backup and disaster recovery readiness' },
+    ],
+    implementationPlan: [
+      {
+        _id: new ObjectId().toString(),
+        phase: 'Phase 1',
+        title: 'Assessment & Digitization',
+        text: 'Service mapping, form standardization, and citizen process redesign.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        phase: 'Phase 2',
+        title: 'System Deployment',
+        text: 'Module setup, user role creation, and branch-wise operational onboarding.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        phase: 'Phase 3',
+        title: 'Training & Pilot Run',
+        text: 'Hands-on training for staff with supervised pilot operation.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        phase: 'Phase 4',
+        title: 'Scale & Monitoring',
+        text: 'Live dashboard usage, monthly review, and policy-aligned optimization.',
+      },
+    ],
+    videoItems: [
+      { _id: new ObjectId().toString(), title: 'Citizen Service Flow', embedUrl: 'https://www.youtube.com/embed/2ePf9rue1Ao' },
+      { _id: new ObjectId().toString(), title: 'Admin Operation Walkthrough', embedUrl: 'https://www.youtube.com/embed/8aGhZQkoFbQ' },
+    ],
+    galleryItems: [
+      {
+        _id: new ObjectId().toString(),
+        image: 'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&w=1400&q=80',
+        alt: 'Team planning public service modernization',
+      },
+      {
+        _id: new ObjectId().toString(),
+        image: 'https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1400&q=80',
+        alt: 'Digital dashboard for public administration',
+      },
+    ],
+  }
+}
+
+function validateServicePointArrayItem(section, payload = {}, { partial = false } = {}) {
+  const value = {}
+  const errors = []
+
+  if (section === servicePointSections.serviceModules) {
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const description = typeof payload.description === 'string' ? payload.description.trim() : ''
+    const points = Array.isArray(payload.points)
+      ? payload.points.map((point) => (typeof point === 'string' ? point.trim() : '')).filter(Boolean)
+      : []
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'description' in payload) {
+      if (!description) errors.push('description is required')
+      else value.description = description
+    }
+    if (!partial || 'points' in payload) {
+      if (!points.length) errors.push('points is required')
+      else value.points = points
+    }
+  }
+
+  if (section === servicePointSections.governancePillars) {
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
+    }
+  }
+
+  if (section === servicePointSections.implementationPlan) {
+    const phase = typeof payload.phase === 'string' ? payload.phase.trim() : ''
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    if (!partial || 'phase' in payload) {
+      if (!phase) errors.push('phase is required')
+      else value.phase = phase
+    }
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
+    }
+  }
+
+  if (section === servicePointSections.videoItems) {
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const embedUrl = typeof payload.embedUrl === 'string' ? payload.embedUrl.trim() : ''
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'embedUrl' in payload) {
+      if (!embedUrl) errors.push('embedUrl is required')
+      else value.embedUrl = embedUrl
+    }
+  }
+
+  if (section === servicePointSections.galleryItems) {
+    const image = typeof payload.image === 'string' ? payload.image.trim() : ''
+    const alt = typeof payload.alt === 'string' ? payload.alt.trim() : ''
+    if (!partial || 'image' in payload) {
+      if (!image) errors.push('image is required')
+      else value.image = image
+    }
+    if (!partial || 'alt' in payload) {
+      if (!alt) errors.push('alt is required')
+      else value.alt = alt
+    }
+  }
+
+  return { errors, value }
+}
+
+function getDefaultCustomSaasPage() {
+  return {
+    key: 'custom-saas-page',
+    heroImage:
+      'https://images.unsplash.com/photo-1518186285589-2f7649de83e0?auto=format&fit=crop&w=2200&q=80',
+    heroBadge: 'Product Engineering Studio',
+    heroTitle: 'Custom Software + SaaS Platform Development',
+    breadcrumbTitle: 'Custom SaaS',
+    introTitle: 'Build Software That Fits Your Business, Then Scale It Like A Product',
+    introDescription:
+      'We design and engineer custom software systems and SaaS products that solve real operational problems, reduce manual bottlenecks, and create long-term digital assets for growth. Whether you need an internal command center, a customer-facing portal, or a subscription-based platform, we deliver with a product-first mindset.',
+    workingProcessTitle: 'Working Process',
+    workingProcessDescription:
+      'Our team follows a predictable product delivery framework so stakeholders get transparency on scope, timeline, and release quality.',
+    architectureTitle: 'Platform Architecture & Engineering Focus',
+    engagementTitle: 'Engagement Models',
+    showcaseTitle: 'Project Showcase',
+    showcaseBadge: 'Live + Code Access',
+    videoDemoTitle: 'Projects Video Demo',
+    videoDemoBadge: 'Live Walkthrough',
+    faqTitle: 'Frequently Asked Questions',
+    deliveryTracks: [
+      {
+        _id: new ObjectId().toString(),
+        title: 'Custom Business Software',
+        description:
+          'Requirement-driven software for operations, sales, support, finance, and reporting with role-based workflows and approval layers.',
+        points: ['Process mapping workshops', 'Modular architecture for growth', 'Enterprise security and audit logging'],
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'SaaS Product Engineering',
+        description:
+          'From MVP to scale-ready multi-tenant SaaS platform with subscription, analytics, and customer self-service onboarding.',
+        points: ['Tenant-isolated data design', 'Usage and billing lifecycle', 'Scalable API + dashboard ecosystem'],
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Integration & Automation Layer',
+        description:
+          'Connect ERP, CRM, payment gateway, identity systems, and third-party APIs into one stable digital operating model.',
+        points: ['Event-based sync architecture', 'Reliable webhook pipelines', 'Operational alerts and monitoring'],
+      },
+    ],
+    buildFlow: [
+      {
+        _id: new ObjectId().toString(),
+        stage: '01',
+        title: 'Discovery & Product Blueprint',
+        text: 'Business goals, user roles, core workflows, and success metrics are finalized.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        stage: '02',
+        title: 'UX Prototyping & Technical Design',
+        text: 'Interactive journey mapping with data model and architecture planning.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        stage: '03',
+        title: 'Agile Build & QA Cycle',
+        text: 'Sprint-wise development with regression testing and security checks.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        stage: '04',
+        title: 'Launch, Support & Growth',
+        text: 'Deployment, observability, team enablement, and roadmap expansion support.',
+      },
+    ],
+    architectureHighlights: [
+      { _id: new ObjectId().toString(), text: 'Multi-tenant SaaS architecture with tenant-aware access control' },
+      { _id: new ObjectId().toString(), text: 'Secure authentication with role hierarchy and policy enforcement' },
+      { _id: new ObjectId().toString(), text: 'Billing, subscription, and plan lifecycle automation' },
+      { _id: new ObjectId().toString(), text: 'Analytics dashboard with KPI drill-downs and export pipelines' },
+      { _id: new ObjectId().toString(), text: 'API-first design for web, mobile, and third-party integrations' },
+      { _id: new ObjectId().toString(), text: 'Audit trails, activity logs, and compliance-ready reporting' },
+    ],
+    engagementModels: [
+      { _id: new ObjectId().toString(), title: 'MVP Launch', timeline: '8-12 weeks', fit: 'For startups validating product-market fit quickly' },
+      { _id: new ObjectId().toString(), title: 'Growth Build', timeline: '3-6 months', fit: 'For scaling teams needing strong modules and integrations' },
+      { _id: new ObjectId().toString(), title: 'Enterprise Track', timeline: '6+ months', fit: 'For complex workflows, governance, and high-scale rollout' },
+    ],
+    projects: [
+      {
+        _id: new ObjectId().toString(),
+        name: 'RetailOps Cloud Suite',
+        category: 'Inventory + POS + Procurement SaaS',
+        summary: 'Unified platform for stock planning, branch POS sync, supplier workflows, and executive dashboards.',
+        image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80',
+        liveUrl: 'https://example.com',
+        githubUrl: 'https://github.com/example/retailops-saas',
+      },
+      {
+        _id: new ObjectId().toString(),
+        name: 'ClinicFlow 360',
+        category: 'Healthcare workflow software',
+        summary: 'Patient queue, consultation, billing, pharmacy, and follow-up automation for multi-branch clinics.',
+        image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80',
+        liveUrl: 'https://example.com',
+        githubUrl: 'https://github.com/example/clinicflow-platform',
+      },
+      {
+        _id: new ObjectId().toString(),
+        name: 'GovService Portal',
+        category: 'Citizen service custom platform',
+        summary: 'Digital application, tracking, and service desk management with role-based authority approvals.',
+        image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80',
+        liveUrl: 'https://example.com',
+        githubUrl: 'https://github.com/example/govservice-portal',
+      },
+    ],
+    projectDemoVideos: [
+      { _id: new ObjectId().toString(), title: 'SaaS Product Dashboard Demo', embedUrl: 'https://www.youtube.com/embed/Ke90Tje7VS0' },
+      { _id: new ObjectId().toString(), title: 'Custom Workflow Automation Demo', embedUrl: 'https://www.youtube.com/embed/1Rs2ND1ryYc' },
+    ],
+    saasFaqs: [
+      {
+        _id: new ObjectId().toString(),
+        q: 'Can you modernize our existing legacy software into SaaS?',
+        a: 'Yes. We audit your current system, define migration phases, preserve critical data, and rebuild modules in a scalable SaaS architecture.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        q: 'How do you ensure security for custom SaaS platforms?',
+        a: 'We implement role-based authorization, secure API standards, activity logs, backup strategy, and environment-specific hardening controls.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        q: 'Do you provide post-launch support and feature evolution?',
+        a: 'Absolutely. We offer structured support, performance monitoring, and roadmap-driven feature releases based on user feedback and business goals.',
+      },
+    ],
+  }
+}
+
+function validateCustomSaasArrayItem(section, payload = {}, { partial = false } = {}) {
+  const value = {}
+  const errors = []
+
+  if (section === customSaasSections.deliveryTracks) {
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const description = typeof payload.description === 'string' ? payload.description.trim() : ''
+    const points = Array.isArray(payload.points)
+      ? payload.points.map((point) => (typeof point === 'string' ? point.trim() : '')).filter(Boolean)
+      : []
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'description' in payload) {
+      if (!description) errors.push('description is required')
+      else value.description = description
+    }
+    if (!partial || 'points' in payload) {
+      if (!points.length) errors.push('points is required')
+      else value.points = points
+    }
+  }
+
+  if (section === customSaasSections.buildFlow) {
+    const stage = typeof payload.stage === 'string' ? payload.stage.trim() : ''
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    if (!partial || 'stage' in payload) {
+      if (!stage) errors.push('stage is required')
+      else value.stage = stage
+    }
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
+    }
+  }
+
+  if (section === customSaasSections.architectureHighlights) {
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
+    }
+  }
+
+  if (section === customSaasSections.engagementModels) {
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const timeline = typeof payload.timeline === 'string' ? payload.timeline.trim() : ''
+    const fit = typeof payload.fit === 'string' ? payload.fit.trim() : ''
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'timeline' in payload) {
+      if (!timeline) errors.push('timeline is required')
+      else value.timeline = timeline
+    }
+    if (!partial || 'fit' in payload) {
+      if (!fit) errors.push('fit is required')
+      else value.fit = fit
+    }
+  }
+
+  if (section === customSaasSections.projects) {
+    const name = typeof payload.name === 'string' ? payload.name.trim() : ''
+    const category = typeof payload.category === 'string' ? payload.category.trim() : ''
+    const summary = typeof payload.summary === 'string' ? payload.summary.trim() : ''
+    const image = typeof payload.image === 'string' ? payload.image.trim() : ''
+    const liveUrl = typeof payload.liveUrl === 'string' ? payload.liveUrl.trim() : ''
+    const githubUrl = typeof payload.githubUrl === 'string' ? payload.githubUrl.trim() : ''
+    if (!partial || 'name' in payload) {
+      if (!name) errors.push('name is required')
+      else value.name = name
+    }
+    if (!partial || 'category' in payload) {
+      if (!category) errors.push('category is required')
+      else value.category = category
+    }
+    if (!partial || 'summary' in payload) {
+      if (!summary) errors.push('summary is required')
+      else value.summary = summary
+    }
+    if (!partial || 'image' in payload) {
+      if (!image) errors.push('image is required')
+      else value.image = image
+    }
+    if (!partial || 'liveUrl' in payload) {
+      if (!liveUrl) errors.push('liveUrl is required')
+      else value.liveUrl = liveUrl
+    }
+    if (!partial || 'githubUrl' in payload) {
+      if (!githubUrl) errors.push('githubUrl is required')
+      else value.githubUrl = githubUrl
+    }
+  }
+
+  if (section === customSaasSections.projectDemoVideos) {
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const embedUrl = typeof payload.embedUrl === 'string' ? payload.embedUrl.trim() : ''
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'embedUrl' in payload) {
+      if (!embedUrl) errors.push('embedUrl is required')
+      else value.embedUrl = embedUrl
+    }
+  }
+
+  if (section === customSaasSections.saasFaqs) {
+    const q = typeof payload.q === 'string' ? payload.q.trim() : ''
+    const a = typeof payload.a === 'string' ? payload.a.trim() : ''
+    if (!partial || 'q' in payload) {
+      if (!q) errors.push('q is required')
+      else value.q = q
+    }
+    if (!partial || 'a' in payload) {
+      if (!a) errors.push('a is required')
+      else value.a = a
+    }
+  }
+
+  return { errors, value }
+}
+
+function getDefaultStartupItConsultingPage() {
+  return {
+    key: 'startup-it-consulting-page',
+    heroImage:
+      'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=2200&q=80',
+    heroBadge: 'Startup Acceleration',
+    heroTitle: 'Startup IT Consulting, System Setup + Digital Transformation',
+    breadcrumbTitle: 'Startup IT Consulting',
+    introTitle: 'Build A Strong Technology Core Before You Scale',
+    introDescription:
+      'Early-stage startups often move fast without structured systems, which creates hidden bottlenecks later. Our consulting program helps founders design the right architecture, choose cost-efficient tools, and establish repeatable operational systems that support growth without chaos.',
+    processTitle: 'Transformation Working Process',
+    outcomesTitle: 'Expected Outcomes',
+    ctaButtonText: 'Book Startup IT Session',
+    ctaButtonLink: '/contact-us',
+    consultingPillars: [
+      {
+        _id: new ObjectId().toString(),
+        title: 'Startup Technology Strategy',
+        description:
+          'From idea validation to execution roadmap, we align business goals with the right technology stack, architecture, and delivery milestones.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'System Setup & Cloud Foundation',
+        description:
+          'We build your startup-ready infrastructure including cloud environments, CI/CD workflows, security baselines, and observability stack.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Digital Transformation Programs',
+        description:
+          'Legacy/manual operations are redesigned into automated digital workflows for sales, operations, customer support, and analytics.',
+      },
+    ],
+    transformationStages: [
+      {
+        _id: new ObjectId().toString(),
+        step: 'Step 01',
+        title: 'Current-State Assessment',
+        text: 'Evaluate business model, process maturity, and technology readiness.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        step: 'Step 02',
+        title: 'Transformation Blueprint',
+        text: 'Define systems, integrations, data model, and execution priorities.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        step: 'Step 03',
+        title: 'Implementation Sprint',
+        text: 'Set up tools, automate workflows, and deliver measurable operational improvements.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        step: 'Step 04',
+        title: 'Scale & Governance',
+        text: 'Introduce metrics, controls, and team operating rhythms for long-term growth.',
+      },
+    ],
+    outcomes: [
+      { _id: new ObjectId().toString(), text: 'Faster product and feature launch cycle' },
+      { _id: new ObjectId().toString(), text: 'Lower technical debt from day one' },
+      { _id: new ObjectId().toString(), text: 'Clear architecture for scaling users' },
+      { _id: new ObjectId().toString(), text: 'Process automation for core operations' },
+      { _id: new ObjectId().toString(), text: 'Data-driven founder decision support' },
+      { _id: new ObjectId().toString(), text: 'Improved investor and compliance readiness' },
+    ],
+  }
+}
+
+function validateStartupItConsultingArrayItem(section, payload = {}, { partial = false } = {}) {
+  const value = {}
+  const errors = []
+
+  if (section === startupItConsultingSections.consultingPillars) {
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const description = typeof payload.description === 'string' ? payload.description.trim() : ''
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'description' in payload) {
+      if (!description) errors.push('description is required')
+      else value.description = description
+    }
+  }
+
+  if (section === startupItConsultingSections.transformationStages) {
+    const step = typeof payload.step === 'string' ? payload.step.trim() : ''
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    if (!partial || 'step' in payload) {
+      if (!step) errors.push('step is required')
+      else value.step = step
+    }
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
+    }
+  }
+
+  if (section === startupItConsultingSections.outcomes) {
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
+    }
+  }
+
+  return { errors, value }
+}
+
+function getDefaultItTrainingPage() {
+  return {
+    key: 'it-training-page',
+    heroImage:
+      'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=2200&q=80',
+    heroBadge: 'Skill To Career Pathway',
+    heroTitle: 'IT Training + Internship Program',
+    breadcrumbTitle: 'IT Training',
+    introTitle: 'Learn Practical Skills, Build Real Projects, Start Your IT Career',
+    introDescription:
+      'Our training and internship program is designed for students and early professionals who want real industry exposure. You will learn modern tools, build practical projects, collaborate like a software team, and prepare for job placement with mentor support.',
+    curriculumTitle: 'Detailed Curriculum & Lab Modules',
+    curriculumBadge: 'Industry Aligned',
+    processTitle: 'Internship Working Process',
+    outcomesTitle: 'Program Outcomes',
+    videoTitle: 'Training & Internship Video Demos',
+    videoBadge: 'Live Sessions',
+    supportTitle: 'Mentorship & Career Support',
+    supportDescription:
+      'The program is not only about technical classes. We focus on complete professional development through mentorship, communication practice, and guided career planning.',
+    faqTitle: 'Frequently Asked Questions',
+    ctaTitle: 'Start Your Learning Journey With SoftEdge',
+    ctaDescription:
+      'Join our IT training and internship ecosystem to gain practical confidence, build portfolio-ready projects, and prepare for professional opportunities in software and digital services.',
+    ctaPrimaryText: 'Apply For Next Batch',
+    ctaPrimaryLink: '/contact',
+    ctaSecondaryText: 'Explore Other Services',
+    ctaSecondaryLink: '/services',
+    trainingTracks: [
+      {
+        _id: new ObjectId().toString(),
+        title: 'Full-Stack Development Training',
+        description:
+          'Hands-on curriculum covering frontend, backend, databases, API design, deployment, and production-ready coding practices.',
+        highlights: ['React + Node.js project labs', 'Git/GitHub workflow mastery', 'Code review and debugging discipline'],
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Career-Focused Internship Program',
+        description:
+          'Structured internship model where learners work on practical tasks, team collaboration, and sprint-based project delivery.',
+        highlights: ['Mentor-guided real tasks', 'Weekly performance feedback', 'Portfolio and interview readiness'],
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Industry Tools & Team Process',
+        description:
+          'Train with tools used by modern software teams: issue tracking, CI/CD mindset, testing flow, and release management.',
+        highlights: ['Agile sprint simulation', 'Documentation and communication', 'Deployment and monitoring basics'],
+      },
+    ],
+    internshipFlow: [
+      {
+        _id: new ObjectId().toString(),
+        phase: 'Phase 1',
+        title: 'Screening & Skill Mapping',
+        text: 'Assess baseline skills and assign personalized learning path.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        phase: 'Phase 2',
+        title: 'Bootcamp + Foundation',
+        text: 'Core concepts, coding standards, and guided mini-project implementation.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        phase: 'Phase 3',
+        title: 'Team Project Execution',
+        text: 'Collaborative feature delivery with reviews, revisions, and demos.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        phase: 'Phase 4',
+        title: 'Portfolio & Placement Prep',
+        text: 'CV polishing, mock interview, and career roadmap support.',
+      },
+    ],
+    outcomes: [
+      { _id: new ObjectId().toString(), text: 'Job-ready project portfolio' },
+      { _id: new ObjectId().toString(), text: 'Strong programming fundamentals' },
+      { _id: new ObjectId().toString(), text: 'Practical team collaboration skills' },
+      { _id: new ObjectId().toString(), text: 'Confidence in live project environments' },
+      { _id: new ObjectId().toString(), text: 'Interview and communication readiness' },
+      { _id: new ObjectId().toString(), text: 'Clear entry path to IT career growth' },
+    ],
+    demoVideos: [
+      { _id: new ObjectId().toString(), title: 'Student Project Demo', url: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
+      { _id: new ObjectId().toString(), title: 'Internship Orientation Session', url: 'https://www.youtube.com/embed/ysz5S6PUM-U' },
+    ],
+    curriculumModules: [
+      {
+        _id: new ObjectId().toString(),
+        title: 'Core Programming Foundation',
+        points: ['Programming logic and problem solving', 'Data structures and algorithm basics', 'Clean code practices'],
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Frontend & UX Engineering',
+        points: ['Responsive UI with React', 'Reusable components and state management', 'Performance and accessibility basics'],
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Backend & API Development',
+        points: ['Node.js and Express architecture', 'REST API design and validation', 'Authentication and role-based access'],
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Database & Deployment',
+        points: ['MongoDB schema modeling and query optimization', 'Cloud deployment pipeline basics', 'Monitoring and logging setup'],
+      },
+    ],
+    learningSupports: [
+      { _id: new ObjectId().toString(), text: 'Daily coding practice tasks with review comments' },
+      { _id: new ObjectId().toString(), text: 'Weekly one-to-one mentor feedback sessions' },
+      { _id: new ObjectId().toString(), text: 'Soft skill sessions: communication, teamwork, presentation' },
+      { _id: new ObjectId().toString(), text: 'Interview preparation and mock technical rounds' },
+      { _id: new ObjectId().toString(), text: 'Certificate and recommendation for successful completion' },
+      { _id: new ObjectId().toString(), text: 'Career guidance for freelancing and job placement' },
+    ],
+    faqItems: [
+      {
+        _id: new ObjectId().toString(),
+        question: 'Who can join this program?',
+        answer: 'Students, fresh graduates, and career switchers who want practical IT skills and internship-style experience.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        question: 'Do I need prior coding experience?',
+        answer: 'Basic computer knowledge is enough to start. We provide a beginner-to-advanced learning path with mentor support.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        question: 'Will I build real projects?',
+        answer: 'Yes. Every participant works on practical projects that can be added to a professional portfolio.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        question: 'Is there job support after completion?',
+        answer: 'Yes. We provide CV guidance, interview preparation, and career direction based on your skills and performance.',
+      },
+    ],
+  }
+}
+
+function validateItTrainingArrayItem(section, payload = {}, { partial = false } = {}) {
+  const value = {}
+  const errors = []
+
+  if (section === itTrainingSections.trainingTracks) {
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const description = typeof payload.description === 'string' ? payload.description.trim() : ''
+    const highlights = Array.isArray(payload.highlights)
+      ? payload.highlights.map((item) => (typeof item === 'string' ? item.trim() : '')).filter(Boolean)
+      : []
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'description' in payload) {
+      if (!description) errors.push('description is required')
+      else value.description = description
+    }
+    if (!partial || 'highlights' in payload) {
+      if (!highlights.length) errors.push('at least one highlights item is required')
+      else value.highlights = highlights
+    }
+  }
+
+  if (section === itTrainingSections.internshipFlow) {
+    const phase = typeof payload.phase === 'string' ? payload.phase.trim() : ''
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    if (!partial || 'phase' in payload) {
+      if (!phase) errors.push('phase is required')
+      else value.phase = phase
+    }
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
+    }
+  }
+
+  if (section === itTrainingSections.outcomes || section === itTrainingSections.learningSupports) {
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
+    }
+  }
+
+  if (section === itTrainingSections.demoVideos) {
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const url = typeof payload.url === 'string' ? payload.url.trim() : ''
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'url' in payload) {
+      if (!url) errors.push('url is required')
+      else value.url = url
+    }
+  }
+
+  if (section === itTrainingSections.curriculumModules) {
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const points = Array.isArray(payload.points)
+      ? payload.points.map((item) => (typeof item === 'string' ? item.trim() : '')).filter(Boolean)
+      : []
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'points' in payload) {
+      if (!points.length) errors.push('at least one points item is required')
+      else value.points = points
+    }
+  }
+
+  if (section === itTrainingSections.faqItems) {
+    const question = typeof payload.question === 'string' ? payload.question.trim() : ''
+    const answer = typeof payload.answer === 'string' ? payload.answer.trim() : ''
+    if (!partial || 'question' in payload) {
+      if (!question) errors.push('question is required')
+      else value.question = question
+    }
+    if (!partial || 'answer' in payload) {
+      if (!answer) errors.push('answer is required')
+      else value.answer = answer
+    }
+  }
+
+  return { errors, value }
+}
+
+function getDefaultTechnicalSupportPage() {
+  return {
+    key: 'technical-support-page',
+    heroImage:
+      'https://images.unsplash.com/photo-1516110833967-5785e5f8c3ff?auto=format&fit=crop&w=2200&q=80',
+    heroBadge: 'Support Operations Center',
+    heroTitle: '24/7 Technical Support & AMC',
+    breadcrumbTitle: 'Technical Support',
+    introTitle: 'Reliable Support To Keep Your Business Running Every Hour',
+    introDescription:
+      'SoftEdge provides proactive and reactive support under a unified AMC model. From incident response to preventive maintenance, our team ensures your technology stack remains secure, optimized, and available with predictable service quality.',
+    coverageTitle: 'AMC Coverage Scope',
+    matrixTitle: 'Incident Response Matrix',
+    packagesTitle: 'AMC Packages',
+    toolsTitle: 'Support Tools & Monitoring Stack',
+    workflowTitle: 'Support Handling Workflow',
+    videoTitle: 'Support Demo & Service Brief',
+    videoBadge: '24/7 Coverage',
+    faqTitle: 'Support FAQ',
+    ctaTitle: 'Need Dedicated AMC For Your Organization?',
+    ctaDescription:
+      'Share your current infrastructure and support challenges. We will propose a practical AMC model with response SLA, preventive maintenance scope, and cost-effective support roadmap.',
+    ctaPrimaryText: 'Request AMC Proposal',
+    ctaPrimaryLink: '/contact',
+    ctaSecondaryText: 'Explore More Services',
+    ctaSecondaryLink: '/services',
+    supportPillars: [
+      {
+        _id: new ObjectId().toString(),
+        title: '24/7 Helpdesk Operations',
+        description:
+          'Round-the-clock support via ticket, phone, WhatsApp, and remote session to resolve incidents quickly and keep business continuity stable.',
+        points: ['Priority-based ticket routing', 'SLA monitoring dashboard', 'Escalation matrix with response targets'],
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'AMC Preventive Maintenance',
+        description:
+          'Annual maintenance contract coverage for servers, networks, workstations, and business applications with scheduled checks.',
+        points: ['Monthly health audit', 'Patch and antivirus management', 'Performance tuning and system cleanup'],
+      },
+      {
+        _id: new ObjectId().toString(),
+        title: 'Onsite + Remote Hybrid Support',
+        description:
+          'Critical issues are handled onsite while routine issues are solved remotely to reduce downtime and optimize support cost.',
+        points: ['Rapid onsite dispatch', 'Secure remote troubleshooting', 'Detailed service reports per visit'],
+      },
+    ],
+    amcCoverage: [
+      { _id: new ObjectId().toString(), text: 'Desktop/Laptop troubleshooting' },
+      { _id: new ObjectId().toString(), text: 'Server uptime and backup check' },
+      { _id: new ObjectId().toString(), text: 'LAN/WiFi/switch/router maintenance' },
+      { _id: new ObjectId().toString(), text: 'Printer and peripheral support' },
+      { _id: new ObjectId().toString(), text: 'Application support coordination' },
+      { _id: new ObjectId().toString(), text: 'License and renewal reminders' },
+    ],
+    responseMatrix: [
+      {
+        _id: new ObjectId().toString(),
+        severity: 'Critical',
+        time: '15-30 mins',
+        window: '24/7',
+        example: 'Server down, billing stop, network outage',
+      },
+      {
+        _id: new ObjectId().toString(),
+        severity: 'High',
+        time: '1 hour',
+        window: 'Business + extended',
+        example: 'Major module error, branch connectivity issue',
+      },
+      {
+        _id: new ObjectId().toString(),
+        severity: 'Medium',
+        time: '2-4 hours',
+        window: 'Business hours',
+        example: 'User-level software conflict',
+      },
+      {
+        _id: new ObjectId().toString(),
+        severity: 'Low',
+        time: 'Within 1 day',
+        window: 'Business hours',
+        example: 'Configuration request, optimization task',
+      },
+    ],
+    supportVideos: [
+      { _id: new ObjectId().toString(), title: 'Remote Support Workflow', url: 'https://www.youtube.com/embed/ysz5S6PUM-U' },
+      { _id: new ObjectId().toString(), title: 'AMC Service Checklist Overview', url: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
+    ],
+    amcPlans: [
+      {
+        _id: new ObjectId().toString(),
+        name: 'Essential AMC',
+        fit: 'Small office / startup',
+        features: ['8x6 support window', 'Monthly preventive visit', 'Remote troubleshooting'],
+      },
+      {
+        _id: new ObjectId().toString(),
+        name: 'Business AMC',
+        fit: 'Growing multi-team company',
+        features: ['Extended support hours', 'Priority ticket queue', 'Quarterly security hardening'],
+      },
+      {
+        _id: new ObjectId().toString(),
+        name: 'Enterprise AMC',
+        fit: 'High-availability operations',
+        features: ['24/7 critical incident support', 'Dedicated support manager', 'Custom SLA and governance review'],
+      },
+    ],
+    toolStack: [
+      { _id: new ObjectId().toString(), text: 'Ticketing + SLA tracking' },
+      { _id: new ObjectId().toString(), text: 'Remote monitoring dashboard' },
+      { _id: new ObjectId().toString(), text: 'Endpoint protection + patching' },
+      { _id: new ObjectId().toString(), text: 'Backup health monitoring' },
+      { _id: new ObjectId().toString(), text: 'Asset inventory management' },
+      { _id: new ObjectId().toString(), text: 'Audit-ready service reports' },
+    ],
+    workingFlow: [
+      {
+        _id: new ObjectId().toString(),
+        step: 'Step 01',
+        title: 'Issue Logging',
+        text: 'All incidents are logged with category, severity, and impact details.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        step: 'Step 02',
+        title: 'Diagnosis & Assignment',
+        text: 'Ticket is routed to the right engineer with proper response priority.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        step: 'Step 03',
+        title: 'Fix & Validation',
+        text: 'Root cause is fixed, service restored, and validation done with your team.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        step: 'Step 04',
+        title: 'RCA & Prevention',
+        text: 'Post-resolution notes and preventive action recommendations are shared.',
+      },
+    ],
+    supportFaqs: [
+      {
+        _id: new ObjectId().toString(),
+        question: 'Do you provide both onsite and remote support?',
+        answer: 'Yes. We use hybrid support where critical tasks can be handled onsite and routine tasks are resolved remotely.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        question: 'Can AMC include third-party software support?',
+        answer: 'Yes. We coordinate with your software vendors and assist in application-level issue escalation and follow-up.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        question: 'How do you report completed support work?',
+        answer: 'Each task is documented with action summary, resolution note, and recommendation in a service report.',
+      },
+    ],
+  }
+}
+
+function validateTechnicalSupportArrayItem(section, payload = {}, { partial = false } = {}) {
+  const value = {}
+  const errors = []
+
+  if (section === technicalSupportSections.supportPillars) {
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const description = typeof payload.description === 'string' ? payload.description.trim() : ''
+    const points = Array.isArray(payload.points)
+      ? payload.points.map((item) => (typeof item === 'string' ? item.trim() : '')).filter(Boolean)
+      : []
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'description' in payload) {
+      if (!description) errors.push('description is required')
+      else value.description = description
+    }
+    if (!partial || 'points' in payload) {
+      if (!points.length) errors.push('at least one points item is required')
+      else value.points = points
+    }
+  }
+
+  if (section === technicalSupportSections.amcCoverage || section === technicalSupportSections.toolStack) {
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
+    }
+  }
+
+  if (section === technicalSupportSections.responseMatrix) {
+    const severity = typeof payload.severity === 'string' ? payload.severity.trim() : ''
+    const time = typeof payload.time === 'string' ? payload.time.trim() : ''
+    const window = typeof payload.window === 'string' ? payload.window.trim() : ''
+    const example = typeof payload.example === 'string' ? payload.example.trim() : ''
+    if (!partial || 'severity' in payload) {
+      if (!severity) errors.push('severity is required')
+      else value.severity = severity
+    }
+    if (!partial || 'time' in payload) {
+      if (!time) errors.push('time is required')
+      else value.time = time
+    }
+    if (!partial || 'window' in payload) {
+      if (!window) errors.push('window is required')
+      else value.window = window
+    }
+    if (!partial || 'example' in payload) {
+      if (!example) errors.push('example is required')
+      else value.example = example
+    }
+  }
+
+  if (section === technicalSupportSections.supportVideos) {
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const url = typeof payload.url === 'string' ? payload.url.trim() : ''
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'url' in payload) {
+      if (!url) errors.push('url is required')
+      else value.url = url
+    }
+  }
+
+  if (section === technicalSupportSections.amcPlans) {
+    const name = typeof payload.name === 'string' ? payload.name.trim() : ''
+    const fit = typeof payload.fit === 'string' ? payload.fit.trim() : ''
+    const features = Array.isArray(payload.features)
+      ? payload.features.map((item) => (typeof item === 'string' ? item.trim() : '')).filter(Boolean)
+      : []
+    if (!partial || 'name' in payload) {
+      if (!name) errors.push('name is required')
+      else value.name = name
+    }
+    if (!partial || 'fit' in payload) {
+      if (!fit) errors.push('fit is required')
+      else value.fit = fit
+    }
+    if (!partial || 'features' in payload) {
+      if (!features.length) errors.push('at least one features item is required')
+      else value.features = features
+    }
+  }
+
+  if (section === technicalSupportSections.workingFlow) {
+    const step = typeof payload.step === 'string' ? payload.step.trim() : ''
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    if (!partial || 'step' in payload) {
+      if (!step) errors.push('step is required')
+      else value.step = step
+    }
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
+    }
+  }
+
+  if (section === technicalSupportSections.supportFaqs) {
+    const question = typeof payload.question === 'string' ? payload.question.trim() : ''
+    const answer = typeof payload.answer === 'string' ? payload.answer.trim() : ''
+    if (!partial || 'question' in payload) {
+      if (!question) errors.push('question is required')
+      else value.question = question
+    }
+    if (!partial || 'answer' in payload) {
+      if (!answer) errors.push('answer is required')
+      else value.answer = answer
+    }
+  }
+
+  return { errors, value }
+}
+
+function getDefaultFooterContent() {
+  return {
+    key: 'footer-content',
+    aboutTitle: 'About Company',
+    aboutDescription: 'We have 14+ years experience. Helping you overcome technology challenges.',
+    contactsTitle: 'Contacts',
+    addressLabel: 'Adress:',
+    addressValue: '4211 Webster Street Rahway, NJ 07065.',
+    emailLabel: 'Email:',
+    emailValue: 'info@yourdomain.com',
+    phoneLabel: 'Phone:',
+    phoneValue: '(+44) 123 456 789',
+    newsletterTitle: 'Newsletter',
+    newsletterDescription: 'Subscribe to our newsletter to receive updates on the latest news!',
+    newsletterPlaceholder: 'Subscribe with us',
+    copyrightPrefix: '© Developed by',
+    companyName: 'SoftEdge Technology LTD.',
+    socialLinks: [
+      { _id: new ObjectId().toString(), label: 'f', href: '#', ariaLabel: 'Facebook social link' },
+      { _id: new ObjectId().toString(), label: 'x', href: '#', ariaLabel: 'X social link' },
+      { _id: new ObjectId().toString(), label: 'yt', href: '#', ariaLabel: 'YouTube social link' },
+      { _id: new ObjectId().toString(), label: 'in', href: '#', ariaLabel: 'LinkedIn social link' },
+    ],
+  }
+}
+
+function validateFooterArrayItem(section, payload = {}, { partial = false } = {}) {
+  const value = {}
+  const errors = []
+
+  if (section === footerSections.socialLinks) {
+    const label = typeof payload.label === 'string' ? payload.label.trim() : ''
+    const href = typeof payload.href === 'string' ? payload.href.trim() : ''
+    const ariaLabel = typeof payload.ariaLabel === 'string' ? payload.ariaLabel.trim() : ''
+    if (!partial || 'label' in payload) {
+      if (!label) errors.push('label is required')
+      else value.label = label
+    }
+    if (!partial || 'href' in payload) {
+      if (!href) errors.push('href is required')
+      else value.href = href
+    }
+    if (!partial || 'ariaLabel' in payload) {
+      if (!ariaLabel) errors.push('ariaLabel is required')
+      else value.ariaLabel = ariaLabel
+    }
+  }
+
+  return { errors, value }
+}
+
+function getDefaultHomePage() {
+  return {
+    key: 'home-page',
+    heroCtaPrimaryText: 'Discover More',
+    heroCtaPrimaryLink: '/about',
+    heroCtaSecondaryText: 'Get A Quote',
+    heroCtaSecondaryLink: '/services',
+    aboutEyebrow: 'About Us',
+    aboutTitle: 'Making the world advanced design work for you',
+    aboutDescription:
+      'We are an experienced digital team delivering thoughtful design, practical engineering, and reliable support for brands that want to grow with confidence.',
+    aboutImage: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80',
+    ourHistoryEyebrow: 'Our history',
+    ourHistoryTitle: 'How We Started',
+    pricingEyebrow: 'Pricing table',
+    pricingTitle: 'Our Pricing Plans',
+    pricingButtonText: 'Start Now',
+    pricingButtonLink: '/',
+    slides: [
+      {
+        _id: new ObjectId().toString(),
+        image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1800&q=80',
+        eyebrow: 'Crafting Digital Experiences',
+        title: 'Experience the best IT technology agency!',
+        subtitle:
+          'We are driving protection and digital transformation for organizations with dependable service, strategic execution, and years of proven experience.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1800&q=80',
+        eyebrow: 'Scalable Digital Solutions',
+        title: 'Build secure systems with confidence.',
+        subtitle:
+          'From planning to launch, we create secure, modern, and scalable platforms that help teams move faster and deliver better outcomes.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1800&q=80',
+        eyebrow: 'Trusted Technology Partner',
+        title: 'Grow with a team that understands your vision.',
+        subtitle:
+          'We combine strong engineering, thoughtful design, and responsive support to help your business adapt, innovate, and scale.',
+      },
+    ],
+    aboutHighlights: [
+      {
+        _id: new ObjectId().toString(),
+        badge: '01',
+        title: 'Advanced Innovative Agency',
+        description:
+          'We create thoughtful digital products and modern brand experiences with a strong focus on usability, visual clarity, and long-term value.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        badge: '02',
+        title: 'Professional Problem Solutions',
+        description:
+          'Our team works closely with clients to solve practical business problems through scalable systems, streamlined workflows, and dependable support.',
+      },
+      {
+        _id: new ObjectId().toString(),
+        badge: '03',
+        title: 'Web Architect and Development',
+        description:
+          'From architecture planning to final delivery, we build secure and maintainable web solutions tailored to business growth and performance.',
+      },
+    ],
+    aboutStats: [
+      { _id: new ObjectId().toString(), end: 3, suffix: 'k', label: 'Design Staff' },
+      { _id: new ObjectId().toString(), end: 12, suffix: 'k', label: 'Project Completed' },
+    ],
+    timeline: [
+      {
+        _id: new ObjectId().toString(),
+        year: '2000',
+        title: 'Company founded',
+        image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80',
+        description: "We're committed to providing customers exceptional service offering employees the best training.",
+      },
+      {
+        _id: new ObjectId().toString(),
+        year: '2005',
+        title: 'Hiring more staff',
+        image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80',
+        description: "We're committed to providing customers exceptional service offering employees the best training.",
+      },
+      {
+        _id: new ObjectId().toString(),
+        year: '2007',
+        title: 'Opened new branches',
+        image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad4ab?auto=format&fit=crop&w=800&q=80',
+        description: "We're committed to providing customers exceptional service offering employees the best training.",
+      },
+      {
+        _id: new ObjectId().toString(),
+        year: '2012',
+        title: 'International expansion',
+        image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80',
+        description: "We're committed to providing customers exceptional service offering employees the best training.",
+      },
+    ],
+    pricingPlans: [
+      {
+        _id: new ObjectId().toString(),
+        name: 'Basic',
+        price: 59,
+        image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=80',
+      },
+      {
+        _id: new ObjectId().toString(),
+        name: 'Standard',
+        price: 99,
+        image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=900&q=80',
+      },
+      {
+        _id: new ObjectId().toString(),
+        name: 'Professional',
+        price: 129,
+        image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80',
+      },
+    ],
+    pricingFeatures: [
+      { _id: new ObjectId().toString(), text: '30 Analytics Campaign' },
+      { _id: new ObjectId().toString(), text: 'Branded Reports' },
+      { _id: new ObjectId().toString(), text: '700 Keywords' },
+      { _id: new ObjectId().toString(), text: '100 Social Account' },
+      { _id: new ObjectId().toString(), text: 'Phone & Email Support' },
+    ],
+  }
+}
+
+function validateHomePageArrayItem(section, payload = {}, { partial = false } = {}) {
+  const value = {}
+  const errors = []
+
+  if (section === homePageSections.slides) {
+    const image = typeof payload.image === 'string' ? payload.image.trim() : ''
+    const eyebrow = typeof payload.eyebrow === 'string' ? payload.eyebrow.trim() : ''
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const subtitle = typeof payload.subtitle === 'string' ? payload.subtitle.trim() : ''
+    if (!partial || 'image' in payload) {
+      if (!image) errors.push('image is required')
+      else value.image = image
+    }
+    if (!partial || 'eyebrow' in payload) {
+      if (!eyebrow) errors.push('eyebrow is required')
+      else value.eyebrow = eyebrow
+    }
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'subtitle' in payload) {
+      if (!subtitle) errors.push('subtitle is required')
+      else value.subtitle = subtitle
+    }
+  }
+
+  if (section === homePageSections.aboutHighlights) {
+    const badge = typeof payload.badge === 'string' ? payload.badge.trim() : ''
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const description = typeof payload.description === 'string' ? payload.description.trim() : ''
+    if (!partial || 'badge' in payload) {
+      if (!badge) errors.push('badge is required')
+      else value.badge = badge
+    }
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'description' in payload) {
+      if (!description) errors.push('description is required')
+      else value.description = description
+    }
+  }
+
+  if (section === homePageSections.aboutStats) {
+    const numericEnd = Number(payload.end)
+    const suffix = typeof payload.suffix === 'string' ? payload.suffix.trim() : ''
+    const label = typeof payload.label === 'string' ? payload.label.trim() : ''
+    if (!partial || 'end' in payload) {
+      if (!Number.isFinite(numericEnd)) errors.push('end must be a number')
+      else value.end = numericEnd
+    }
+    if (!partial || 'suffix' in payload) {
+      if (!suffix) errors.push('suffix is required')
+      else value.suffix = suffix
+    }
+    if (!partial || 'label' in payload) {
+      if (!label) errors.push('label is required')
+      else value.label = label
+    }
+  }
+
+  if (section === homePageSections.timeline) {
+    const year = typeof payload.year === 'string' ? payload.year.trim() : ''
+    const title = typeof payload.title === 'string' ? payload.title.trim() : ''
+    const image = typeof payload.image === 'string' ? payload.image.trim() : ''
+    const description = typeof payload.description === 'string' ? payload.description.trim() : ''
+    if (!partial || 'year' in payload) {
+      if (!year) errors.push('year is required')
+      else value.year = year
+    }
+    if (!partial || 'title' in payload) {
+      if (!title) errors.push('title is required')
+      else value.title = title
+    }
+    if (!partial || 'image' in payload) {
+      if (!image) errors.push('image is required')
+      else value.image = image
+    }
+    if (!partial || 'description' in payload) {
+      if (!description) errors.push('description is required')
+      else value.description = description
+    }
+  }
+
+  if (section === homePageSections.pricingPlans) {
+    const name = typeof payload.name === 'string' ? payload.name.trim() : ''
+    const image = typeof payload.image === 'string' ? payload.image.trim() : ''
+    const numericPrice = Number(payload.price)
+    if (!partial || 'name' in payload) {
+      if (!name) errors.push('name is required')
+      else value.name = name
+    }
+    if (!partial || 'price' in payload) {
+      if (!Number.isFinite(numericPrice)) errors.push('price must be a number')
+      else value.price = numericPrice
+    }
+    if (!partial || 'image' in payload) {
+      if (!image) errors.push('image is required')
+      else value.image = image
+    }
+  }
+
+  if (section === homePageSections.pricingFeatures) {
+    const text = typeof payload.text === 'string' ? payload.text.trim() : ''
+    if (!partial || 'text' in payload) {
+      if (!text) errors.push('text is required')
+      else value.text = text
     }
   }
 
@@ -5808,6 +8166,222 @@ async function getProcessAutomationPageDocument() {
   return defaults
 }
 
+async function getIoTSmartOfficeHomePageDocument() {
+  const collection = getPageContentCollection()
+  const existing = await collection.findOne({ key: 'iot-smart-office-home-page' })
+
+  if (existing) {
+    return existing
+  }
+
+  const defaults = {
+    ...getDefaultIoTSmartOfficeHomePage(),
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  }
+
+  await collection.insertOne(defaults)
+  return defaults
+}
+
+async function getBiometricCctvPageDocument() {
+  const collection = getPageContentCollection()
+  const existing = await collection.findOne({ key: 'biometric-cctv-page' })
+
+  if (existing) {
+    return existing
+  }
+
+  const defaults = {
+    ...getDefaultBiometricCctvPage(),
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  }
+
+  await collection.insertOne(defaults)
+  return defaults
+}
+
+async function getConversationalAiPageDocument() {
+  const collection = getPageContentCollection()
+  const existing = await collection.findOne({ key: 'conversational-ai-page' })
+
+  if (existing) {
+    return existing
+  }
+
+  const defaults = {
+    ...getDefaultConversationalAiPage(),
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  }
+
+  await collection.insertOne(defaults)
+  return defaults
+}
+
+async function getRoboticProcessPageDocument() {
+  const collection = getPageContentCollection()
+  const existing = await collection.findOne({ key: 'robotic-process-page' })
+
+  if (existing) {
+    return existing
+  }
+
+  const defaults = {
+    ...getDefaultRoboticProcessPage(),
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  }
+
+  await collection.insertOne(defaults)
+  return defaults
+}
+
+async function getGenerativeAiMarketingPageDocument() {
+  const collection = getPageContentCollection()
+  const existing = await collection.findOne({ key: 'generative-ai-marketing-page' })
+
+  if (existing) {
+    return existing
+  }
+
+  const defaults = {
+    ...getDefaultGenerativeAiMarketingPage(),
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  }
+
+  await collection.insertOne(defaults)
+  return defaults
+}
+
+async function getServicePointPageDocument() {
+  const collection = getPageContentCollection()
+  const existing = await collection.findOne({ key: 'service-point-page' })
+
+  if (existing) {
+    return existing
+  }
+
+  const defaults = {
+    ...getDefaultServicePointPage(),
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  }
+
+  await collection.insertOne(defaults)
+  return defaults
+}
+
+async function getCustomSaasPageDocument() {
+  const collection = getPageContentCollection()
+  const existing = await collection.findOne({ key: 'custom-saas-page' })
+
+  if (existing) {
+    return existing
+  }
+
+  const defaults = {
+    ...getDefaultCustomSaasPage(),
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  }
+
+  await collection.insertOne(defaults)
+  return defaults
+}
+
+async function getStartupItConsultingPageDocument() {
+  const collection = getPageContentCollection()
+  const existing = await collection.findOne({ key: 'startup-it-consulting-page' })
+
+  if (existing) {
+    return existing
+  }
+
+  const defaults = {
+    ...getDefaultStartupItConsultingPage(),
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  }
+
+  await collection.insertOne(defaults)
+  return defaults
+}
+
+async function getItTrainingPageDocument() {
+  const collection = getPageContentCollection()
+  const existing = await collection.findOne({ key: 'it-training-page' })
+
+  if (existing) {
+    return existing
+  }
+
+  const defaults = {
+    ...getDefaultItTrainingPage(),
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  }
+
+  await collection.insertOne(defaults)
+  return defaults
+}
+
+async function getTechnicalSupportPageDocument() {
+  const collection = getPageContentCollection()
+  const existing = await collection.findOne({ key: 'technical-support-page' })
+
+  if (existing) {
+    return existing
+  }
+
+  const defaults = {
+    ...getDefaultTechnicalSupportPage(),
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  }
+
+  await collection.insertOne(defaults)
+  return defaults
+}
+
+async function getFooterContentDocument() {
+  const collection = getPageContentCollection()
+  const existing = await collection.findOne({ key: 'footer-content' })
+
+  if (existing) {
+    return existing
+  }
+
+  const defaults = {
+    ...getDefaultFooterContent(),
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  }
+
+  await collection.insertOne(defaults)
+  return defaults
+}
+
+async function getHomePageDocument() {
+  const collection = getPageContentCollection()
+  const existing = await collection.findOne({ key: 'home-page' })
+
+  if (existing) {
+    return existing
+  }
+
+  const defaults = {
+    ...getDefaultHomePage(),
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  }
+
+  await collection.insertOne(defaults)
+  return defaults
+}
+
 async function getEducationalInstituteManagementPageDocument() {
   const collection = getPageContentCollection()
   const existing = await collection.findOne({ key: 'educational-institute-management-page' })
@@ -8419,6 +10993,1950 @@ app.delete('/api/process-automation-page/:section/:itemId', async (req, res) => 
   } catch (error) {
     console.error(error)
     return res.status(500).json({ error: 'Failed to delete process automation section item' })
+  }
+})
+
+app.get('/api/iot-smart-office-home-page', async (_req, res) => {
+  try {
+    const page = await getIoTSmartOfficeHomePageDocument()
+    return res.json(normalizeDocument(page))
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to fetch iot smart office/home page data' })
+  }
+})
+
+app.put('/api/iot-smart-office-home-page', async (req, res) => {
+  try {
+    const defaultPage = getDefaultIoTSmartOfficeHomePage()
+    const payload = {
+      heroImage: typeof req.body.heroImage === 'string' ? req.body.heroImage.trim() : '',
+      heroTitle:
+        typeof req.body.heroTitle === 'string'
+          ? req.body.heroTitle.trim()
+          : 'IoT Smart Office/Home + Smart Board/ICT Lab',
+      breadcrumbTitle:
+        typeof req.body.breadcrumbTitle === 'string' ? req.body.breadcrumbTitle.trim() : 'IoT Smart Office/Home',
+      sectionBadge:
+        typeof req.body.sectionBadge === 'string' ? req.body.sectionBadge.trim() : 'Next Generation Infrastructure',
+      sectionTitle:
+        typeof req.body.sectionTitle === 'string'
+          ? req.body.sectionTitle.trim()
+          : 'Intelligent Spaces for Productivity, Learning, and Security',
+      sectionDescription: typeof req.body.sectionDescription === 'string' ? req.body.sectionDescription.trim() : '',
+      deliverTitle: typeof req.body.deliverTitle === 'string' ? req.body.deliverTitle.trim() : 'What We Deliver',
+      roadmapTitle:
+        typeof req.body.roadmapTitle === 'string' ? req.body.roadmapTitle.trim() : 'Implementation Roadmap',
+      ctaBadge: typeof req.body.ctaBadge === 'string' ? req.body.ctaBadge.trim() : 'Ready To Upgrade',
+      ctaTitle:
+        typeof req.body.ctaTitle === 'string'
+          ? req.body.ctaTitle.trim()
+          : 'Build a smarter office, home, and ICT learning ecosystem with SoftEdge.',
+      ctaDescription: typeof req.body.ctaDescription === 'string' ? req.body.ctaDescription.trim() : '',
+      ctaButtonText:
+        typeof req.body.ctaButtonText === 'string' ? req.body.ctaButtonText.trim() : 'Explore More Services',
+      ctaButtonLink: typeof req.body.ctaButtonLink === 'string' ? req.body.ctaButtonLink.trim() : '/services',
+      updatedAt: new Date(),
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'iot-smart-office-home-page' },
+      {
+        $set: payload,
+        $setOnInsert: {
+          key: defaultPage.key,
+          featureCards: defaultPage.featureCards,
+          includedServices: defaultPage.includedServices,
+          solutionPhases: defaultPage.solutionPhases,
+          createdAt: new Date(),
+        },
+      },
+      { upsert: true },
+    )
+
+    const updatedPage = await getPageContentCollection().findOne({ key: 'iot-smart-office-home-page' })
+    return res.json({
+      message: 'IoT smart office/home page content updated',
+      page: normalizeDocument(updatedPage),
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update iot smart office/home page content' })
+  }
+})
+
+app.post('/api/iot-smart-office-home-page/:section', async (req, res) => {
+  try {
+    const { section } = req.params
+    const targetSection = iotSmartOfficeHomeSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateIoTSmartOfficeHomeArrayItem(targetSection, req.body)
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    const page = await getIoTSmartOfficeHomePageDocument()
+    const nextItem = { _id: new ObjectId().toString(), ...value }
+    const nextItems = [...(page[targetSection] || []), nextItem]
+
+    await getPageContentCollection().updateOne(
+      { key: 'iot-smart-office-home-page' },
+      { $set: { [targetSection]: nextItems, updatedAt: new Date() } },
+    )
+
+    return res.status(201).json({ message: `${targetSection} item created successfully`, item: nextItem })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to create iot smart office/home page section item' })
+  }
+})
+
+app.patch('/api/iot-smart-office-home-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = iotSmartOfficeHomeSections[section]
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateIoTSmartOfficeHomeArrayItem(targetSection, req.body, { partial: true })
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+    if (!Object.keys(value).length) {
+      return res.status(400).json({ error: 'At least one field is required to update' })
+    }
+
+    const page = await getIoTSmartOfficeHomePageDocument()
+    const items = page[targetSection] || []
+    const index = items.findIndex((item) => item._id === itemId)
+    if (index === -1) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    const nextItems = [...items]
+    nextItems[index] = { ...nextItems[index], ...value }
+
+    await getPageContentCollection().updateOne(
+      { key: 'iot-smart-office-home-page' },
+      { $set: { [targetSection]: nextItems, updatedAt: new Date() } },
+    )
+
+    return res.json({ message: `${targetSection} item updated successfully`, item: nextItems[index] })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update iot smart office/home page section item' })
+  }
+})
+
+app.delete('/api/iot-smart-office-home-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = iotSmartOfficeHomeSections[section]
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const page = await getIoTSmartOfficeHomePageDocument()
+    const items = page[targetSection] || []
+    const nextItems = items.filter((item) => item._id !== itemId)
+    if (nextItems.length === items.length) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'iot-smart-office-home-page' },
+      { $set: { [targetSection]: nextItems, updatedAt: new Date() } },
+    )
+
+    return res.json({ message: `${targetSection} item deleted successfully` })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to delete iot smart office/home page section item' })
+  }
+})
+
+app.get('/api/biometric-cctv-page', async (_req, res) => {
+  try {
+    const page = await getBiometricCctvPageDocument()
+    return res.json(normalizeDocument(page))
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to fetch biometric cctv page data' })
+  }
+})
+
+app.put('/api/biometric-cctv-page', async (req, res) => {
+  try {
+    const defaultPage = getDefaultBiometricCctvPage()
+    const payload = {
+      heroImage: typeof req.body.heroImage === 'string' ? req.body.heroImage.trim() : '',
+      heroBadge:
+        typeof req.body.heroBadge === 'string' ? req.body.heroBadge.trim() : 'Physical Security Solutions',
+      heroTitle:
+        typeof req.body.heroTitle === 'string' ? req.body.heroTitle.trim() : 'Biometric Access + CCTV Surveillance',
+      breadcrumbTitle:
+        typeof req.body.breadcrumbTitle === 'string' ? req.body.breadcrumbTitle.trim() : 'Biometric + CCTV',
+      whyBadge: typeof req.body.whyBadge === 'string' ? req.body.whyBadge.trim() : 'Why This Matters',
+      whyTitle:
+        typeof req.body.whyTitle === 'string'
+          ? req.body.whyTitle.trim()
+          : 'Integrated Security For People, Assets, and Data',
+      whyDescription: typeof req.body.whyDescription === 'string' ? req.body.whyDescription.trim() : '',
+      whyDescriptionBottom:
+        typeof req.body.whyDescriptionBottom === 'string' ? req.body.whyDescriptionBottom.trim() : '',
+      implementationTitle:
+        typeof req.body.implementationTitle === 'string' ? req.body.implementationTitle.trim() : 'Implementation Flow',
+      coverageTitle:
+        typeof req.body.coverageTitle === 'string' ? req.body.coverageTitle.trim() : 'Coverage Environments',
+      complianceTitle:
+        typeof req.body.complianceTitle === 'string'
+          ? req.body.complianceTitle.trim()
+          : 'Compliance & Security Governance',
+      complianceDescription:
+        typeof req.body.complianceDescription === 'string' ? req.body.complianceDescription.trim() : '',
+      stackTitle:
+        typeof req.body.stackTitle === 'string' ? req.body.stackTitle.trim() : 'Recommended Technology Stack',
+      supportTitle:
+        typeof req.body.supportTitle === 'string' ? req.body.supportTitle.trim() : 'Operations & Support Plans',
+      faqTitle: typeof req.body.faqTitle === 'string' ? req.body.faqTitle.trim() : 'FAQ & Next Step',
+      ctaButtonText:
+        typeof req.body.ctaButtonText === 'string' ? req.body.ctaButtonText.trim() : 'Request Consultation',
+      ctaButtonLink: typeof req.body.ctaButtonLink === 'string' ? req.body.ctaButtonLink.trim() : '/services',
+      updatedAt: new Date(),
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'biometric-cctv-page' },
+      {
+        $set: payload,
+        $setOnInsert: {
+          key: defaultPage.key,
+          metrics: defaultPage.metrics,
+          coreModules: defaultPage.coreModules,
+          projectFlow: defaultPage.projectFlow,
+          coverageItems: defaultPage.coverageItems,
+          hardwareStack: defaultPage.hardwareStack,
+          compliancePoints: defaultPage.compliancePoints,
+          servicePlans: defaultPage.servicePlans,
+          faqItems: defaultPage.faqItems,
+          createdAt: new Date(),
+        },
+      },
+      { upsert: true },
+    )
+
+    const updatedPage = await getPageContentCollection().findOne({ key: 'biometric-cctv-page' })
+    return res.json({
+      message: 'Biometric cctv page content updated',
+      page: normalizeDocument(updatedPage),
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update biometric cctv page content' })
+  }
+})
+
+app.post('/api/biometric-cctv-page/:section', async (req, res) => {
+  try {
+    const { section } = req.params
+    const targetSection = biometricCctvSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateBiometricCctvArrayItem(targetSection, req.body)
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    const page = await getBiometricCctvPageDocument()
+    const nextItem = { _id: new ObjectId().toString(), ...value }
+    const nextItems = [...(page[targetSection] || []), nextItem]
+
+    await getPageContentCollection().updateOne(
+      { key: 'biometric-cctv-page' },
+      { $set: { [targetSection]: nextItems, updatedAt: new Date() } },
+    )
+
+    return res.status(201).json({ message: `${targetSection} item created successfully`, item: nextItem })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to create biometric cctv page section item' })
+  }
+})
+
+app.patch('/api/biometric-cctv-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = biometricCctvSections[section]
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateBiometricCctvArrayItem(targetSection, req.body, { partial: true })
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+    if (!Object.keys(value).length) {
+      return res.status(400).json({ error: 'At least one field is required to update' })
+    }
+
+    const page = await getBiometricCctvPageDocument()
+    const items = page[targetSection] || []
+    const index = items.findIndex((item) => item._id === itemId)
+    if (index === -1) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    const nextItems = [...items]
+    nextItems[index] = { ...nextItems[index], ...value }
+
+    await getPageContentCollection().updateOne(
+      { key: 'biometric-cctv-page' },
+      { $set: { [targetSection]: nextItems, updatedAt: new Date() } },
+    )
+
+    return res.json({ message: `${targetSection} item updated successfully`, item: nextItems[index] })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update biometric cctv page section item' })
+  }
+})
+
+app.delete('/api/biometric-cctv-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = biometricCctvSections[section]
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const page = await getBiometricCctvPageDocument()
+    const items = page[targetSection] || []
+    const nextItems = items.filter((item) => item._id !== itemId)
+    if (nextItems.length === items.length) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'biometric-cctv-page' },
+      { $set: { [targetSection]: nextItems, updatedAt: new Date() } },
+    )
+
+    return res.json({ message: `${targetSection} item deleted successfully` })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to delete biometric cctv page section item' })
+  }
+})
+
+app.get('/api/conversational-ai-page', async (_req, res) => {
+  try {
+    const page = await getConversationalAiPageDocument()
+    return res.json(normalizeDocument(page))
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to fetch conversational ai page data' })
+  }
+})
+
+app.put('/api/conversational-ai-page', async (req, res) => {
+  try {
+    const defaultPage = getDefaultConversationalAiPage()
+    const payload = {
+      heroImage: typeof req.body.heroImage === 'string' ? req.body.heroImage.trim() : '',
+      heroBadge: typeof req.body.heroBadge === 'string' ? req.body.heroBadge.trim() : 'AI Automation Suite',
+      heroTitle:
+        typeof req.body.heroTitle === 'string'
+          ? req.body.heroTitle.trim()
+          : 'Conversational AI Chatbots + AI Analytics',
+      breadcrumbTitle:
+        typeof req.body.breadcrumbTitle === 'string' ? req.body.breadcrumbTitle.trim() : 'Conversational AI',
+      smartBadge: typeof req.body.smartBadge === 'string' ? req.body.smartBadge.trim() : 'Smart Interaction Layer',
+      smartTitle:
+        typeof req.body.smartTitle === 'string'
+          ? req.body.smartTitle.trim()
+          : 'Transform Customer Conversations Into Growth Signals',
+      smartDescription: typeof req.body.smartDescription === 'string' ? req.body.smartDescription.trim() : '',
+      smartDescriptionBottom:
+        typeof req.body.smartDescriptionBottom === 'string' ? req.body.smartDescriptionBottom.trim() : '',
+      implementationTitle:
+        typeof req.body.implementationTitle === 'string' ? req.body.implementationTitle.trim() : 'Implementation Workflow',
+      capabilitiesTitle:
+        typeof req.body.capabilitiesTitle === 'string' ? req.body.capabilitiesTitle.trim() : 'Key Capabilities',
+      readyBadge: typeof req.body.readyBadge === 'string' ? req.body.readyBadge.trim() : 'Ready To Launch AI',
+      readyTitle:
+        typeof req.body.readyTitle === 'string'
+          ? req.body.readyTitle.trim()
+          : 'Build an intelligent conversation system that supports, sells, and learns.',
+      readyDescription: typeof req.body.readyDescription === 'string' ? req.body.readyDescription.trim() : '',
+      ctaButtonText:
+        typeof req.body.ctaButtonText === 'string' ? req.body.ctaButtonText.trim() : 'Start AI Consultation',
+      ctaButtonLink: typeof req.body.ctaButtonLink === 'string' ? req.body.ctaButtonLink.trim() : '/services',
+      updatedAt: new Date(),
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'conversational-ai-page' },
+      {
+        $set: payload,
+        $setOnInsert: {
+          key: defaultPage.key,
+          solutionBlocks: defaultPage.solutionBlocks,
+          capabilities: defaultPage.capabilities,
+          aiWorkflow: defaultPage.aiWorkflow,
+          kpiCards: defaultPage.kpiCards,
+          createdAt: new Date(),
+        },
+      },
+      { upsert: true },
+    )
+
+    const updatedPage = await getPageContentCollection().findOne({ key: 'conversational-ai-page' })
+    return res.json({
+      message: 'Conversational ai page content updated',
+      page: normalizeDocument(updatedPage),
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update conversational ai page content' })
+  }
+})
+
+app.post('/api/conversational-ai-page/:section', async (req, res) => {
+  try {
+    const { section } = req.params
+    const targetSection = conversationalAiSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateConversationalAiArrayItem(targetSection, req.body)
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    const page = await getConversationalAiPageDocument()
+    const nextItem = { _id: new ObjectId().toString(), ...value }
+    const nextItems = [...(page[targetSection] || []), nextItem]
+
+    await getPageContentCollection().updateOne(
+      { key: 'conversational-ai-page' },
+      { $set: { [targetSection]: nextItems, updatedAt: new Date() } },
+    )
+
+    return res.status(201).json({ message: `${targetSection} item created successfully`, item: nextItem })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to create conversational ai page section item' })
+  }
+})
+
+app.patch('/api/conversational-ai-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = conversationalAiSections[section]
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateConversationalAiArrayItem(targetSection, req.body, { partial: true })
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+    if (!Object.keys(value).length) {
+      return res.status(400).json({ error: 'At least one field is required to update' })
+    }
+
+    const page = await getConversationalAiPageDocument()
+    const items = page[targetSection] || []
+    const index = items.findIndex((item) => item._id === itemId)
+    if (index === -1) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    const nextItems = [...items]
+    nextItems[index] = { ...nextItems[index], ...value }
+
+    await getPageContentCollection().updateOne(
+      { key: 'conversational-ai-page' },
+      { $set: { [targetSection]: nextItems, updatedAt: new Date() } },
+    )
+
+    return res.json({ message: `${targetSection} item updated successfully`, item: nextItems[index] })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update conversational ai page section item' })
+  }
+})
+
+app.delete('/api/conversational-ai-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = conversationalAiSections[section]
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const page = await getConversationalAiPageDocument()
+    const items = page[targetSection] || []
+    const nextItems = items.filter((item) => item._id !== itemId)
+    if (nextItems.length === items.length) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'conversational-ai-page' },
+      { $set: { [targetSection]: nextItems, updatedAt: new Date() } },
+    )
+
+    return res.json({ message: `${targetSection} item deleted successfully` })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to delete conversational ai page section item' })
+  }
+})
+
+app.get('/api/robotic-process-page', async (_req, res) => {
+  try {
+    const page = await getRoboticProcessPageDocument()
+    return res.json(normalizeDocument(page))
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to fetch robotic process page data' })
+  }
+})
+
+app.put('/api/robotic-process-page', async (req, res) => {
+  try {
+    const defaultPage = getDefaultRoboticProcessPage()
+    const payload = {
+      heroImage: typeof req.body.heroImage === 'string' ? req.body.heroImage.trim() : '',
+      heroBadge: typeof req.body.heroBadge === 'string' ? req.body.heroBadge.trim() : 'Automation Excellence',
+      heroTitle:
+        typeof req.body.heroTitle === 'string' ? req.body.heroTitle.trim() : 'Robotic Process Automation (RPA)',
+      breadcrumbTitle: typeof req.body.breadcrumbTitle === 'string' ? req.body.breadcrumbTitle.trim() : 'RPA',
+      processBadge: typeof req.body.processBadge === 'string' ? req.body.processBadge.trim() : 'Process Intelligence',
+      processTitle:
+        typeof req.body.processTitle === 'string'
+          ? req.body.processTitle.trim()
+          : 'Automate Repetitive Workflows and Free Your Team For Higher-Value Tasks',
+      processDescription: typeof req.body.processDescription === 'string' ? req.body.processDescription.trim() : '',
+      processDescriptionBottom:
+        typeof req.body.processDescriptionBottom === 'string' ? req.body.processDescriptionBottom.trim() : '',
+      implementationTitle:
+        typeof req.body.implementationTitle === 'string' ? req.body.implementationTitle.trim() : 'Implementation Workflow',
+      targetsTitle:
+        typeof req.body.targetsTitle === 'string' ? req.body.targetsTitle.trim() : 'High-impact Automation Targets',
+      faqTitle: typeof req.body.faqTitle === 'string' ? req.body.faqTitle.trim() : 'FAQ & Next Step',
+      ctaButtonText:
+        typeof req.body.ctaButtonText === 'string' ? req.body.ctaButtonText.trim() : 'Plan RPA Strategy',
+      ctaButtonLink: typeof req.body.ctaButtonLink === 'string' ? req.body.ctaButtonLink.trim() : '/services',
+      updatedAt: new Date(),
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'robotic-process-page' },
+      {
+        $set: payload,
+        $setOnInsert: {
+          key: defaultPage.key,
+          rpaSolutions: defaultPage.rpaSolutions,
+          automationTargets: defaultPage.automationTargets,
+          implementationFlow: defaultPage.implementationFlow,
+          outcomes: defaultPage.outcomes,
+          faqs: defaultPage.faqs,
+          createdAt: new Date(),
+        },
+      },
+      { upsert: true },
+    )
+
+    const updatedPage = await getPageContentCollection().findOne({ key: 'robotic-process-page' })
+    return res.json({
+      message: 'Robotic process page content updated',
+      page: normalizeDocument(updatedPage),
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update robotic process page content' })
+  }
+})
+
+app.post('/api/robotic-process-page/:section', async (req, res) => {
+  try {
+    const { section } = req.params
+    const targetSection = roboticProcessSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateRoboticProcessArrayItem(targetSection, req.body)
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    const page = await getRoboticProcessPageDocument()
+    const nextItem = { _id: new ObjectId().toString(), ...value }
+    const nextItems = [...(page[targetSection] || []), nextItem]
+
+    await getPageContentCollection().updateOne(
+      { key: 'robotic-process-page' },
+      { $set: { [targetSection]: nextItems, updatedAt: new Date() } },
+    )
+
+    return res.status(201).json({ message: `${targetSection} item created successfully`, item: nextItem })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to create robotic process page section item' })
+  }
+})
+
+app.patch('/api/robotic-process-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = roboticProcessSections[section]
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateRoboticProcessArrayItem(targetSection, req.body, { partial: true })
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+    if (!Object.keys(value).length) {
+      return res.status(400).json({ error: 'At least one field is required to update' })
+    }
+
+    const page = await getRoboticProcessPageDocument()
+    const items = page[targetSection] || []
+    const index = items.findIndex((item) => item._id === itemId)
+    if (index === -1) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    const nextItems = [...items]
+    nextItems[index] = { ...nextItems[index], ...value }
+
+    await getPageContentCollection().updateOne(
+      { key: 'robotic-process-page' },
+      { $set: { [targetSection]: nextItems, updatedAt: new Date() } },
+    )
+
+    return res.json({ message: `${targetSection} item updated successfully`, item: nextItems[index] })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update robotic process page section item' })
+  }
+})
+
+app.delete('/api/robotic-process-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = roboticProcessSections[section]
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const page = await getRoboticProcessPageDocument()
+    const items = page[targetSection] || []
+    const nextItems = items.filter((item) => item._id !== itemId)
+    if (nextItems.length === items.length) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'robotic-process-page' },
+      { $set: { [targetSection]: nextItems, updatedAt: new Date() } },
+    )
+
+    return res.json({ message: `${targetSection} item deleted successfully` })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to delete robotic process page section item' })
+  }
+})
+
+app.get('/api/generative-ai-marketing-page', async (_req, res) => {
+  try {
+    const page = await getGenerativeAiMarketingPageDocument()
+    return res.json(normalizeDocument(page))
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to fetch generative ai marketing page data' })
+  }
+})
+
+app.put('/api/generative-ai-marketing-page', async (req, res) => {
+  try {
+    const defaultPage = getDefaultGenerativeAiMarketingPage()
+    const payload = {
+      heroImage: typeof req.body.heroImage === 'string' ? req.body.heroImage.trim() : '',
+      heroBadge: typeof req.body.heroBadge === 'string' ? req.body.heroBadge.trim() : 'AI-Powered Growth',
+      heroTitle: typeof req.body.heroTitle === 'string' ? req.body.heroTitle.trim() : 'Generative AI For Marketing',
+      breadcrumbTitle:
+        typeof req.body.breadcrumbTitle === 'string' ? req.body.breadcrumbTitle.trim() : 'Generative AI Marketing',
+      introBadge: typeof req.body.introBadge === 'string' ? req.body.introBadge.trim() : 'Creative Intelligence',
+      introTitle:
+        typeof req.body.introTitle === 'string'
+          ? req.body.introTitle.trim()
+          : 'Produce, Personalize, and Optimize Marketing Content at Scale',
+      introDescription: typeof req.body.introDescription === 'string' ? req.body.introDescription.trim() : '',
+      introDescriptionBottom:
+        typeof req.body.introDescriptionBottom === 'string' ? req.body.introDescriptionBottom.trim() : '',
+      workflowTitle:
+        typeof req.body.workflowTitle === 'string' ? req.body.workflowTitle.trim() : 'Implementation Workflow',
+      capabilitiesTitle:
+        typeof req.body.capabilitiesTitle === 'string' ? req.body.capabilitiesTitle.trim() : 'Core Capabilities',
+      faqTitle: typeof req.body.faqTitle === 'string' ? req.body.faqTitle.trim() : 'FAQ & Next Step',
+      ctaButtonText:
+        typeof req.body.ctaButtonText === 'string' ? req.body.ctaButtonText.trim() : 'Launch AI Marketing',
+      ctaButtonLink: typeof req.body.ctaButtonLink === 'string' ? req.body.ctaButtonLink.trim() : '/services',
+      updatedAt: new Date(),
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'generative-ai-marketing-page' },
+      {
+        $set: payload,
+        $setOnInsert: {
+          key: defaultPage.key,
+          marketingUseCases: defaultPage.marketingUseCases,
+          workflowStages: defaultPage.workflowStages,
+          capabilityTags: defaultPage.capabilityTags,
+          resultCards: defaultPage.resultCards,
+          faqs: defaultPage.faqs,
+          createdAt: new Date(),
+        },
+      },
+      { upsert: true },
+    )
+
+    const updatedPage = await getPageContentCollection().findOne({ key: 'generative-ai-marketing-page' })
+    return res.json({
+      message: 'Generative AI marketing page content updated',
+      page: normalizeDocument(updatedPage),
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update generative ai marketing page content' })
+  }
+})
+
+app.post('/api/generative-ai-marketing-page/:section', async (req, res) => {
+  try {
+    const { section } = req.params
+    const targetSection = generativeAiMarketingSections[section]
+
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateGenerativeAiMarketingArrayItem(targetSection, req.body)
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    const page = await getGenerativeAiMarketingPageDocument()
+    const nextItem = { _id: new ObjectId().toString(), ...value }
+    const nextItems = [...(page[targetSection] || []), nextItem]
+
+    await getPageContentCollection().updateOne(
+      { key: 'generative-ai-marketing-page' },
+      { $set: { [targetSection]: nextItems, updatedAt: new Date() } },
+    )
+
+    return res.status(201).json({ message: `${targetSection} item created successfully`, item: nextItem })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to create generative ai marketing page section item' })
+  }
+})
+
+app.patch('/api/generative-ai-marketing-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = generativeAiMarketingSections[section]
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateGenerativeAiMarketingArrayItem(targetSection, req.body, { partial: true })
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+    if (!Object.keys(value).length) {
+      return res.status(400).json({ error: 'At least one field is required to update' })
+    }
+
+    const page = await getGenerativeAiMarketingPageDocument()
+    const items = page[targetSection] || []
+    const index = items.findIndex((item) => item._id === itemId)
+    if (index === -1) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    const nextItems = [...items]
+    nextItems[index] = { ...nextItems[index], ...value }
+
+    await getPageContentCollection().updateOne(
+      { key: 'generative-ai-marketing-page' },
+      { $set: { [targetSection]: nextItems, updatedAt: new Date() } },
+    )
+
+    return res.json({ message: `${targetSection} item updated successfully`, item: nextItems[index] })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update generative ai marketing page section item' })
+  }
+})
+
+app.delete('/api/generative-ai-marketing-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = generativeAiMarketingSections[section]
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const page = await getGenerativeAiMarketingPageDocument()
+    const items = page[targetSection] || []
+    const nextItems = items.filter((item) => item._id !== itemId)
+    if (nextItems.length === items.length) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'generative-ai-marketing-page' },
+      { $set: { [targetSection]: nextItems, updatedAt: new Date() } },
+    )
+
+    return res.json({ message: `${targetSection} item deleted successfully` })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to delete generative ai marketing page section item' })
+  }
+})
+
+app.get('/api/service-point-page', async (_req, res) => {
+  try {
+    const page = await getServicePointPageDocument()
+    return res.json(normalizeDocument(page))
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to fetch service point page data' })
+  }
+})
+
+app.put('/api/service-point-page', async (req, res) => {
+  try {
+    const defaultPage = getDefaultServicePointPage()
+    const payload = {
+      heroImage: typeof req.body.heroImage === 'string' ? req.body.heroImage.trim() : '',
+      heroBadge: typeof req.body.heroBadge === 'string' ? req.body.heroBadge.trim() : 'E-Governance Platform',
+      heroTitle: typeof req.body.heroTitle === 'string' ? req.body.heroTitle.trim() : 'Service Point (Municipality / Union)',
+      breadcrumbTitle: typeof req.body.breadcrumbTitle === 'string' ? req.body.breadcrumbTitle.trim() : 'Service Point',
+      overviewTitle: typeof req.body.overviewTitle === 'string' ? req.body.overviewTitle.trim() : 'Smart Public Service Delivery Hub',
+      overviewDescription: typeof req.body.overviewDescription === 'string' ? req.body.overviewDescription.trim() : '',
+      overviewDescriptionBottom:
+        typeof req.body.overviewDescriptionBottom === 'string' ? req.body.overviewDescriptionBottom.trim() : '',
+      serviceModulesTitle:
+        typeof req.body.serviceModulesTitle === 'string' ? req.body.serviceModulesTitle.trim() : 'Core Service Modules',
+      roadmapTitle: typeof req.body.roadmapTitle === 'string' ? req.body.roadmapTitle.trim() : 'Implementation Roadmap',
+      governanceTitle:
+        typeof req.body.governanceTitle === 'string' ? req.body.governanceTitle.trim() : 'Governance Capability Stack',
+      videoSectionTitle:
+        typeof req.body.videoSectionTitle === 'string' ? req.body.videoSectionTitle.trim() : 'Live Demo & Explainer Videos',
+      videoSectionSubtitle:
+        typeof req.body.videoSectionSubtitle === 'string' ? req.body.videoSectionSubtitle.trim() : '',
+      videoTagText: typeof req.body.videoTagText === 'string' ? req.body.videoTagText.trim() : 'Field-ready onboarding',
+      galleryTitle: typeof req.body.galleryTitle === 'string' ? req.body.galleryTitle.trim() : 'Field Gallery',
+      proposalTitle: typeof req.body.proposalTitle === 'string' ? req.body.proposalTitle.trim() : 'Need a Custom Rollout Plan?',
+      proposalDescription: typeof req.body.proposalDescription === 'string' ? req.body.proposalDescription.trim() : '',
+      proposalButtonText:
+        typeof req.body.proposalButtonText === 'string' ? req.body.proposalButtonText.trim() : 'Request Service Point Proposal',
+      proposalButtonLink: typeof req.body.proposalButtonLink === 'string' ? req.body.proposalButtonLink.trim() : '/contact-us',
+      updatedAt: new Date(),
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'service-point-page' },
+      {
+        $set: payload,
+        $setOnInsert: {
+          key: defaultPage.key,
+          serviceModules: defaultPage.serviceModules,
+          governancePillars: defaultPage.governancePillars,
+          implementationPlan: defaultPage.implementationPlan,
+          videoItems: defaultPage.videoItems,
+          galleryItems: defaultPage.galleryItems,
+          createdAt: new Date(),
+        },
+      },
+      { upsert: true },
+    )
+
+    const updatedPage = await getPageContentCollection().findOne({ key: 'service-point-page' })
+    return res.json({
+      message: 'Service point page content updated',
+      page: normalizeDocument(updatedPage),
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update service point page content' })
+  }
+})
+
+app.post('/api/service-point-page/:section', async (req, res) => {
+  try {
+    const { section } = req.params
+    const targetSection = servicePointSections[section]
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateServicePointArrayItem(targetSection, req.body)
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    const page = await getServicePointPageDocument()
+    const nextItem = { _id: new ObjectId().toString(), ...value }
+    const nextItems = [...(page[targetSection] || []), nextItem]
+
+    await getPageContentCollection().updateOne(
+      { key: 'service-point-page' },
+      { $set: { [targetSection]: nextItems, updatedAt: new Date() } },
+    )
+
+    return res.status(201).json({ message: `${targetSection} item created successfully`, item: nextItem })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to create service point page section item' })
+  }
+})
+
+app.patch('/api/service-point-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = servicePointSections[section]
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateServicePointArrayItem(targetSection, req.body, { partial: true })
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+    if (!Object.keys(value).length) {
+      return res.status(400).json({ error: 'At least one field is required to update' })
+    }
+
+    const page = await getServicePointPageDocument()
+    const items = page[targetSection] || []
+    const index = items.findIndex((item) => item._id === itemId)
+    if (index === -1) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    const nextItems = [...items]
+    nextItems[index] = { ...nextItems[index], ...value }
+
+    await getPageContentCollection().updateOne(
+      { key: 'service-point-page' },
+      { $set: { [targetSection]: nextItems, updatedAt: new Date() } },
+    )
+
+    return res.json({ message: `${targetSection} item updated successfully`, item: nextItems[index] })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update service point page section item' })
+  }
+})
+
+app.delete('/api/service-point-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = servicePointSections[section]
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const page = await getServicePointPageDocument()
+    const items = page[targetSection] || []
+    const nextItems = items.filter((item) => item._id !== itemId)
+    if (nextItems.length === items.length) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'service-point-page' },
+      { $set: { [targetSection]: nextItems, updatedAt: new Date() } },
+    )
+
+    return res.json({ message: `${targetSection} item deleted successfully` })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to delete service point page section item' })
+  }
+})
+
+app.get('/api/custom-saas-page', async (_req, res) => {
+  try {
+    const page = await getCustomSaasPageDocument()
+    return res.json(normalizeDocument(page))
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to fetch custom saas page data' })
+  }
+})
+
+app.put('/api/custom-saas-page', async (req, res) => {
+  try {
+    const defaultPage = getDefaultCustomSaasPage()
+    const payload = {
+      heroImage: typeof req.body.heroImage === 'string' ? req.body.heroImage.trim() : '',
+      heroBadge: typeof req.body.heroBadge === 'string' ? req.body.heroBadge.trim() : 'Product Engineering Studio',
+      heroTitle:
+        typeof req.body.heroTitle === 'string'
+          ? req.body.heroTitle.trim()
+          : 'Custom Software + SaaS Platform Development',
+      breadcrumbTitle: typeof req.body.breadcrumbTitle === 'string' ? req.body.breadcrumbTitle.trim() : 'Custom SaaS',
+      introTitle:
+        typeof req.body.introTitle === 'string'
+          ? req.body.introTitle.trim()
+          : 'Build Software That Fits Your Business, Then Scale It Like A Product',
+      introDescription: typeof req.body.introDescription === 'string' ? req.body.introDescription.trim() : '',
+      workingProcessTitle: typeof req.body.workingProcessTitle === 'string' ? req.body.workingProcessTitle.trim() : 'Working Process',
+      workingProcessDescription: typeof req.body.workingProcessDescription === 'string' ? req.body.workingProcessDescription.trim() : '',
+      architectureTitle:
+        typeof req.body.architectureTitle === 'string' ? req.body.architectureTitle.trim() : 'Platform Architecture & Engineering Focus',
+      engagementTitle: typeof req.body.engagementTitle === 'string' ? req.body.engagementTitle.trim() : 'Engagement Models',
+      showcaseTitle: typeof req.body.showcaseTitle === 'string' ? req.body.showcaseTitle.trim() : 'Project Showcase',
+      showcaseBadge: typeof req.body.showcaseBadge === 'string' ? req.body.showcaseBadge.trim() : 'Live + Code Access',
+      videoDemoTitle: typeof req.body.videoDemoTitle === 'string' ? req.body.videoDemoTitle.trim() : 'Projects Video Demo',
+      videoDemoBadge: typeof req.body.videoDemoBadge === 'string' ? req.body.videoDemoBadge.trim() : 'Live Walkthrough',
+      faqTitle: typeof req.body.faqTitle === 'string' ? req.body.faqTitle.trim() : 'Frequently Asked Questions',
+      updatedAt: new Date(),
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'custom-saas-page' },
+      {
+        $set: payload,
+        $setOnInsert: {
+          key: defaultPage.key,
+          deliveryTracks: defaultPage.deliveryTracks,
+          buildFlow: defaultPage.buildFlow,
+          architectureHighlights: defaultPage.architectureHighlights,
+          engagementModels: defaultPage.engagementModels,
+          projects: defaultPage.projects,
+          projectDemoVideos: defaultPage.projectDemoVideos,
+          saasFaqs: defaultPage.saasFaqs,
+          createdAt: new Date(),
+        },
+      },
+      { upsert: true },
+    )
+
+    const updatedPage = await getPageContentCollection().findOne({ key: 'custom-saas-page' })
+    return res.json({
+      message: 'Custom saas page content updated',
+      page: normalizeDocument(updatedPage),
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update custom saas page content' })
+  }
+})
+
+app.post('/api/custom-saas-page/:section', async (req, res) => {
+  try {
+    const { section } = req.params
+    const targetSection = customSaasSections[section]
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateCustomSaasArrayItem(targetSection, req.body)
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    const page = await getCustomSaasPageDocument()
+    const nextItem = { _id: new ObjectId().toString(), ...value }
+    const nextItems = [...(page[targetSection] || []), nextItem]
+
+    await getPageContentCollection().updateOne(
+      { key: 'custom-saas-page' },
+      { $set: { [targetSection]: nextItems, updatedAt: new Date() } },
+    )
+
+    return res.status(201).json({ message: `${targetSection} item created successfully`, item: nextItem })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to create custom saas page section item' })
+  }
+})
+
+app.patch('/api/custom-saas-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = customSaasSections[section]
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateCustomSaasArrayItem(targetSection, req.body, { partial: true })
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+    if (!Object.keys(value).length) {
+      return res.status(400).json({ error: 'At least one field is required to update' })
+    }
+
+    const page = await getCustomSaasPageDocument()
+    const items = page[targetSection] || []
+    const index = items.findIndex((item) => item._id === itemId)
+    if (index === -1) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    const nextItems = [...items]
+    nextItems[index] = { ...nextItems[index], ...value }
+
+    await getPageContentCollection().updateOne(
+      { key: 'custom-saas-page' },
+      { $set: { [targetSection]: nextItems, updatedAt: new Date() } },
+    )
+
+    return res.json({ message: `${targetSection} item updated successfully`, item: nextItems[index] })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update custom saas page section item' })
+  }
+})
+
+app.delete('/api/custom-saas-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = customSaasSections[section]
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const page = await getCustomSaasPageDocument()
+    const items = page[targetSection] || []
+    const nextItems = items.filter((item) => item._id !== itemId)
+    if (nextItems.length === items.length) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'custom-saas-page' },
+      { $set: { [targetSection]: nextItems, updatedAt: new Date() } },
+    )
+
+    return res.json({ message: `${targetSection} item deleted successfully` })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to delete custom saas page section item' })
+  }
+})
+
+app.get('/api/startup-it-consulting-page', async (_req, res) => {
+  try {
+    const page = await getStartupItConsultingPageDocument()
+    return res.json(normalizeDocument(page))
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to fetch startup IT consulting page data' })
+  }
+})
+
+app.put('/api/startup-it-consulting-page', async (req, res) => {
+  try {
+    const defaultPage = getDefaultStartupItConsultingPage()
+    const payload = {
+      heroImage: typeof req.body.heroImage === 'string' ? req.body.heroImage.trim() : '',
+      heroBadge: typeof req.body.heroBadge === 'string' ? req.body.heroBadge.trim() : 'Startup Acceleration',
+      heroTitle:
+        typeof req.body.heroTitle === 'string'
+          ? req.body.heroTitle.trim()
+          : 'Startup IT Consulting, System Setup + Digital Transformation',
+      breadcrumbTitle:
+        typeof req.body.breadcrumbTitle === 'string' ? req.body.breadcrumbTitle.trim() : 'Startup IT Consulting',
+      introTitle:
+        typeof req.body.introTitle === 'string'
+          ? req.body.introTitle.trim()
+          : 'Build A Strong Technology Core Before You Scale',
+      introDescription: typeof req.body.introDescription === 'string' ? req.body.introDescription.trim() : '',
+      processTitle:
+        typeof req.body.processTitle === 'string' ? req.body.processTitle.trim() : 'Transformation Working Process',
+      outcomesTitle: typeof req.body.outcomesTitle === 'string' ? req.body.outcomesTitle.trim() : 'Expected Outcomes',
+      ctaButtonText: typeof req.body.ctaButtonText === 'string' ? req.body.ctaButtonText.trim() : 'Book Startup IT Session',
+      ctaButtonLink: typeof req.body.ctaButtonLink === 'string' ? req.body.ctaButtonLink.trim() : '/contact-us',
+      updatedAt: new Date(),
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'startup-it-consulting-page' },
+      {
+        $set: payload,
+        $setOnInsert: {
+          key: defaultPage.key,
+          consultingPillars: defaultPage.consultingPillars,
+          transformationStages: defaultPage.transformationStages,
+          outcomes: defaultPage.outcomes,
+          createdAt: new Date(),
+        },
+      },
+      { upsert: true },
+    )
+
+    const updatedPage = await getPageContentCollection().findOne({ key: 'startup-it-consulting-page' })
+    return res.json({
+      message: 'Startup IT consulting page content updated',
+      page: normalizeDocument(updatedPage),
+    })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update startup IT consulting page content' })
+  }
+})
+
+app.post('/api/startup-it-consulting-page/:section', async (req, res) => {
+  try {
+    const { section } = req.params
+    const targetSection = startupItConsultingSections[section]
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateStartupItConsultingArrayItem(targetSection, req.body)
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    const page = await getStartupItConsultingPageDocument()
+    const nextItem = { _id: new ObjectId().toString(), ...value }
+    const nextItems = [...(page[targetSection] || []), nextItem]
+
+    await getPageContentCollection().updateOne(
+      { key: 'startup-it-consulting-page' },
+      { $set: { [targetSection]: nextItems, updatedAt: new Date() } },
+    )
+
+    return res.status(201).json({ message: `${targetSection} item created successfully`, item: nextItem })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to create startup IT consulting page section item' })
+  }
+})
+
+app.patch('/api/startup-it-consulting-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = startupItConsultingSections[section]
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateStartupItConsultingArrayItem(targetSection, req.body, { partial: true })
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+    if (!Object.keys(value).length) {
+      return res.status(400).json({ error: 'At least one field is required to update' })
+    }
+
+    const page = await getStartupItConsultingPageDocument()
+    const items = page[targetSection] || []
+    const index = items.findIndex((item) => item._id === itemId)
+    if (index === -1) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    const nextItems = [...items]
+    nextItems[index] = { ...nextItems[index], ...value }
+
+    await getPageContentCollection().updateOne(
+      { key: 'startup-it-consulting-page' },
+      { $set: { [targetSection]: nextItems, updatedAt: new Date() } },
+    )
+
+    return res.json({ message: `${targetSection} item updated successfully`, item: nextItems[index] })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update startup IT consulting page section item' })
+  }
+})
+
+app.delete('/api/startup-it-consulting-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = startupItConsultingSections[section]
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const page = await getStartupItConsultingPageDocument()
+    const items = page[targetSection] || []
+    const nextItems = items.filter((item) => item._id !== itemId)
+    if (nextItems.length === items.length) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'startup-it-consulting-page' },
+      { $set: { [targetSection]: nextItems, updatedAt: new Date() } },
+    )
+
+    return res.json({ message: `${targetSection} item deleted successfully` })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to delete startup IT consulting page section item' })
+  }
+})
+
+app.get('/api/it-training-page', async (_req, res) => {
+  try {
+    const page = await getItTrainingPageDocument()
+    return res.json(normalizeDocument(page))
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to fetch IT training page data' })
+  }
+})
+
+app.put('/api/it-training-page', async (req, res) => {
+  try {
+    const defaultPage = getDefaultItTrainingPage()
+    const payload = {
+      heroImage: typeof req.body.heroImage === 'string' ? req.body.heroImage.trim() : '',
+      heroBadge: typeof req.body.heroBadge === 'string' ? req.body.heroBadge.trim() : 'Skill To Career Pathway',
+      heroTitle: typeof req.body.heroTitle === 'string' ? req.body.heroTitle.trim() : 'IT Training + Internship Program',
+      breadcrumbTitle: typeof req.body.breadcrumbTitle === 'string' ? req.body.breadcrumbTitle.trim() : 'IT Training',
+      introTitle:
+        typeof req.body.introTitle === 'string'
+          ? req.body.introTitle.trim()
+          : 'Learn Practical Skills, Build Real Projects, Start Your IT Career',
+      introDescription: typeof req.body.introDescription === 'string' ? req.body.introDescription.trim() : '',
+      curriculumTitle: typeof req.body.curriculumTitle === 'string' ? req.body.curriculumTitle.trim() : 'Detailed Curriculum & Lab Modules',
+      curriculumBadge: typeof req.body.curriculumBadge === 'string' ? req.body.curriculumBadge.trim() : 'Industry Aligned',
+      processTitle: typeof req.body.processTitle === 'string' ? req.body.processTitle.trim() : 'Internship Working Process',
+      outcomesTitle: typeof req.body.outcomesTitle === 'string' ? req.body.outcomesTitle.trim() : 'Program Outcomes',
+      videoTitle: typeof req.body.videoTitle === 'string' ? req.body.videoTitle.trim() : 'Training & Internship Video Demos',
+      videoBadge: typeof req.body.videoBadge === 'string' ? req.body.videoBadge.trim() : 'Live Sessions',
+      supportTitle: typeof req.body.supportTitle === 'string' ? req.body.supportTitle.trim() : 'Mentorship & Career Support',
+      supportDescription: typeof req.body.supportDescription === 'string' ? req.body.supportDescription.trim() : '',
+      faqTitle: typeof req.body.faqTitle === 'string' ? req.body.faqTitle.trim() : 'Frequently Asked Questions',
+      ctaTitle: typeof req.body.ctaTitle === 'string' ? req.body.ctaTitle.trim() : 'Start Your Learning Journey With SoftEdge',
+      ctaDescription: typeof req.body.ctaDescription === 'string' ? req.body.ctaDescription.trim() : '',
+      ctaPrimaryText: typeof req.body.ctaPrimaryText === 'string' ? req.body.ctaPrimaryText.trim() : 'Apply For Next Batch',
+      ctaPrimaryLink: typeof req.body.ctaPrimaryLink === 'string' ? req.body.ctaPrimaryLink.trim() : '/contact',
+      ctaSecondaryText: typeof req.body.ctaSecondaryText === 'string' ? req.body.ctaSecondaryText.trim() : 'Explore Other Services',
+      ctaSecondaryLink: typeof req.body.ctaSecondaryLink === 'string' ? req.body.ctaSecondaryLink.trim() : '/services',
+      updatedAt: new Date(),
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'it-training-page' },
+      {
+        $set: payload,
+        $setOnInsert: {
+          key: defaultPage.key,
+          trainingTracks: defaultPage.trainingTracks,
+          internshipFlow: defaultPage.internshipFlow,
+          outcomes: defaultPage.outcomes,
+          demoVideos: defaultPage.demoVideos,
+          curriculumModules: defaultPage.curriculumModules,
+          learningSupports: defaultPage.learningSupports,
+          faqItems: defaultPage.faqItems,
+          createdAt: new Date(),
+        },
+      },
+      { upsert: true },
+    )
+
+    const updatedPage = await getPageContentCollection().findOne({ key: 'it-training-page' })
+    return res.json({ message: 'IT training page content updated', page: normalizeDocument(updatedPage) })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update IT training page content' })
+  }
+})
+
+app.post('/api/it-training-page/:section', async (req, res) => {
+  try {
+    const { section } = req.params
+    const targetSection = itTrainingSections[section]
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateItTrainingArrayItem(targetSection, req.body)
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    const page = await getItTrainingPageDocument()
+    const nextItem = { _id: new ObjectId().toString(), ...value }
+    const nextItems = [...(page[targetSection] || []), nextItem]
+
+    await getPageContentCollection().updateOne(
+      { key: 'it-training-page' },
+      { $set: { [targetSection]: nextItems, updatedAt: new Date() } },
+    )
+
+    return res.status(201).json({ message: `${targetSection} item created successfully`, item: nextItem })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to create IT training page section item' })
+  }
+})
+
+app.patch('/api/it-training-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = itTrainingSections[section]
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateItTrainingArrayItem(targetSection, req.body, { partial: true })
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+    if (!Object.keys(value).length) {
+      return res.status(400).json({ error: 'At least one field is required to update' })
+    }
+
+    const page = await getItTrainingPageDocument()
+    const items = page[targetSection] || []
+    const index = items.findIndex((item) => item._id === itemId)
+    if (index === -1) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    const nextItems = [...items]
+    nextItems[index] = { ...nextItems[index], ...value }
+
+    await getPageContentCollection().updateOne(
+      { key: 'it-training-page' },
+      { $set: { [targetSection]: nextItems, updatedAt: new Date() } },
+    )
+
+    return res.json({ message: `${targetSection} item updated successfully`, item: nextItems[index] })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update IT training page section item' })
+  }
+})
+
+app.delete('/api/it-training-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = itTrainingSections[section]
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const page = await getItTrainingPageDocument()
+    const items = page[targetSection] || []
+    const nextItems = items.filter((item) => item._id !== itemId)
+    if (nextItems.length === items.length) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'it-training-page' },
+      { $set: { [targetSection]: nextItems, updatedAt: new Date() } },
+    )
+
+    return res.json({ message: `${targetSection} item deleted successfully` })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to delete IT training page section item' })
+  }
+})
+
+app.get('/api/technical-support-page', async (_req, res) => {
+  try {
+    const page = await getTechnicalSupportPageDocument()
+    return res.json(normalizeDocument(page))
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to fetch technical support page data' })
+  }
+})
+
+app.put('/api/technical-support-page', async (req, res) => {
+  try {
+    const defaultPage = getDefaultTechnicalSupportPage()
+    const payload = {
+      heroImage: typeof req.body.heroImage === 'string' ? req.body.heroImage.trim() : '',
+      heroBadge: typeof req.body.heroBadge === 'string' ? req.body.heroBadge.trim() : 'Support Operations Center',
+      heroTitle: typeof req.body.heroTitle === 'string' ? req.body.heroTitle.trim() : '24/7 Technical Support & AMC',
+      breadcrumbTitle: typeof req.body.breadcrumbTitle === 'string' ? req.body.breadcrumbTitle.trim() : 'Technical Support',
+      introTitle:
+        typeof req.body.introTitle === 'string'
+          ? req.body.introTitle.trim()
+          : 'Reliable Support To Keep Your Business Running Every Hour',
+      introDescription: typeof req.body.introDescription === 'string' ? req.body.introDescription.trim() : '',
+      coverageTitle: typeof req.body.coverageTitle === 'string' ? req.body.coverageTitle.trim() : 'AMC Coverage Scope',
+      matrixTitle: typeof req.body.matrixTitle === 'string' ? req.body.matrixTitle.trim() : 'Incident Response Matrix',
+      packagesTitle: typeof req.body.packagesTitle === 'string' ? req.body.packagesTitle.trim() : 'AMC Packages',
+      toolsTitle: typeof req.body.toolsTitle === 'string' ? req.body.toolsTitle.trim() : 'Support Tools & Monitoring Stack',
+      workflowTitle: typeof req.body.workflowTitle === 'string' ? req.body.workflowTitle.trim() : 'Support Handling Workflow',
+      videoTitle: typeof req.body.videoTitle === 'string' ? req.body.videoTitle.trim() : 'Support Demo & Service Brief',
+      videoBadge: typeof req.body.videoBadge === 'string' ? req.body.videoBadge.trim() : '24/7 Coverage',
+      faqTitle: typeof req.body.faqTitle === 'string' ? req.body.faqTitle.trim() : 'Support FAQ',
+      ctaTitle: typeof req.body.ctaTitle === 'string' ? req.body.ctaTitle.trim() : 'Need Dedicated AMC For Your Organization?',
+      ctaDescription: typeof req.body.ctaDescription === 'string' ? req.body.ctaDescription.trim() : '',
+      ctaPrimaryText: typeof req.body.ctaPrimaryText === 'string' ? req.body.ctaPrimaryText.trim() : 'Request AMC Proposal',
+      ctaPrimaryLink: typeof req.body.ctaPrimaryLink === 'string' ? req.body.ctaPrimaryLink.trim() : '/contact',
+      ctaSecondaryText: typeof req.body.ctaSecondaryText === 'string' ? req.body.ctaSecondaryText.trim() : 'Explore More Services',
+      ctaSecondaryLink: typeof req.body.ctaSecondaryLink === 'string' ? req.body.ctaSecondaryLink.trim() : '/services',
+      updatedAt: new Date(),
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'technical-support-page' },
+      {
+        $set: payload,
+        $setOnInsert: {
+          key: defaultPage.key,
+          supportPillars: defaultPage.supportPillars,
+          amcCoverage: defaultPage.amcCoverage,
+          responseMatrix: defaultPage.responseMatrix,
+          supportVideos: defaultPage.supportVideos,
+          amcPlans: defaultPage.amcPlans,
+          toolStack: defaultPage.toolStack,
+          workingFlow: defaultPage.workingFlow,
+          supportFaqs: defaultPage.supportFaqs,
+          createdAt: new Date(),
+        },
+      },
+      { upsert: true },
+    )
+
+    const updatedPage = await getPageContentCollection().findOne({ key: 'technical-support-page' })
+    return res.json({ message: 'Technical support page content updated', page: normalizeDocument(updatedPage) })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update technical support page content' })
+  }
+})
+
+app.post('/api/technical-support-page/:section', async (req, res) => {
+  try {
+    const { section } = req.params
+    const targetSection = technicalSupportSections[section]
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateTechnicalSupportArrayItem(targetSection, req.body)
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    const page = await getTechnicalSupportPageDocument()
+    const nextItem = { _id: new ObjectId().toString(), ...value }
+    const nextItems = [...(page[targetSection] || []), nextItem]
+
+    await getPageContentCollection().updateOne(
+      { key: 'technical-support-page' },
+      { $set: { [targetSection]: nextItems, updatedAt: new Date() } },
+    )
+
+    return res.status(201).json({ message: `${targetSection} item created successfully`, item: nextItem })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to create technical support page section item' })
+  }
+})
+
+app.patch('/api/technical-support-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = technicalSupportSections[section]
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateTechnicalSupportArrayItem(targetSection, req.body, { partial: true })
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+    if (!Object.keys(value).length) {
+      return res.status(400).json({ error: 'At least one field is required to update' })
+    }
+
+    const page = await getTechnicalSupportPageDocument()
+    const items = page[targetSection] || []
+    const index = items.findIndex((item) => item._id === itemId)
+    if (index === -1) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    const nextItems = [...items]
+    nextItems[index] = { ...nextItems[index], ...value }
+
+    await getPageContentCollection().updateOne(
+      { key: 'technical-support-page' },
+      { $set: { [targetSection]: nextItems, updatedAt: new Date() } },
+    )
+
+    return res.json({ message: `${targetSection} item updated successfully`, item: nextItems[index] })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update technical support page section item' })
+  }
+})
+
+app.delete('/api/technical-support-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = technicalSupportSections[section]
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const page = await getTechnicalSupportPageDocument()
+    const items = page[targetSection] || []
+    const nextItems = items.filter((item) => item._id !== itemId)
+    if (nextItems.length === items.length) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'technical-support-page' },
+      { $set: { [targetSection]: nextItems, updatedAt: new Date() } },
+    )
+
+    return res.json({ message: `${targetSection} item deleted successfully` })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to delete technical support page section item' })
+  }
+})
+
+app.get('/api/footer-content', async (_req, res) => {
+  try {
+    const page = await getFooterContentDocument()
+    return res.json(normalizeDocument(page))
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to fetch footer content' })
+  }
+})
+
+app.put('/api/footer-content', async (req, res) => {
+  try {
+    const defaultPage = getDefaultFooterContent()
+    const payload = {
+      aboutTitle: typeof req.body.aboutTitle === 'string' ? req.body.aboutTitle.trim() : 'About Company',
+      aboutDescription:
+        typeof req.body.aboutDescription === 'string'
+          ? req.body.aboutDescription.trim()
+          : 'We have 14+ years experience. Helping you overcome technology challenges.',
+      contactsTitle: typeof req.body.contactsTitle === 'string' ? req.body.contactsTitle.trim() : 'Contacts',
+      addressLabel: typeof req.body.addressLabel === 'string' ? req.body.addressLabel.trim() : 'Adress:',
+      addressValue: typeof req.body.addressValue === 'string' ? req.body.addressValue.trim() : '',
+      emailLabel: typeof req.body.emailLabel === 'string' ? req.body.emailLabel.trim() : 'Email:',
+      emailValue: typeof req.body.emailValue === 'string' ? req.body.emailValue.trim() : '',
+      phoneLabel: typeof req.body.phoneLabel === 'string' ? req.body.phoneLabel.trim() : 'Phone:',
+      phoneValue: typeof req.body.phoneValue === 'string' ? req.body.phoneValue.trim() : '',
+      newsletterTitle: typeof req.body.newsletterTitle === 'string' ? req.body.newsletterTitle.trim() : 'Newsletter',
+      newsletterDescription: typeof req.body.newsletterDescription === 'string' ? req.body.newsletterDescription.trim() : '',
+      newsletterPlaceholder:
+        typeof req.body.newsletterPlaceholder === 'string' ? req.body.newsletterPlaceholder.trim() : 'Subscribe with us',
+      copyrightPrefix: typeof req.body.copyrightPrefix === 'string' ? req.body.copyrightPrefix.trim() : '© Developed by',
+      companyName: typeof req.body.companyName === 'string' ? req.body.companyName.trim() : 'SoftEdge Technology LTD.',
+      updatedAt: new Date(),
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'footer-content' },
+      {
+        $set: payload,
+        $setOnInsert: {
+          key: defaultPage.key,
+          socialLinks: defaultPage.socialLinks,
+          createdAt: new Date(),
+        },
+      },
+      { upsert: true },
+    )
+
+    const updatedPage = await getPageContentCollection().findOne({ key: 'footer-content' })
+    return res.json({ message: 'Footer content updated', page: normalizeDocument(updatedPage) })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update footer content' })
+  }
+})
+
+app.post('/api/footer-content/:section', async (req, res) => {
+  try {
+    const { section } = req.params
+    const targetSection = footerSections[section]
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateFooterArrayItem(targetSection, req.body)
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    const page = await getFooterContentDocument()
+    const nextItem = { _id: new ObjectId().toString(), ...value }
+    const nextItems = [...(page[targetSection] || []), nextItem]
+
+    await getPageContentCollection().updateOne(
+      { key: 'footer-content' },
+      { $set: { [targetSection]: nextItems, updatedAt: new Date() } },
+    )
+
+    return res.status(201).json({ message: `${targetSection} item created successfully`, item: nextItem })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to create footer section item' })
+  }
+})
+
+app.patch('/api/footer-content/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = footerSections[section]
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateFooterArrayItem(targetSection, req.body, { partial: true })
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+    if (!Object.keys(value).length) {
+      return res.status(400).json({ error: 'At least one field is required to update' })
+    }
+
+    const page = await getFooterContentDocument()
+    const items = page[targetSection] || []
+    const index = items.findIndex((item) => item._id === itemId)
+    if (index === -1) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    const nextItems = [...items]
+    nextItems[index] = { ...nextItems[index], ...value }
+
+    await getPageContentCollection().updateOne(
+      { key: 'footer-content' },
+      { $set: { [targetSection]: nextItems, updatedAt: new Date() } },
+    )
+
+    return res.json({ message: `${targetSection} item updated successfully`, item: nextItems[index] })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update footer section item' })
+  }
+})
+
+app.delete('/api/footer-content/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = footerSections[section]
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const page = await getFooterContentDocument()
+    const items = page[targetSection] || []
+    const nextItems = items.filter((item) => item._id !== itemId)
+    if (nextItems.length === items.length) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'footer-content' },
+      { $set: { [targetSection]: nextItems, updatedAt: new Date() } },
+    )
+
+    return res.json({ message: `${targetSection} item deleted successfully` })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to delete footer section item' })
+  }
+})
+
+app.get('/api/home-page', async (_req, res) => {
+  try {
+    const page = await getHomePageDocument()
+    return res.json(normalizeDocument(page))
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to fetch home page content' })
+  }
+})
+
+app.put('/api/home-page', async (req, res) => {
+  try {
+    const defaultPage = getDefaultHomePage()
+    const payload = {
+      heroCtaPrimaryText:
+        typeof req.body.heroCtaPrimaryText === 'string' ? req.body.heroCtaPrimaryText.trim() : 'Discover More',
+      heroCtaPrimaryLink:
+        typeof req.body.heroCtaPrimaryLink === 'string' ? req.body.heroCtaPrimaryLink.trim() : '/about',
+      heroCtaSecondaryText:
+        typeof req.body.heroCtaSecondaryText === 'string' ? req.body.heroCtaSecondaryText.trim() : 'Get A Quote',
+      heroCtaSecondaryLink:
+        typeof req.body.heroCtaSecondaryLink === 'string' ? req.body.heroCtaSecondaryLink.trim() : '/services',
+      aboutEyebrow: typeof req.body.aboutEyebrow === 'string' ? req.body.aboutEyebrow.trim() : 'About Us',
+      aboutTitle:
+        typeof req.body.aboutTitle === 'string'
+          ? req.body.aboutTitle.trim()
+          : 'Making the world advanced design work for you',
+      aboutDescription: typeof req.body.aboutDescription === 'string' ? req.body.aboutDescription.trim() : '',
+      aboutImage: typeof req.body.aboutImage === 'string' ? req.body.aboutImage.trim() : '',
+      ourHistoryEyebrow:
+        typeof req.body.ourHistoryEyebrow === 'string' ? req.body.ourHistoryEyebrow.trim() : 'Our history',
+      ourHistoryTitle: typeof req.body.ourHistoryTitle === 'string' ? req.body.ourHistoryTitle.trim() : 'How We Started',
+      pricingEyebrow: typeof req.body.pricingEyebrow === 'string' ? req.body.pricingEyebrow.trim() : 'Pricing table',
+      pricingTitle: typeof req.body.pricingTitle === 'string' ? req.body.pricingTitle.trim() : 'Our Pricing Plans',
+      pricingButtonText: typeof req.body.pricingButtonText === 'string' ? req.body.pricingButtonText.trim() : 'Start Now',
+      pricingButtonLink: typeof req.body.pricingButtonLink === 'string' ? req.body.pricingButtonLink.trim() : '/',
+      updatedAt: new Date(),
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'home-page' },
+      {
+        $set: payload,
+        $setOnInsert: {
+          key: defaultPage.key,
+          slides: defaultPage.slides,
+          aboutHighlights: defaultPage.aboutHighlights,
+          aboutStats: defaultPage.aboutStats,
+          timeline: defaultPage.timeline,
+          pricingPlans: defaultPage.pricingPlans,
+          pricingFeatures: defaultPage.pricingFeatures,
+          createdAt: new Date(),
+        },
+      },
+      { upsert: true },
+    )
+
+    const updatedPage = await getPageContentCollection().findOne({ key: 'home-page' })
+    return res.json({ message: 'Home page content updated', page: normalizeDocument(updatedPage) })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update home page content' })
+  }
+})
+
+app.post('/api/home-page/:section', async (req, res) => {
+  try {
+    const { section } = req.params
+    const targetSection = homePageSections[section]
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateHomePageArrayItem(targetSection, req.body)
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+
+    const page = await getHomePageDocument()
+    const nextItem = { _id: new ObjectId().toString(), ...value }
+    const nextItems = [...(page[targetSection] || []), nextItem]
+
+    await getPageContentCollection().updateOne(
+      { key: 'home-page' },
+      { $set: { [targetSection]: nextItems, updatedAt: new Date() } },
+    )
+
+    return res.status(201).json({ message: `${targetSection} item created successfully`, item: nextItem })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to create home page section item' })
+  }
+})
+
+app.patch('/api/home-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = homePageSections[section]
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const { errors, value } = validateHomePageArrayItem(targetSection, req.body, { partial: true })
+    if (errors.length) {
+      return res.status(400).json({ error: errors.join(', ') })
+    }
+    if (!Object.keys(value).length) {
+      return res.status(400).json({ error: 'At least one field is required to update' })
+    }
+
+    const page = await getHomePageDocument()
+    const items = page[targetSection] || []
+    const index = items.findIndex((item) => item._id === itemId)
+    if (index === -1) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    const nextItems = [...items]
+    nextItems[index] = { ...nextItems[index], ...value }
+
+    await getPageContentCollection().updateOne(
+      { key: 'home-page' },
+      { $set: { [targetSection]: nextItems, updatedAt: new Date() } },
+    )
+
+    return res.json({ message: `${targetSection} item updated successfully`, item: nextItems[index] })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to update home page section item' })
+  }
+})
+
+app.delete('/api/home-page/:section/:itemId', async (req, res) => {
+  try {
+    const { section, itemId } = req.params
+    const targetSection = homePageSections[section]
+    if (!targetSection) {
+      return res.status(400).json({ error: 'Invalid section' })
+    }
+
+    const page = await getHomePageDocument()
+    const items = page[targetSection] || []
+    const nextItems = items.filter((item) => item._id !== itemId)
+    if (nextItems.length === items.length) {
+      return res.status(404).json({ error: 'Item not found' })
+    }
+
+    await getPageContentCollection().updateOne(
+      { key: 'home-page' },
+      { $set: { [targetSection]: nextItems, updatedAt: new Date() } },
+    )
+
+    return res.json({ message: `${targetSection} item deleted successfully` })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ error: 'Failed to delete home page section item' })
   }
 })
 
